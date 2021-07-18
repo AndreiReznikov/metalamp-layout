@@ -1,0 +1,71 @@
+@import "../../components/color-description/color-description";
+@import "../../components/type-description/type-description";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: 
+  url('../../fonts/Montserrat-Bold.woff2') format('woff2'), 
+  url('../../fonts/Montserrat-Bold.woff') format('woff'), 
+  url('../../fonts/Montserrat-Bold.ttf') format('truetype'), 
+  url('../../fonts/Montserrat-Bold.svg#Montserrat_Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: 
+  url('../../fonts/Montserrat-Regular.woff2') format('woff2'), 
+  url('../../fonts/Montserrat-Regular.woff') format('woff'), 
+  url('../../fonts/Montserrat-Regular.ttf') format('truetype'), 
+  url('../../fonts/Montserrat-Regular.svg#Montserrat_Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.logo-container {
+  margin: 30px 0 0 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors-description-list-container {
+  margin: 63px 0 0 150px;
+}
+
+.colors-description-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+}
+
+.type-description-list-container {
+  margin: 47px 82px 0 0;
+}
+
+.type-description-list {
+  list-style-type: none;
+  padding: 0;
+  &__item {
+    margin: 0 0 52px 0;
+    padding: 0;
+  }
+}
+

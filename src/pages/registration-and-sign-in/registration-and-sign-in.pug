@@ -1,0 +1,22 @@
+include ../../components/header/header
+include ../../components/registration-card/registration-card
+include ../../components/entry-card/entry-card
+include ../../components/footer/footer
+include ../../components/footer-mobile/footer-mobile
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="Registration and sign in, components, MetaLamp, education")
+    meta(name="description" content="Отель Toxin, подобрать номер")
+    title Registration and sign in
+  body
+    +header() 
+    main.registration-and-sign-in-background-container
+      aricle.registration-and-sign-in-card-container
+        +registration-card({buttonText: 'Зарегистрироваться'})
+        +entry-card()
+    +footer()
+    +footer-mobile()
