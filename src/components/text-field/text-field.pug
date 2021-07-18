@@ -1,0 +1,16 @@
+mixin text-field(options)
+  -
+    if (!options)
+      options = {}
+
+  .text-field(style=options.style)
+    if options.title
+      h3.text-field__title!=options.title
+    input(
+      class="text-field__input"
+      type=options.type 
+      placeholder=options.placeholder
+      value=options.value
+      autofocus=options.isFocused 
+      disabled=options.idDisabled
+      )

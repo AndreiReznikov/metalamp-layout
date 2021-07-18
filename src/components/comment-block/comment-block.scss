@@ -1,0 +1,65 @@
+@import "../like-button/like-button";
+
+.comments-block {
+  max-width: 711px;
+  box-sizing: border-box;
+  &__user {
+    display: flex;
+  }
+  
+  &__like-button {
+    margin-top: 2px;
+  }
+  
+  &__comment {
+    display: flex;
+    margin: 9px 0 0 4px;
+  }
+  
+  &__user-photo  {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(31, 32, 65, 0.05);
+  }
+  
+  &__user-info {
+    padding-left: 10px;
+  }
+  
+  &__username {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  
+  &__date {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  
+  &__comment-text {
+    margin: 0;
+    padding: 0 0 0 15px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}

@@ -1,0 +1,10 @@
+.social-icons {
+  &__link{
+    padding-left: 18px;
+    text-decoration: none;
+  }
+  
+  &__image:first-child {
+    padding: 0;
+  }
+}

@@ -1,0 +1,207 @@
+.iqdropdown-title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.iqdropdown {
+  width: 320px;
+  height: 44px;
+  background: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  @media screen and (max-width: 480px) {
+    width: 260px;
+    padding: 0 10px;
+  }
+
+    &.menu-open {
+      border-radius: 4px 4px 0 0;
+      border: 1px solid rgba(31, 32, 65, 0.5)
+    }
+
+    &.iqdropdown-conveniences {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .iqdropdown-selection {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(31, 32, 65, 0.75);
+    }
+
+    .iqdropdown-selection::after {
+      display: none;
+    }
+
+    .iqdropdown-arrow {
+      font-size: 14px;
+      line-height: 24px;
+      align-items: center;
+      text-align: center;
+      color: rgba(31, 32, 65, 0.50);
+    }
+
+    .iqdropdown-menu {
+      width: 100%;
+      background: #fff;
+      border: 1px solid rgba(31, 32, 65, 0.50);
+      border-radius: 0 0 4px 4px;
+      box-sizing: content-box;
+      top: 44px;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    }
+
+    .iqdropdown-menu-option {
+      display: flex;
+      align-items: center;
+      padding-right: 5px;
+      margin-top: 7px;
+      height: 30px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1F2041;
+    }
+
+    .iqdropdown-menu-option:first-child {
+      margin-top: 4px;
+    }
+
+    .iqdropdown-menu-option:last-child {
+      margin-bottom: 10px;
+    }
+
+    .iqdropdown-menu-option .counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 30px;
+      padding: 0;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      border: none;
+      color: #1F2041;
+    }
+
+    .iqdropdown-item-controls {
+      height: auto;
+    }
+ 
+
+    .iqdropdown-item-controls button{
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      color: rgba(31, 32, 65, 0.50);
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      box-sizing: border-box;
+      border-radius: 22px;
+      cursor: pointer;
+    }
+
+    .iqdropdown-item-controls button:disabled {
+      cursor: default;
+    }
+
+    .iqdropdown-item-controls button.button-decrement {
+      border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+
+    .iqdropdown-item-controls button.button-decrement:disabled {
+      border: 1px solid rgba(31, 32, 65, 0.05);
+    }
+    
+    .iqdropdown-item-controls button.button-increment {
+      border-radius: 22px;
+    }
+    
+    .iqdropdown--buttons {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 22px;
+      margin-bottom: 12px;
+      padding: 0 7px 0 14px;
+    }
+    
+    .iqdropdown--button {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #BC9CFF;
+      cursor: pointer;
+    }
+    
+    .iqdropdown--button-clear {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.9s;
+    }
+
+    .iqdropdown--button-clear_visible {
+      visibility: visible;
+      opacity: 1;
+    }
+}
+
+.iqdropdown .icon-decrement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iqdropdown .icon-decrement::after {
+  width: 6px;
+  height: 2px;
+  background: rgba(31, 32, 65, 0.50);
+}
+
+.iqdropdown .icon-decrement.icon-increment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iqdropdown .icon-decrement.icon-increment::after {
+  width: 8px;
+  height: 2px;
+  background: rgba(31, 32, 65, 0.50);
+}
+
+.iqdropdown .icon-decrement.icon-increment::before {
+  width: 8px;
+  height: 2px;
+  background: rgba(31, 32, 65, 0.50);
+}
+
+.iqdropdown-item-controls button.button-decrement:disabled .icon-decrement::after {
+  background: rgba(31, 32, 65, 0.05);
+}
+
+.iqdropdown .iqdropdown-item-controls button.button-decrement {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 50%;
+}   

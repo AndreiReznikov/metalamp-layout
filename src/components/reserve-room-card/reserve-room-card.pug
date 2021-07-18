@@ -1,0 +1,62 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../button/button
+
+mixin reserve-room-card(options)
+  -
+    if (!options)
+      options = {};
+
+  .reserve-room-block
+    .reserve-room-block__wrapper
+      form.reserve-room-block__form
+        .reserve-room-block__number-and-price-container   
+          span.reserve-room-block__number-symbol № 
+            span.reserve-room-block__room-number 888
+            span.reserve-room-block__lux-mark  люкс
+          span.reserve-room-block__room-price 9 990
+            span.reserve-room-block__room-price__currency &#8381 
+            span.reserve-room-block__time-interval в сутки
+        .reserve-room-block__date-dropdown-container
+          +date-dropdown({
+            title: ['Прибытие', 'Выезд'],
+            dateFrom: options.dateFrom,
+            dateTo: options.dateTo
+            })
+        .reserve-room-block__guests-dropdown-container 
+          +dropdown({
+            items: ['Взрослые', 'Дети', 'Младенцы'], 
+            addingButtons: true, 
+            isGuests: true, 
+            isClicked: true, 
+            title: 'Гости',
+            buttonsNum: options.dropdownButtonsNum,
+            clicksNum: options.dropdownClicksNum       
+            })
+        .reserve-room-block__price-block 
+          .reserve-room-block__sum  
+            .reserve-room-block__sum-description 
+              span.reserve-room-block__sum-text 9 990&#8381 x 4 суток
+            span.reserve-room-block__service-sum 39 960&#8381
+          .reserve-room-block__sum  
+            .reserve-room-block__sum-description 
+              span.reserve-room-block__sum-text Сбор за услуги: скидка 2 179&#8381
+              .reserve-room-block__information-icon-container
+                .reserve-room-block__information-icon i
+            span.reserve-room-block__service-sum 0&#8381
+          .reserve-room-block__sum  
+            .reserve-room-block__sum-description 
+              span.reserve-room-block__sum-text Сбор за дополнительные услуги
+              .reserve-room-block__information-icon-container
+                .reserve-room-block__information-icon i
+            span.reserve-room-block__service-sum 300&#8381
+        .reserve-room-block__total-sum-block  
+          span.reserve-room-block__total-text Итого
+          span.reserve-room-block__dotted-border 
+          span.reserve-room-block__total-sum 38 081&#8381
+        .reserve-room-block__button-container
+          +button({
+            longButton: true, 
+            text: 'Забронировать', 
+            type: 'submit'
+            })
