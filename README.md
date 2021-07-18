@@ -1,1 +1,1 @@
-# andrei-rezinkov-project.github.io
+# andreirezinkovproject.github.io
