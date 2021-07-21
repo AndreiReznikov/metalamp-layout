@@ -1,0 +1,127 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+@import '../date-dropdown/date-dropdown';
+@import '../dropdown/dropdown';
+@import '../button/button';
+
+.reserve-room-block {
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (max-width: 400px) {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &__wrapper {
+    padding: 45px 29px 29px 29px;
+
+    @media screen and (max-width: 400px) {
+      padding: 45px 15px 29px 15px;
+    }
+  }
+  
+  &__number-and-price-container    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__number-symbol {
+    @include H3();
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  &__room-number{
+    @include H1();
+  }
+  
+  &__lux-mark {
+    display: inline-block;
+    margin-left: 6px;
+  }
+  
+  &__room-price {
+    @include Body-font();
+    padding-top: 4px;
+    font-weight: bold;
+    line-height: 18px;
+    color: $Dark-Shade-50;
+  }
+  
+  &__time-interval {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  
+  &__date-dropdown-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+  }
+  
+  &__guests-dropdown-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  &__price-block {
+    @include Body-font();
+    margin-top: 20px;
+    line-height: 18px;
+  }
+  
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  &__sum-description  {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 74.7%;
+  }
+  
+  &__information-icon {
+    @include H3();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $Dark-Shade-25;
+    border-radius: 50%;
+    color: $Dark-Shade-25;
+    text-transform: none;
+    cursor: pointer;
+  }
+  
+  &__total-sum-block {
+    @include H2();
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+    line-height: 23px;
+  }
+  
+  &__dotted-border {
+    flex: 1;
+    margin: 0 5px;
+    height: 18px;
+    border-bottom: dotted 1px $Dark-Shade-25;
+  }
+  
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+  }
+}

@@ -1,0 +1,11 @@
+mixin logo(options)
+  -
+    if (!options) 
+      options = {};
+
+  if options.isColorful
+    a.logo(href="landing-page.html")
+      img.logo__image(src=require("../../img/logo-toxin.svg") alt="Logo Toxin")
+  else
+    a.logo(href="landing-page.html")
+      img.logo__image(src=require("../../img/logo.svg") alt="Logo Toxin")

@@ -1,0 +1,33 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+.text-field__title {
+  @include H3();
+  margin: 0 0 5px 0;
+}
+
+.text-field__input {
+  @include Body-font();
+  width: 100%;
+  height: 44px;
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid $Dark-Shade-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $Dark-Shade-50;
+    }
+
+    &::placeholder {
+      color: $Dark-Shade-25;
+    }
+
+    &:disabled {
+      color: $Dark-Shade-5;
+      border: 1px solid $Dark-Shade-5;
+      cursor: default;
+    }
+}

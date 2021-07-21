@@ -1,0 +1,23 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+.type-description {
+  font-family: Montserrat, Arial, sans-serif;
+
+  &__text{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    display: inline-block;
+    min-width: 45px;
+    margin-right: 30px;
+    color: $Dark-Shade-25;
+    font-weight: normal;
+    text-align: right;
+    box-sizing: border-box;
+  }
+}

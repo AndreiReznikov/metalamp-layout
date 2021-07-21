@@ -1,0 +1,15 @@
+.social-icons {
+  &__link{
+    display: inline-block;
+    padding-left: 22px;
+    text-decoration: none;
+  }
+
+  &__link:first-child {
+    padding-left: 0;
+  }
+  
+  &__image:first-child {
+    padding: 0;
+  }
+}

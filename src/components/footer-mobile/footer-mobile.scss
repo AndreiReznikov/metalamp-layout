@@ -1,0 +1,35 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+@import '../logo/logo';
+@import '../social-icons/social-icons';
+
+.footer-mobile {
+  display: none;
+  background-color: #fff;
+  max-width: 768px;
+  min-height: 367px;
+
+  &_visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    @include Body-font();
+    margin: 22px 15px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,55 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+.radio-buttons {
+  display: flex;
+
+  &__label {
+    @include Body-font();
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 0 20px 0 0;
+  }
+  
+  &__input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  &__custom-input {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid $Purple;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  &__custom-input:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  &__input:checked + &__custom-input:after {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 10px;
+  }
+}

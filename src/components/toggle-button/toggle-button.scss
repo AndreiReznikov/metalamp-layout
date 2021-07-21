@@ -1,0 +1,65 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+$toggle-width: 38px;
+$circle-width: 12px;
+$circle-margin: 3px;
+
+.toggle-button {
+  
+  @include Body-font();
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 24px;
+
+  &__text {
+    padding-left: 50px;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  &__custom-input {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: $toggle-width;
+    height: 18px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid $Dark-Shade-25;
+    border-radius: 10px;
+    box-sizing: content-box;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  &__custom-input:after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin: 0 $circle-margin;
+    background: $Dark-Shade-25;
+    border-radius: 10px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  &__input:checked + &__custom-input {
+    border: 1px solid $Purple;
+  }
+  
+  &__input:checked + &__custom-input:after {
+    background: $Purple;
+    -webkit-transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
+    -ms-transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
+    transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
+  }
+}

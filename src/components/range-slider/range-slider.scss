@@ -1,0 +1,61 @@
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+.range-slider__title {
+  @include H3();
+  position: absolute;
+}
+
+.irs {
+  position: absolute;
+  width: 266px;
+}
+
+.irs-min, .irs-max, .irs-from, .irs-to {
+  display: none;
+}
+
+.range-slider-values {
+  @include H3();
+  position: absolute;
+  right: 0;
+  font-weight: normal;
+  color: $Dark-Shade-50;
+}
+
+.irs--flat .irs-line {
+  margin-top: 13px;
+  width: 266px;
+  height: 6px;
+  background: #fff;
+  border: 1px solid $Dark-Shade-25;
+  box-sizing: border-box;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.irs--flat .irs-bar {
+  margin-top: 13px;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.irs--flat .irs-handle {
+  margin-top: 11px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  display: none;
+}

@@ -1,0 +1,16 @@
+mixin masked-text-field(options)
+  -
+    if (!options)
+      options = {}
+
+  .masked-text-field(style=options.style )
+    if options.title
+      h3.masked-text-field__title!=options.title
+    input(
+      class="masked-text-field__input js-masked-text-field__input"
+      type=options.type 
+      placeholder=options.placeholder
+      value=options.value
+      autofocus=options.isFocused 
+      disabled=options.idDisabled
+      )
