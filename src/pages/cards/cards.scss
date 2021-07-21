@@ -1,0 +1,64 @@
+@import '../../components/logo/logo';
+@import '../../components/room-search-card/room-search-card';
+@import '../../components/registration-card/registration-card';
+@import '../../components/reserve-room-card/reserve-room-card';
+@import '../../components/entry-card/entry-card';
+@import '../../components/room-card/room-card';
+@import '../../components/filter-date-dropdown/filter-date-dropdown';
+
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #E5E5E5;
+  min-height: 1350px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.cards-logo-container {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.cards-left-block {
+  max-width: 380px;
+  margin-left: 140px;
+  margin-top: 68px;
+}
+
+.cards-registration-block-container {
+  margin-top: 40px;
+}
+
+.cards-central-block {
+  width: 380px;
+  margin-left: 40px;
+  margin-top: 69px;
+}
+
+.cards-entry-block-container {
+  margin-top: 39px;
+}
+
+.cards-right-block {
+  width: 320px;
+  margin-left: 40px;
+  margin-top: 7px;
+}
+
+.cards-room-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin-top: 421px;
+  height: 554px;
+}

@@ -1,0 +1,216 @@
+@import '../../components/logo/logo';
+@import '../../components/element-description/element-description';
+@import '../../components/text-field/text-field';
+@import '../../components/masked-text-field/masked-text-field';
+@import '../../components/dropdown/dropdown';
+@import '../../components/date-dropdown/date-dropdown';
+@import '../../components/filter-date-dropdown/filter-date-dropdown';
+@import '../../components/subscription-text-field/subscription-text-field';
+@import '../../components/checkbox-button/checkbox-button';
+@import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+@import '../../components/radio-buttons/radio-buttons';
+@import '../../components/toggle-button/toggle-button';
+@import '../../components/like-button/like-button';
+@import '../../components/rate-button/rate-button';
+@import '../../components/button/button';
+@import '../../components/bullet-list/bullet-list';
+@import '../../components/advantage-item/advantage-item';
+@import '../../components/comment-block/comment-block';
+@import '../../components/range-slider/range-slider';
+@import '../../components/pagination/pagination';
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.logo-container {
+  margin-top: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 61px auto 131px auto;
+}
+
+.form-elements-left-block {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.form-elements-first-text-field {
+  width: 100%;
+}
+
+.form-elements-second-text-field {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-elements-dropdown-first-container {
+  margin-top: 20px;
+}
+
+.form-elements-masked-text-field-container {
+  width: 100%;
+  margin-top: 23px;
+}
+
+.form-elements-date-dropdown-container {
+  margin-top: 40px;
+}
+
+.form-elements-filter-date-dropdown-container {
+  width: 266px;
+  margin-top: 41px;
+}
+
+.form-elements-subscription-text-field-container {
+  margin-top: 41px;
+}
+
+.form-elements-dropdown-second-container {
+  margin-top: 100px;
+}
+
+.form-elements-dropdown-third-container {
+  margin-top: 20px;
+}
+
+.form-elements-expandable-checkbox-list-container {
+  margin-top: 172px;
+}
+
+.form-elements-opened-expandable-checkbox-list-container {
+  margin-top: 31px;
+}
+
+.form-elements-central-block {
+  margin-left: 127px;
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.form-elements-radio-buttons-container {
+  margin-top: 42px;
+}
+
+.form-elements-toggle-buttons-container {
+  margin-top: 40px;
+}
+
+.form-elements-toggle-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-elements-like-button-container {
+  margin-top: 34px;
+}
+
+.form-elements-like-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  margin-top: 14px;
+}
+
+.form-elements-rate-buttons-container {
+  margin-top: 40px;
+}
+
+.form-elemetns-rate-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 256px;
+  margin: 18px 0 0 2px;
+}
+
+.form-elements-dropdown-fourth-container {
+  margin-top: 197px;
+}
+
+.form-elements-rich-checkbox-buttons-container {
+  margin-top: 256px;
+}
+
+.form-elements-right-block {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 72px;
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.form-elements-buttons-container {
+  margin-top: 88px;
+}
+
+.form-elements-filled-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1px;
+  margin-top: 16px;
+  width: 217px;
+}
+
+.form-elements-empty-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 217px;
+}
+
+.form-elements-long-button-container {
+  margin-top: 30px;
+}
+
+.form-elements-hidden-border-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1px;
+  margin-top: 31px;
+  width: 142px;
+}
+
+.form-elements-pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  max-width: 76%;
+}
+
+.form-elements-dropdown-fifth-container {
+  margin-top: 264px;
+}
+
+.form-elements-bullet-list-container {
+  max-width: 260px;
+  margin-top: 257px;
+}
+
+.form-elements-bottom-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 93px;
+}
+
+.form-elements-advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 280px;
+  height: 153px;
+}
+
+.form-elements-comment-block-container {
+  margin: 7px 0 0 166px;
+}

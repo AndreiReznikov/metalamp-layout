@@ -1,0 +1,70 @@
+include ../../components/logo/logo
+include ../../components/room-search-card/room-search-card
+include ../../components/registration-card/registration-card
+include ../../components/reserve-room-card/reserve-room-card
+include ../../components/entry-card/entry-card
+include ../../components/room-card/room-card
+include ../../components/filter-date-dropdown/filter-date-dropdown
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="Cards, components, MetaLamp, education")
+    meta(name="description" content="Компоненты карточек для сайта Toxin")
+    title Cards
+  body 
+    .container
+      .cards-logo-container
+        +logo()
+
+      .cards-left-block
+        +room-search-card()
+
+        .cards-registration-block-container
+          +registration-card({buttonText: 'Перейти к оплате'})
+
+      .cards-central-block
+        +reserve-room-card({
+          dateFrom: 'new Date(2019, 7, 19)',
+          dateTo: 'new Date(2019, 7, 23)',
+          dropdownButtonsNum: [0, 1],
+          dropdownClicksNum: [2, 1]
+        })
+        
+        .cards-entry-block-container
+          +entry-card()
+
+      .cards-right-block
+        .cards-date-dropdown-container
+          +filter-date-dropdown({
+            style: {'opacity': 0, 'width': '320px'},
+            isOpened: true,
+            dateFrom: 'new Date(2019, 7, 19)',
+            dateTo: 'new Date(2019, 7, 23)',
+          })
+
+        .cards-room-cards-container 
+          +room-card({
+            photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'], 
+            number: '888', 
+            price: '9 990', 
+            starsNumber: 5, 
+            checkedButton: 5, 
+            reviewsNumber: 145, 
+            isLux: true, 
+            isSlickArrays: true
+            })
+          +room-card({
+            photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'], 
+            number: '840', 
+            price: '9 990', 
+            starsNumber: 5, 
+            checkedButton: 4, 
+            reviewsNumber: 65
+            })
+
+
+
+

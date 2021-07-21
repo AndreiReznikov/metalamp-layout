@@ -1,0 +1,23 @@
+include ../../components/header/header
+include ../../components/room-search-card/room-search-card
+include ../../components/footer/footer
+include ../../components/footer-mobile/footer-mobile
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="Landing page, components, MetaLamp, education")
+    meta(name="description" content="Отель Toxin, подобрать номер")
+    title Landing page
+  body 
+    .landing-page-container
+      +header()
+    main.landing-page-background-container 
+      .landing-page-background-wrapper
+        article.landing-page-room-search-card-container
+          +room-search-card()
+      p.landing-page-background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer()
+    +footer-mobile()

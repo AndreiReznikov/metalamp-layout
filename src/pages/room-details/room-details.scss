@@ -1,0 +1,290 @@
+@import '../../components/header/header';
+@import '../../components/advantage-item/advantage-item';
+@import '../../components/reserve-room-card/reserve-room-card';
+@import '../../components/comment-block/comment-block';
+@import '../../components/bullet-list/bullet-list';
+@import '../../components/footer/footer';
+@import '../../components/footer-mobile/footer-mobile';
+
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.room-details-background-container {
+  width: 100%;
+}
+
+.room-details-background-photo {
+  position: relative;
+  height: 625px;
+
+  @media screen and (max-width: 1440px) {
+    height: 485px;
+  }
+
+  @media screen and (max-width: 680px) {
+    height: 380px;
+  }
+  
+  &__image {
+    margin-left: 68.2%;
+    width: 31.8%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+    transition: 0.5s;
+
+    @media screen and (max-width: 680px) {
+      margin: 280px 0 0 0;
+      width: 50%;
+      height: 100px;
+    }
+  }
+
+  &__image_reversed {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + img {
+    position: absolute;
+    width: 68.2%;
+    height: 100%;
+    margin-left: 0;
+    left: 0;
+    top: 0;
+    transition: all 0.5 ease;
+
+    @media screen and (max-width: 680px) {
+      margin-top: 0;
+      width: 100%;
+      height: 280px;
+    }
+  }
+}
+
+.room-details-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 70px 140px 62px 140px;
+  border-bottom: 1px solid $Dark-Shade-5;
+
+  @media screen and (max-width: 1439px) {
+    padding: 70px 35px 62px 35px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 70px 15px 62px 15px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 70px 5px 62px 5px;
+  }
+}
+
+.room-details-main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 5;
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 100%;
+  }
+}
+
+.room-details-advantages-container {
+  flex-basis: 43.6%;
+  @media screen and (max-width: 1080px) {
+    flex-basis: 100%;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (max-width: 680px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+}
+
+.room-details-advantages-wrapper {
+  max-width: 320px;
+}
+
+.room-details-advantage-wrapper {
+  margin-top: 25px;
+}
+
+.room-details-comments-container {
+  margin-top: 10px;
+}
+
+.room-details-comment-wrapper {
+  margin-bottom: 23px;
+}
+
+.room-details-comments-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 15px 23px 0;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+  }
+}
+
+.room-details-comments-title-wrapper .room-details-block-title {
+  margin-bottom: 0;
+  text-align: start;
+  flex-basis: 80%;
+}
+
+.room-details-block-title {
+  @include H2;
+
+  @media screen and (max-width: 680px) {
+    margin-bottom: 30px;
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+.room-details-commenst-number-text {
+  @include Body-font();
+  line-height: 20px;
+  color: $Dark-Shade-50;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
+  }
+}
+
+.room-details-bullet-list-container {
+  margin-top: 10px;
+  padding-right: 20px;
+  flex-basis: 46.5%;
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+}
+
+.room-details-bullet-list-wrapper {
+  max-width: 260px;
+}
+
+.room-details-cancel-information-container {
+  margin-top: 10px;
+  flex-basis: 53.5%;
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+}
+
+.room-details-cancel-information-text {
+  @include Body-font();
+  max-width: 340px;
+  line-height: 24px;
+}
+
+.room-details-doughnut-container {
+  position: relative;
+  height: 180px;
+
+  @media screen and (max-width: 680px) {
+    flex-basis: 100%;
+  }
+}
+
+.room-details-doughnut-container .room-details-block-title {
+  margin-left: 22px;
+
+  @media screen and (max-width: 1080px) {
+    margin-left: 0;
+  }
+}
+
+.room-details-doughnut-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  @media screen and (max-width: 680px) {
+    margin-top: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.room-details-chart-text-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 162px;
+
+  @media screen and (max-width: 400px) {
+    width: 110px;
+    margin-left: 0;
+  }
+}
+
+.room-details-chart-text {
+  @include H3();
+  max-width: 65px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $Purple;
+
+  &__number {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.room-details-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  @media screen and (max-width: 900px) {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+}

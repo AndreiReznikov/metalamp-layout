@@ -1,0 +1,63 @@
+@import '../../components/header/header';
+@import '../../components/room-search-card/room-search-card';
+@import '../../components/footer/footer';
+@import '../../components/footer-mobile/footer-mobile';
+
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.landing-page-background-container {
+  position: relative;
+  width: 100%;
+  background-image: url('../../img/landing-background.jpg');
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.landing-page-background-wrapper {
+  padding: 0 140px;
+  max-width: 1440px;
+  min-height: 830px;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
+    padding: 0 15px;
+  }
+}
+
+.landing-page-room-search-card-container {
+  padding-top: 70px;
+}
+
+.landing-page-background-description {
+  @include Body-font();
+  position: absolute;
+  max-width: 300px;
+  bottom: 21px;
+  right: 135px;
+  line-height: 24px;
+  text-align: right;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    right: auto;
+    padding: 25px;
+  }
+}

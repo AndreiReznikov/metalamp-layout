@@ -1,0 +1,46 @@
+@import '../../components/logo/logo';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/footer-mobile/footer-mobile';
+
+@import '../../templates/colors.scss';
+@import '../../templates/fonts.scss';
+
+html {
+  background-color: $Dark-Shade-5;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.headers-and-footers-logo-container {
+  margin: 30px 0 0 30px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.headers-and-footers-header-container {
+  margin-top: 58px;
+}
+
+.headers-and-footers-header-width-logged-in-user-container {
+  margin-top: 40px;
+}
+
+.headers-and-footers-footer-container {
+  margin-top: 40px;
+}
+
+.headers-and-footers-footer-mobile-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 140px 0;
+}
+
+
+
+
