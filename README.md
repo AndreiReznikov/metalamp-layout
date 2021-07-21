@@ -2,7 +2,7 @@
 
 To install the project, use the __"npm install"__ command in the project folder. 
 
-The item-quantity-dropdown plugin is connected locally. It is located on the path __"root-folder/src/components/dropdown/item-quantity-dropdown"__.
+The item-quantity-dropdown plugin is connected locally. It is located on the path __"root/src/components/dropdown/item-quantity-dropdown"__.
 
 # Link: https://andreireznikov.github.io/metalamp-layout/dist/
 
