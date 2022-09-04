@@ -7,13 +7,19 @@ const PATHS = {
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const PugPlugin = require('pug-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 __webpack_base_uri__ = 'http://localhost:8080';
 
+const { NODE_ENV } = process.env;
+const IS_DEV = NODE_ENV === 'development';
+const IS_PROD = NODE_ENV === 'production';
+
 module.exports = {
+  mode: NODE_ENV || 'development',
   entry: {
     'index': `${PATHS.src}/pages/index/index`,
     'headers-and-footers': `${PATHS.src}/pages/headers-and-footers/headers-and-footers`,
@@ -58,7 +64,7 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loader: PugPlugin.loader
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
