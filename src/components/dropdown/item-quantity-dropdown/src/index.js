@@ -20,7 +20,7 @@
     onChange: () => {},
     beforeDecrement: () => true,
     beforeIncrement: () => true,
-    setSelectionText (itemCount, totalItems) {
+    setSelectionText(itemCount, totalItems) {
       const usePlural = totalItems !== 1 && this.textPlural.length > 0;
       const text = usePlural ? this.textPlural : this.selectionText;
       return `${totalItems} ${text}`;
@@ -41,11 +41,11 @@
       const itemCount = {};
       let totalItems = 0;
 
-      function updateDisplay () {
+      function updateDisplay() {
         $selection.html(settings.setSelectionText(itemCount, totalItems));
       }
 
-      function setItemSettings (id, $item) {
+      function setItemSettings(id, $item) {
         const minCount = Number($item.data('mincount'));
         const maxCount = Number($item.data('maxcount'));
 
@@ -55,7 +55,7 @@
         };
       }
 
-      function addControls (id, $item) {
+      function addControls(id, $item) {
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
         const $decrementButton = $(`
           <button class="button-decrement js-button-decrement" disabled>
@@ -81,13 +81,15 @@
           $item.prepend($controls);
         }
 
-        $menu.click(event => {
+        $menu.click((event) => {
           event.stopPropagation();
           event.preventDefault();
         });
 
         $decrementButton.click((event) => {
-          const { items, minItems, beforeDecrement, onChange } = settings;
+          const {
+            items, minItems, beforeDecrement, onChange,
+          } = settings;
           const allowClick = beforeDecrement(id, itemCount);
 
           if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
@@ -96,9 +98,9 @@
             $counter.html(itemCount[id]);
 
             if (itemCount[id] == 0) {
-              $decrementButton.prop('disabled', true); 
+              $decrementButton.prop('disabled', true);
             }
-            
+
             if (totalItems == 0) {
               $clearButton.removeClass('iqdropdown--button-clear_visible');
             }
@@ -111,7 +113,9 @@
         });
 
         $incrementButton.click((event) => {
-          const { items, maxItems, beforeIncrement, onChange } = settings;
+          const {
+            items, maxItems, beforeIncrement, onChange,
+          } = settings;
           const allowClick = beforeIncrement(id, itemCount);
 
           if (allowClick && totalItems < maxItems && itemCount[id] < items[id].maxCount) {
@@ -129,10 +133,10 @@
           event.preventDefault();
         });
 
-        $buttonsContainer.click(event => event.stopPropagation());
+        $buttonsContainer.click((event) => event.stopPropagation());
 
-        $clearButton.click(event => {
-          const {onChange} = settings;
+        $clearButton.click((event) => {
+          const { onChange } = settings;
 
           itemCount[id] = 0;
           totalItems = 0;
@@ -148,11 +152,11 @@
           event.stopPropagation();
         });
 
-        $applyButton.click(event => {
+        $applyButton.click((event) => {
           if (totalItems > 0) $this.removeClass('menu-open');
         });
 
-        $item.click(event => event.stopPropagation());
+        $item.click((event) => event.stopPropagation());
 
         return $item;
       }

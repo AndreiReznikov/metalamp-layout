@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "webpack --mode production",
     "dev": "webpack --mode development",
-    "server": "webpack serve --open"
+    "server": "webpack serve --open",
+    "lint": "eslint ."
   },
   "author": "Andrei Reznikov",
   "license": "ISC",
@@ -19,6 +20,9 @@
     "clean-webpack-plugin": "*",
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.7",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-pug": "^1.2.4",
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",

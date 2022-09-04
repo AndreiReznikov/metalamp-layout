@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(() => {
   const $menuExpandableItemsCollection = $('.js-header__list-item_expandable');
 
-  $menuExpandableItemsCollection.each(function() {
+  $menuExpandableItemsCollection.each(function () {
     const $menuExpandableItem = $(this);
     const $expandableList = $menuExpandableItem.find('.js-header__expanded-menu');
     const menuExpandableLink = $menuExpandableItem.find('.js-header__list-link');
@@ -10,16 +10,16 @@ $(document).ready(function() {
     const showExpandableList = () => $expandableList.toggle();
     const transformArrow = () => arrow.toggleClass('header__list-arrow_transformed');
 
-    menuExpandableLink.click(event => {
+    menuExpandableLink.click((event) => {
       transformArrow();
       showExpandableList();
       event.preventDefault();
-    })
+    });
   });
 
   const $headersCollection = $('.js-header');
 
-  $headersCollection.each(function() {
+  $headersCollection.each(function () {
     const $header = $(this);
     const burgerContainer = $header.find('.js-header__burger-container');
     const burger = $header.find('.js-header__burger');
@@ -27,7 +27,7 @@ $(document).ready(function() {
     const mobileMenu = $header.find('~ .js-mobile-menu');
     const $expandableItems = $(mobileMenu.find('.js-mobile-menu__list-link_expandable'));
 
-    $expandableItems.each(function() {
+    $expandableItems.each(function () {
       const $expandableItem = $(this);
       const expandableList = $expandableItem.find('~ .js-mobile-menu__expanded-list');
       const arrow = $expandableItem.find('.js-mobile-menu__list-arrow');
@@ -35,11 +35,11 @@ $(document).ready(function() {
       const transformArrow = () => arrow.toggleClass('mobile-menu__list-arrow_transformed');
       const showList = () => expandableList.slideToggle();
 
-      $expandableItem.click(event => {
+      $expandableItem.click((event) => {
         transformArrow();
         showList();
         event.preventDefault();
-      })
+      });
     });
 
     const showMobileMenu = () => mobileMenu.toggleClass('mobile-menu_visible');

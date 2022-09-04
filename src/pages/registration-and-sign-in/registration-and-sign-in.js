@@ -1,15 +1,15 @@
-import '../../components/header/header'
-import '../../components/registration-card/registration-card'
+import '../../components/header/header';
+import '../../components/registration-card/registration-card';
 
-import './registration-and-sign-in.scss'
+import './registration-and-sign-in.scss';
 
-$(document).ready(function() {
+$(document).ready(() => {
   const registrationCardHtml = $('.js-registration-block');
   const entryCardHtml = $('.js-entry-block');
 
-  const search = document.location.search;
+  const { search } = document.location;
 
-  if (search == '?page=entry') {
+  if (search === '?page=entry') {
     entryCardHtml.addClass('show-card');
     return;
   }
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   const $forms = $('form');
 
-  $forms.submit(function(event) {
+  $forms.submit((event) => {
     event.preventDefault();
   });
 });

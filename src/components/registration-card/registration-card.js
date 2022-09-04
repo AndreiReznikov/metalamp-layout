@@ -1,1 +1,1 @@
-import '../masked-text-field/masked-text-field'
+import '../masked-text-field/masked-text-field';
