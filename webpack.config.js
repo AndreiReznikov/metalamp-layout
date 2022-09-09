@@ -6,6 +6,8 @@ const PATHS = {
   dist: path.resolve(process.cwd(), 'dist'),
 };
 
+const PAGES = ['headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration-and-sign-in'];
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const PugPlugin = require('pug-plugin');
@@ -45,7 +47,7 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', {
+        use: [MiniCssExtractPlugin.loader, 'css-loader', {
           loader: 'postcss-loader',
           options: {
             postcssOptions: {
@@ -82,57 +84,20 @@ module.exports = {
         },
       ],
     }),
-    new MiniCssExtractPlugin({
-      filename: 'bundle.css',
-    }),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo.png',
     }),
+    ...PAGES.map((page) => new HTMLWebpackPlugin({
+      template: `${PATHS.src}/pages/${page}/${page}.pug`,
+      filename: `${page}.html`,
+      chunks: [`${page}`],
+    })),
     new HTMLWebpackPlugin({
       filename: 'index.html',
       template: './src/pages/index/index.pug',
       chunks: ['index'],
     }),
-    new HTMLWebpackPlugin({
-      filename: 'colors-and-type.html',
-      template: './src/pages/colors-and-type/colors-and-type.pug',
-      chunks: ['colors-and-type'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'headers-and-footers.html',
-      template: './src/pages/headers-and-footers/headers-and-footers.pug',
-      chunks: ['headers-and-footers'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'form-elements.html',
-      template: './src/pages/form-elements/form-elements.pug',
-      chunks: ['form-elements'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'cards.html',
-      template: './src/pages/cards/cards.pug',
-      chunks: ['cards'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'landing-page.html',
-      template: './src/pages/landing-page/landing-page.pug',
-      chunks: ['landing-page'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'search-room.html',
-      template: './src/pages/search-room/search-room.pug',
-      chunks: ['search-room'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'room-details.html',
-      template: './src/pages/room-details/room-details.pug',
-      chunks: ['room-details'],
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'registration-and-sign-in.html',
-      template: './src/pages/registration-and-sign-in/registration-and-sign-in.pug',
-      chunks: ['registration-and-sign-in'],
-    }),
+    new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
