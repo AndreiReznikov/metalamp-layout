@@ -20,11 +20,7 @@ html, body {
 
 .room-details-background-photo {
   position: relative;
-  height: 625px;
-
-  @media screen and (max-width: 1440px) {
-    height: 485px;
-  }
+  height: 485px;
 
   @media screen and (max-width: 680px) {
     height: 380px;
@@ -74,14 +70,10 @@ html, body {
 .room-details-main-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 70px 140px 62px 140px;
   border-bottom: 1px solid $Dark-Shade-5;
-
-  @media screen and (max-width: 1439px) {
-    padding: 70px 35px 62px 35px;
-  }
 
   @media screen and (max-width: 1024px) {
     padding: 70px 15px 62px 15px;
