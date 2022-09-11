@@ -22,7 +22,7 @@ html(lang="en")
     title Room details
   body
     +header()
-    section.room-details-background-container
+    div.room-details-background-container
       .room-details-background-photo
         label.room-details-background-photo__label
           input(class="room-details-background-photo__input" type="radio" name="room" checked)
@@ -38,7 +38,7 @@ html(lang="en")
       .room-details-main-wrapper 
         .room-details-advantages-container 
           +title({text: 'Сведения о номере'})
-          article.room-details-advantages-wrapper
+          div.room-details-advantages-wrapper
             .room-details-advantage-wrapper 
               +advantage-item({
                 title: 'Комфорт', 
@@ -59,7 +59,7 @@ html(lang="en")
                 border: 'none'
                 })
 
-        article.room-details-doughnut-container
+        div.room-details-doughnut-container
           +title({text: 'Впечатления от номера', style: {'margin-bottom': '16px'}})
           .room-details-doughnut-wrapper.js-room-details-doughnut-wrapper
             canvas.room-details-chart.js-room-details-chart(width="342" height="133")

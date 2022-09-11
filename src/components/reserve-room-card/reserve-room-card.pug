@@ -13,13 +13,13 @@ mixin reserve-room-card(options)
         .reserve-room-block__number-and-price-container   
           h1.reserve-room-block__number-symbol № 
             span.reserve-room-block__room-number 888
-            .reserve-room-block__lux-mark 
+            span.reserve-room-block__lux-mark 
               +button({
               hiddenBorderButton: true, 
               text: 'Люкс'
               })
           span.reserve-room-block__room-price 9 990
-            span.reserve-room-block__room-price__currency &#8381 
+            span.reserve-room-block__room-price__currency &#8381;
             span.reserve-room-block__time-interval в сутки
         .reserve-room-block__date-dropdown-container
           +date-dropdown({
@@ -40,24 +40,24 @@ mixin reserve-room-card(options)
         .reserve-room-block__price-block 
           .reserve-room-block__sum  
             .reserve-room-block__sum-description 
-              span.reserve-room-block__sum-text 9 990&#8381 x 4 суток
-            span.reserve-room-block__service-sum 39 960&#8381
+              span.reserve-room-block__sum-text 9 990&#8381; x 4 суток
+            span.reserve-room-block__service-sum 39 960&#8381;
           .reserve-room-block__sum  
             .reserve-room-block__sum-description 
-              span.reserve-room-block__sum-text Сбор за услуги: скидка 2 179&#8381
+              span.reserve-room-block__sum-text Сбор за услуги: скидка 2 179&#8381;
               .reserve-room-block__information-icon-container
                 .reserve-room-block__information-icon i
-            span.reserve-room-block__service-sum 0&#8381
+            span.reserve-room-block__service-sum 0&#8381;
           .reserve-room-block__sum  
             .reserve-room-block__sum-description 
               span.reserve-room-block__sum-text Сбор за дополнительные услуги
               .reserve-room-block__information-icon-container
                 .reserve-room-block__information-icon i
-            span.reserve-room-block__service-sum 300&#8381
+            span.reserve-room-block__service-sum 300&#8381;
         .reserve-room-block__total-sum-block  
           span.reserve-room-block__total-text Итого
           span.reserve-room-block__dotted-border 
-          span.reserve-room-block__total-sum 38 081&#8381
+          span.reserve-room-block__total-sum 38 081&#8381;
         .reserve-room-block__button-container
           +button({
             longButton: true, 

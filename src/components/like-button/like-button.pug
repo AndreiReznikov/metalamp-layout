@@ -5,7 +5,7 @@ mixin like-button(options)
  
   .like-button.js-like-button
     button(class=className)
-      .like-button__inner-conainer
+      span.like-button__inner-conainer
         if options.isLiked
           img(src=require("../../img/liked.svg") class="like-button__icon js-like-button__icon" alt="Liked")
         else  

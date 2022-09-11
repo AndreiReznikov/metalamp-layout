@@ -35,7 +35,7 @@ $rangeSlidersCollection.each(function () {
     const from = $input.data('from');
     const to = $input.data('to');
 
-    $valueFrom.html(`${from.toLocaleString()}&#8381`);
-    $valueTo.html(`${to.toLocaleString()}&#8381`);
+    $valueFrom.html(`${from.toLocaleString()}&#8381;`);
+    $valueTo.html(`${to.toLocaleString()}&#8381;`);
   });
 });

@@ -11,19 +11,19 @@ mixin dropdown(options)
   ) 
     if options.title
       h3.iqdropdown-title!=options.title
-    div(class=className style=`width: ${options.width}`)
+    div(class=className style=`width: ${options.width ? options.width : '320px'}`)
       p.iqdropdown-selection
-        .iqdropdown-menu 
-          - let i = 0;
-            while i < options.items.length 
-              - i++
-              .iqdropdown-menu-option(data-id=`${i}`)
-                .dropdown-item-container  
-                  p.iqdrodown-item 
-                    = options.items[i-1]
-            if options.addingButtons
-              .iqdropdown--buttons
-                button.iqdropdown--button.iqdropdown--button-clear.js-iqdropdown--button-clear(type="reset") Очистить
-                button.iqdropdown--button.iqdropdown--button-apply.js-iqdropdown--button-apply(type="submit") Применить
+      .iqdropdown-menu 
+        - let i = 0;
+          while i < options.items.length 
+            - i++
+            .iqdropdown-menu-option(data-id=`${i}`)
+              .dropdown-item-container  
+                p.iqdrodown-item 
+                  = options.items[i-1]
+          if options.addingButtons
+            .iqdropdown--buttons
+              button.iqdropdown--button.iqdropdown--button-clear.js-iqdropdown--button-clear(type="reset") Очистить
+              button.iqdropdown--button.iqdropdown--button-apply.js-iqdropdown--button-apply(type="submit") Применить
       img(src=require("../../img/expand-arrow.svg") class="iqdropdown-arrow" alt="Arrow")
     

@@ -1,8 +1,8 @@
 mixin rate-button(options)
   -
     let buttonNum = 0;
-  label.rate-button
-    .rate-button__stars-group 
+  div.rate-button
+    span.rate-button__stars-group 
       while buttonNum < options.starsNumber
         - buttonNum++
         if options.starsNumber - buttonNum + 1 === options.checkedButton

@@ -37,7 +37,7 @@ mixin button(options)
         style=options.style
         href=options.href
         )!=options.text
-      img(class="long-button__arrow" src=require("../../img/long_button_arrow.svg"))
+      img(class="long-button__arrow" src=require("../../img/long_button_arrow.svg") alt="arrow")
   else if options.filledButton
     a(
       class=className 
