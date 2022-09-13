@@ -11,7 +11,6 @@ const PAGES = ['headers-and-footers', 'colors-and-type', 'form-elements', 'cards
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const PugPlugin = require('pug-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const { NODE_ENV } = process.env;
@@ -65,25 +64,22 @@ module.exports = {
         loader: PugPlugin.loader,
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline',
+        test: /fonts.*\.(woff(2)?|eot|ttf|otf|svg|)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]',
+        },
       },
     ],
   },
   plugins: [
-    require('autoprefixer'),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/img'),
-          to: path.resolve(__dirname, 'dist/img'),
-        },
-      ],
-    }),
     new FaviconsWebpackPlugin({
       logo: './src/img/logo.png',
     }),

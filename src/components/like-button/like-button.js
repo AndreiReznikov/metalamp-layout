@@ -8,14 +8,14 @@ $likeButtonsCollection.each(function () {
   const $icon = $this.find('.js-like-button__icon');
   const $count = $this.find('.js-like-button__count');
 
-  const countValue = Number($count.text());
+  let countValue = Number($count.text());
 
   function toggleLike() {
     if ($button.hasClass('like-button__button_liked')) {
-      $count.text(countValue - 1);
+      $count.text(countValue -= 1);
       $icon.prop('src', unlikeImage);
     } else {
-      $count.text(countValue + 1);
+      $count.text(countValue += 1);
       $icon.prop('src', likeImage);
     }
     $button.toggleClass('like-button__button_liked');

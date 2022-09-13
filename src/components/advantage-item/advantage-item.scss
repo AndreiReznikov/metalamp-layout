@@ -1,11 +1,11 @@
-@import '../../templates/colors.scss';
-@import '../../templates/fonts.scss';
+@import '../../templates/vars-and-mixins.scss';
 
 .advantage-item {
   display: flex;
   width: 280px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  
   &__icon {
     min-width: 48px;
     margin-left: 5px;
@@ -19,7 +19,6 @@
     @include H2();
     margin: 0 0 5px 0;
     font-size: 14px;
-
   }
   
   &__description {

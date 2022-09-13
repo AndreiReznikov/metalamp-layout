@@ -1,4 +1,9 @@
 mixin color-description(options)
+  -
+    if (!options.style) options.style = '';
+    if (!options.title) options.title = '';
+    if (!options.hex) options.hex = '';
+    
   .color-description
     .color-description__square(style=options.style)
     .color-description__description-text

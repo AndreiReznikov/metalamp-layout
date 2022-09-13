@@ -1,7 +1,10 @@
 mixin date-dropdown(options)
   -
-    if (!options)
-      options = {}
+    if (!options) options = {}
+    if (!options.dateFrom) options.dateFrom = '';
+    if (!options.dateTo) options.dateTo = '';
+    if (!options.isFromEmpty) options.isFromEmpty = false;
+    if (!options.isToEmpty) options.isToEmpty = false;
 
   .date-dropdown-container.js-date-dropdown-container
     input(

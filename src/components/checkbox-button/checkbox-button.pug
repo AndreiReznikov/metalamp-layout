@@ -1,4 +1,10 @@
 mixin checkbox-button(options)
+  -
+    if (!options.title) options.title = '';
+    if (!options.isRich) options.isRich = false;
+    if (!options.richButtonTitle) options.richButtonTitle = '';
+    if (!options.checked) options.checked = false;
+
   .checkbox-button-container
     if options.title 
       h3.checkbox-button__title!=options.title

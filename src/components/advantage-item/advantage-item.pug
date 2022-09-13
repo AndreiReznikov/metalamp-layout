@@ -1,8 +1,11 @@
 mixin advantage-item(options)
   -
-    let image = options.image
+    if (!options.border) options.border = '1px solid rgba(31, 32, 65, 0.1)';
+    if (!options.image) options.image = '';
+    if (!options.title) options.title = '';
+    if (!options.description) options.description = '';
 
-  .advantage-item(style=`border-bottom: ${options.border ? options.border : '1px solid rgba(31, 32, 65, 0.1)'}`)
+  .advantage-item(style=`border-bottom: ${options.border}`)
     .advantage-item__icon
       img(src=require(`../../img/${options.image}`) alt="icon")
     .advantage-item__text

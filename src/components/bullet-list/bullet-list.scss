@@ -1,8 +1,7 @@
-@import '../../templates/colors.scss';
-@import '../../templates/fonts.scss';
+@import '../../templates/vars-and-mixins.scss';
 
 .bullet-list {
-
+  
   &__list  {
     margin: 0;
     padding: 0;

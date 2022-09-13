@@ -1,6 +1,14 @@
 include ../like-button/like-button
 
 mixin comment-block(options)
+  - 
+    if (!options.image) options.image = '';
+    if (!options.username) options.username = '';
+    if (!options.date) options.date = '';
+    if (!options.likeCount) options.likeCount = 0;
+    if (!options.isLiked) options.isLiked = false;
+    if (!options.text) options.text = '';
+    
   .comments-block
     .comments-block__user 
       img.comments-block__user-photo(

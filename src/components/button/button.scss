@@ -1,5 +1,4 @@
-@import '../../templates/colors.scss';
-@import '../../templates/fonts.scss';
+@import '../../templates/vars-and-mixins.scss';
 
 .filled-button {
   @include H3();
@@ -43,8 +42,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
     color: $Purple;
     background-color: #fff;
     border-radius: 22px;

@@ -1,4 +1,7 @@
 mixin bullet-list(options)
+  -
+    if (!options.bulletItems) options.bulletItems = []
+    
   .bullet-list
     ul.bullet-list__list 
       each val in options.bulletItems

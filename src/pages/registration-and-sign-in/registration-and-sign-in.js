@@ -2,6 +2,7 @@ import '../../components/header/header';
 import '../../components/registration-card/registration-card';
 
 import './registration-and-sign-in.scss';
+import '../../templates/fonts.scss';
 
 $(document).ready(() => {
   const registrationCardHtml = $('.js-registration-block');

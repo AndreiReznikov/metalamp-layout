@@ -11,6 +11,7 @@ import '../../components/range-slider/range-slider';
 import '../../components/expandable-checkbox-list/expandable-checkbox-list';
 
 import './search-room.scss';
+import '../../templates/fonts.scss';
 
 const $filterButton = $('.js-search-room-filter__button');
 const $filterItems = $('.js-search-room-widgets-container');

@@ -9,8 +9,7 @@
 @import '../../components/footer/footer';
 @import '../../components/footer-mobile/footer-mobile';
 
-@import '../../templates/colors.scss';
-@import '../../templates/fonts.scss';
+@import '../../templates/vars-and-mixins.scss';
 
 html, body {
   margin: 0;

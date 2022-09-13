@@ -1,15 +1,18 @@
 mixin button(options)
   -
-    if(!options.href)
-      options.href = '/mock-address/change-me';
+    if (!options.href) options.href = '/mock-address/change-me';
+    if (!options.style) options.style = '';
+    if (!options.text) options.text = '';
+    if (!options.type) options.type = 'button';
 
-    let className = ''
-    className += options.filledButton ? 'filled-button' : ''
-    className += options.emptyButton ? 'empty-button__button' : ''
-    className += options.hiddenBorderButton ? 'hidden-border-button' : ''
-    className += options.longButton ? 'long-button__button' : ''
-    className += options.longLinkButton ? 'long-link-button__button' : ''
-    className += options.isDisabled ? ' button_disabled' : ''
+
+    let className = '';
+    className += options.filledButton ? 'filled-button' : '';
+    className += options.emptyButton ? 'empty-button__button' : '';
+    className += options.hiddenBorderButton ? 'hidden-border-button' : '';
+    className += options.longButton ? 'long-button__button' : '';
+    className += options.longLinkButton ? 'long-link-button__button' : '';
+    className += options.isDisabled ? ' button_disabled' : '';
 
 
 

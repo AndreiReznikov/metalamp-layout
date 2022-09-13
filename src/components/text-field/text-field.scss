@@ -1,5 +1,4 @@
-@import '../../templates/colors.scss';
-@import '../../templates/fonts.scss';
+@import '../../templates/vars-and-mixins.scss';
 
 .text-field__title {
   @include H3();

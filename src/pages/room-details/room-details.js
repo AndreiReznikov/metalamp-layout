@@ -5,6 +5,7 @@ import '../../components/reserve-room-card/reserve-room-card';
 import '../../components/comment-block/comment-block';
 
 import './room-details.scss';
+import '../../templates/fonts.scss';
 
 const canvasContainer = document.querySelector('.js-room-details-doughnut-wrapper');
 

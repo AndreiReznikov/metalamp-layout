@@ -8,3 +8,4 @@ import '../../components/range-slider/range-slider';
 import '../../components/pagination/pagination';
 
 import './form-elements.scss';
+import '../../templates/fonts.scss';
