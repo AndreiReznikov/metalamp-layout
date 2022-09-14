@@ -1,4 +1,4 @@
-mixin dropdown(options)
+mixin dropdown(options = {})
   -
     let className = "iqdropdown"
     className += options.isOpened ? " menu-open" : ""
@@ -16,7 +16,7 @@ mixin dropdown(options)
       .iqdropdown-menu 
         - let i = 0;
           while i < options.items.length 
-            - i++
+            - i += 1
             .iqdropdown-menu-option(data-id=`${i}`)
               .dropdown-item-container  
                 p.iqdrodown-item 

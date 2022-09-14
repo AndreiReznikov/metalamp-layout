@@ -4,10 +4,7 @@ include ../masked-text-field/masked-text-field
 include ../toggle-button/toggle-button
 include ../button/button
 
-mixin registration-card(options)
-  -
-    if (!options)
-      options = {};
+mixin registration-card(options = {})
   .registration-block.js-registration-block
     h1.registration-block__title Регистрация аккаунта
     .registration-block__wrapper 

@@ -1,4 +1,4 @@
-mixin toggle-button(options)
+mixin toggle-button(options = {})
   label.toggle-button
     span.toggle-button__text!=options.text
     input.toggle-button__input(type="checkbox" checked!=options.checked)

@@ -1,8 +1,5 @@
-mixin filter-date-dropdown(options)
+mixin filter-date-dropdown(options = {})
   -
-    if (!options)
-      options = {};
-
     let className = 'filter-date-dropdown__input js-filter-date-dropdown__input'
 
     className += options.isOpened ? ' js-filter-date-dropdown__input_opened' : ''

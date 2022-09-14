@@ -1,8 +1,4 @@
-mixin text-field(options)
-  -
-    if (!options)
-      options = {}
-
+mixin text-field(options = {})
   .text-field(style=options.style)
     if options.title
       h3.text-field__title!=options.title

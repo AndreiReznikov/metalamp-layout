@@ -1,11 +1,8 @@
 include ../logo/logo
 include ../social-icons/social-icons
 
-mixin footer-mobile(options)
+mixin footer-mobile(options = {})
   -
-    if (!options)
-      options = {};
-
     let className = 'footer-mobile'
     className += options.isVisible ? ' footer-mobile_visible' : ''
 

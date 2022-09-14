@@ -99,6 +99,8 @@ $('.js-iqdropdown-conveniences').iqDropdown({
     if (sixthConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}, ${bathroomsNumber} ${bathrooms}...`;
     if (seventhConveniencesStringCondition) return `${bedsNumber} ${beds}, ${bathroomsNumber} ${bathrooms}...`;
     if (eighthConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}, ${bedsNumber} ${beds}, ${bathroomsNumber} ван...`;
+
+    return '';
   },
 });
 
@@ -113,10 +115,10 @@ function clickDropdownButtons() {
     const clicksNums = eval($dropdown.data('clicks'));
 
     if (buttonsNums && clicksNums) {
-      for (let i = 0; i < buttonsNums.length; i++) {
+      for (let i = 0; i < buttonsNums.length; i += 1) {
         const $incrementButton = $(incrementButtons[buttonsNums[i]]);
 
-        for (let j = 0; j < clicksNums[i]; j++) {
+        for (let j = 0; j < clicksNums[i]; j += 1) {
           $incrementButton.trigger('click');
         }
       }

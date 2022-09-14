@@ -1,11 +1,8 @@
 include ../logo/logo
 include ../button/button
 
-mixin header(options)
+mixin header(options = {})
   -
-    if (!options)
-      options = {};
-
     let boldItemClass = 'header__list-bold-item'
 
     boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal'

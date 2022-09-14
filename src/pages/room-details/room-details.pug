@@ -6,10 +6,7 @@ include ../../components/bullet-list/bullet-list
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
 
-mixin title(options)
-  -
-    if (!options)
-      options = {};
+mixin title(options = {})
   h2.room-details-block-title(style=options.style)!=options.text
 
 doctype html

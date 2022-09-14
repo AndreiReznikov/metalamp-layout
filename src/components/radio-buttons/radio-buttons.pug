@@ -1,4 +1,4 @@
-mixin radio-buttons(options)
+mixin radio-buttons(options = {})
   .radio-buttons
     label.radio-buttons__label(for="first-name")=options.radio_names[0]
       input.radio-buttons__input(id="first-name" type="radio" name="name" checked)
