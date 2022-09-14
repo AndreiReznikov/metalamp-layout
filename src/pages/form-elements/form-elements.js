@@ -6,6 +6,5 @@ import '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../components/like-button/like-button';
 import '../../components/range-slider/range-slider';
 import '../../components/pagination/pagination';
-
-import './form-elements.scss';
 import '../../templates/fonts.scss';
+import './form-elements.scss';

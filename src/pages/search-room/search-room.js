@@ -9,9 +9,8 @@ import '../../components/dropdown/dropdown';
 import '../../components/filter-date-dropdown/filter-date-dropdown';
 import '../../components/range-slider/range-slider';
 import '../../components/expandable-checkbox-list/expandable-checkbox-list';
-
-import './search-room.scss';
 import '../../templates/fonts.scss';
+import './search-room.scss';
 
 const $filterButton = $('.js-search-room-filter__button');
 const $filterItems = $('.js-search-room-widgets-container');
@@ -66,7 +65,7 @@ const initializeSlick = () => {
     });
   });
 
-  $('.js-data-container .js-room-short-information-block__slider_width-arrays').each(function () {
+  $('.js-data-container .js-room-short-information-block__slider_width_arrows').each(function () {
     const $item = $(this);
 
     $item.slick({

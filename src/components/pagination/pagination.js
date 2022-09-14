@@ -12,7 +12,7 @@ function simpleTemplating(data) {
 
 const paginationArray = [];
 
-for (let i = 0; i < 180; i++) {
+for (let i = 0; i < 180; i += 1) {
   paginationArray.push(i);
 }
 

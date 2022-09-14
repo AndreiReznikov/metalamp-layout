@@ -12,7 +12,7 @@ $(document).ready(() => {
     });
   });
 
-  $('.js-room-short-information-block__slider_width-arrays').each(function () {
+  $('.js-room-short-information-block__slider_width_arrows').each(function () {
     const $item = $(this);
 
     $item.slick({

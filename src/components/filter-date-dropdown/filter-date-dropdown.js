@@ -1,6 +1,5 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
-import './filter-date-dropdown.scss';
 
 const $filterDropdownsCollection = $('.js-filter-date-dropdown');
 

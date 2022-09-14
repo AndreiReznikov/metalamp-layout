@@ -1,2 +1,2 @@
-import './index.scss';
 import '../../templates/fonts.scss';
+import './index.scss';

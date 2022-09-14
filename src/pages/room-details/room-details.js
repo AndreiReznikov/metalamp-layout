@@ -3,9 +3,8 @@ import Chart from 'chart.js/auto';
 import '../../components/header/header';
 import '../../components/reserve-room-card/reserve-room-card';
 import '../../components/comment-block/comment-block';
-
-import './room-details.scss';
 import '../../templates/fonts.scss';
+import './room-details.scss';
 
 const canvasContainer = document.querySelector('.js-room-details-doughnut-wrapper');
 
