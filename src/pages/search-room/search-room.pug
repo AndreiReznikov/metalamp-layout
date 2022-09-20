@@ -18,115 +18,116 @@ html(lang="en")
     meta(name="description" content="Отель Toxin, подобрать номер")
     title Search room
   body 
-    +header()
-    .search-room-filter
-      button.search-room-filter__button.js-search-room-filter__button
-        span.search-room-filter__wrapper
-          img(
-          class="search-room-filter__icon" 
-          src=require("../../img/filter.svg") 
-          alt="Filter"
-          )
-          span.search-room-filter__text Фильтры   
-    main.search-room-container  
-      .search-room-widgets-container.js-search-room-widgets-container
-        form.search-room-widgets-form
-          section.search-room-widgets-wrapper
-            .search-room-filter-date-dropdown-container
-              +filter-date-dropdown({
-                title: 'Даты пребывания в отеле',
-                dateFrom: 'new Date(2020, 7, 19)',
-                dateTo: 'new Date(2020, 7, 23)',
-                style: {'width': '266px'}
-                })
-            .search-room-guests-dropdown-container
-              +dropdown({
-                title: 'Гости',
-                items: ['Взрослые', 'Дети', 'Младенцы'], 
-                addingButtons: true, 
-                isGuests: true, 
-                width: '266px',
-                buttonsNum: [0, 2],
-                clicksNum: [3, 1]
-                })
-            .search-room-range-slider-container
-              +range-slider({title: 'Диапазон цены'})
-              p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
-            .search-room-checkbox-buttons-container
-              .search-room-checkbox-buttons-wrapper
-                +checkbox-button({
-                    text: 'Можно курить', 
-                    title: 'Правила дома'
+    .search-room-wrapper
+      +header()
+      .search-room-filter
+        button.search-room-filter__button.js-search-room-filter__button
+          span.search-room-filter__wrapper
+            img(
+            class="search-room-filter__icon" 
+            src=require("../../img/filter.svg") 
+            alt="Filter"
+            )
+            span.search-room-filter__text Фильтры   
+      main.search-room-container  
+        .search-room-widgets-container.js-search-room-widgets-container
+          form.search-room-widgets-form
+            section.search-room-widgets-wrapper
+              .search-room-filter-date-dropdown-container
+                +filter-date-dropdown({
+                  title: 'Даты пребывания в отеле',
+                  dateFrom: 'new Date(2020, 7, 19)',
+                  dateTo: 'new Date(2020, 7, 23)',
+                  style: {'width': '266px'}
+                  })
+              .search-room-guests-dropdown-container
+                +dropdown({
+                  title: 'Гости',
+                  items: ['Взрослые', 'Дети', 'Младенцы'], 
+                  addingButtons: true, 
+                  isGuests: true, 
+                  width: '266px',
+                  buttonsNum: [0, 2],
+                  clicksNum: [3, 1]
+                  })
+              .search-room-range-slider-container
+                +range-slider({title: 'Диапазон цены'})
+                p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
+              .search-room-checkbox-buttons-container
+                .search-room-checkbox-buttons-wrapper
+                  +checkbox-button({
+                      text: 'Можно курить', 
+                      title: 'Правила дома'
+                      })
+                  +checkbox-button({
+                    text: 'Можно с питомцами', 
+                    checked: true
                     })
-                +checkbox-button({
-                  text: 'Можно с питомцами', 
-                  checked: true
-                  })
-                +checkbox-button({
-                  text: 'Можно пригласить гостей (до 10 человек)', 
-                  checked: true
-                  })
-            .search-room-rich-checkbox-buttons-container
-              .search-room-rich-checkbox-buttons-wrapper
-                +checkbox-button({
-                    title: 'Доступность', 
-                    richButtonTitle: 'Широкий коридор', 
-                    text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`, 
+                  +checkbox-button({
+                    text: 'Можно пригласить гостей (до 10 человек)', 
+                    checked: true
+                    })
+              .search-room-rich-checkbox-buttons-container
+                .search-room-rich-checkbox-buttons-wrapper
+                  +checkbox-button({
+                      title: 'Доступность', 
+                      richButtonTitle: 'Широкий коридор', 
+                      text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`, 
+                      isRich: true
+                      })
+                  +checkbox-button({
+                    richButtonTitle: 'Помощник для инвалидов', 
+                    text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`, 
                     isRich: true
                     })
-                +checkbox-button({
-                  richButtonTitle: 'Помощник для инвалидов', 
-                  text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`, 
-                  isRich: true
+              .search-room-conveniences-dropdown-container   
+                +dropdown({
+                  title: 'Удобства номера',
+                  items: ['Спальни', 'Кровати', 'Ванные комнаты'], 
+                  width: '266px', 
+                  isConveniences: true, 
+                  buttonsNum: [0, 1],
+                  clicksNum: [2, 2]
                   })
-            .search-room-conveniences-dropdown-container   
-              +dropdown({
-                title: 'Удобства номера',
-                items: ['Спальни', 'Кровати', 'Ванные комнаты'], 
-                width: '266px', 
-                isConveniences: true, 
-                buttonsNum: [0, 1],
-                clicksNum: [2, 2]
-                })
-            .search-room-expandable-checkbox-list-container 
-              +expandable-checkbox-list({
-                title: 'Дополнительные удобства', 
-                checkbox_texts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
-                })
-      section.search-room-cards-container
-        h1.search-room-title Номера, которые мы для вас подобрали
-        +pagination()
-    +footer()
-    +footer-mobile()
-    .search-room-pagination-container
-      - 
-        let roomsCardsProperties = [
-          ['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, true], 
-          ['room-photo2.jpg', '840', '9 990', 5, 4, 65, false, false],
-          ['room-photo3.jpg', '980', '8 500', 5, 3, 35, true, false],
-          ['room-photo4.jpg', '856', '7 300', 5, 5, 19, false, false],
-          ['room-photo5.jpg', '740', '6 000', 5, 4, 44, false, false],
-          ['room-photo6.jpg', '982', '5 800', 5, 3, 56, false, false],
-          ['room-photo7.jpg', '678', '5 500', 5, 5, 45, false, false],
-          ['room-photo8.jpg', '450', '5 300', 5, 4, 39, false, false],
-          ['room-photo9.jpg', '350', '5 000', 5, 3, 77, false, false],
-          ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false, false],
-          ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false, false],
-          ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false, false]  
-          ];
+              .search-room-expandable-checkbox-list-container 
+                +expandable-checkbox-list({
+                  title: 'Дополнительные удобства', 
+                  checkbox_texts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+                  })
+        section.search-room-cards-container
+          h1.search-room-title Номера, которые мы для вас подобрали
+          +pagination()
+      +footer()
+      +footer-mobile()
+      .search-room-pagination-container
+        - 
+          let roomsCardsProperties = [
+            ['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, true], 
+            ['room-photo2.jpg', '840', '9 990', 5, 4, 65, false, false],
+            ['room-photo3.jpg', '980', '8 500', 5, 3, 35, true, false],
+            ['room-photo4.jpg', '856', '7 300', 5, 5, 19, false, false],
+            ['room-photo5.jpg', '740', '6 000', 5, 4, 44, false, false],
+            ['room-photo6.jpg', '982', '5 800', 5, 3, 56, false, false],
+            ['room-photo7.jpg', '678', '5 500', 5, 5, 45, false, false],
+            ['room-photo8.jpg', '450', '5 300', 5, 4, 39, false, false],
+            ['room-photo9.jpg', '350', '5 000', 5, 3, 77, false, false],
+            ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false, false],
+            ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false, false],
+            ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false, false]  
+            ];
 
-        for (let i = 0; i < 160; i += 1) {
-          roomsCardsProperties.push(['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, false])
-        };
+          for (let i = 0; i < 160; i += 1) {
+            roomsCardsProperties.push(['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, false])
+          };
 
-      - for (let i = 0; i < roomsCardsProperties.length; i++)
-        +room-card({
-          photos: [roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0]], 
-          number: roomsCardsProperties[i][1], 
-          price: roomsCardsProperties[i][2], 
-          starsNumber: roomsCardsProperties[i][3], 
-          checkedButton: roomsCardsProperties[i][4], 
-          reviewsNumber: roomsCardsProperties[i][5], 
-          isLux: roomsCardsProperties[i][6], 
-          isSlickArrays: roomsCardsProperties[i][7]
-          })
+        - for (let i = 0; i < roomsCardsProperties.length; i++)
+          +room-card({
+            photos: [roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0]], 
+            number: roomsCardsProperties[i][1], 
+            price: roomsCardsProperties[i][2], 
+            starsNumber: roomsCardsProperties[i][3], 
+            checkedButton: roomsCardsProperties[i][4], 
+            reviewsNumber: roomsCardsProperties[i][5], 
+            isLux: roomsCardsProperties[i][6], 
+            isSlickArrays: roomsCardsProperties[i][7]
+            })

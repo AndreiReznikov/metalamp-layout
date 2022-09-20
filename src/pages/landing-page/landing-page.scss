@@ -7,13 +7,21 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color: #fff;
   color: #1F2041;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
 }
 
+.landing-page-wrapper {
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
 .landing-page-background-container {
+  flex: 1 0 auto;
   position: relative;
   width: 100%;
   background-image: url('../../img/landing-background.jpg');

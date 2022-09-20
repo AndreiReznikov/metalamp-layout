@@ -11,12 +11,13 @@ html(lang="ru")
     meta(name="keywords" content="Landing page, components, MetaLamp, education")
     meta(name="description" content="Отель Toxin, подобрать номер")
     title Landing page
-  body 
-    +header()
-    main.landing-page-background-container 
-      .landing-page-background-wrapper
-        article.landing-page-room-search-card-container
-          +room-search-card()
-      p.landing-page-background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
-    +footer()
-    +footer-mobile()
+  body
+    .landing-page-wrapper
+      +header()
+      main.landing-page-background-container 
+        .landing-page-background-wrapper
+          article.landing-page-room-search-card-container
+            +room-search-card()
+        p.landing-page-background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +footer()
+      +footer-mobile()

@@ -13,10 +13,11 @@ html(lang="en")
     meta(name="description" content="Отель Toxin, подобрать номер")
     title Registration and sign in
   body
-    +header() 
-    main.registration-and-sign-in-background-container
-      div.registration-and-sign-in-card-container
-        +registration-card({buttonText: 'Зарегистрироваться'})
-        +entry-card()
-    +footer()
-    +footer-mobile()
+    .registration-and-sign-in-wrapper
+      +header() 
+      main.registration-and-sign-in-background-container
+        div.registration-and-sign-in-card-container
+          +registration-card({buttonText: 'Зарегистрироваться'})
+          +entry-card()
+      +footer()
+      +footer-mobile()
