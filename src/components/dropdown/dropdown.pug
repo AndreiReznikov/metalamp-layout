@@ -11,7 +11,7 @@ mixin dropdown(options = {})
   ) 
     if options.title
       h3.iqdropdown-title!=options.title
-    div(class=className style=`width: ${options.width ? options.width : '320px'}`)
+    div(class=className style=`width: ${options.width ? options.width : ''}`)
       p.iqdropdown-selection
       .iqdropdown-menu 
         - let i = 0;

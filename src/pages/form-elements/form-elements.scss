@@ -19,6 +19,13 @@
 @import '../../components/range-slider/range-slider';
 @import '../../components/pagination/pagination';
 
+.html {
+  background-color: #fff;
+  color: #1F2041;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;

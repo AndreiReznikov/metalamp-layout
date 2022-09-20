@@ -19,6 +19,10 @@ This is a project to find hotel rooms, to which I have devoted quite a lot of ti
 
 The item-quantity-dropdown plugin is connected locally. It is located on the path __"root/src/components/dropdown/item-quantity-dropdown"__.
 
+# Important
+
+Most of the commits were lost in the process, due to the inexperience of the author. The project files from the folder were moved manually to a remote repository.
+
 # Start
 
 To start the project, use the command __"npm run server"__ in the project folder.

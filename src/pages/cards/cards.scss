@@ -7,6 +7,12 @@
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
 @import '../../templates/vars-and-mixins.scss';
 
+.html {
+  color: #1F2041;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+}
+
 html, body {
   padding: 0;
   margin: 0;
