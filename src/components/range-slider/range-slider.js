@@ -30,8 +30,8 @@ $rangeSlidersCollection.each(function () {
   $valueFrom.html(`${$rangeSliderInput.data('from').toLocaleString()}&#8381`);
   $valueTo.html(`${$rangeSliderInput.data('to').toLocaleString()}&#8381`);
 
-  function transformInputsView() {
-    const $input = $(this);
+  function transformInputsView(event) {
+    const $input = $(event.currentTarget);
     const from = $input.data('from');
     const to = $input.data('to');
 
