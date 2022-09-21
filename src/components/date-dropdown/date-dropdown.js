@@ -32,19 +32,20 @@ $dateDropdownsCollection.each(function () {
   const datepicker = dateDropdownInput.data('datepicker');
   const datepickerElements = datepicker.$datepicker;
 
-  dateFrom.click(() => datepicker.show());
-  dateTo.click(() => datepicker.show());
-
-  const $applyButton = $('<span class=\'datepicker--button\'>Применить</span>');
-
-  datepickerElements.find('.datepicker--buttons').append($applyButton);
-
+  const showDatepicker = () => datepicker.show();
   const hideDatepicker = () => {
     if (datepicker.selectedDates.length < 2) return;
     datepicker.hide();
   };
 
-  $applyButton.click(() => hideDatepicker());
+  dateFrom.click(showDatepicker);
+  dateTo.click(showDatepicker);
+
+  const $applyButton = $('<span class=\'datepicker--button\'>Применить</span>');
+
+  datepickerElements.find('.datepicker--buttons').append($applyButton);
+
+  $applyButton.click(hideDatepicker);
 
   const setDefaultDates = () => {
     const dateFromVal = $(dateDropdownInput).data('from');

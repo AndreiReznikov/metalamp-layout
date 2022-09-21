@@ -45,7 +45,7 @@ $filterDropdownsCollection.each(function () {
     datepicker.hide();
   };
 
-  $applyButton.click(() => hideDatepicker());
+  $applyButton.click(hideDatepicker);
 
   const setDefaultDates = () => {
     const dateFromVal = $(filterDropdownInput).data('from');

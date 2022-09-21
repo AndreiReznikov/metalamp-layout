@@ -21,5 +21,5 @@ $likeButtonsCollection.each(function () {
     $button.toggleClass('like-button__button_liked');
   }
 
-  $button.click(() => toggleLike());
+  $button.click(toggleLike);
 });

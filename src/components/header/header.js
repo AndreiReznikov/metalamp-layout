@@ -8,12 +8,13 @@ $menuExpandableItemsCollection.each(function () {
 
   const showExpandableList = () => $expandableList.toggle();
   const transformArrow = () => arrow.toggleClass('header__list-arrow_transformed');
-
-  menuExpandableLink.click((event) => {
+  const toggleList = (event) => {
     transformArrow();
     showExpandableList();
     event.preventDefault();
-  });
+  };
+
+  menuExpandableLink.click(toggleList);
 });
 
 const $headersCollection = $('.js-header');
@@ -33,23 +34,25 @@ $headersCollection.each(function () {
 
     const transformArrow = () => arrow.toggleClass('mobile-menu__list-arrow_transformed');
     const showList = () => expandableList.slideToggle();
-
-    $expandableItem.click((event) => {
+    const toggleList = (event) => {
       transformArrow();
       showList();
       event.preventDefault();
-    });
+    };
+
+    $expandableItem.click(toggleList);
   });
 
   const showMobileMenu = () => mobileMenu.toggleClass('mobile-menu_visible');
   const transformBurger = () => burger.toggleClass('header__burger_transformed');
   const stopScroll = () => $('html, body').toggleClass('stop-scroll');
   const showScrim = () => $('.scrim').toggle();
-
-  burgerContainer.click(() => {
+  const toggleMobileMenu = () => {
     transformBurger();
     showMobileMenu();
     showScrim();
     stopScroll();
-  });
+  };
+
+  burgerContainer.click(toggleMobileMenu);
 });
