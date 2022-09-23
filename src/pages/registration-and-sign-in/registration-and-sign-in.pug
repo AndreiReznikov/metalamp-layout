@@ -16,8 +16,10 @@ html(lang="en")
     .registration-and-sign-in-wrapper
       +header() 
       main.registration-and-sign-in-background-container
-        div.registration-and-sign-in-card-container
-          +registration-card({buttonText: 'Зарегистрироваться'})
-          +entry-card()
+        .registration-and-sign-in-card-container
+          .registration-card-wrapper.js-registration-card-wrapper
+            +registration-card({buttonText: 'Зарегистрироваться'})
+          .entry-card-wrapper.js-entry-card-wrapper
+            +entry-card()
       +footer()
       +footer-mobile()

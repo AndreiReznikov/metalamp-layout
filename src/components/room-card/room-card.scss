@@ -43,6 +43,8 @@
   
   &__room-price {
     @include Body-font();
+    display: inline-block;
+    padding-bottom: 1px;
     font-weight: bold;
     color: $Dark-Shade-50;
   }

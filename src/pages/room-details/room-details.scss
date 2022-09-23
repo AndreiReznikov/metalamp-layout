@@ -142,7 +142,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 15px 23px 0;
+  margin: 0 2px 23px 0;
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
@@ -169,6 +169,8 @@ html, body {
 
 .room-details-commenst-number-text {
   @include Body-font();
+  display: inline-block;
+  margin-top: 5px;
   line-height: 20px;
   color: $Dark-Shade-50;
 

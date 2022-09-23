@@ -45,7 +45,7 @@
   &__list-item  {
     @include Body-font();
     display: block;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     line-height: 17px;
     color: $Dark-Shade-50;
     cursor: pointer;
@@ -148,6 +148,10 @@
   
   &__copyright-text {
     @include Body-font();
+  }
+
+  &__social-icons-container {
+    padding: 2px 2px 0 0;
   }
 }
 

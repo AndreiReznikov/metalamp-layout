@@ -25,6 +25,7 @@
 
   &__text_normal-text {
     @include Body-font();
+    display: inline-block;
     width: 95%;
     font-size: 12px;
     color: $Dark-Shade-50;

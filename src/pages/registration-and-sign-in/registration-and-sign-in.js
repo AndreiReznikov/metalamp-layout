@@ -4,20 +4,26 @@ import '../../templates/fonts.scss';
 import './registration-and-sign-in.scss';
 
 $(document).ready(() => {
-  const registrationCardHtml = $('.js-registration-block');
-  const entryCardHtml = $('.js-entry-block');
-
-  const { search } = document.location;
-
-  if (search === '?page=entry') {
-    entryCardHtml.addClass('show-card');
-    return;
-  }
-  registrationCardHtml.addClass('show-card');
-
   const $forms = $('form');
 
   $forms.submit((event) => {
     event.preventDefault();
   });
+
+  const registrationCardHtml = $('.js-registration-card-wrapper');
+  const entryCardHtml = $('.js-entry-card-wrapper');
+  const registraitionAndSignInBackground = $('.registration-and-sign-in-background-container');
+
+  const { search } = document.location;
+
+  const backgroundMinHeight = search === '?page=entry' ? '702px' : '684px';
+
+  registraitionAndSignInBackground.css('min-height', backgroundMinHeight);
+
+  if (search === '?page=entry') {
+    entryCardHtml.addClass('show-card');
+    return;
+  }
+
+  registrationCardHtml.addClass('show-card');
 });
