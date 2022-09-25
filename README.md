@@ -23,6 +23,8 @@ The item-quantity-dropdown plugin is connected locally. It is located on the pat
 
 Most of the commits were lost in the process, due to the inexperience of the author. The project files from the folder were moved manually to a remote repository.
 
+Due to incorrectly connected fonts at the initial stage of development, css files have become very large. An extension is used to track them .gitattributes. This issue has been fixed in the latest version.
+
 # Start
 
 To start the project, use the command __"npm run server"__ in the project folder.
