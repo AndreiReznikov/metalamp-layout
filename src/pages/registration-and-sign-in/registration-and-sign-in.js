@@ -6,9 +6,11 @@ import './registration-and-sign-in.scss';
 $(document).ready(() => {
   const $forms = $('form');
 
-  $forms.submit((event) => {
+  const handleFormsPreventDefault = (event) => {
     event.preventDefault();
-  });
+  };
+
+  $forms.submit(handleFormsPreventDefault);
 
   const registrationCardHtml = $('.js-registration-card-wrapper');
   const entryCardHtml = $('.js-entry-card-wrapper');

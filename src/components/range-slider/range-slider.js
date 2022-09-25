@@ -30,7 +30,7 @@ $rangeSlidersCollection.each(function () {
   $valueFrom.html(`${$rangeSliderInput.data('from').toLocaleString()}&#8381`);
   $valueTo.html(`${$rangeSliderInput.data('to').toLocaleString()}&#8381`);
 
-  function transformInputsView(event) {
+  function handleRangeSliderInputTransformInputsView(event) {
     const $input = $(event.currentTarget);
     const from = $input.data('from');
     const to = $input.data('to');
@@ -39,5 +39,5 @@ $rangeSlidersCollection.each(function () {
     $valueTo.html(`${to.toLocaleString()}&#8381;`);
   }
 
-  $rangeSliderInput.on('change', transformInputsView);
+  $rangeSliderInput.on('change', handleRangeSliderInputTransformInputsView);
 });

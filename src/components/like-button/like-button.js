@@ -10,7 +10,7 @@ $likeButtonsCollection.each(function () {
 
   let countValue = Number($count.text());
 
-  function toggleLike() {
+  function handleButtonToggleLike() {
     if ($button.hasClass('like-button__button_liked')) {
       $count.text(countValue -= 1);
       $icon.prop('src', unlikeImage);
@@ -21,5 +21,5 @@ $likeButtonsCollection.each(function () {
     $button.toggleClass('like-button__button_liked');
   }
 
-  $button.click(toggleLike);
+  $button.click(handleButtonToggleLike);
 });

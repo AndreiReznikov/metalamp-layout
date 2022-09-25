@@ -110,6 +110,8 @@ chartVoicesSum.text(`${getVoicesSum()}`);
 
 const $forms = $('form');
 
-$forms.submit((event) => {
+const handleFormsPreventDefault = (event) => {
   event.preventDefault();
-});
+};
+
+$forms.submit(handleFormsPreventDefault);

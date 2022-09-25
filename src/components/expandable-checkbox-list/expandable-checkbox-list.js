@@ -10,12 +10,12 @@ $expandableListsCollection.each(function () {
 
   const showList = () => { $checkboxList.toggleClass('js-expandable-checkbox-list__list_opened'); };
   const transformArrow = () => { $listArrow.toggleClass('js-expandable-checkbox-list__arrow_transformed'); };
-  const toggleList = () => {
+  const handleListTitleToggleList = () => {
     showList();
     transformArrow();
   };
 
-  $listTitle.click(toggleList);
+  $listTitle.click(handleListTitleToggleList);
 });
 
 $openedListsCollection.each(function () {

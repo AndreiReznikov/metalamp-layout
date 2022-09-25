@@ -16,7 +16,7 @@ const $filterButton = $('.js-search-room-filter__button');
 const $filterItems = $('.js-search-room-widgets-container');
 
 const showFilterItems = () => $filterItems.toggle();
-$filterButton.click(() => showFilterItems());
+$filterButton.click(showFilterItems);
 
 function simpleTemplating(data) {
   let html = '<ul class="pagination-list">';

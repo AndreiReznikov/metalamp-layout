@@ -40,12 +40,12 @@ $filterDropdownsCollection.each(function () {
 
   filterDropdownElements.find('.datepicker--buttons').append($applyButton);
 
-  const hideDatepicker = () => {
+  const handleApplyButtonHideDatepicker = () => {
     if (datepicker.selectedDates.length < 2) return;
     datepicker.hide();
   };
 
-  $applyButton.click(hideDatepicker);
+  $applyButton.click(handleApplyButtonHideDatepicker);
 
   const setDefaultDates = () => {
     const dateFromVal = $(filterDropdownInput).data('from');

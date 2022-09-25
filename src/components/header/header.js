@@ -47,12 +47,12 @@ $headersCollection.each(function () {
   const transformBurger = () => burger.toggleClass('header__burger_transformed');
   const stopScroll = () => $('html, body').toggleClass('stop-scroll');
   const showScrim = () => $('.scrim').toggle();
-  const toggleMobileMenu = () => {
+  const handleBurgerContainerToggleMobileMenu = () => {
     transformBurger();
     showMobileMenu();
     showScrim();
     stopScroll();
   };
 
-  burgerContainer.click(toggleMobileMenu);
+  burgerContainer.click(handleBurgerContainerToggleMobileMenu);
 });
