@@ -174,6 +174,10 @@ html, body {
   line-height: 20px;
   color: $Dark-Shade-50;
 
+  @media screen and (max-width: 1380px) {
+    margin-right: 15px;
+  }
+
   @media screen and (max-width: 480px) {
     margin-top: 20px;
   }

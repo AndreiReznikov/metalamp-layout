@@ -2,6 +2,11 @@
 @import '../logo/logo';
 @import '../button/button';
 
+.header-container {
+  width: 100%;
+  min-height: 100%;
+}
+
 .header {
   width: 100%;
   box-sizing: border-box;

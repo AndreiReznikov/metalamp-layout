@@ -8,9 +8,15 @@ mixin entry-card()
       form.entry-block__form
         .entry-block__data-inputs-container
           .entry-block__data-input-container
-            +text-field({placeholder: 'Email'})
+            +text-field({
+              placeholder: 'Email',
+              type: 'email'
+              })
           .entry-block__data-input-container
-            +text-field({placeholder: 'Пароль'})
+            +text-field({
+              placeholder: 'Пароль',
+              type: 'password'
+              })
         .entry-block__button-container 
           +button({
             longButton: true, 
