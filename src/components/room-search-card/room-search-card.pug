@@ -6,19 +6,19 @@ mixin room-search-card()
   .room-search-block
     h1.room-search-block__title Найдём номера под ваши пожелания
     form.room-serch-block__form
-      .room-search-block__wrapper 
+      .room-search-block__wrapper
         .room-search-block__date-dropdown-container
-          +date-dropdown({title: ['Прибытие', 'Выезд']})       
-        .room-search-block__guests-dropdown-container 
+          +date-dropdown({title: ['Прибытие', 'Выезд']})
+        .room-search-block__guests-dropdown-container
           +dropdown({
-            items: ['Взрослые', 'Дети', 'Младенцы'], 
-            addingButtons: true, 
-            isGuests: true, 
+            items: ['Взрослые', 'Дети', 'Младенцы'],
+            addingButtons: true,
+            isGuests: true,
             title: 'Гости'
             })
         .room-search-block__long-button-container
           +button({
-            longLinkButton: true, 
-            text: 'Подобрать номер', 
+            longLinkButton: true,
+            text: 'Подобрать номер',
             href: 'search-room.html'
             })

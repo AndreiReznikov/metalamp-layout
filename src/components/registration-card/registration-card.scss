@@ -30,7 +30,7 @@
       margin: 39px 5px 0 5px;
     }
   }
-  
+
   &__wrapper {
     padding: 21px 29px 29px 29px;
 
@@ -38,7 +38,7 @@
       padding: 21px 10px 29px 10px;
     }
   }
-  
+
   &__username-input-container {
     margin-bottom: 10px;
   }
@@ -50,20 +50,20 @@
   &__radio-buttons-container {
     margin-top: 10px;
   }
-  
+
   &__date-input-container {
     margin-top: 24px;
   }
-  
+
   &__enter-data-container {
     margin-top: 20px;
   }
-  
+
   &__date-title {
     @include H3();
     margin: 0 0 5px 0;
   }
-  
+
   &__entry-data-input-container {
     margin-bottom: 10px;
   }
@@ -71,17 +71,17 @@
   &__entry-data-input-container:last-child {
     margin-bottom: 0;
   }
-  
+
   &__toggle-button-container {
     margin-top: 8px;
   }
-  
+
   &__long-button-container {
-    margin-top: 22px; 
+    margin-top: 22px;
     display: flex;
     justify-content: center;
   }
-  
+
   &__login-container {
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +94,7 @@
       justify-content: center;
     }
   }
-  
+
   &__login-text {
     @include Body-font();
 

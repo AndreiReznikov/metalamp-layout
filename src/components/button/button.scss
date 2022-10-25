@@ -51,7 +51,7 @@
     pointer-events: none;
     z-index: 2;
   }
-  
+
   &__button {
     position: absolute;
     width: 100%;
@@ -100,6 +100,7 @@ $long-button-width: 320px;
   @media screen and (max-width: 480px) {
     width: 250px;
   }
+
     &__button {
       @include H3();
       width: $long-button-width;
@@ -122,6 +123,7 @@ $long-button-width: 320px;
         width: 250px;
       }
     }
+
     &__arrow {
       position: absolute;
       right: 13px;
@@ -134,9 +136,11 @@ $long-button-width: 320px;
   display: flex;
   align-items: center;
   width: $long-button-width;
+
   @media screen and (max-width: 480px) {
     width: 250px;
   }
+
     &__button {
       @include H3();
       width: $long-button-width;
@@ -162,6 +166,7 @@ $long-button-width: 320px;
         width: 250px;
       }
     }
+
     &__arrow {
       position: absolute;
       right: 13px;

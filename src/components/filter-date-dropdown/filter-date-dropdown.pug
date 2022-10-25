@@ -9,9 +9,9 @@ mixin filter-date-dropdown(options = {})
     .filter-date-dropdown__input-container(style=options.style)
       img(src=require("../../img/expand-arrow.svg") class="filter-date-dropdown__arrow" alt="Arrow")
       input(
-        class=className 
-        type="text" 
-        data-multiple-dates-separator=" - " 
+        class=className
+        type="text"
+        data-multiple-dates-separator=" - "
         placeholder="Выберите даты"
         data-from=options.dateFrom
         data-to=options.dateTo

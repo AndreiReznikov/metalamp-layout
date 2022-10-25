@@ -5,11 +5,13 @@
   max-width: 266px;
   min-height: 20px;
   margin-bottom: 10px;
+
   &__title {
     @include H3();
     margin: 0 0 17px 0;
     padding: 0;
   }
+
   &__text {
     @include Body-font();
     display: flex;
@@ -40,14 +42,14 @@
     text-transform: none;
     color: $Dark-Shade-75;
   }
-   
+
   &__input {
     position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
   }
-  
+
   &__custom-input {
     position: absolute;
     display: flex;
@@ -60,11 +62,11 @@
     border: 1px solid $Dark-Shade-25;
     cursor: pointer;
   }
-  
+
   &__input:checked + .checkbox-button__custom-input {
     border: 1px solid $Purple;
   }
-  
+
   &__input:checked + .checkbox-button__custom-input:after {
     content: '';
     display: block;
@@ -72,7 +74,7 @@
     height: 8px;
     margin: 0 0 2px 1px;
     border: 1px solid transparent;
-    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-image-slice: 1;
     border-width: 0 2px 2px 0;
     box-sizing: border-box;

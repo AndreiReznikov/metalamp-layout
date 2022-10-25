@@ -14,7 +14,7 @@ html(lang="ru")
     meta(name="keywords" content="Cards, components, MetaLamp, education")
     meta(name="description" content="Компоненты карточек для сайта Toxin")
     title Cards
-  body 
+  body
     .container
       .cards-logo-container
         +logo()
@@ -32,7 +32,7 @@ html(lang="ru")
           dropdownButtonsNum: [0, 1],
           dropdownClicksNum: [2, 1]
         })
-        
+
         .cards-entry-block-container
           +entry-card()
 
@@ -45,26 +45,22 @@ html(lang="ru")
             dateTo: 'new Date(2019, 7, 23)',
           })
 
-        .cards-room-cards-container 
+        .cards-room-cards-container
           +room-card({
-            photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'], 
-            number: '888', 
-            price: '9 990', 
-            starsNumber: 5, 
-            checkedButton: 5, 
-            reviewsNumber: 145, 
-            isLux: true, 
+            photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'],
+            number: '888',
+            price: '9 990',
+            starsNumber: 5,
+            checkedButton: 5,
+            reviewsNumber: 145,
+            isLux: true,
             isSlickArrays: true
             })
           +room-card({
-            photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'], 
-            number: '840', 
-            price: '9 990', 
-            starsNumber: 5, 
-            checkedButton: 4, 
+            photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'],
+            number: '840',
+            price: '9 990',
+            starsNumber: 5,
+            checkedButton: 4,
             reviewsNumber: 65
             })
-
-
-
-

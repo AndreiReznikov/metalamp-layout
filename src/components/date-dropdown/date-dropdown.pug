@@ -1,33 +1,33 @@
 mixin date-dropdown(options = {})
   .date-dropdown-container.js-date-dropdown-container
     input(
-      type="text" 
-      class="datepicker-multi js-datepicker-multi" 
-      data-range="true" 
-      data-multiple-dates-separator=" - "  
+      type="text"
+      class="datepicker-multi js-datepicker-multi"
+      data-range="true"
+      data-multiple-dates-separator=" - "
       data-position="bottom left"
       data-from=options.dateFrom
       data-to=options.dateTo
       )
     .date-dropdown-wrapper
       if options.title
-        h3.date-dropdown__title!=options.title[0]   
+        h3.date-dropdown__title!=options.title[0]
       .date-dropdown__input-from
-        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")      
+        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")
         input(
-          class="date-from js-date-from date-dropdown__input" 
-          type="text" 
+          class="date-from js-date-from date-dropdown__input"
+          type="text"
           placeholder="дд.мм.гггг"
           data-from-empty=options.isFromEmpty
           )
     .date-dropdown-wrapper
       if options.title
-        h3.date-dropdown__title!=options.title[1]  
+        h3.date-dropdown__title!=options.title[1]
       .date-dropdown__input-to
-        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")                 
+        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")
         input(
-          class="date-to js-date-to date-dropdown__input" 
-          type="text" 
+          class="date-to js-date-to date-dropdown__input"
+          type="text"
           placeholder="дд.мм.гггг"
           data-to-empty=options.isToEmpty
           )

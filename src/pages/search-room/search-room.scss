@@ -53,7 +53,7 @@ html, body {
     display: flex;
     justify-content: center;
   }
-  
+
   &__button {
     padding: 15px;
     border: 1px solid $Dark-Shade-25;
@@ -104,6 +104,7 @@ html, body {
 }
 
 .search-room-filter-date-dropdown-container {
+
   @media screen and (max-width: 1024px) {
     margin-top: 0;
     order: 0;
@@ -250,7 +251,7 @@ html, body {
   flex-wrap: wrap;
   align-content: flex-start;
   margin: 29px 0 0 58px;
-  flex: 6; 
+  flex: 6;
 
   @media screen and (max-width: 1024px) {
     flex-basis: 100%;

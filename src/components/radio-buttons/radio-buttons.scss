@@ -11,7 +11,7 @@
     flex-direction: row-reverse;
     margin: 0 20px 0 0;
   }
-  
+
   &__input {
     width: 20px;
     height: 20px;
@@ -22,7 +22,7 @@
     cursor: pointer;
     z-index: 2;
   }
-  
+
   &__custom-input {
     position: absolute;
     display: flex;
@@ -37,13 +37,13 @@
     cursor: pointer;
     z-index: 1;
   }
-  
+
   &__custom-input:after {
     content: "";
     position: absolute;
     display: none;
   }
-  
+
   &__input:checked + &__custom-input:after {
     display: block;
     width: 12px;

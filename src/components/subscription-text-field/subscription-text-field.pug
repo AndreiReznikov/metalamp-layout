@@ -1,17 +1,17 @@
 mixin subscription-text-field(options = {})
   .subscription-text-field
-    if options.title 
+    if options.title
       h3.subscription-text-field__title!=options.title
     .subscription-text-field__input-container(style=options.style)
       input(
-        class="subscription-text-field__input" 
-        type="email" 
-        placeholder="Email" 
+        class="subscription-text-field__input"
+        type="email"
+        placeholder="Email"
         )
       button(class="subscription-text-field__button" type="submit")
         span.subscription-text-field__arrow-container
           img(
-            class="subscription-text-field__arrow" 
-            src=require("../../img/arrow_forward.svg") 
+            class="subscription-text-field__arrow"
+            src=require("../../img/arrow_forward.svg")
             alt="Send email button"
-          ) 
+          )

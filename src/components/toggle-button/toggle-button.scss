@@ -5,7 +5,7 @@ $circle-width: 12px;
 $circle-margin: 3px;
 
 .toggle-button {
-  
+
   @include Body-font();
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@ $circle-margin: 3px;
     -moz-appearance: none;
     appearance: none;
   }
-  
+
   &__custom-input {
     position: absolute;
     display: flex;
@@ -38,7 +38,7 @@ $circle-margin: 3px;
     cursor: pointer;
     z-index: 1;
   }
-  
+
   &__custom-input:after {
     position: absolute;
     content: "";
@@ -50,11 +50,11 @@ $circle-margin: 3px;
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   &__input:checked + &__custom-input {
     border: 1px solid $Purple;
   }
-  
+
   &__input:checked + &__custom-input:after {
     background: $Purple;
     -webkit-transform: translateX($toggle-width - $circle-width - 2*$circle-margin);

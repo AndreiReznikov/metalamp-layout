@@ -4,7 +4,7 @@ include ../button/button
 mixin entry-card()
   .entry-block.js-entry-block
     h1.entry-block__title Войти
-    .entry-block__wrapper 
+    .entry-block__wrapper
       form.entry-block__form
         .entry-block__data-inputs-container
           .entry-block__data-input-container
@@ -17,16 +17,16 @@ mixin entry-card()
               placeholder: 'Пароль',
               type: 'password'
               })
-        .entry-block__button-container 
+        .entry-block__button-container
           +button({
-            longButton: true, 
-            text: 'Войти', 
+            longButton: true,
+            text: 'Войти',
             type: 'submit'
             })
         .entry-block__login-container
-          .entry-block__login-text Нет аккаунта на Toxin? 
+          .entry-block__login-text Нет аккаунта на Toxin?
           +button({
-            emptyButton: true, 
-            text: 'Создать', 
+            emptyButton: true,
+            text: 'Создать',
             href: 'registration-and-sign-in.html'
             })

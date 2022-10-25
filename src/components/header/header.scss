@@ -26,15 +26,16 @@
     @media screen and (max-width: 1439px) {
       padding: 0 35px;
     }
-  
+
     @media screen and (max-width: 1024px) {
       padding: 0 15px;
     }
   }
-  
+
   &__right-block-container {
     display: flex;
     align-items: center;
+
     @media screen and (max-width: 1024px) {
       display: none;
     }
@@ -43,7 +44,7 @@
   &__nav {
     display: flex;
   }
-  
+
   &__menu-list {
     @include Body-font();
     display: flex;
@@ -51,7 +52,7 @@
     margin-right: 25px;
     list-style-type: none;
   }
-  
+
   &__list-item {
     position: relative;
     padding-left: 21px;
@@ -113,12 +114,12 @@
     color: $Dark-Shade-50;
     text-decoration: none;
   }
-  
+
   &__list-link {
     color: $Dark-Shade-50;
     text-decoration: none;
   }
-  
+
   &__list-bold-item {
     font-weight: bold;
     color: $Dark-Shade-75;
@@ -128,13 +129,13 @@
     font-weight: normal;
     color: $Dark-Shade-50;
   }
-  
+
   &__buttons-container {
     display: flex;
     justify-content: space-between;
     width: 303px;
   }
-  
+
   &__user-name {
     @include Body-font();
     display: flex;
@@ -150,6 +151,7 @@
     width: 35px;
     height: 26px;
     cursor: pointer;
+
     @media screen and (max-width: 1024px) {
       display: flex;
       align-items: center;
@@ -182,7 +184,7 @@
     background-color:$Dark-Shade-50;
     transition: 0.6s;
   }
-  
+
   &__burger_transformed {
     height: 0;
   }

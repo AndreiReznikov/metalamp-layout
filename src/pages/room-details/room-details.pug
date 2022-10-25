@@ -33,26 +33,26 @@ html(lang="en")
             img(class="room-details-background-photo__image" src=require("../../img/room-photo1-2.jpg") alt="Room photo")
 
       main.room-details-main-container
-        .room-details-main-wrapper 
-          .room-details-advantages-container 
+        .room-details-main-wrapper
+          .room-details-advantages-container
             +title({text: 'Сведения о номере'})
             div.room-details-advantages-wrapper
-              .room-details-advantage-wrapper 
+              .room-details-advantage-wrapper
                 +advantage-item({
-                  title: 'Комфорт', 
-                  description: 'Шумопоглощающие стены', 
+                  title: 'Комфорт',
+                  description: 'Шумопоглощающие стены',
                   image: 'insert_emoticon.svg'
                   })
-              .room-details-advantage-wrapper 
+              .room-details-advantage-wrapper
                 +advantage-item({
-                  title: 'Удобство', 
-                  description: 'Окно в каждой из спален', 
+                  title: 'Удобство',
+                  description: 'Окно в каждой из спален',
                   image: 'location_city.svg'
                   })
-              .room-details-advantage-wrapper 
+              .room-details-advantage-wrapper
                 +advantage-item({
-                  title: 'Уют', 
-                  description: 'Номер оснащён камином', 
+                  title: 'Уют',
+                  description: 'Номер оснащён камином',
                   image: 'whatshot.svg',
                   border: 'none'
                   })
@@ -62,26 +62,26 @@ html(lang="en")
             .room-details-doughnut-wrapper.js-room-details-doughnut-wrapper
               canvas.room-details-chart.js-room-details-chart(width="342" height="133")
 
-          section.room-details-comments-container 
-            .room-details-comments-title-wrapper 
+          section.room-details-comments-container
+            .room-details-comments-title-wrapper
               +title({text: 'Отзывы посетителей номера'})
               span.room-details-commenst-number-text 2 отзыва
             article.room-details-comment-wrapper
               +comment-block({
-                image: 'image.jpg', 
-                date: '5 дней назад', 
-                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', 
-                username: 'Мурад Сарафанов', 
-                likeCount: 12, 
+                image: 'image.jpg',
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                username: 'Мурад Сарафанов',
+                likeCount: 12,
                 isLiked: true
                 })
             article.room-details-comment-wrapper
               +comment-block({
-                image: 'image2.jpg', 
-                date: 'Неделю назад', 
-                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', 
-                username: 'Патрисия Стёклышкова', 
-                likeCount: 2, 
+                image: 'image2.jpg',
+                date: 'Неделю назад',
+                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                username: 'Патрисия Стёклышкова',
+                likeCount: 2,
                 isLiked: false
                 })
 
@@ -94,7 +94,7 @@ html(lang="en")
             +title({text: 'Отмена', style: {'margin-bottom': '20px'}})
             .room-details-cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
-        section.room-details-card-wrapper 
+        section.room-details-card-wrapper
           .room-details-room-card-wrapper
             +reserve-room-card({
               dateFrom: 'new Date(2019, 7, 19)',

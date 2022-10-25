@@ -15,7 +15,7 @@
     height: 151px;
     border-radius: 4px 4px 0 0;
   }
-  
+
   &__information {
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@
     font-weight: bold;
     color: $Dark-Shade-100;
   }
-  
+
   &__room-number {
     @include H2();
   }
@@ -40,7 +40,7 @@
     display: inline-block;
     margin-left: 6px;
   }
-  
+
   &__room-price {
     @include Body-font();
     display: inline-block;
@@ -48,12 +48,12 @@
     font-weight: bold;
     color: $Dark-Shade-50;
   }
-  
+
   &__time-interval {
     font-weight: normal;
     font-size: 12px;
   }
-  
+
   &__rate-block {
     display: flex;
     align-items: center;
@@ -61,17 +61,17 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   &__reviews-number {
     @include Body-font();
     font-weight: bold;
     color: $Dark-Shade-50;
   }
-  
+
   &__reviews-number-text {
     font-weight: normal;
   }
-  
+
   &__image {
     width: 100%;
     height: 151px;

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
 
-    &__square{
+    &__square {
       width: 70px;
       height: 70px;
       border-radius: 6px;
@@ -18,7 +18,7 @@
       @include H2();
       line-height: 28px;
     }
-    
+
     &__color-hex {
       @include H2();
       font-weight: normal;

@@ -6,78 +6,78 @@ mixin header(options = {})
     let boldItemClass = 'header__list-bold-item'
 
     boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal'
-  
+
   .header-container
     header.header.js-header
       .header__wrapper
-        +logo({isColorful: true})  
+        +logo({isColorful: true})
         .header__burger-container.js-header__burger-container
           .header__burger.js-header__burger
         .header__right-block-container
           nav.header__nav
-            ul.header__menu-list 
-              li.header__list-item 
+            ul.header__menu-list
+              li.header__list-item
                 a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me" 
-                  ) 
+                  href="/mock-address/change-me"
+                  )
                   span(class=boldItemClass) О нас
 
-              li.header__list-item.header__list-item_expandable.js-header__list-item_expandable  
+              li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
                 a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me" 
-                  ) 
+                  href="/mock-address/change-me"
+                  )
                   span.header__list-link-text Услуги
                   img(
-                    class="header__list-arrow js-header__list-arrow" 
-                    src=require("../../img/expand-arrow.svg") 
+                    class="header__list-arrow js-header__list-arrow"
+                    src=require("../../img/expand-arrow.svg")
                     alt="Expand arrow"
                     )
 
-                .header__expanded-menu.js-header__expanded-menu  
+                .header__expanded-menu.js-header__expanded-menu
                   ul.header__expanded-menu-list
                     each val in ['Ресторан', 'Бассейн', 'Транспорт']
-                      li.header__expanded-menu-item 
+                      li.header__expanded-menu-item
                         a.header__expanded-menu-link(
-                          href="/mock-address/change-me" 
+                          href="/mock-address/change-me"
                           )!=val
 
-              each val in ['Вакансии', 'Новости']  
-                li.header__list-item  
+              each val in ['Вакансии', 'Новости']
+                li.header__list-item
                   a.header__list-link.js-header__list-link(
-                    href="/mock-address/change-me" 
+                    href="/mock-address/change-me"
                     )!=val
 
               li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
                 a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me" 
-                  ) 
+                  href="/mock-address/change-me"
+                  )
                   span.header__list-link-text Соглашения
                   img(
-                    class="header__list-arrow js-header__list-arrow" 
-                    src=require("../../img/expand-arrow.svg") 
+                    class="header__list-arrow js-header__list-arrow"
+                    src=require("../../img/expand-arrow.svg")
                     alt="Expand arrow"
                     )
-                .header__expanded-menu.js-header__expanded-menu 
+                .header__expanded-menu.js-header__expanded-menu
                   ul.header__expanded-menu-list
-                    each val in ['Договор по оказанию услуг', 'Договор хранения']  
-                      li.header__expanded-menu-item 
+                    each val in ['Договор по оказанию услуг', 'Договор хранения']
+                      li.header__expanded-menu-item
                         a.header__expanded-menu-link(
-                          href="/mock-address/change-me" 
+                          href="/mock-address/change-me"
                           )!=val
 
           if (options.isLoggedIn)
-            span.header__user-name!=options.userName 
-          else 
+            span.header__user-name!=options.userName
+          else
             .header__buttons-container
               +button({
-                emptyButton: true, 
-                text: 'Войти', 
+                emptyButton: true,
+                text: 'Войти',
                 style: {'height': '34px', 'width': '87px'},
                 href: 'registration-and-sign-in.html?page=entry'
                 })
               +button({
-                filledButton: true, 
-                text: 'Зарегистрироваться', 
+                filledButton: true,
+                text: 'Зарегистрироваться',
                 style: {'height': '34px', width: '196px'},
                 href: 'registration-and-sign-in.html'
                 })
@@ -86,64 +86,64 @@ mixin header(options = {})
       .mobile-menu__buttons-container
         .mobile-menu__button-container
           +button({
-            emptyButton: true, 
-            text: 'Войти', 
+            emptyButton: true,
+            text: 'Войти',
             style: {'height': '50px', 'width': '200px'},
             href: 'registration-and-sign-in.html?page=entry'
             })
         .mobile-menu__button-container
           +button({
-            filledButton: true, 
-            text: 'Зарегистрироваться', 
+            filledButton: true,
+            text: 'Зарегистрироваться',
             style: {'height': '50px', 'width': '200px'},
             href: 'registration-and-sign-in.html'
             })
       nav.mobile-menu__nav
         ul.mobile-menu__list
-          li.mobile-menu__list-item 
+          li.mobile-menu__list-item
             a.mobile-menu__list-link.js-mobile-menu__list-link(
-              href="/mock-address/change-me" 
-              ) 
+              href="/mock-address/change-me"
+              )
               span.mobile-menu__list-bold-item О нас
           li.mobile-menu__list-item
             a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
-              href="/mock-address/change-me" 
-              ) 
+              href="/mock-address/change-me"
+              )
               span.mobile-menu__list-bold-item Услуги
               img(
-                  class="mobile-menu__list-arrow js-mobile-menu__list-arrow" 
-                  src=require("../../img/expand-arrow.svg") 
+                  class="mobile-menu__list-arrow js-mobile-menu__list-arrow"
+                  src=require("../../img/expand-arrow.svg")
                   alt="Expand arrow"
                   )
-            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list  
-              each val in ['Ресторан', 'Бассейн', 'Транспорт']  
-                li.mobile-menu__expanded-list-item 
+            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
+              each val in ['Ресторан', 'Бассейн', 'Транспорт']
+                li.mobile-menu__expanded-list-item
                   a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
-                    href="/mock-address/change-me" 
+                    href="/mock-address/change-me"
                     )!=val
 
-          each val in ['Вакансии', 'Новости', 'Транспорт']  
-            li.mobile-menu__list-item 
+          each val in ['Вакансии', 'Новости', 'Транспорт']
+            li.mobile-menu__list-item
               a.mobile-menu__list-link.js-mobile-menu__list-link(
-                href="/mock-address/change-me" 
+                href="/mock-address/change-me"
                 )
                 span.mobile-menu__list-bold-item!=val
 
           li.mobile-menu__list-item
             a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
-              href="/mock-address/change-me" 
-              ) 
+              href="/mock-address/change-me"
+              )
               span.mobile-menu__list-bold-item Соглашения
               img(
-                  class="mobile-menu__list-arrow js-mobile-menu__list-arrow" 
-                  src=require("../../img/expand-arrow.svg") 
+                  class="mobile-menu__list-arrow js-mobile-menu__list-arrow"
+                  src=require("../../img/expand-arrow.svg")
                   alt="Expand arrow"
                   )
-            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list  
-              each val in ['Договор по оказанию услуг', 'Договор хранения']  
-                li.mobile-menu__expanded-list-item 
+            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
+              each val in ['Договор по оказанию услуг', 'Договор хранения']
+                li.mobile-menu__expanded-list-item
                   a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
-                    href="/mock-address/change-me" 
+                    href="/mock-address/change-me"
                     )!=val
 
     .scrim

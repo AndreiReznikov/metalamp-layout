@@ -10,18 +10,18 @@
   @media screen and (max-width: 480px) {
     width: 260px;
   }
-  
+
   .date-dropdown__title {
     @include H3();
     margin: 0;
     padding: 0;
   }
-  
+
   .date-dropdown__input-from, .date-dropdown__input-to {
     position: relative;
     margin-top: 5px;
   }
-  
+
   .date-dropdown__input {
     @include Body-font();
     width: 150px;
@@ -33,21 +33,22 @@
     box-sizing: border-box;
     outline: none;
     cursor: pointer;
+
     @media screen and (max-width: 480px) {
       width: 125px;
       padding: 0 0 0 10px;
     }
   }
-  
+
   .date-dropdown__input:focus {
     border: 1px solid $Dark-Shade-50;
   }
-  
+
   .date-dropdown__input::placeholder {
     @include Body-font();
     text-transform: uppercase;
   }
-  
+
   .date-dropdown__arrow {
     position: absolute;
     padding: 0;
@@ -55,6 +56,7 @@
     right: 15px;
     transform: translate(0, -50%);
     pointer-events: none;
+
     @media screen and (max-width: 480px) {
       right: 10px;
     }
@@ -226,4 +228,3 @@
   fill: #BC9CFF;
   stroke: none;
 }
-

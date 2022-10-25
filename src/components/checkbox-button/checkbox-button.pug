@@ -1,15 +1,15 @@
 mixin checkbox-button(options = {})
   .checkbox-button-container
-    if options.title 
+    if options.title
       h3.checkbox-button__title!=options.title
-    label.checkbox-button 
+    label.checkbox-button
       if options.isRich
         span.checkbox-button__text-container
           span.checkbox-button__rich-button-title=options.richButtonTitle
           span.checkbox-button__text_normal-text=options.text
         input.checkbox-button__input(type="checkbox" checked=options.checked)
         span.checkbox-button__custom-input
-      else 
+      else
         span.checkbox-button__text=options.text
         input.checkbox-button__input(type="checkbox" checked=options.checked)
         span.checkbox-button__custom-input

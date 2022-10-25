@@ -13,7 +13,7 @@
   @media screen and (max-width: 400px) {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
-  
+
   &__title {
     @include H1();
     margin: 39px 29px 0 29px;
@@ -23,7 +23,7 @@
       font-size: 20px;
     }
   }
-  
+
   &__wrapper {
     padding: 21px 29px 31px 29px;
 
@@ -31,7 +31,7 @@
       padding: 21px 10px 31px 10px;
     }
   }
-  
+
   &__data-inputs-container {
     width: 100%;
   }
@@ -39,13 +39,13 @@
   &__data-input-container {
     margin-bottom: 10px;
   }
-  
+
   &__button-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
-  
+
   &__login-container {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +58,7 @@
       justify-content: center;
     }
   }
-  
+
   &__login-text {
     @include Body-font();
 

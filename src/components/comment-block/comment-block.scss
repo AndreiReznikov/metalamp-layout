@@ -5,21 +5,21 @@
   max-width: 711px;
   min-width: 280px;
   box-sizing: border-box;
-  
+
   &__user {
     display: flex;
   }
-  
+
   &__like-button {
     margin-top: 2px;
   }
-  
+
   &__comment {
     display: flex;
     margin: 9px 0 0 4px;
   }
-  
-  &__user-photo  {
+
+  &__user-photo {
     width: 48px;
     height: 48px;
     object-fit: cover;
@@ -28,11 +28,11 @@
     border-radius: 50%;
     box-shadow: 0 10px 10px $Dark-Shade-5;
   }
-  
+
   &__user-info {
     padding-left: 10px;
   }
-  
+
   &__username {
     @include H3();
     margin: 0;
@@ -42,12 +42,12 @@
     color: $Dark-Shade-75;
     text-transform: none;
   }
-  
+
   &__date {
     @include Body-font();
     line-height: 24px;
   }
-  
+
   &__comment-text {
     @include Body-font();
     padding: 0 0 0 15px;

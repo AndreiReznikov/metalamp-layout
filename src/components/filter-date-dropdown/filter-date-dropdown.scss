@@ -1,16 +1,16 @@
 @import '../../templates/vars-and-mixins.scss';
 
 .filter-date-dropdown {
-  
+
   &__title {
     @include H3();
     margin: 0 0 5px 0;
   }
-  
+
   &__input-container {
     position: relative;
   }
-  
+
   &__input {
     @include Body-font();
     width: 100%;
@@ -33,7 +33,7 @@
     outline: none;
     border: 1px solid $Dark-Shade-50;
   }
-  
+
   &__arrow {
     position: absolute;
     top: 50%;

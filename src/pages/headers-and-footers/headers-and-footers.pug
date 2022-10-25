@@ -3,8 +3,8 @@ include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
 
-doctype html  
-html(lang="ru")  
+doctype html
+html(lang="ru")
   head
     title Headers & Footers
     meta(charset="UTF-8")
@@ -21,7 +21,7 @@ html(lang="ru")
 
       .headers-and-footers-header-width-logged-in-user-container
         +header({
-          isLoggedIn: true, 
+          isLoggedIn: true,
           userName: 'Юлий Цезарь',
           isBoldItem: true
           })
@@ -30,7 +30,3 @@ html(lang="ru")
         +footer()
       .headers-and-footers-footer-mobile-container
         +footer-mobile({isVisible: true})
-        
-  
-              
-

@@ -2,7 +2,7 @@
 @import '../checkbox-button/checkbox-button';
 
 .expandable-checkbox-list{
-  
+
   &__title {
     @include H3();
     display: flex;
@@ -12,11 +12,11 @@
     box-sizing: border-box;
     cursor: pointer;
   }
-  
+
   &__arrow {
     padding: 2px 14px 0 0;
   }
-  
+
   &__list {
     display: none;
   }
@@ -24,7 +24,7 @@
   .js-expandable-checkbox-list__arrow_transformed {
     transform: rotateX(180deg);
   }
-  
+
   .js-expandable-checkbox-list__list_opened {
     display: block;
   }

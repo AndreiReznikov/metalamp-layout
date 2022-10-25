@@ -2,8 +2,8 @@ include ../../components/logo/logo
 include ../../components/color-description/color-description
 include ../../components/type-description/type-description
 
-doctype html  
-html(lang="en")  
+doctype html
+html(lang="en")
   head
     title Colors & Type
     meta(charset="UTF-8")
@@ -17,82 +17,77 @@ html(lang="en")
 
       main.wrapper
         .colors-description-list-container
-          ul.colors-description-list 
+          ul.colors-description-list
             li.colors-description-list__item
               +color-description({
-                title: 'Dark Shade 100%', 
-                hex: '#1F2041', 
+                title: 'Dark Shade 100%',
+                hex: '#1F2041',
                 style: {'background-color': '#1F2041'}
                 })
             li.colors-description-list__item
               +color-description({
-                title: 'Dark Shade 75%', 
-                hex: '#1F2041', 
+                title: 'Dark Shade 75%',
+                hex: '#1F2041',
                 style: {'background-color': '#1F2041', 'opacity': '0.75'}
                 })
             li.colors-description-list__item
               +color-description({
-                title: 'Dark Shade 50%', 
-                hex: '#1F2041', 
+                title: 'Dark Shade 50%',
+                hex: '#1F2041',
                 style: {'background-color': '#1F2041', 'opacity': '0.5'}
                 })
             li.colors-description-list__item
               +color-description({
-                title: 'Dark Shade 25%', 
-                hex: '#1F2041', 
+                title: 'Dark Shade 25%',
+                hex: '#1F2041',
                 style: {'background-color': '#1F2041', 'opacity': '0.25'}
                 })
             li.colors-description-list__item
               +color-description({
                 title: 'Dark Shade 5%',
-                hex: '#1F2041', 
+                hex: '#1F2041',
                 style: {'background-color': '#1F2041', 'opacity': '0.05'}
                 })
             li.colors-description-list__item
               +color-description({
-                title: 'Purple', 
-                hex: '#BC9CFF', 
+                title: 'Purple',
+                hex: '#BC9CFF',
                 style: {'background-color': '#BC9CFF'}
                 })
             li.colors-description-list__item
               +color-description({
-                title: 'Green', 
-                hex: '#6FCF97', 
+                title: 'Green',
+                hex: '#6FCF97',
                 style: {'background-color': '#6FCF97'}
                 })
-        
+
         .type-description-list-container
-          ul.type-description-list 
-            li.type-description-list__item 
+          ul.type-description-list
+            li.type-description-list__item
               +type-description({
-                title: 'H1', 
-                tag: 'H1', 
-                description: 'This one is the sub-section or widget title', 
+                title: 'H1',
+                tag: 'H1',
+                description: 'This one is the sub-section or widget title',
                 style: {'font-size': '24px', 'width': '520px'}
                 })
-            li.type-description-list__item 
+            li.type-description-list__item
               +type-description({
-                title: 'H2', 
-                tag: 'H2', 
-                description: 'Next one is the item title inside widgets', 
+                title: 'H2',
+                tag: 'H2',
+                description: 'Next one is the item title inside widgets',
                 style: {'font-size': '19px', 'width': '450px'}
                 })
-            li.type-description-list__item 
+            li.type-description-list__item
               +type-description({
-                title: 'H3', 
-                tag: 'H3', 
-                description: 'This is a label or CTA text', 
+                title: 'H3',
+                tag: 'H3',
+                description: 'This is a label or CTA text',
                 style: {'font-size': '12px', 'text-transform': 'uppercase'}
                 })
-            li.type-description-list__item 
+            li.type-description-list__item
               +type-description({
-                title: 'Body', 
-                tag: 'div', 
-                description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 
+                title: 'Body',
+                tag: 'div',
+                description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
                 style: {'font-size': '14px', 'width': '380px', 'line-height': '24px'}
                 })
-          
-            
-
-        
-  

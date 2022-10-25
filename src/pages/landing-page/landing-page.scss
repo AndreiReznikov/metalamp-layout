@@ -27,6 +27,7 @@ html, body {
   background-image: url('../../img/landing-background.jpg');
   background-size: cover;
   background-position: center;
+
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
@@ -38,6 +39,7 @@ html, body {
   max-width: 1440px;
   min-height: 830px;
   margin: 0 auto;
+
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
