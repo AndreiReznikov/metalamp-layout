@@ -24,7 +24,7 @@ mixin button(options = {})
         type=options.type
         disabled=options.disabled
         )!=options.text
-      img(class="long-button__arrow" src=require("../../img/long_button_arrow.svg") alt="arrow")
+      img(class="long-button__arrow" src=require("../../img/long-button-arrow.svg") alt="arrow")
   else if options.longLinkButton
     .long-link-button
       a(
@@ -32,7 +32,7 @@ mixin button(options = {})
         style=options.style
         href=options.href
         )!=options.text
-      img(class="long-button__arrow" src=require("../../img/long_button_arrow.svg") alt="arrow")
+      img(class="long-button__arrow" src=require("../../img/long-button-arrow.svg") alt="arrow")
   else if options.filledButton
     a(
       class=className
@@ -47,4 +47,3 @@ mixin button(options = {})
       )
       span.filled-button__text!=options.text
 
-    
