@@ -1,8 +1,8 @@
 mixin radio-buttons(options = {})
   .radio-buttons
-    label.radio-buttons__label(for="first-name")=options.radio_names[0]
-      input.radio-buttons__input(id="first-name" type="radio" name="name" checked)
+    label.radio-buttons__label=options.radio_names[0]
+      input.radio-buttons__input(type="radio" name="name" checked)
       span.radio-buttons__custom-input
-    label.radio-buttons__label(for="second-name")=options.radio_names[1]
-      input.radio-buttons__input(id="second-name" type="radio" name="name")
+    label.radio-buttons__label=options.radio_names[1]
+      input.radio-buttons__input(type="radio" name="name")
       span.radio-buttons__custom-input
