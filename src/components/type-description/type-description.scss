@@ -10,6 +10,27 @@
     padding: 0;
   }
 
+  &__text_size_large {
+    width: 520px;
+    font-size: 24px;
+  }
+
+  &__text_size_medium {
+    width: 450px;
+    font-size: 19px;
+  }
+
+  &__text_size_small {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__text_size_standart {
+    width: 380px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   &__title {
     display: inline-block;
     min-width: 45px;

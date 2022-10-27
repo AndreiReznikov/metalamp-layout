@@ -1,5 +1,9 @@
 mixin advantage-item(options = {})
-  .advantage-item(style=`border-bottom: ${options.border ? options.border : '1px solid rgba(31, 32, 65, 0.1)'}`)
+  -
+    let className = 'advantage-item';
+    className += options.isBorder ? ' advantage-item_bordered' : '';
+
+  div(class=className)
     .advantage-item__icon
       img(src=require(`../../img/${options.image}`) alt="icon")
     .advantage-item__text

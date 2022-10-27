@@ -1,5 +1,12 @@
 mixin type-description(options = {})
+  -
+    let className = 'type-description__text';
+    className += options.title === 'H1' ? ' type-description__text_size_large' : '';
+    className += options.title === 'H2' ? ' type-description__text_size_medium' : '';
+    className += options.title === 'H3' ?  ' type-description__text_size_small' : '';
+    className += options.title === 'Body' ? ' type-description__text_size_standart' : '';
+
   .type-description
-    #{options.tag}.type-description__text(style=options.style)
+    #{options.tag}(class=className)
       span.type-description__title!=options.title
       span.type-description__description!=options.description
