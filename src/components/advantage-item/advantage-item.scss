@@ -12,6 +12,9 @@
   &__icon {
     min-width: 48px;
     margin-left: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__text {
