@@ -9,6 +9,12 @@
 
   &__input-container {
     position: relative;
+    width: 266px;
+  }
+
+  &__input-container_hidden {
+    width: 320px;
+    opacity: 0;
   }
 
   &__input {

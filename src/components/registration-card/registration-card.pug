@@ -13,23 +13,20 @@ mixin registration-card(options = {})
           .registration-block__username-input-container
             +text-field({
               placeholder: 'Имя',
-              type: 'text',
-              style: {'width': '100%'}
+              type: 'text'
               })
           .registration-block__username-input-container
             +text-field({
               placeholder: 'Фамилия',
-              type: 'text',
-              style: {'width': '100%'}
+              type: 'text'
               })
         .registration-block__radio-buttons-container
-          +radio-buttons({radio_names: ['Мужчина', 'Женщина']})
+          +radio-buttons({radioNames: ['Мужчина', 'Женщина']})
         .registration-block__date-input-container
           +masked-text-field({
             input_type: 'text',
             placeholder: 'ДД.ММ.ГГГГ',
-            title: 'Дата рождения',
-            style: {'width': '100%'}
+            title: 'Дата рождения'
             })
         .registration-block__enter-data-container
           .registration-block__date-title Данные для входа в сервис
@@ -37,14 +34,12 @@ mixin registration-card(options = {})
             .registration-block__entry-data-input-container
               +text-field({
                 placeholder: 'Email',
-                type: 'email',
-                style: {'width': '100%'}
+                type: 'email'
                 })
             .registration-block__entry-data-input-container
               +text-field({
                 placeholder: 'Пароль',
-                type: 'password',
-                style: {'width': '100%'}
+                type: 'password'
                 })
         .registration-block__toggle-button-container
           +toggle-button({text: 'Получать спецпредложения'})

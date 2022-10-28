@@ -37,8 +37,7 @@ html(lang="ru")
           .form-elements-first-text-field
             +element-description({
               title: 'Text field',
-              status: 'Default',
-              style: {'margin-bottom': '5px'}
+              status: 'Default'
               })
             +text-field({
               type: 'email',
@@ -48,8 +47,7 @@ html(lang="ru")
           .form-elements-second-text-field
             +element-description({
               title: 'Text field',
-              status: 'Hover / Focus',
-              style: {'margin-bottom': '5px'}
+              status: 'Hover / Focus'
               })
             +text-field({
               type: 'text',
@@ -78,7 +76,7 @@ html(lang="ru")
               dateFrom: 'new Date(2019, 7, 15)',
               dateTo: 'new Date(2019, 7, 19)',
               isFromEmpty: 'true'
-            })
+              })
 
           .form-elements-filter-date-dropdown-container
             +filter-date-dropdown({
@@ -93,8 +91,7 @@ html(lang="ru")
           .form-elements-dropdown-second-container
             +element-description({
               title: 'Dropdown',
-              status: 'Default',
-              style: {'margin-bottom': '5px'}
+              status: 'Default'
               })
             +dropdown({
               items: ['Спальни', 'Кровати', 'Ванные комнаты'],
@@ -107,8 +104,7 @@ html(lang="ru")
           .form-elements-dropdown-third-container
             +element-description({
               title: 'Dropdown',
-              status: 'Expanded',
-              style: {'margin-bottom': '5px'}
+              status: 'Expanded'
               })
             +dropdown({
               items: ['Спальни', 'Кровати', 'Ванные комнаты'],
@@ -150,20 +146,20 @@ html(lang="ru")
               })
 
           .form-elements-radio-buttons-container
-            +element-description({
-              title: 'Radio buttons',
-              style: {'margin-bottom': '16px'}
+            .form-elements-radio-buttons-description-container
+              +element-description({
+                title: 'Radio buttons'
               })
             +radio-buttons({
               title: 'Radio buttons',
-              radio_names: ['Мужчина', 'Женщина']
+              radioNames: ['Мужчина', 'Женщина']
               })
 
           .form-elements-toggle-buttons-container
-            +element-description({
-              title: 'Toggle',
-              style: {'margin-bottom': '14px'}
-              })
+            .form-elements-toggle-description-container
+              +element-description({
+                title: 'Toggle'
+                })
             .form-elements-toggle-buttons-wrapper
               +toggle-button({
                 text: 'Получать спецпредложения',
@@ -218,10 +214,10 @@ html(lang="ru")
             +range-slider({title: 'Range slider'})
 
           .form-elements-buttons-container
-            +element-description({
-              title: 'Buttons',
-              style: {'margin-bottom': '14px'}
-              })
+            .form-elements-buttons-description-container
+              +element-description({
+                title: 'Buttons'
+                })
             .form-elements-filled-buttons-container
               +button({
                 filledButton: true,
@@ -259,10 +255,10 @@ html(lang="ru")
                 })
 
           .form-elements-pagination-container
-            +element-description({
-              title: 'Pagination',
-              style: {'margin-bottom': '23px'}
-              })
+            .form-elements-pagination-description-container
+              +element-description({
+                title: 'Pagination'
+                })
             +pagination()
 
           .form-elements-dropdown-fifth-container
@@ -277,10 +273,10 @@ html(lang="ru")
               })
 
           .form-elements-bullet-list-container
-            +element-description({
-              title: 'Bullet list',
-              style: {'margin-bottom': '12px'}
-              })
+            .form-elements-bullet-list-description-container
+              +element-description({
+                title: 'Bullet list'
+                })
             +bullet-list({bulletItems: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
         .form-elements-bottom-block

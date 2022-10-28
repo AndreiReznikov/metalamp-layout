@@ -39,10 +39,10 @@ html(lang="ru")
       .cards-right-block
         .cards-date-dropdown-container
           +filter-date-dropdown({
-            style: {'opacity': 0, 'width': '320px'},
+            isHidden: true,
             isOpened: true,
             dateFrom: 'new Date(2019, 7, 19)',
-            dateTo: 'new Date(2019, 7, 23)',
+            dateTo: 'new Date(2019, 7, 23)'
           })
 
         .cards-room-cards-container

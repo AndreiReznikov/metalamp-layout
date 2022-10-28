@@ -7,7 +7,7 @@ include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
 
 mixin title(options = {})
-  h2.room-details-block-title(style=options.style)!=options.text
+  h2.room-details-block-title!=options.text
 
 doctype html
 html(lang="en")
@@ -36,7 +36,7 @@ html(lang="en")
         .room-details-main-wrapper
           .room-details-advantages-container
             +title({text: 'Сведения о номере'})
-            div.room-details-advantages-wrapper
+            .room-details-advantages-wrapper
               .room-details-advantage-wrapper
                 +advantage-item({
                   title: 'Комфорт',
@@ -58,14 +58,16 @@ html(lang="en")
                   image: 'whatshot.svg'
                   })
 
-          div.room-details-doughnut-container
-            +title({text: 'Впечатления от номера', style: {'margin-bottom': '16px'}})
+          .room-details-doughnut-container
+            .room-details-doughnut-title-container
+              +title({text: 'Впечатления от номера'})
             .room-details-doughnut-wrapper.js-room-details-doughnut-wrapper
               canvas.room-details-chart.js-room-details-chart(width="342" height="133")
 
           section.room-details-comments-container
-            .room-details-comments-title-wrapper
-              +title({text: 'Отзывы посетителей номера'})
+            .room-details-comments-title-information-wrapper
+              .room-details-comments-title-container
+                +title({text: 'Отзывы посетителей номера'})
               span.room-details-commenst-number-text 2 отзыва
             article.room-details-comment-wrapper
               +comment-block({
@@ -87,12 +89,14 @@ html(lang="en")
                 })
 
           article.room-details-bullet-list-container
-            +title({text: 'Правила', style: {'margin': '0 0 18px 20px'}})
+            .room-details-bullet-list-title-container
+              +title({text: 'Правила'})
             .room-details-bullet-list-wrapper
               +bullet-list({bulletItems: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
           section.room-details-cancel-information-container
-            +title({text: 'Отмена', style: {'margin-bottom': '20px'}})
+            .room-details-cancel-information-title-container
+              +title({text: 'Отмена'})
             .room-details-cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
         section.room-details-card-wrapper
