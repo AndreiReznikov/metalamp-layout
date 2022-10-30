@@ -7,7 +7,7 @@ mixin expandable-checkbox-list(options = {})
 
   .expandable-checkbox-list.js-expandable-checkbox-list
     h3(class=className)!=options.title
-      img(src=require("../../img/expand-arrow.svg") class="expandable-checkbox-list__arrow js-expandable-checkbox-list__arrow" alt="Arrow")
+      .expandable-checkbox-list__arrow.js-expandable-checkbox-list__arrow
     .expandable-checkbox-list__list.js-expandable-checkbox-list__list
       each val, index in options.checkbox_texts
         - let check; if (options.checked_items) {for (let i = 0; i < options.checked_items.length; i++) {if (index === options.checked_items[i]) {check = true; break}; check = false;}}

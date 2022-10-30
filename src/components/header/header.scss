@@ -68,7 +68,20 @@
   }
 
   &__list-arrow {
+    display: inline-block;
     transition: 0.4s;
+  }
+
+  &__list-arrow::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 3px;
+    border: 1px solid $Dark-Shade-50;
+    border-width: 0 2px 2px 0;
+    box-sizing: border-box;
+    transform: rotate(45deg);
   }
 
   &__list-arrow_transformed {
@@ -265,6 +278,17 @@
     position: absolute;
     right: 0;
     object-fit: cover;
+  }
+
+  &__list-arrow::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $Dark-Shade-50;
+    border-width: 0 2px 2px 0;
+    box-sizing: border-box;
+    transform: rotate(45deg);
   }
 
   &__list-arrow_transformed {

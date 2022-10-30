@@ -13,7 +13,7 @@ mixin date-dropdown(options = {})
       if options.title
         h3.date-dropdown__title!=options.title[0]
       .date-dropdown__input-from
-        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")
+        .date-dropdown__arrow
         input(
           class="date-from js-date-from date-dropdown__input"
           type="text"
@@ -24,7 +24,7 @@ mixin date-dropdown(options = {})
       if options.title
         h3.date-dropdown__title!=options.title[1]
       .date-dropdown__input-to
-        img(src=require("../../img/expand-arrow.svg") class="date-dropdown__arrow" alt="Arrow")
+        .date-dropdown__arrow
         input(
           class="date-to js-date-to date-dropdown__input"
           type="text"

@@ -17,6 +17,17 @@
     padding: 2px 14px 0 0;
   }
 
+  &__arrow::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $Dark-Shade-50;
+    border-width: 0 2px 2px 0;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+  }
+
   &__list {
     display: none;
   }

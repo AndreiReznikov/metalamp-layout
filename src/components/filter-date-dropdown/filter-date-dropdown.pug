@@ -11,7 +11,7 @@ mixin filter-date-dropdown(options = {})
   .filter-date-dropdown.js-filter-date-dropdown
     h3.filter-date-dropdown__title!=options.title
     div(class=inputContainerClassName)
-      img(src=require("../../img/expand-arrow.svg") class="filter-date-dropdown__arrow" alt="Arrow")
+      .filter-date-dropdown__arrow
       input(
         class=className
         type="text"
