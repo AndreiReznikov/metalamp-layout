@@ -19,6 +19,7 @@ $likeButtonsCollection.each(function () {
       $icon.prop('src', likeImage);
     }
     $button.toggleClass('like-button__button_liked');
+    $icon.toggleClass('like-button__icon_liked');
   }
 
   $button.click(handleButtonToggleLike);

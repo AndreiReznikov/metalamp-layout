@@ -10,6 +10,14 @@
     padding-left: 0;
   }
 
+  &__image {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &__image:first-child {
     padding: 0;
   }

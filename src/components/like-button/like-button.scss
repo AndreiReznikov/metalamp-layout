@@ -28,7 +28,16 @@
   }
 
   &__icon {
+    width: 8px;
     height: 8px;
+    background-image: url(../../img/unliked.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__icon_liked {
+    background-image: url(../../img/liked.svg);
   }
 
   &__count {

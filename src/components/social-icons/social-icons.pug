@@ -1,8 +1,8 @@
 mixin social-icons()
+  -
+    const socials = ['twitter', 'facebook', 'instagram'];
+
   .social-icons
-    a(class="social-icons__link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer")
-      img(class="social-icons__image" src=require("../../img/twitter.svg") alt="Twitter")
-    a(class="social-icons__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer")
-      img(class="social-icons__image" src=require("../../img/facebook.svg") alt="Facebook")
-    a(class="social-icons__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
-      img(class="social-icons__image" src=require("../../img/instagram.svg") alt="Instagram")
+    each val in socials
+      a(class="social-icons__link" href=`https://${val}.com/` target="_blank" rel="noopener noreferrer")
+        div(class="social-icons__image" style=`background-image: url(${require('../../img/' + val + '.svg')});`)
