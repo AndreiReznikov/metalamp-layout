@@ -1,49 +1,49 @@
 mixin button(options = {})
   -
     let className = '';
-    className += options.filledButton ? 'filled-button' : '';
-    className += options.emptyButton ? 'empty-button__button' : '';
-    className += options.hiddenBorderButton ? 'hidden-border-button' : '';
-    className += options.longButton ? 'long-button__button' : '';
-    className += options.longLinkButton ? 'long-link-button__button' : '';
-    className += options.isDisabled ? ' button_disabled' : '';
+    className += options.filledButton ? 'filled-button' :
+      options.emptyButton ? 'empty-button' :
+      options.textButton ? 'text-button' :
+      options.longButton ? 'long-button' :
+      options.longLinkButton ? 'long-link-button' : '';
 
-  if options.emptyButton
-    .empty-button(style=options.style)
-      a(
-        class=className
-        style=options.style
-        href=options.href
-        )
-      div(class="empty-button__background")!=options.text
-  else if options.longButton
-    .long-button
-      button(
-        class=className
-        style=options.style
-        type=options.type
-        disabled=options.disabled
-        )!=options.text
-      img(class="long-button__arrow" src=require("../../img/long-button-arrow.svg") alt="arrow")
-  else if options.longLinkButton
-    .long-link-button
-      a(
-        class=className
-        style=options.style
-        href=options.href
-        )!=options.text
-      img(class="long-button__arrow" src=require("../../img/long-button-arrow.svg") alt="arrow")
-  else if options.filledButton
+    className += options.size === 'L' ? ' ' + className + '_size_l' : '';
+
+
+  if options.filledButton
     a(
-      class=className
-      style=options.style
+      class=className,
       href=options.href
       )
       span.filled-button__text!=options.text
-  else if options.hiddenBorderButton
+
+  else if options.emptyButton
+    a(
+      class=className
+      href=options.href
+      )
+      span.empty-button__background!=options.text
+
+  else if options.textButton
     button(
       class=className
-      style=options.style
+      type='button'
       )
-      span.filled-button__text!=options.text
+      span.text-button__text!=options.text
+
+  else if options.longButton
+    div(class=className)
+      button(
+        class='long-button__button'
+        type=options.type
+        )!=options.text
+      span.long-button__arrow
+
+  else if options.longLinkButton
+    div(class=className)
+      a(
+        class='long-link-button__link'
+        href=options.href
+        )!=options.text
+      span.long-link-button__arrow
 
