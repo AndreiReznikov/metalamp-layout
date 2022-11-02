@@ -1,0 +1,19 @@
+include ../like-button/like-button
+
+mixin comment(options = {})
+  .comment
+    .comment__user-wrapper
+      img.comment__user-photo(
+        src=require(`../../img/${options.image}`),
+        alt="User photo"
+        )
+      .comment__user-info
+        h3.comment__username=options.username
+        .comment__date=options.date
+    .comment__comment-wrapper
+      .comment__like-button-wrapper
+        +like-button({
+          count: options.likeCount,
+          isLiked: options.isLiked
+          })
+      .comment__text=options.text

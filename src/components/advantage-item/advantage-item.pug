@@ -7,5 +7,5 @@ mixin advantage-item(options = {})
   div(class=className)
     .advantage-item__icon(style=`background-image: url(${require('../../img/' + options.image)});`)
     .advantage-item__text
-      .advantage-item__title!=options.title
-      .advantage-item__description!=options.description
+      .advantage-item__title=options.title
+      .advantage-item__description=options.description

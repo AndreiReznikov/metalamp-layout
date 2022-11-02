@@ -3,12 +3,19 @@ include ../button/button
 
 mixin header(options = {})
   -
-    let boldItemClass = 'header__list-bold-item'
+    let boldItemClass = 'header__list-bold-item';
+    boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal';
 
-    boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal'
+    const items = [
+      ['О нас', []],
+      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт']],
+      ['Вакансии', []],
+      ['Новости', []],
+      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения']]
+    ];
 
-  .header-container
-    header.header.js-header
+  .header.js-header
+    header.header__container.js-header__container
       .header__wrapper
         +logo({isColorful: true})
         .header__burger-container.js-header__burger-container
@@ -16,46 +23,29 @@ mixin header(options = {})
         .header__right-block-container
           nav.header__nav
             ul.header__menu-list
-              li.header__list-item
-                a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me"
-                  )
-                  span(class=boldItemClass) О нас
 
-              li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
-                a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me"
-                  )
-                  span.header__list-link-text Услуги
-                  .header__list-arrow.js-header__list-arrow
+              each item in items
+                if item[1].length
+                  li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
+                    a.header__list-link.js-header__list-link(
+                      href="/mock-address/change-me"
+                      )
+                      span.header__list-link-text=item[0]
+                      .header__list-arrow.js-header__list-arrow
 
-                .header__expanded-menu.js-header__expanded-menu
-                  ul.header__expanded-menu-list
-                    each val in ['Ресторан', 'Бассейн', 'Транспорт']
-                      li.header__expanded-menu-item
-                        a.header__expanded-menu-link(
-                          href="/mock-address/change-me"
-                          )!=val
-
-              each val in ['Вакансии', 'Новости']
-                li.header__list-item
-                  a.header__list-link.js-header__list-link(
-                    href="/mock-address/change-me"
-                    )!=val
-
-              li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
-                a.header__list-link.js-header__list-link(
-                  href="/mock-address/change-me"
-                  )
-                  span.header__list-link-text Соглашения
-                  .header__list-arrow.js-header__list-arrow
-                .header__expanded-menu.js-header__expanded-menu
-                  ul.header__expanded-menu-list
-                    each val in ['Договор по оказанию услуг', 'Договор хранения']
-                      li.header__expanded-menu-item
-                        a.header__expanded-menu-link(
-                          href="/mock-address/change-me"
-                          )!=val
+                    .header__expanded-menu.js-header__expanded-menu
+                      ul.header__expanded-menu-list
+                        each val in item[1]
+                          li.header__expanded-menu-item
+                            a.header__expanded-menu-link(
+                              href="/mock-address/change-me"
+                              )=val
+                else
+                  li.header__list-item
+                    a.header__list-link.js-header__list-link(
+                      href="/mock-address/change-me"
+                      )
+                      span(class=boldItemClass)=item[0]
 
           if (options.isLoggedIn)
             span.header__user-name!=options.userName
@@ -64,7 +54,6 @@ mixin header(options = {})
               +button({
                 emptyButton: true,
                 text: 'Войти',
-                style: {'height': '34px', 'width': '87px'},
                 href: 'registration-and-sign-in.html?page=entry'
                 })
               +button({
@@ -80,7 +69,6 @@ mixin header(options = {})
           +button({
             emptyButton: true,
             text: 'Войти',
-            style: {'height': '50px', 'width': '200px'},
             href: 'registration-and-sign-in.html?page=entry'
             })
         .mobile-menu__button-container
@@ -92,42 +80,25 @@ mixin header(options = {})
             })
       nav.mobile-menu__nav
         ul.mobile-menu__list
-          li.mobile-menu__list-item
-            a.mobile-menu__list-link.js-mobile-menu__list-link(
-              href="/mock-address/change-me"
-              )
-              span.mobile-menu__list-bold-item О нас
-          li.mobile-menu__list-item
-            a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
-              href="/mock-address/change-me"
-              )
-              span.mobile-menu__list-bold-item Услуги
-              .mobile-menu__list-arrow.js-mobile-menu__list-arrow
-            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
-              each val in ['Ресторан', 'Бассейн', 'Транспорт']
-                li.mobile-menu__expanded-list-item
-                  a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
-                    href="/mock-address/change-me"
-                    )!=val
-
-          each val in ['Вакансии', 'Новости', 'Транспорт']
-            li.mobile-menu__list-item
-              a.mobile-menu__list-link.js-mobile-menu__list-link(
-                href="/mock-address/change-me"
-                )
-                span.mobile-menu__list-bold-item!=val
-
-          li.mobile-menu__list-item
-            a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
-              href="/mock-address/change-me"
-              )
-              span.mobile-menu__list-bold-item Соглашения
-              .mobile-menu__list-arrow.js-mobile-menu__list-arrow
-            ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
-              each val in ['Договор по оказанию услуг', 'Договор хранения']
-                li.mobile-menu__expanded-list-item
-                  a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
-                    href="/mock-address/change-me"
-                    )!=val
+          each item in items
+            if item[1].length
+              li.mobile-menu__list-item
+                a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
+                  href="/mock-address/change-me"
+                  )
+                  span.mobile-menu__list-bold-item=item[0]
+                  .mobile-menu__list-arrow.js-mobile-menu__list-arrow
+                ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
+                  each val in item[1]
+                    li.mobile-menu__expanded-list-item
+                      a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
+                        href="/mock-address/change-me"
+                        )=val
+            else
+              li.mobile-menu__list-item
+                a.mobile-menu__list-link.js-mobile-menu__list-link(
+                  href="/mock-address/change-me"
+                  )
+                  span.mobile-menu__list-bold-item=item[0]
 
     .scrim

@@ -15,7 +15,7 @@ mixin room-card(options = {})
     .room-card__information
       .room-card__room-number-container
         span.room-card__number-symbol №
-        span.room-card__room-number!=options.number
+        span.room-card__room-number=options.number
         if options.isLux
           .room-card__lux-mark
             +button({

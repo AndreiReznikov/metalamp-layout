@@ -12,14 +12,17 @@ html(lang="ru")
         .metalamp-layout-ui-kit-container
           h2.metalamp-layout-ui-kit-title UI Kit
           ul.metalamp-layout-ui-kit-list
-            li.metalamp-layout-ui-kit-item
-              a.metalamp-layout-ui-kit-link(href="colors-and-type.html" target="_blank" rel="noopener noreferrer") Colors and Type
-            li.metalamp-layout-ui-kit-item
-              a.metalamp-layout-ui-kit-link(href="form-elements.html"  target="_blank" rel="noopener noreferrer") Form Elements
-            li.metalamp-layout-ui-kit-item
-              a.metalamp-layout-ui-kit-link(href="cards.html" target="_blank" rel="noopener noreferrer") Cards
-            li.metalamp-layout-ui-kit-item
-              a.metalamp-layout-ui-kit-link(href="headers-and-footers.html" target="_blank" rel="noopener noreferrer") Headers and Footers
+            -
+              const pages = [
+                ['colors-and-type.html', 'Colors and Type'],
+                ['form-elements.html', 'Form Elements'],
+                ['cards.html', 'Cards'],
+                ['headers-and-footers.html', 'Headers and Footers'],
+              ];
+
+            each page in pages
+              li.metalamp-layout-ui-kit-item
+                a.metalamp-layout-ui-kit-link(href=page[0] target="_blank" rel="noopener noreferrer")=page[1]
 
         .metalamp-layout-website-pages-container
           a.metalamp-layout-website-pages-link(href="landing-page.html" target="_blank" rel="noopener noreferrer")

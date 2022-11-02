@@ -2,4 +2,4 @@ mixin bullet-list(options = {})
   .bullet-list
     ul.bullet-list__list
       each val in options.bulletItems
-        li.bullet-list__item!=val
+        li.bullet-list__item=val

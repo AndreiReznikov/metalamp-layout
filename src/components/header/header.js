@@ -17,7 +17,7 @@ $menuExpandableItemsCollection.each(function () {
   menuExpandableLink.click(toggleList);
 });
 
-const $headersCollection = $('.js-header');
+const $headersCollection = $('.js-header__container');
 
 $headersCollection.each(function () {
   const $header = $(this);

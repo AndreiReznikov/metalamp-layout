@@ -2,16 +2,16 @@
 @import '../logo/logo';
 @import '../button/button';
 
-.header-container {
-  width: 100%;
-  min-height: 100%;
-}
-
 .header {
   width: 100%;
-  box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0px 10px 20px $Dark-Shade-5;
+  min-height: 100%;
+
+  &__container {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px $Dark-Shade-5;
+  }
 
   &__wrapper {
     display: flex;

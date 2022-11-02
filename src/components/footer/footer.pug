@@ -10,33 +10,24 @@ mixin footer()
           +logo({isColorful: true})
           .footer__first-section-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__items-section
-          .footer__second-section
-            ul.footer__list
-              li.footer__list-item
-                h3.footer__title Навигация
-              each val in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+          -
+            const sections = [
+              ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги']],
+              ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']],
+              ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']]
+            ];
+
+          each value in sections
+            div(class=value[0])
+              ul.footer__list
                 li.footer__list-item
-                  a.footer__link(
-                    href="/mock-address/change-me"
-                  )=val
-          .footer__third-section
-            ul.footer__list
-              li.footer__list-item
-                h3.footer__title О нас
-              each val in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-                li.footer__list-item
-                  a.footer__link(
-                    href="/mock-address/change-me"
-                  )=val
-          .footer__fourth-section
-            ul.footer__list
-              li.footer__list-item
-                h3.footer__title Служба поддержки
-              each val in ['Соглашения', 'Сообщества', 'Связь с нами']
-                li.footer__list-item
-                  a.footer__link(
-                    href="/mock-address/change-me"
-                  )=val
+                  h3.footer__title Навигация
+                each val in value[1]
+                  li.footer__list-item
+                    a.footer__link(
+                      href="/mock-address/change-me"
+                    )=val
+                    
         .footer__fifth-section
           h3.footer__subscription-title Подписка
           form.footer__subscription-form

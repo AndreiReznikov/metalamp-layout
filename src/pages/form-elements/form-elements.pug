@@ -17,7 +17,7 @@ include ../../components/button/button
 include ../../components/pagination/pagination
 include ../../components/bullet-list/bullet-list
 include ../../components/advantage-item/advantage-item
-include ../../components/comment-block/comment-block
+include ../../components/comment/comment
 
 doctype html
 html(lang="ru")
@@ -293,8 +293,8 @@ html(lang="ru")
               image: 'location-city.svg',
               isBorder: true
               })
-          .form-elements-comment-block-container
-            +comment-block({
+          .form-elements-comment-container
+            +comment({
               image: 'image.jpg',
               date: '5 дней назад',
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',

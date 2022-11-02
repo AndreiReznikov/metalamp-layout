@@ -2,7 +2,7 @@ import Chart from 'chart.js/auto';
 
 import '../../components/header/header';
 import '../../components/reserve-room-card/reserve-room-card';
-import '../../components/comment-block/comment-block';
+import '../../components/comment/comment';
 import '../../templates/fonts.scss';
 import './room-details.scss';
 

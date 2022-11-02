@@ -7,17 +7,13 @@ mixin entry-card()
     .entry-card__wrapper
       form.entry-card__form
         .entry-card__inputs-container
-          .entry-card__input-wrapper
-            +text-field({
-              placeholder: 'Email',
-              type: 'email'
-              })
-          .entry-card__input-wrapper
-            +text-field({
-              placeholder: 'Пароль',
-              type: 'password'
-              })
-        .entry-card__button-wrapper
+          each val in [['Email', 'email'], ['Пароль', 'password']]
+            .entry-card__input-wrapper
+              +text-field({
+                placeholder: val[0],
+                type: val[1]
+                })
+        .entry-card__long-button-wrapper
           +button({
             longButton: true,
             text: 'Войти',

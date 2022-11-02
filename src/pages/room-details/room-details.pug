@@ -1,7 +1,7 @@
 include ../../components/header/header
 include ../../components/advantage-item/advantage-item
 include ../../components/reserve-room-card/reserve-room-card
-include ../../components/comment-block/comment-block
+include ../../components/comment/comment
 include ../../components/bullet-list/bullet-list
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
@@ -70,7 +70,7 @@ html(lang="en")
                 +title({text: 'Отзывы посетителей номера'})
               span.room-details-commenst-number-text 2 отзыва
             article.room-details-comment-wrapper
-              +comment-block({
+              +comment({
                 image: 'image.jpg',
                 date: '5 дней назад',
                 text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
@@ -79,7 +79,7 @@ html(lang="en")
                 isLiked: true
                 })
             article.room-details-comment-wrapper
-              +comment-block({
+              +comment({
                 image: 'image2.jpg',
                 date: 'Неделю назад',
                 text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',

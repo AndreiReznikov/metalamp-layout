@@ -11,5 +11,5 @@ mixin type(options = {})
 
   .type
     #{tag}(class=className)
-      span.type__title!=options.title
-      span.type__description!=options.description
+      span.type__title=options.title
+      span.type__description=options.description

@@ -2,7 +2,7 @@
 @import '../../components/element-description/element-description';
 @import '../../components/text-field/text-field';
 @import '../../components/masked-text-field/masked-text-field';
-@import '../../components/comment-block/comment-block';
+@import '../../components/comment/comment';
 @import '../../components/dropdown/dropdown';
 @import '../../components/date-dropdown/date-dropdown';
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
@@ -238,6 +238,6 @@ html {
   height: 153px;
 }
 
-.form-elements-comment-block-container {
+.form-elements-comment-container {
   margin: 7px 0 0 166px;
 }

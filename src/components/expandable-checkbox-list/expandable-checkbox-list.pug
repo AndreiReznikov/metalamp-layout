@@ -6,7 +6,7 @@ mixin expandable-checkbox-list(options = {})
     className += options.isOpened ? ' js-expandable-checkbox-list__title_opened' : ''
 
   .expandable-checkbox-list.js-expandable-checkbox-list
-    h3(class=className)!=options.title
+    h3(class=className)=options.title
       .expandable-checkbox-list__arrow.js-expandable-checkbox-list__arrow
     .expandable-checkbox-list__list.js-expandable-checkbox-list__list
       each val, index in options.checkboxTexts

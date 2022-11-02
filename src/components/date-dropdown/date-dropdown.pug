@@ -9,25 +9,19 @@ mixin date-dropdown(options = {})
       data-from=options.dateFrom
       data-to=options.dateTo
       )
-    .date-dropdown__wrapper
-      if options.title
-        h3.date-dropdown__title!=options.title[0]
-      .date-dropdown__from
-        .date-dropdown__arrow
-        input(
-          class="date-dropdown__input-from js-date-dropdown__input-from"
-          type="text"
-          placeholder="дд.мм.гггг"
-          data-from-empty=options.isFromEmpty
-          )
-    .date-dropdown__wrapper
-      if options.title
-        h3.date-dropdown__title!=options.title[1]
-      .date-dropdown__to
-        .date-dropdown__arrow
-        input(
-          class="date-dropdown__input-to js-date-dropdown__input-to"
-          type="text"
-          placeholder="дд.мм.гггг"
-          data-to-empty=options.isToEmpty
-          )
+
+    each val, index in ['from', 'to']
+      .date-dropdown__wrapper
+        if options.title
+          h3.date-dropdown__title=options.title[index]
+        .date-dropdown__input-wrapper
+          .date-dropdown__arrow
+          input(
+            class=`date-dropdown__input-${val} js-date-dropdown__input-${val}`
+            type="text"
+            placeholder="дд.мм.гггг"
+            if val = 'from'
+              data-from-empty=options.isFromEmpty
+            else
+              data-to-empty=options.isToEmpty
+            )

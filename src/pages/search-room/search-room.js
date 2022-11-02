@@ -35,7 +35,7 @@ dataContainer.addClass('pagination__data-container_visible');
 
 const paginationArray = [];
 
-const $roomCard = $('.js-room-short-information-block');
+const $roomCard = $('.js-room-card');
 
 $roomCard.each(function () {
   const card = this;
@@ -56,7 +56,7 @@ const showItemsNum = () => {
 };
 
 const initializeSlick = () => {
-  $('.js-room-short-information-block__slider').each(function () {
+  $('.js-room-card__slider').each(function () {
     const $item = $(this);
 
     $item.slick({
@@ -65,7 +65,7 @@ const initializeSlick = () => {
     });
   });
 
-  $('.js-room-short-information-block__slider_with_arrows').each(function () {
+  $('.js-room-card__slider_with_arrows').each(function () {
     const $item = $(this);
 
     $item.slick({

@@ -10,40 +10,35 @@ mixin button(options = {})
     className += options.size === 'L' ? ' ' + className + '_size_l' : '';
 
 
-  if options.filledButton
+  if options.filledButton || options.emptyButton
     a(
       class=className,
       href=options.href
       )
-      span.filled-button__text!=options.text
-
-  else if options.emptyButton
-    a(
-      class=className
-      href=options.href
-      )
-      span.empty-button__background!=options.text
+      if options.filledButton
+        span.filled-button__text=options.text
+      else
+        span.empty-button__background=options.text
 
   else if options.textButton
     button(
       class=className
       type='button'
       )
-      span.text-button__text!=options.text
+      span.text-button__text=options.text
 
-  else if options.longButton
+  else if options.longButton || options.longLinkButton
     div(class=className)
-      button(
-        class='long-button__button'
-        type=options.type
-        )!=options.text
-      span.long-button__arrow
-
-  else if options.longLinkButton
-    div(class=className)
-      a(
-        class='long-link-button__link'
-        href=options.href
-        )!=options.text
-      span.long-link-button__arrow
+      if options.longButton
+        button(
+          class='long-button__button'
+          type=options.type
+          )!=options.text
+        span.long-button__arrow
+      else
+        a(
+          class='long-link-button__link'
+          href=options.href
+          )!=options.text
+        span.long-link-button__arrow
 

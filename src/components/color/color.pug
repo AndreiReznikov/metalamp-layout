@@ -13,5 +13,5 @@ mixin color(options = {})
   .color
     div(class=className)
     .color__text
-      h2.color__title!=options.title
-      span.color__hex!=options.hex
+      h2.color__title=options.title
+      span.color__hex=options.hex

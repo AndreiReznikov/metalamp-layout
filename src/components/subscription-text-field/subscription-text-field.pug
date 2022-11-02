@@ -1,7 +1,7 @@
 mixin subscription-text-field(options = {})
   .subscription-text-field
     if options.title
-      h3.subscription-text-field__title!=options.title
+      h3.subscription-text-field__title=options.title
     .subscription-text-field__input-container
       input(
         class="subscription-text-field__input"
