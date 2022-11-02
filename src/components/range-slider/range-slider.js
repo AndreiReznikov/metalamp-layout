@@ -18,14 +18,14 @@ $rangeSlidersCollection.each(function () {
 
   const $ionRangeSlider = $($rangeSlider.find('.irs.irs--flat'));
 
-  $ionRangeSlider.append('<div class="range-slider-values js-range-slider-values"></div>');
+  $ionRangeSlider.append('<div class="range-slider__values js-range-slider__values"></div>');
 
-  const $rangeSliderValues = $($rangeSlider.find('.js-range-slider-values'));
+  const $rangeSliderValues = $($rangeSlider.find('.js-range-slider__values'));
 
-  $rangeSliderValues.append('<span class="range-slider-value-from js-range-slider-value-from"></span>').append('<span class=range-slider-value-separator> - </span>').append('<span class="range-slider-value-to js-range-slider-value-to"></span>');
+  $rangeSliderValues.append('<span class="range-slider__from js-range-slider__from"></span>').append('<span class=range-slider__value-separator> - </span>').append('<span class="range-slider__to js-range-slider__to"></span>');
 
-  const $valueFrom = $rangeSlider.find('.js-range-slider-value-from');
-  const $valueTo = $rangeSlider.find('.js-range-slider-value-to');
+  const $valueFrom = $rangeSlider.find('.js-range-slider__from');
+  const $valueTo = $rangeSlider.find('.js-range-slider__to');
 
   $valueFrom.html(`${$rangeSliderInput.data('from').toLocaleString()}&#8381`);
   $valueTo.html(`${$rangeSliderInput.data('to').toLocaleString()}&#8381`);

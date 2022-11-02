@@ -1,8 +1,9 @@
 mixin radio-buttons(options = {})
+  -
+    let i = 0;
+
   .radio-buttons
-    label.radio-buttons__label=options.radioNames[0]
-      input.radio-buttons__input(type="radio" name="name" checked)
-      span.radio-buttons__custom-input
-    label.radio-buttons__label=options.radioNames[1]
-      input.radio-buttons__input(type="radio" name="name")
-      span.radio-buttons__custom-input
+    while i < options.radioNames.length
+      label.radio-buttons__label=options.radioNames[i++]
+        input.radio-buttons__input(type="radio" name="name" checked=options.checkedNumber === i - 1)
+        span.radio-buttons__custom-input

@@ -118,13 +118,13 @@ html(lang="ru")
           .form-elements-expandable-checkbox-list-container
             +expandable-checkbox-list({
               title: 'Expandable checkbox list',
-              checkbox_texts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
               })
           .form-elements-opened-expandable-checkbox-list-container
             +expandable-checkbox-list({
               title: 'Expandable checkbox list',
-              checkbox_texts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
-              checked_items: [1, 2, 3],
+              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+              checkedItems: [1, 2, 3],
               isOpened: true
               })
 
@@ -152,7 +152,8 @@ html(lang="ru")
               })
             +radio-buttons({
               title: 'Radio buttons',
-              radioNames: ['Мужчина', 'Женщина']
+              radioNames: ['Мужчина', 'Женщина'],
+              checkedNumber: 0
               })
 
           .form-elements-toggle-buttons-container

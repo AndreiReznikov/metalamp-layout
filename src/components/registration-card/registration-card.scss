@@ -5,7 +5,7 @@
 @import '../toggle-button/toggle-button';
 @import '../button/button';
 
-.registration-block {
+.registration-card {
   max-width: 380px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -39,11 +39,11 @@
     }
   }
 
-  &__username-input-container {
+  &__username-input-wrapper {
     margin-bottom: 10px;
   }
 
-  &__username-input-container:last-child {
+  &__username-input-wrapper:last-child {
     margin-bottom: 0;
   }
 
@@ -55,20 +55,20 @@
     margin-top: 24px;
   }
 
-  &__enter-data-container {
+  &__entry-data-container {
     margin-top: 20px;
   }
 
-  &__date-title {
+  &__data-title {
     @include H3();
     margin: 0 0 5px 0;
   }
 
-  &__entry-data-input-container {
+  &__entry-data-input-wrapper {
     margin-bottom: 10px;
   }
 
-  &__entry-data-input-container:last-child {
+  &__entry-data-input-wrapper:last-child {
     margin-bottom: 0;
   }
 

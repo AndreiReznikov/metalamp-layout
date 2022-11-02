@@ -5,52 +5,47 @@ include ../toggle-button/toggle-button
 include ../button/button
 
 mixin registration-card(options = {})
-  .registration-block.js-registration-block
-    h1.registration-block__title Регистрация аккаунта
-    .registration-block__wrapper
-      form.registration-block__form
-        .registration-block__username-inputs-container
-          .registration-block__username-input-container
-            +text-field({
-              placeholder: 'Имя',
-              type: 'text'
-              })
-          .registration-block__username-input-container
-            +text-field({
-              placeholder: 'Фамилия',
-              type: 'text'
-              })
-        .registration-block__radio-buttons-container
-          +radio-buttons({radioNames: ['Мужчина', 'Женщина']})
-        .registration-block__date-input-container
+  .registration-card.js-registration-card
+    h1.registration-card__title Регистрация аккаунта
+    .registration-card__wrapper
+      form.registration-card__form
+        .registration-card__username-inputs-container
+          each val in ['Имя', 'Фамилия']
+            .registration-card__username-input-wrapper
+              +text-field({
+                placeholder: val,
+                type: 'text'
+                })
+        .registration-card__radio-buttons-container
+          +radio-buttons({
+            radioNames: ['Мужчина', 'Женщина'],
+            checkedNumber: 0
+            })
+        .registration-card__date-input-container
           +masked-text-field({
-            input_type: 'text',
+            type: 'text',
             placeholder: 'ДД.ММ.ГГГГ',
             title: 'Дата рождения'
             })
-        .registration-block__enter-data-container
-          .registration-block__date-title Данные для входа в сервис
-          .registration-block__entry-data-inputs-container
-            .registration-block__entry-data-input-container
-              +text-field({
-                placeholder: 'Email',
-                type: 'email'
-                })
-            .registration-block__entry-data-input-container
-              +text-field({
-                placeholder: 'Пароль',
-                type: 'password'
-                })
-        .registration-block__toggle-button-container
+        .registration-card__entry-data-container
+          .registration-card__data-title Данные для входа в сервис
+          .registration-card__entry-data-inputs-container
+            each val in [['Email', 'email'], ['Пароль', 'password']]
+              .registration-card__entry-data-input-wrapper
+                +text-field({
+                  placeholder: val[0],
+                  type: val[1]
+                  })
+        .registration-card__toggle-button-container
           +toggle-button({text: 'Получать спецпредложения'})
-        .registration-block__long-button-container
+        .registration-card__long-button-container
           +button({
             longButton: true,
             text: options.buttonText,
             type: 'submit'
             })
-        .registration-block__login-container
-          .registration-block__login-text Уже есть аккаунт на Toxin
+        .registration-card__login-container
+          .registration-card__login-text Уже есть аккаунт на Toxin
           +button({
             emptyButton: true,
             text: 'Войти',

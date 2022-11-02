@@ -3,20 +3,20 @@ include ../dropdown/dropdown
 include ../button/button
 
 mixin room-search-card()
-  .room-search-block
-    h1.room-search-block__title Найдём номера под ваши пожелания
-    form.room-serch-block__form
-      .room-search-block__wrapper
-        .room-search-block__date-dropdown-container
+  .room-search-card
+    h1.room-search-card__title Найдём номера под ваши пожелания
+    form.room-serch-card__form
+      .room-search-card__wrapper
+        .room-search-card__date-dropdown-container
           +date-dropdown({title: ['Прибытие', 'Выезд']})
-        .room-search-block__guests-dropdown-container
+        .room-search-card__guests-dropdown-container
           +dropdown({
             items: ['Взрослые', 'Дети', 'Младенцы'],
             addingButtons: true,
             isGuests: true,
             title: 'Гости'
             })
-        .room-search-block__long-button-container
+        .room-search-card__long-button-container
           +button({
             longLinkButton: true,
             text: 'Подобрать номер',

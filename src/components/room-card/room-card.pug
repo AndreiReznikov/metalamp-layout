@@ -3,32 +3,34 @@ include ../rate-button/rate-button
 
 mixin room-card(options = {})
   -
-    let className = options.isSlickArrows ? 'room-short-information-block__slider_with_arrows js-room-short-information-block__slider_with_arrows' : 'room-short-information-block__slider js-room-short-information-block__slider'
+    let className = options.isSlickArrows ?
+      'room-card__slider_with_arrows js-room-card__slider_with_arrows' :
+      'room-card__slider js-room-card__slider';
 
-  .room-short-information-block.js-room-short-information-block
-    .room-short-information-block__image-container
+  .room-card.js-room-card
+    .room-card__image-container
       div(class=className)
         each val in options.photos
-          img.room-short-information-block__image(src=require(`../../img/${val}`) alt="Room photo")
-    .room-short-information-block__information
-      .room-short-information-block__room-number-container
-        span.room-short-information-block__number-symbol №
-        span.room-short-information-block__room-number!=options.number
+          img.room-card__image(src=require(`../../img/${val}`) alt="Room photo")
+    .room-card__information
+      .room-card__room-number-container
+        span.room-card__number-symbol №
+        span.room-card__room-number!=options.number
         if options.isLux
-          .room-short-information-block__lux-mark
+          .room-card__lux-mark
             +button({
               textButton: true,
               text: 'Люкс'
               })
-      .room-short-information-block__room-price-container
-        span.room-short-information-block__room-price!=options.price
-          span.room-short-information-block__currency &#8381;
-          span.room-short-information-block__time-interval  в сутки
-    .room-short-information-block__rate-block
+      .room-card__price-container
+        span.room-card__price!=options.price
+          span.room-card__currency &#8381;
+          span.room-card__time-interval  в сутки
+    .room-card__rate
       +rate-button({
         starsNumber: options.starsNumber,
         checkedButton: options.checkedButton,
         name: `${Math.random()}`
         })
-      .room-short-information-block__reviews-number!=options.reviewsNumber
-        span.room-short-information-block__reviews-number-text  Отзывов
+      .room-card__reviews-number!=options.reviewsNumber
+        span.room-card__reviews-number-text  Отзывов

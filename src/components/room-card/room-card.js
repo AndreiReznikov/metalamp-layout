@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 $(document).ready(() => {
-  $('.js-room-short-information-block__slider').each(function () {
+  $('.js-room-card__slider').each(function () {
     const $item = $(this);
 
     $item.slick({
@@ -12,7 +12,7 @@ $(document).ready(() => {
     });
   });
 
-  $('.js-room-short-information-block__slider_with_arrows').each(function () {
+  $('.js-room-card__slider_with_arrows').each(function () {
     const $item = $(this);
 
     $item.slick({

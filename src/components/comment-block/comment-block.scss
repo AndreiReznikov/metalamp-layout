@@ -1,7 +1,7 @@
 @import '../../templates/vars-and-mixins.scss';
 @import '../like-button/like-button';
 
-.comments-block {
+.comment-block {
   max-width: 711px;
   min-width: 280px;
   box-sizing: border-box;
@@ -48,7 +48,7 @@
     line-height: 24px;
   }
 
-  &__comment-text {
+  &__text {
     @include Body-font();
     padding: 0 0 0 15px;
     line-height: 24px;

@@ -1,8 +1,4 @@
-mixin logo(options)
-  -
-    if (!options)
-      options = {};
-
+mixin logo(options = {})
   if options.isColorful
     a.logo(href="landing-page.html")
       .logo__toxin-icon

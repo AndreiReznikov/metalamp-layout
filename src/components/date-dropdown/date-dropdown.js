@@ -1,13 +1,13 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
-const $dateDropdownsCollection = $('.js-date-dropdown-container');
+const $dateDropdownsCollection = $('.js-date-dropdown');
 
 $dateDropdownsCollection.each(function () {
   const $dateDropdown = $(this);
   const dateDropdownInput = $dateDropdown.find('.js-datepicker-multi');
-  const dateFrom = $dateDropdown.find('.js-date-from');
-  const dateTo = $dateDropdown.find('.js-date-to');
+  const dateFrom = $dateDropdown.find('.js-date-dropdown__input-from');
+  const dateTo = $dateDropdown.find('.js-date-dropdown__input-to');
 
   dateDropdownInput.datepicker({
     clearButton: true,

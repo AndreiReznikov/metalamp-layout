@@ -1,5 +1,5 @@
 mixin date-dropdown(options = {})
-  .date-dropdown-container.js-date-dropdown-container
+  .date-dropdown.js-date-dropdown
     input(
       type="text"
       class="datepicker-multi js-datepicker-multi"
@@ -9,24 +9,24 @@ mixin date-dropdown(options = {})
       data-from=options.dateFrom
       data-to=options.dateTo
       )
-    .date-dropdown-wrapper
+    .date-dropdown__wrapper
       if options.title
         h3.date-dropdown__title!=options.title[0]
-      .date-dropdown__input-from
+      .date-dropdown__from
         .date-dropdown__arrow
         input(
-          class="date-from js-date-from date-dropdown__input"
+          class="date-dropdown__input-from js-date-dropdown__input-from"
           type="text"
           placeholder="дд.мм.гггг"
           data-from-empty=options.isFromEmpty
           )
-    .date-dropdown-wrapper
+    .date-dropdown__wrapper
       if options.title
         h3.date-dropdown__title!=options.title[1]
-      .date-dropdown__input-to
+      .date-dropdown__to
         .date-dropdown__arrow
         input(
-          class="date-to js-date-to date-dropdown__input"
+          class="date-dropdown__input-to js-date-dropdown__input-to"
           type="text"
           placeholder="дд.мм.гггг"
           data-to-empty=options.isToEmpty

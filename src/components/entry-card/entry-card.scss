@@ -2,7 +2,7 @@
 @import '../text-field/text-field';
 @import '../button/button';
 
-.entry-block {
+.entry-card {
   max-width: 380px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -32,21 +32,21 @@
     }
   }
 
-  &__data-inputs-container {
+  &__inputs-container {
     width: 100%;
   }
 
-  &__data-input-container {
+  &__input-wrapper {
     margin-bottom: 10px;
   }
 
-  &__button-container {
+  &__button-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
 
-  &__login-container {
+  &__registration-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -59,7 +59,7 @@
     }
   }
 
-  &__login-text {
+  &__registration-text {
     @include Body-font();
 
     @media screen and (max-width: 480px) {

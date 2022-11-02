@@ -1,10 +1,6 @@
 @import '../../templates/vars-and-mixins.scss';
 
 .checkbox-button {
-  display: flex;
-  max-width: 266px;
-  min-height: 20px;
-  margin-bottom: 10px;
 
   &__title {
     @include H3();
@@ -12,20 +8,19 @@
     padding: 0;
   }
 
-  &__text {
-    @include Body-font();
+  &__label {
     display: flex;
-    max-width: 240px;
-    margin: 0;
-    padding: 0 0 0 30px;
-    color: $Dark-Shade-50;
+    flex-direction: column;
+    max-width: 266px;
+    min-height: 20px;
+    margin-bottom: 10px;
   }
 
   &__text-container {
     padding-left: 30px;
   }
 
-  &__text_normal-text {
+  &__text_regular {
     @include Body-font();
     display: inline-block;
     width: 95%;
@@ -41,6 +36,15 @@
     font-size: 14px;
     text-transform: none;
     color: $Dark-Shade-75;
+  }
+
+  &__text {
+    @include Body-font();
+    display: flex;
+    max-width: 240px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    color: $Dark-Shade-50;
   }
 
   &__input {

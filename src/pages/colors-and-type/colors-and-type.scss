@@ -1,6 +1,6 @@
 @import '../../components/logo/logo';
-@import '../../components/color-description/color-description';
-@import '../../components/type-description/type-description';
+@import '../../components/color/color';
+@import '../../components/type/type';
 
 html {
   background-color: #fff;
@@ -9,26 +9,26 @@ html {
   font-size: 14px;
 }
 
-.container {
+.colors-and-type-container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
 }
 
-.logo-container {
+.colors-and-type-logo-container {
   margin: 30px 0 0 30px;
 }
 
-.wrapper {
+.colors-and-type-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.colors-description-list-container {
+.colors-and-type-colors-description-list-container {
   margin: 63px 0 0 150px;
 }
 
-.colors-description-list {
+.colors-and-type-colors-description-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -39,11 +39,11 @@ html {
   }
 }
 
-.type-description-list-container {
+.colors-and-type-type-description-list-container {
   margin: 47px 82px 0 0;
 }
 
-.type-description-list {
+.colors-and-type-type-description-list {
   list-style-type: none;
   padding: 0;
 

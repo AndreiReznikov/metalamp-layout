@@ -1,11 +1,11 @@
 @import '../../templates/vars-and-mixins.scss';
 
-.data-container {
+.pagination__data-container {
   display: none;
   width: 100%;
 }
 
-.data-container_visible {
+.pagination__data-container_visible {
   display: block;
 }
 
@@ -101,7 +101,7 @@
   opacity: 1;
 }
 
-.pagination-wrapper {
+.pagination {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -109,14 +109,14 @@
   box-sizing: border-box;
 }
 
-.pagination-container {
+.pagination__container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.pagination-list {
+.pagination__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -124,17 +124,17 @@
   padding: 0;
   list-style-type: none;
 
-  &__item {
+  &-item {
     margin: 10px 5px 11px 0;
   }
 
-  &__link {
+  &-link {
     display: inline-block;
     text-decoration: none;
   }
 }
 
-.pagination-text {
+.pagination__text {
   @include Body-font();
   position: absolute;
   min-width: 200px;

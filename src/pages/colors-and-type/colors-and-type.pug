@@ -1,6 +1,6 @@
 include ../../components/logo/logo
-include ../../components/color-description/color-description
-include ../../components/type-description/type-description
+include ../../components/color/color
+include ../../components/type/type
 
 doctype html
 html(lang="en")
@@ -11,72 +11,44 @@ html(lang="en")
     meta(name="keywords" content="Colors & Type, components, MetaLamp, education")
     meta(name="description" content="Цвета и шрифты, используемые для сайта Toxin")
   body
-    .container
-      .logo-container
+    .colors-and-type-container
+      .colors-and-type-logo-container
         +logo()
 
-      main.wrapper
-        .colors-description-list-container
-          ul.colors-description-list
-            li.colors-description-list__item
-              +color-description({
-                title: 'Dark Shade 100%',
-                hex: '#1F2041'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Dark Shade 75%',
-                hex: '#1F2041'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Dark Shade 50%',
-                hex: '#1F2041'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Dark Shade 25%',
-                hex: '#1F2041'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Dark Shade 5%',
-                hex: '#1F2041'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Purple',
-                hex: '#BC9CFF'
-                })
-            li.colors-description-list__item
-              +color-description({
-                title: 'Green',
-                hex: '#6FCF97'
-                })
+      main.colors-and-type-wrapper
+        .colors-and-type-colors-description-list-container
+          -
+            let colors = [
+              ['Dark Shade 100%', '#1F2041'],
+              ['Dark Shade 75%', '#1F2041'],
+              ['Dark Shade 50%', '#1F2041'],
+              ['Dark Shade 25%', '#1F2041'],
+              ['Dark Shade 5%', '#1F2041'],
+              ['Purple', '#BC9CFF'],
+              ['Green', '#6FCF97']
+            ];
 
-        .type-description-list-container
-          ul.type-description-list
-            li.type-description-list__item
-              +type-description({
-                title: 'H1',
-                tag: 'H1',
-                description: 'This one is the sub-section or widget title'
-                })
-            li.type-description-list__item
-              +type-description({
-                title: 'H2',
-                tag: 'H2',
-                description: 'Next one is the item title inside widgets'
-                })
-            li.type-description-list__item
-              +type-description({
-                title: 'H3',
-                tag: 'H3',
-                description: 'This is a label or CTA text'
-                })
-            li.type-description-list__item
-              +type-description({
-                title: 'Body',
-                tag: 'div',
-                description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
-                })
+          ul.colors-and-type-colors-description-list
+            each val in colors
+              li.colors-and-type-colors-description-list__item
+                +color({
+                  title: val[0],
+                  hex: val[1]
+                  })
+
+        .colors-and-type-type-description-list-container
+          -
+            let types = [
+              ['H1', 'This one is the sub-section or widget title'],
+              ['H2', 'Next one is the item title inside widgets'],
+              ['H3', 'This is a label or CTA text'],
+              ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']
+            ];
+
+          ul.colors-and-type-type-description-list
+            each val in types
+              li.colors-and-type-type-description-list__item
+                +type({
+                  title: val[0],
+                  description: val[1]
+                  })

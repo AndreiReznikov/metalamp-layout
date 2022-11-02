@@ -19,19 +19,19 @@ const showFilterItems = () => $filterItems.toggle();
 $filterButton.click(showFilterItems);
 
 function simpleTemplating(data) {
-  let html = '<ul class="pagination-list">';
+  let html = '<ul class="pagination__list">';
   $.each(data, (index, item) => {
-    html += '<li class="pagination-list__item js-pagination-list__item">'
-      + `<a class="pagination-list__link" href="room-details.html">${item}</a>`
+    html += '<li class="pagination__list-item js-pagination__list-item">'
+      + `<a class="pagination__list-link" href="room-details.html">${item}</a>`
       + '</li>';
   });
   html += '</ul>';
   return html;
 }
 
-const dataContainer = $('.js-data-container');
+const dataContainer = $('.js-pagination__data-container');
 
-dataContainer.addClass('data-container_visible');
+dataContainer.addClass('pagination__data-container_visible');
 
 const paginationArray = [];
 
@@ -46,9 +46,9 @@ $roomCard.each(function () {
 
 const showItemsNum = () => {
   const paginationSize = 12;
-  const paginationItemsNum = $('.js-pagination-list__item').length;
-  const paginationSubText = $('.js-pagination-text__num');
-  const pageNum = $('.js-pagination-container').pagination('getSelectedPageNum');
+  const paginationItemsNum = $('.js-pagination__list-item').length;
+  const paginationSubText = $('.js-pagination__number');
+  const pageNum = $('.js-pagination__container').pagination('getSelectedPageNum');
 
   const paginationText = `${(paginationSize * pageNum - paginationSize + 1)} - ${paginationSize * pageNum - (paginationSize - paginationItemsNum)} `;
 
@@ -56,7 +56,7 @@ const showItemsNum = () => {
 };
 
 const initializeSlick = () => {
-  $('.js-data-container .js-room-short-information-block__slider').each(function () {
+  $('.js-room-short-information-block__slider').each(function () {
     const $item = $(this);
 
     $item.slick({
@@ -65,7 +65,7 @@ const initializeSlick = () => {
     });
   });
 
-  $('.js-data-container .js-room-short-information-block__slider_with_arrows').each(function () {
+  $('.js-room-short-information-block__slider_with_arrows').each(function () {
     const $item = $(this);
 
     $item.slick({
@@ -79,7 +79,7 @@ const initializeSlick = () => {
 
 const windowWidth = $(window).width();
 
-$('.js-pagination-container').pagination({
+$('.js-pagination__container').pagination({
   dataSource: paginationArray,
   autoHidePrevious: !(windowWidth < 600),
   autoHideNext: !(windowWidth < 600),
@@ -92,7 +92,7 @@ $('.js-pagination-container').pagination({
   callback: (data) => {
     const html = simpleTemplating(data);
 
-    $('.js-data-container').html(html);
+    $('.js-pagination__data-container').html(html);
   },
   afterPaging: () => initializeSlick(),
   afterNextOnClick: () => showItemsNum(),

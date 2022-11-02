@@ -46,7 +46,7 @@
     font-size: 10px;
   }
 
-  &__button_liked &__count {
+  &__icon_liked + &__count {
     color: $Purple;
   }
 }

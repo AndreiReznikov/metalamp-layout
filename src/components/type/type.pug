@@ -1,0 +1,15 @@
+mixin type(options = {})
+  -
+    let className = 'type__text';
+    className +=
+      options.title === 'H1' ? ' type__text_size_l' :
+      options.title === 'H2' ? ' type__text_size_m' :
+      options.title === 'H3' ?  ' type__text_size_s' :
+      options.title === 'Body' ? ' type__text_size_regular' : '';
+
+    let tag = options.title === 'Body' ? 'div' : options.title;
+
+  .type
+    #{tag}(class=className)
+      span.type__title!=options.title
+      span.type__description!=options.description

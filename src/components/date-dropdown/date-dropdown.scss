@@ -1,6 +1,6 @@
 @import '../../templates/vars-and-mixins.scss';
 
-.date-dropdown-container {
+.date-dropdown {
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -11,18 +11,18 @@
     width: 260px;
   }
 
-  .date-dropdown__title {
+  &__title {
     @include H3();
     margin: 0;
     padding: 0;
   }
 
-  .date-dropdown__input-from, .date-dropdown__input-to {
+  &__from, &__to {
     position: relative;
     margin-top: 5px;
   }
 
-  .date-dropdown__input {
+  &__input-from, &__input-to {
     @include Body-font();
     width: 150px;
     height: 44px;
@@ -40,16 +40,16 @@
     }
   }
 
-  .date-dropdown__input:focus {
+  &__input-from:focus, &__input-to:focus {
     border: 1px solid $Dark-Shade-50;
   }
 
-  .date-dropdown__input::placeholder {
+  &__input-from::placeholder, &__input-to::placeholder {
     @include Body-font();
     text-transform: uppercase;
   }
 
-  .date-dropdown__arrow {
+  &__arrow {
     position: absolute;
     padding: 0;
     top: 50%;
@@ -62,7 +62,7 @@
     }
   }
 
-  .date-dropdown__arrow::after {
+  &__arrow::after {
     content: '';
     display: block;
     width: 8px;

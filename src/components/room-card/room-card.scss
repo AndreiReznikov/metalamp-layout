@@ -2,7 +2,7 @@
 @import '../button/button';
 @import '../rate-button/rate-button';
 
-.room-short-information-block {
+.room-card {
   width: 270px;
   height: 257px;
   background: #fff;
@@ -41,7 +41,7 @@
     margin-left: 6px;
   }
 
-  &__room-price {
+  &__price {
     @include Body-font();
     display: inline-block;
     padding-bottom: 1px;
@@ -54,7 +54,7 @@
     font-size: 12px;
   }
 
-  &__rate-block {
+  &__rate {
     display: flex;
     align-items: center;
     margin: 10px 21px 0 21px;

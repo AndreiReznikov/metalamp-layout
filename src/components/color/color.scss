@@ -1,0 +1,58 @@
+@import '../../templates/vars-and-mixins.scss';
+
+.color {
+    display: flex;
+    align-items: center;
+
+    &__square {
+      width: 70px;
+      height: 70px;
+      border-radius: 6px;
+    }
+
+    &__square_one_hundred_percent_dark_shade {
+      background-color: #1F2041;
+    }
+
+    &__square_seventy_five_percent_dark_shade {
+      background-color: #1F2041;
+      opacity: 0.75;
+    }
+
+    &__square_fifty_percent_dark_shade {
+      background-color: #1F2041;
+      opacity: 0.5;
+    }
+
+    &__square_twenty_five_percent_dark_shade {
+      background-color: #1F2041;
+      opacity: 0.25;
+    }
+
+    &__square_five_percent_dark_shade {
+      background-color: #1F2041;
+      opacity: 0.05;
+    }
+
+    &__square_purple {
+      background-color: #BC9CFF;
+    }
+
+    &__square_green {
+      background-color: #6FCF97;
+    }
+
+    &__text {
+      margin: 0 0 0 40px;
+    }
+
+    &__title {
+      @include H2();
+      line-height: 28px;
+    }
+
+    &__hex {
+      @include H2();
+      font-weight: normal;
+    }
+  }

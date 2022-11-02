@@ -2,9 +2,9 @@ import 'paginationjs/dist/pagination.min';
 import 'paginationjs/dist/pagination.css';
 
 function simpleTemplating(data) {
-  let html = '<ul class="pagination-list">';
+  let html = '<ul class="pagination__list">';
   $.each(data, (index, item) => {
-    html += `<li class="pagination-list__item">${item}</li>`;
+    html += `<li class="pagination__list-item">${item}</li>`;
   });
   html += '</ul>';
   return html;
@@ -16,7 +16,7 @@ for (let i = 0; i < 180; i += 1) {
   paginationArray.push(i);
 }
 
-$('.js-pagination-container').pagination({
+$('.js-pagination__container').pagination({
   dataSource: paginationArray,
   autoHidePrevious: true,
   autoHideNext: true,
@@ -29,6 +29,6 @@ $('.js-pagination-container').pagination({
   callback: (data) => {
     const html = simpleTemplating(data);
 
-    $('.js-data-container').html(html);
+    $('.js-pagination__data-container').html(html);
   },
 });

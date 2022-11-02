@@ -1,0 +1,17 @@
+mixin color(options = {})
+  -
+    let className = 'color__square';
+    className +=
+      options.title === 'Dark Shade 100%' ? ' color__square_one_hundred_percent_dark_shade' :
+      options.title === 'Dark Shade 75%' ? ' color__square_seventy_five_percent_dark_shade' :
+      options.title === 'Dark Shade 50%' ? ' color__square_fifty_percent_dark_shade' :
+      options.title === 'Dark Shade 25%' ? ' color__square_twenty_five_percent_dark_shade' :
+      options.title === 'Dark Shade 5%' ? ' color__square_five_percent_dark_shade' :
+      options.title === 'Purple' ? ' color__square_purple' :
+      options.title === 'Green' ? ' color__square_green' : '';
+
+  .color
+    div(class=className)
+    .color__text
+      h2.color__title!=options.title
+      span.color__hex!=options.hex
