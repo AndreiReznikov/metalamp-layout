@@ -37,26 +37,21 @@ html(lang="en")
           .room-details-advantages-container
             +title({text: 'Сведения о номере'})
             .room-details-advantages-wrapper
-              .room-details-advantage-wrapper
-                +advantage-item({
-                  title: 'Комфорт',
-                  description: 'Шумопоглощающие стены',
-                  image: 'insert-emoticon.svg',
-                  isBorder: true
-                  })
-              .room-details-advantage-wrapper
-                +advantage-item({
-                  title: 'Удобство',
-                  description: 'Окно в каждой из спален',
-                  image: 'location-city.svg',
-                  isBorder: true
-                  })
-              .room-details-advantage-wrapper
-                +advantage-item({
-                  title: 'Уют',
-                  description: 'Номер оснащён камином',
-                  image: 'whatshot.svg'
-                  })
+              -
+                const advantages = [
+                  ['Комфорт', 'Шумопоглощающие стены', 'insert-emoticon.svg', true],
+                  ['Удобство', 'Окно в каждой из спален', 'location-city.svg', true],
+                  ['Уют', 'Номер оснащён камином', 'whatshot.svg', false]
+                ];
+
+              each val in advantages
+                .room-details-advantage-wrapper
+                  +advantage-item({
+                    title: val[0],
+                    description: val[1],
+                    image: val[2],
+                    isBorder: val[3]
+                    })
 
           .room-details-doughnut-container
             .room-details-doughnut-title-container
@@ -69,30 +64,49 @@ html(lang="en")
               .room-details-comments-title-container
                 +title({text: 'Отзывы посетителей номера'})
               span.room-details-commenst-number-text 2 отзыва
-            article.room-details-comment-wrapper
-              +comment({
-                image: 'image.jpg',
-                date: '5 дней назад',
-                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                username: 'Мурад Сарафанов',
-                likeCount: 12,
-                isLiked: true
-                })
-            article.room-details-comment-wrapper
-              +comment({
-                image: 'image2.jpg',
-                date: 'Неделю назад',
-                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-                username: 'Патрисия Стёклышкова',
-                likeCount: 2,
-                isLiked: false
-                })
+
+            -
+              const comments = [
+                [
+                  'image.jpg',
+                  '5 дней назад',
+                  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                  'Мурад Сарафанов',
+                  12,
+                  true
+                ],
+                [
+                  'image2.jpg',
+                  'Неделю назад',
+                  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                  'Патрисия Стёклышкова',
+                  2,
+                  false
+                ]
+              ];
+
+            each val in comments
+              article.room-details-comment-wrapper
+                +comment({
+                  image: val[0],
+                  date: val[1],
+                  text: val[2],
+                  username: val[3],
+                  likeCount: val[4],
+                  isLiked: val[5]
+                  })
 
           article.room-details-bullet-list-container
             .room-details-bullet-list-title-container
               +title({text: 'Правила'})
             .room-details-bullet-list-wrapper
-              +bullet-list({bulletItems: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+              +bullet-list({
+                bulletItems: [
+                  'Нельзя с питомцами',
+                  'Без вечеринок и мероприятий',
+                  'Время прибытия — после 13:00, а выезд до 12:00'
+                  ]
+                })
 
           section.room-details-cancel-information-container
             .room-details-cancel-information-title-container
