@@ -20,7 +20,7 @@ html(lang="en")
   body
     .room-details-wrapper
       +header()
-      div.room-details-background-container
+      .room-details-background-container
         .room-details-background-photo
           label.room-details-background-photo__label
             input(class="room-details-background-photo__input" type="radio" name="room" checked)
@@ -98,7 +98,9 @@ html(lang="en")
 
           article.room-details-bullet-list-container
             .room-details-bullet-list-title-container
-              +title({text: 'Правила'})
+              +title({
+                text: 'Правила'
+                })
             .room-details-bullet-list-wrapper
               +bullet-list({
                 bulletItems: [

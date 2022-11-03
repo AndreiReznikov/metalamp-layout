@@ -28,32 +28,44 @@ html(lang="ru")
     meta(name="description" content="Компоненты формы для сайта Toxin")
     title Form Elements
   body
-    .container
-      .logo-container
+    .form-elements-container
+      .form-elements-logo-container
         +logo()
-      .wrapper
+      .form-elements-wrapper
         .form-elements-left-block
 
-          .form-elements-first-text-field
-            +element-description({
-              title: 'Text field',
-              status: 'Default'
-              })
-            +text-field({
-              type: 'email',
-              placeholder: 'Email'
-              })
+          -
+            const textFields = [
+              {
+                class: 'form-elements-first-text-field',
+                title: 'Text field',
+                status: 'Default',
+                type: 'email',
+                placeholder: 'Email'
+              },
+              {
+                class: 'form-elements-second-text-field',
+                title: 'Text field',
+                status: 'Hover / Focus',
+                type: 'email',
+                placeholder: 'Email',
+                value: 'This is pretty awesome',
+                isFocused: true
+              }
+            ];
 
-          .form-elements-second-text-field
-            +element-description({
-              title: 'Text field',
-              status: 'Hover / Focus'
-              })
-            +text-field({
-              type: 'text',
-              value: 'This is pretty awesome',
-              isFocused: true
-              })
+          each val in textFields
+            div(class=val.class)
+              +element-description({
+                title: val.title,
+                status: val.status
+                })
+              +text-field({
+                type: val.type,
+                placeholder: val.placeholder,
+                value: val.value,
+                isFocused: val.isFocused
+                })
 
           .form-elements-dropdown-first-container
             +dropdown({
@@ -86,7 +98,9 @@ html(lang="ru")
               })
 
           .form-elements-subscription-text-field-container
-            +subscription-text-field({title: 'Subscription text field'})
+            +subscription-text-field({
+              title: 'Subscription text field'
+              })
 
           .form-elements-dropdown-second-container
             +element-description({
@@ -115,35 +129,57 @@ html(lang="ru")
               clicksNum: [2, 2]
               })
 
-          .form-elements-expandable-checkbox-list-container
-            +expandable-checkbox-list({
-              title: 'Expandable checkbox list',
-              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
-              })
-          .form-elements-opened-expandable-checkbox-list-container
-            +expandable-checkbox-list({
-              title: 'Expandable checkbox list',
-              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
-              checkedItems: [1, 2, 3],
-              isOpened: true
-              })
+          -
+            const checkboxLists = [
+              {
+                class: 'form-elements-expandable-checkbox-list-container',
+                title: 'Expandable checkbox list',
+                checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+              },
+              {
+                class: 'form-elements-opened-expandable-checkbox-list-container',
+                title: 'Expandable checkbox list',
+                checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+                checkedItems: [1, 2, 3],
+                isOpened: true
+              },
+            ];
+
+          each val in checkboxLists
+            div(class=val.class)
+              +expandable-checkbox-list({
+                title: val.title,
+                checkboxTexts: val.checkboxTexts,
+                checkedItems: val.checkedItems,
+                isOpened: val.isOpened
+                })
 
 
         .form-elements-central-block
 
           .form-elements-checkbox-buttons-container
-            +checkbox-button({
-              text: 'Можно курить',
-              title: 'Checkbox buttons'
-              })
-            +checkbox-button({
-              text: 'Можно с питомцами',
-              checked: true
-              })
-            +checkbox-button({
-              text: 'Можно пригласить гостей (до 10 человек)',
-              checked: true
-              })
+            -
+              const checkboxes = [
+                {
+                  text: 'Можно курить',
+                  title: 'Checkbox buttons'
+                },
+                {
+                  text: 'Можно с питомцами',
+                  checked: true
+                },
+                {
+                  text: 'Можно пригласить гостей (до 10 человек)',
+                  checked: true
+                }
+              ];
+
+            each val in checkboxes
+              +checkbox-button({
+                text: val.text,
+                title: val.title,
+                checked: val.checked
+                })
 
           .form-elements-radio-buttons-container
             .form-elements-radio-buttons-description-container
@@ -162,31 +198,60 @@ html(lang="ru")
                 title: 'Toggle'
                 })
             .form-elements-toggle-buttons-wrapper
-              +toggle-button({
-                text: 'Получать спецпредложения',
-                checked: true
-                })
-              +toggle-button({text: 'Получать спецпредложения'})
+              -
+                const toggleButtons = [
+                  ['Получать спецпредложения', true],
+                  ['Получать спецпредложения', false]
+                ];
+
+              each val in toggleButtons
+                +toggle-button({
+                  text: val[0],
+                  checked: val[1]
+                  })
 
           .form-elements-like-button-container
-            +element-description({title: 'Like button'})
+            +element-description({
+              title: 'Like button'
+              })
             .form-elements-like-buttons-wrapper
-              +like-button({count: 2})
-              +like-button({count: 12, isLiked: true})
+              -
+                const likeButtons = [
+                  [2, false],
+                  [12, true]
+                ];
+
+              each val in likeButtons
+                +like-button({
+                  count: val[0],
+                  isLiked: val[1]
+                  })
 
           .form-elements-rate-buttons-container
-            +element-description({title: 'Rate button'})
+            +element-description({
+              title: 'Rate button'
+              })
             .form-elemetns-rate-buttons-wrapper
-              +rate-button({
-                starsNumber: 5,
-                checkedButton: 4,
-                name: 'First rate'
-                })
-              +rate-button({
-                starsNumber: 5,
-                checkedButton: 5,
-                name: 'Second rate'
-                })
+              -
+                const rateButtons = [
+                  {
+                    starsNumber: 5,
+                    checkedButton: 4,
+                    name: 'First rate'
+                  },
+                  {
+                    starsNumber: 5,
+                    checkedButton: 5,
+                    name: 'Second rate'
+                  }
+                ];
+
+              each val in rateButtons
+                +rate-button({
+                  starsNumber: val.starsNumber,
+                  checkedButton: val.checkedButton,
+                  name: val.name
+                  })
 
           .form-elements-dropdown-fourth-container
             +dropdown({
@@ -196,63 +261,108 @@ html(lang="ru")
               isGuests: true,
               title: 'Dropdown'
               })
+
           .form-elements-rich-checkbox-buttons-container
-            +checkbox-button({
-              title: 'Rich checkbox buttons',
-              richButtonTitle: 'Широкий коридор',
-              text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
-              isRich: true
-              })
-            +checkbox-button({
-              richButtonTitle: 'Помощник для инвалидов',
-              text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
-              isRich: true
-              })
+            -
+              const richCheckboxButtons = [
+                {
+                  title: 'Rich checkbox buttons',
+                  richButtonTitle: 'Широкий коридор',
+                  text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
+                  isRich: true
+                },
+                {
+                  richButtonTitle: 'Помощник для инвалидов',
+                  text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+                  isRich: true
+                }
+              ];
+
+            each val in richCheckboxButtons
+              +checkbox-button({
+                title: val.title,
+                richButtonTitle: val.richButtonTitle,
+                text: val.text,
+                isRich: val.isRich
+                })
 
         .form-elements-right-block
-
           .form-elements-range-slider-container
-            +range-slider({title: 'Range slider'})
+            +range-slider({
+              title: 'Range slider'
+              })
 
           .form-elements-buttons-container
             .form-elements-buttons-description-container
               +element-description({
                 title: 'Buttons'
                 })
-            .form-elements-filled-buttons-container
-              +button({
-                filledButton: true,
-                text: 'Click me'
-                })
-              +button({
-                filledButton: true,
-                text: 'Click me'
-                })
-            .form-elements-empty-buttons-container
-              +button({
-                emptyButton: true,
-                size: 'L',
-                text: 'Click me'
-                })
-              +button({
-                emptyButton: true,
-                size: 'L',
-                text: 'Click me'
-                })
-            .form-elements-hidden-border-buttons-container
-              +button({
-                textButton: true,
-                text: 'Click me'
-                })
-              +button({
-                textButton: true,
-                text: 'Click me'
-                })
-            .form-elements-long-button-container
-              +button({
-                longButton: true,
-                text: 'Перейти к оплате'
-                })
+
+            -
+              const buttons = [
+                {
+                  class: 'form-elements-filled-buttons-container',
+                  buttons: [
+                    {
+                      filledButton: true,
+                      text: 'Click me'
+                    },
+                    {
+                      filledButton: true,
+                      text: 'Click me'
+                    }
+                  ]
+                },
+                {
+                  class: 'form-elements-empty-buttons-container',
+                  buttons: [
+                    {
+                      emptyButton: true,
+                      size: 'L',
+                      text: 'Click me'
+                    },
+                    {
+                      emptyButton: true,
+                      size: 'L',
+                      text: 'Click me'
+                    }
+                  ]
+                },
+                {
+                  class: 'form-elements-text-buttons-container',
+                  buttons: [
+                    {
+                      textButton: true,
+                      text: 'Click me'
+                    },
+                    {
+                      textButton: true,
+                      text: 'Click me'
+                    }
+                  ]
+                },
+                {
+                  class: 'form-elements-long-button-container',
+                  buttons: [
+                    {
+                      longButton: true,
+                      text: 'Перейти к оплате'
+                    }
+                  ]
+                },
+              ];
+
+            each val in buttons
+              div(class=val.class)
+                each button in val.buttons
+                  +button({
+                    filledButton: button.filledButton,
+                    emptyButton: button.emptyButton,
+                    textButton: button.textButton,
+                    longButton: button.longButton,
+                    size: button.size,
+                    text: button.text
+                    })
 
           .form-elements-pagination-container
             .form-elements-pagination-description-container
@@ -277,22 +387,40 @@ html(lang="ru")
               +element-description({
                 title: 'Bullet list'
                 })
-            +bullet-list({bulletItems: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+            +bullet-list({
+              bulletItems: [
+                'Нельзя с питомцами',
+                'Без вечеринок и мероприятий',
+                'Время прибытия — после 13:00, а выезд до 12:00'
+                ]
+              })
 
         .form-elements-bottom-block
           .form-elements-advantages-container
-            +advantage-item({
-              title: 'Комфорт',
-              description: 'Шумопоглощающие стены',
-              image: 'insert-emoticon.svg',
-              isBorder: true
-              })
-            +advantage-item({
-              title: 'Удобство',
-              description: 'Окно в каждой из спален',
-              image: 'location-city.svg',
-              isBorder: true
-              })
+            -
+              const advantages = [
+                {
+                  title: 'Комфорт',
+                  description: 'Шумопоглощающие стены',
+                  image: 'insert-emoticon.svg',
+                  isBorder: true
+                },
+                {
+                  title: 'Удобство',
+                  description: 'Окно в каждой из спален',
+                  image: 'location-city.svg',
+                  isBorder: true
+               }
+              ];
+
+            each val in advantages
+              +advantage-item({
+                title: val.title,
+                description: val.description,
+                image: val.image,
+                isBorder: val.isBorder
+                })
+
           .form-elements-comment-container
             +comment({
               image: 'image.jpg',

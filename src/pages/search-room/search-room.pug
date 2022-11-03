@@ -52,31 +52,45 @@ html(lang="en")
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
-                  +checkbox-button({
-                      text: 'Можно курить',
-                      title: 'Правила дома'
+                  -
+                    const checkboxes = [
+                      { text: 'Можно курить', title: 'Правила дома' },
+                      { text: 'Можно с питомцами', checked: true },
+                      { text: 'Можно пригласить гостей (до 10 человек)', checked: true }
+                    ];
+
+                  each val in checkboxes
+                    +checkbox-button({
+                      text: val.text,
+                      title: val.title,
+                      checked: val.checked
                       })
-                  +checkbox-button({
-                    text: 'Можно с питомцами',
-                    checked: true
-                    })
-                  +checkbox-button({
-                    text: 'Можно пригласить гостей (до 10 человек)',
-                    checked: true
-                    })
+
               .search-room-rich-checkbox-buttons-container
                 .search-room-rich-checkbox-buttons-wrapper
-                  +checkbox-button({
-                      title: 'Доступность',
-                      richButtonTitle: 'Широкий коридор',
-                      text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
-                      isRich: true
+                  -
+                    const richCheckboxes = [
+                      {
+                        title: 'Доступность',
+                        richButtonTitle: 'Широкий коридор',
+                        text: `Ширина коридоров в номере ${String.fromCharCode(160)}менее 91 см.`,
+                        isRich: true
+                      },
+                      {
+                        richButtonTitle: 'Помощник для инвалидов',
+                        text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+                        isRich: true
+                      }
+                    ];
+
+                  each val in richCheckboxes
+                    +checkbox-button({
+                      title: val.title,
+                      richButtonTitle: val.richButtonTitle,
+                      text: val.text,
+                      isRich: val.isRich
                       })
-                  +checkbox-button({
-                    richButtonTitle: 'Помощник для инвалидов',
-                    text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
-                    isRich: true
-                    })
+
               .search-room-conveniences-dropdown-container
                 +dropdown({
                   title: 'Удобства номера',
@@ -111,7 +125,7 @@ html(lang="en")
             ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false, false],
             ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false, false],
             ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false, false]
-            ];
+          ];
 
           for (let i = 0; i < 160; i += 1) {
             roomsCardsProperties.push(['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, false])
