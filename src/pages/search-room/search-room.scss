@@ -69,7 +69,12 @@ html, body {
 
   &__icon {
     width: 15px;
-    margin-right: 5px;
+    height: 15px;
+    margin: 2px 5px 0 0;
+    background-image: url('../../img/filter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   &__text {

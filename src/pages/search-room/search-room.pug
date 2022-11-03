@@ -23,11 +23,7 @@ html(lang="en")
       .search-room-filter
         button.search-room-filter__button.js-search-room-filter__button
           span.search-room-filter__wrapper
-            img(
-            class="search-room-filter__icon"
-            src=require("../../img/filter.svg")
-            alt="Filter"
-            )
+            span.search-room-filter__icon
             span.search-room-filter__text Фильтры
       main.search-room-container
         .search-room-widgets-container.js-search-room-widgets-container
@@ -50,7 +46,9 @@ html(lang="en")
                   clicksNum: [3, 1]
                   })
               .search-room-range-slider-container
-                +range-slider({title: 'Диапазон цены'})
+                +range-slider({
+                  title: 'Диапазон цены'
+                  })
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
