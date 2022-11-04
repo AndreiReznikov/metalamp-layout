@@ -1,5 +1,14 @@
 @import '../../templates/vars-and-mixins.scss';
 
+$squares:
+  'one_hundred_percent_dark_shade' $Dark-Shade-100,
+  'seventy_five_percent_dark_shade' $Dark-Shade-75,
+  'fifty_percent_dark_shade' $Dark-Shade-50,
+  'twenty_five_percent_dark_shade' $Dark-Shade-25,
+  'five_percent_dark_shade' $Dark-Shade-5,
+  'purple' $Purple,
+  'green' $Green;
+
 .color {
     display: flex;
     align-items: center;
@@ -10,36 +19,10 @@
       border-radius: 6px;
     }
 
-    &__square_one_hundred_percent_dark_shade {
-      background-color: #1F2041;
-    }
-
-    &__square_seventy_five_percent_dark_shade {
-      background-color: #1F2041;
-      opacity: 0.75;
-    }
-
-    &__square_fifty_percent_dark_shade {
-      background-color: #1F2041;
-      opacity: 0.5;
-    }
-
-    &__square_twenty_five_percent_dark_shade {
-      background-color: #1F2041;
-      opacity: 0.25;
-    }
-
-    &__square_five_percent_dark_shade {
-      background-color: #1F2041;
-      opacity: 0.05;
-    }
-
-    &__square_purple {
-      background-color: #BC9CFF;
-    }
-
-    &__square_green {
-      background-color: #6FCF97;
+    @each $modifier, $color in $squares {
+      &__square_#{$modifier} {
+        background-color: $color;
+      }
     }
 
     &__text {

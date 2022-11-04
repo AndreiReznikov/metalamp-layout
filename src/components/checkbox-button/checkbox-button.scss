@@ -78,11 +78,11 @@
     height: 8px;
     margin: 0 0 2px 1px;
     border: 1px solid transparent;
-    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-image: $gradient;
     border-image-slice: 1;
     border-width: 0 2px 2px 0;
     box-sizing: border-box;
     transform: rotate(45deg);
-    z-index: 100000;
+    z-index: 10;
   }
 }
