@@ -1,21 +1,18 @@
+$logos:
+  'colorful-icon' 106px 40px '../../img/logo-toxin.svg',
+  'icon' 48px 48px '../../img/logo.svg';
+
 .logo {
   display: inline-flex;
 
-  &__toxin-icon {
-    width: 106px;
-    height: 40px;
-    background-image: url(../../img/logo-toxin.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  &__icon {
-    width: 48px;
-    height: 48px;
-    background-image: url(../../img/logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  @each $element, $width, $height, $url in $logos {
+    &__#{$element} {
+      width: $width;
+      height: $height;
+      background-image: url($url);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }

@@ -48,3 +48,14 @@ $semitransparentGradient: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, r
   font-size: 14px;
   color: $Dark-Shade-75;
 }
+
+@mixin arrow() {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid $Dark-Shade-50;
+  border-width: 0 2px 2px 0;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+}

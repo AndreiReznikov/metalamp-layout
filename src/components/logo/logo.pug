@@ -1,7 +1,6 @@
 mixin logo(options = {})
-  if options.isColorful
-    a.logo(href="landing-page.html")
-      .logo__toxin-icon
-  else
-    a.logo(href="landing-page.html")
+  a.logo(href="landing-page.html")
+    if options.isColorful
+      .logo__colorful-icon
+    else
       .logo__icon

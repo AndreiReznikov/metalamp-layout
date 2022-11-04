@@ -21,13 +21,8 @@
     appearance: none;
     cursor: pointer;
   }
-
-  &__radio:checked {
-    background-image: url('../../img/star.svg');
-    background-repeat: no-repeat;
-  }
-
-  &__radio:checked ~ &__radio {
+  
+  &__radio:checked, &__radio:checked ~ &__radio {
     background-image: url('../../img/star.svg');
     background-repeat: no-repeat;
   }

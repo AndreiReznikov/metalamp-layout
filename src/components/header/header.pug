@@ -14,6 +14,20 @@ mixin header(options = {})
       ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения']]
     ];
 
+    const buttons = [
+      {
+        emptyButton: true,
+        text: 'Войти',
+        href: 'registration-and-sign-in.html?page=entry'
+      },
+      {
+        filledButton: true,
+        text: 'Зарегистрироваться',
+        size: 'L',
+        href: 'registration-and-sign-in.html'
+      }
+    ];
+
   .header.js-header
     header.header__container.js-header__container
       .header__wrapper
@@ -51,33 +65,27 @@ mixin header(options = {})
             span.header__user-name!=options.userName
           else
             .header__buttons-container
-              +button({
-                emptyButton: true,
-                text: 'Войти',
-                href: 'registration-and-sign-in.html?page=entry'
-                })
-              +button({
-                filledButton: true,
-                text: 'Зарегистрироваться',
-                size: 'L',
-                href: 'registration-and-sign-in.html'
-                })
+              each button in buttons
+                +button({
+                  emptyButton: button.emptyButton,
+                  filledButton: button.filledButton,
+                  text: button.text,
+                  size: button.size,
+                  href: button.href
+                  })
 
     .mobile-menu.js-mobile-menu
       .mobile-menu__buttons-container
-        .mobile-menu__button-container
-          +button({
-            emptyButton: true,
-            text: 'Войти',
-            href: 'registration-and-sign-in.html?page=entry'
-            })
-        .mobile-menu__button-container
-          +button({
-            filledButton: true,
-            text: 'Зарегистрироваться',
-            size: 'L',
-            href: 'registration-and-sign-in.html'
-            })
+        each button in buttons
+          .mobile-menu__button-container
+            +button({
+              emptyButton: button.emptyButton,
+              filledButton: button.filledButton,
+              text: button.text,
+              size: button.size,
+              href: button.href
+              })
+
       nav.mobile-menu__nav
         ul.mobile-menu__list
           each item in items

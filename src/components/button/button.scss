@@ -1,6 +1,6 @@
 @import '../../templates/vars-and-mixins.scss';
 
-@mixin arrow() {
+@mixin buttonArrow() {
   position: absolute;
   right: 13px;
   width: 20px;
@@ -125,7 +125,7 @@
   }
 
   &__arrow {
-    @include arrow;
+    @include buttonArrow;
   }
 }
 
@@ -165,6 +165,6 @@
   }
 
   &__arrow {
-    @include arrow;
+    @include buttonArrow;
   }
 }

@@ -1,13 +1,19 @@
 @import '../../templates/vars-and-mixins.scss';
 
+$types:
+  'size_l' 520px 24px none,
+  'size_m' 450px 19px none,
+  'size_s' auto 12px uppercase,
+  'size_regular' 380px 14px none 24px;
+
 .type {
   font-family: Montserrat, Arial, sans-serif;
 
   &__text{
     display: flex;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   &__title {
@@ -20,24 +26,12 @@
     box-sizing: border-box;
   }
 
-  &__text_size_l {
-    width: 520px;
-    font-size: 24px;
-  }
-
-  &__text_size_m {
-    width: 450px;
-    font-size: 19px;
-  }
-
-  &__text_size_s {
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-
-  &__text_size_regular {
-    width: 380px;
-    font-size: 14px;
-    line-height: 24px;
+  @each $name, $width, $font-size, $text-transform, $line-height in $types {
+    &__text_#{$name} {
+      width: $width;
+      font-size: $font-size;
+      text-transform: $text-transform;
+      line-height: if($line-height, 24px, normal);
+    }
   }
 }
