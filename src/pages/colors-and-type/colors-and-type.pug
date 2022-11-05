@@ -1,6 +1,7 @@
 include ../../components/logo/logo
 include ../../components/color/color
 include ../../components/type/type
+include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
@@ -13,21 +14,12 @@ html(lang="en")
   body
     .colors-and-type-container
       .colors-and-type-logo-container
-        +logo()
+      +logo({
+        href: 'index.html'
+      })
 
       main.colors-and-type-wrapper
         .colors-and-type-colors-description-list-container
-          -
-            let colors = [
-              ['Dark Shade 100%', '#1F2041'],
-              ['Dark Shade 75%', '#1F2041'],
-              ['Dark Shade 50%', '#1F2041'],
-              ['Dark Shade 25%', '#1F2041'],
-              ['Dark Shade 5%', '#1F2041'],
-              ['Purple', '#BC9CFF'],
-              ['Green', '#6FCF97']
-            ];
-
           ul.colors-and-type-colors-description-list
             each val in colors
               li.colors-and-type-colors-description-list__item
@@ -37,14 +29,6 @@ html(lang="en")
                   })
 
         .colors-and-type-type-description-list-container
-          -
-            let types = [
-              ['H1', 'This one is the sub-section or widget title'],
-              ['H2', 'Next one is the item title inside widgets'],
-              ['H3', 'This is a label or CTA text'],
-              ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']
-            ];
-
           ul.colors-and-type-type-description-list
             each val in types
               li.colors-and-type-type-description-list__item

@@ -1,0 +1,33 @@
+@import '../../templates/vars-and-mixins.scss';
+
+.advantage {
+  display: flex;
+  width: 280px;
+  padding-bottom: 20px;
+
+  &_bordered {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+
+  &__icon {
+    min-width: 48px;
+    margin-left: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__text {
+    margin-left: 5px;
+  }
+
+  &__title {
+    @include H2();
+    margin: 0 0 5px 0;
+    font-size: 14px;
+  }
+
+  &__description {
+    @include Body-font();
+  }
+}

@@ -14,7 +14,9 @@ html(lang="ru")
   body
     .container
       .headers-and-footers-logo-container
-        +logo()
+        +logo({
+          href: 'index.html'
+        })
 
       .headers-and-footers-header-container
         +header({
@@ -24,8 +26,8 @@ html(lang="ru")
       .headers-and-footers-header-with-logged-in-user-container
         +header({
           isLoggedIn: true,
-          userName: 'Юлий Цезарь',
-          isBoldItem: true
+          isBoldItem: true,
+          username: 'Юлий Цезарь'
           })
 
       .headers-and-footers-footer-container

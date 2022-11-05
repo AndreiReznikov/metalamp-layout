@@ -1,13 +1,11 @@
 include ../../components/header/header
-include ../../components/advantage-item/advantage-item
-include ../../components/reserve-room-card/reserve-room-card
+include ../../components/advantage/advantage
+include ../../components/reserve-card/reserve-card
 include ../../components/comment/comment
 include ../../components/bullet-list/bullet-list
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
-
-mixin title(options = {})
-  h2.room-details-block-title!=options.text
+include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
@@ -21,32 +19,24 @@ html(lang="en")
     .room-details-wrapper
       +header()
       .room-details-background-container
-        .room-details-background-photo
-          label.room-details-background-photo__label
-            input(class="room-details-background-photo__input" type="radio" name="room" checked)
-            img(class="room-details-background-photo__image" src=require("../../img/room-photo1.jpg") alt="Room photo")
-          label.photo-label
-            input(class="room-details-background-photo__input" type="radio" name="room")
-            img(class="room-details-background-photo__image photo__image_reversed" src=require("../../img/room-photo1-1.jpg") alt="Room photo")
-          label.photo-label
-            input(class="room-details-background-photo__input" type="radio" name="room")
-            img(class="room-details-background-photo__image" src=require("../../img/room-photo1-2.jpg") alt="Room photo")
+        .room-details-background
+          .room-details-background__large-photo-wrapper
+            img(class="room-details-background__image room-details-background__image_size_l" src=require("../../img/room-photo1.jpg") alt="Room photo")
+
+          - let i = 1;
+          .room-details-background__small-photo-wrapper
+            while i < 3
+              img(class="room-details-background__image" src=require(`../../img/room-photo1-${i++}.jpg`) alt="Room photo")
 
       main.room-details-main-container
         .room-details-main-wrapper
           .room-details-advantages-container
-            +title({text: 'Сведения о номере'})
+            +roomTitle('Сведения о номере')
             .room-details-advantages-wrapper
-              -
-                const advantages = [
-                  ['Комфорт', 'Шумопоглощающие стены', 'insert-emoticon.svg', true],
-                  ['Удобство', 'Окно в каждой из спален', 'location-city.svg', true],
-                  ['Уют', 'Номер оснащён камином', 'whatshot.svg', false]
-                ];
 
-              each val in advantages
+              each val in advantagesRoom
                 .room-details-advantage-wrapper
-                  +advantage-item({
+                  +advantage({
                     title: val[0],
                     description: val[1],
                     image: val[2],
@@ -55,35 +45,15 @@ html(lang="en")
 
           .room-details-doughnut-container
             .room-details-doughnut-title-container
-              +title({text: 'Впечатления от номера'})
+              +roomTitle('Впечатления от номера')
             .room-details-doughnut-wrapper.js-room-details-doughnut-wrapper
               canvas.room-details-chart.js-room-details-chart(width="342" height="133")
 
           section.room-details-comments-container
             .room-details-comments-title-information-wrapper
               .room-details-comments-title-container
-                +title({text: 'Отзывы посетителей номера'})
+                +roomTitle('Отзывы посетителей номера')
               span.room-details-commenst-number-text 2 отзыва
-
-            -
-              const comments = [
-                [
-                  'image.jpg',
-                  '5 дней назад',
-                  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                  'Мурад Сарафанов',
-                  12,
-                  true
-                ],
-                [
-                  'image2.jpg',
-                  'Неделю назад',
-                  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-                  'Патрисия Стёклышкова',
-                  2,
-                  false
-                ]
-              ];
 
             each val in comments
               article.room-details-comment-wrapper
@@ -98,9 +68,7 @@ html(lang="en")
 
           article.room-details-bullet-list-container
             .room-details-bullet-list-title-container
-              +title({
-                text: 'Правила'
-                })
+              +roomTitle('Правила')
             .room-details-bullet-list-wrapper
               +bullet-list({
                 bulletItems: [
@@ -112,12 +80,12 @@ html(lang="en")
 
           section.room-details-cancel-information-container
             .room-details-cancel-information-title-container
-              +title({text: 'Отмена'})
+              +roomTitle('Отмена')
             .room-details-cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
         section.room-details-card-wrapper
           .room-details-room-card-wrapper
-            +reserve-room-card({
+            +reserve-card({
               dateFrom: 'new Date(2019, 7, 19)',
               dateTo: 'new Date(2019, 7, 23)',
               dropdownButtonsNum: [0, 1],

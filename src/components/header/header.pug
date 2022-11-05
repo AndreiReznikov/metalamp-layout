@@ -7,7 +7,7 @@ mixin header(options = {})
     boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal';
 
     const items = [
-      ['О нас', []],
+      ['О нас', [], 'bold'],
       ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт']],
       ['Вакансии', []],
       ['Новости', []],
@@ -31,7 +31,10 @@ mixin header(options = {})
   .header.js-header
     header.header__container.js-header__container
       .header__wrapper
-        +logo({isColorful: true})
+        +logo({
+          isColorful: true,
+          href: 'landing-page.html'
+          })
         .header__burger-container.js-header__burger-container
           .header__burger.js-header__burger
         .header__right-block-container
@@ -59,10 +62,13 @@ mixin header(options = {})
                     a.header__list-link.js-header__list-link(
                       href="/mock-address/change-me"
                       )
-                      span(class=boldItemClass)=item[0]
+                      if item[2]
+                        span(class=boldItemClass)=item[0]
+                      else
+                        span.header__list-link-text=item[0]
 
           if (options.isLoggedIn)
-            span.header__user-name!=options.userName
+            span.header__user-name!=options.username
           else
             .header__buttons-container
               each button in buttons

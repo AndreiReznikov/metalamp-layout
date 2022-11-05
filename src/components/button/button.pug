@@ -33,12 +33,12 @@ mixin button(options = {})
         button(
           class='long-button__button'
           type=options.type
-          )!=options.text
+          )=options.text
         span.long-button__arrow
       else
         a(
           class='long-link-button__link'
           href=options.href
-          )!=options.text
+          )=options.text
         span.long-link-button__arrow
 

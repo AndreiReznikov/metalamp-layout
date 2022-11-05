@@ -1,7 +1,7 @@
 mixin masked-text-field(options = {})
   .masked-text-field
     if options.title
-      h3.masked-text-field__title!=options.title
+      h3.masked-text-field__title=options.title
     input(
       class="masked-text-field__input js-masked-text-field__input"
       type=options.type

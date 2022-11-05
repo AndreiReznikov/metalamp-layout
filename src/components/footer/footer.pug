@@ -2,21 +2,24 @@ include ../logo/logo
 include ../subscription-text-field/subscription-text-field
 include ../social-icons/social-icons
 
+-
+  const sections = [
+    ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги']],
+    ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']],
+    ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']]
+  ];
+
 mixin footer()
   footer.footer
     .footer__top-section-container
       .footer__top-section-wrapper
         .footer__first-section
-          +logo({isColorful: true})
+          +logo({
+            isColorful: true,
+            href: 'landing-page.html'
+            })
           .footer__first-section-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__items-section
-          -
-            const sections = [
-              ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги']],
-              ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']],
-              ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']]
-            ];
-
           each value in sections
             div(class=value[0])
               ul.footer__list
@@ -27,7 +30,7 @@ mixin footer()
                     a.footer__link(
                       href="/mock-address/change-me"
                     )=val
-                    
+
         .footer__fifth-section
           h3.footer__subscription-title Подписка
           form.footer__subscription-form
@@ -36,4 +39,6 @@ mixin footer()
     .footer__bottom-section-wrapper
       .footer__copyright-text Copyright &#169; 2018 Toxin отель. Все права защищены.
       .footer__social-icons-container
-        +social-icons()
+        +social-icons({
+          socials: ['twitter', 'facebook', 'instagram']
+        })

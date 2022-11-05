@@ -6,24 +6,23 @@ mixin dropdown(options = {})
     className += options.isConveniences ? " iqdropdown-conveniences js-iqdropdown-conveniences" : ""
 
   .iqdropdown-container.js-iqdropdown-container(
-    data-clicks!=options.clicksNum 
-    data-buttons!=options.buttonsNum
-  ) 
+    data-clicks=options.clicksNum
+    data-buttons=options.buttonsNum
+  )
     if options.title
       h3.iqdropdown-title!=options.title
     div(class=className style=`width: ${options.width ? options.width : ''}`)
       p.iqdropdown-selection
-      .iqdropdown-menu 
+      .iqdropdown-menu
         - let i = 0;
-          while i < options.items.length 
+          while i < options.items.length
             - i += 1
             .iqdropdown-menu-option(data-id=`${i}`)
-              .dropdown-item-container  
-                p.iqdrodown-item 
+              .dropdown-item-container
+                p.iqdrodown-item
                   = options.items[i-1]
           if options.addingButtons
             .iqdropdown--buttons
               button.iqdropdown--button.iqdropdown--button-clear.js-iqdropdown--button-clear(type="reset") Очистить
               button.iqdropdown--button.iqdropdown--button-apply.js-iqdropdown--button-apply(type="submit") Применить
-      img(src=require("../../img/expand-arrow.svg") class="iqdropdown-arrow" alt="Arrow")
-    
+      //- img(src=require("../../img/expand-arrow.svg") class="iqdropdown-arrow" alt="Arrow")

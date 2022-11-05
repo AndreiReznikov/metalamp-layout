@@ -1,3 +1,5 @@
+include ../../templates/vars-and-mixins
+
 doctype html
 html(lang="ru")
   head
@@ -12,14 +14,6 @@ html(lang="ru")
         .metalamp-layout-ui-kit-container
           h2.metalamp-layout-ui-kit-title UI Kit
           ul.metalamp-layout-ui-kit-list
-            -
-              const pages = [
-                ['colors-and-type.html', 'Colors and Type'],
-                ['form-elements.html', 'Form Elements'],
-                ['cards.html', 'Cards'],
-                ['headers-and-footers.html', 'Headers and Footers'],
-              ];
-
             each page in pages
               li.metalamp-layout-ui-kit-item
                 a.metalamp-layout-ui-kit-link(href=page[0] target="_blank" rel="noopener noreferrer")=page[1]

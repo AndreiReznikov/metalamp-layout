@@ -1,9 +1,13 @@
 .social-icons {
 
-  &__link{
+  &__link {
     display: inline-block;
     padding-left: 22px;
     text-decoration: none;
+  }
+
+  &__link:hover {
+    opacity: 0.5;
   }
 
   &__link:first-child {

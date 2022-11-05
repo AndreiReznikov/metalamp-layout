@@ -7,7 +7,12 @@ mixin footer-mobile(options = {})
     className += options.isVisible ? ' footer-mobile_visible' : ''
 
   div(class=className)
-    +logo({isColorful: true})
+    +logo({
+      isColorful: true,
+      href: 'landing-page.html'
+      })
     .footer-mobile__text Copyright &#169; 2018 Toxin отель. Все права защищены.
     .footer-mobile__icons-container
-      +social-icons()
+      +social-icons({
+        socials: ['twitter', 'facebook', 'instagram']
+      })

@@ -1,0 +1,43 @@
+@import '../../templates/vars-and-mixins.scss';
+@import '../date-dropdown/date-dropdown';
+@import '../dropdown/dropdown';
+@import '../button/button';
+
+.search-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__title {
+    @include H1();
+    margin: 39px 29px 0 29px;
+
+    @media screen and (max-width: 480px) {
+      width: 260px;
+      margin: 39px 0 0 0;
+      font-size: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 21px 0 29px 0;
+  }
+
+  &__guests-dropdown-container {
+    margin-top: 20px;
+  }
+
+  &__long-button-container {
+    margin-top: 31px;
+  }
+}

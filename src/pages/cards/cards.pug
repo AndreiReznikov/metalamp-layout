@@ -1,7 +1,7 @@
 include ../../components/logo/logo
-include ../../components/room-search-card/room-search-card
+include ../../components/search-card/search-card
 include ../../components/registration-card/registration-card
-include ../../components/reserve-room-card/reserve-room-card
+include ../../components/reserve-card/reserve-card
 include ../../components/entry-card/entry-card
 include ../../components/room-card/room-card
 include ../../components/filter-date-dropdown/filter-date-dropdown
@@ -17,16 +17,18 @@ html(lang="ru")
   body
     .cards-container
       .cards-logo-container
-        +logo()
+        +logo({
+          href: 'index.html'
+        })
 
       .cards-left-block
-        +room-search-card()
+        +search-card()
 
         .cards-registration-block-container
           +registration-card({buttonText: 'Перейти к оплате'})
 
       .cards-central-block
-        +reserve-room-card({
+        +reserve-card({
           dateFrom: 'new Date(2019, 7, 19)',
           dateTo: 'new Date(2019, 7, 23)',
           dropdownButtonsNum: [0, 1],

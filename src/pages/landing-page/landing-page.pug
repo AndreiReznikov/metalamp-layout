@@ -1,5 +1,5 @@
 include ../../components/header/header
-include ../../components/room-search-card/room-search-card
+include ../../components/search-card/search-card
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
 
@@ -16,8 +16,8 @@ html(lang="ru")
       +header()
       main.landing-page-background-container
         .landing-page-background-wrapper
-          article.landing-page-room-search-card-container
-            +room-search-card()
+          article.landing-page-search-card-container
+            +search-card()
         p.landing-page-background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
       +footer()
       +footer-mobile()

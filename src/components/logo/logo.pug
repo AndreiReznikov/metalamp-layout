@@ -1,5 +1,5 @@
 mixin logo(options = {})
-  a.logo(href="landing-page.html")
+  a.logo(href=options.href)
     if options.isColorful
       .logo__colorful-icon
     else

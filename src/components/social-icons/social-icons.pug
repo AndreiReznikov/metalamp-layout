@@ -1,6 +1,6 @@
-mixin social-icons()
+mixin social-icons(options = {})
   -
-    const socials = ['twitter', 'facebook', 'instagram'];
+    const socials = options.socials;
 
   .social-icons
     each val in socials

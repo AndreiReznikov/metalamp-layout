@@ -1,0 +1,63 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../button/button
+
+-
+  const serviceSum = [
+    ['9 990₽ x 4 суток', '39 960'],
+    ['Сбор за услуги: скидка 2 179₽', '0', 'info'],
+    ['Сбор за дополнительные услуги', '300', 'info']
+  ];
+
+mixin reserve-card(options = {})
+  .reserve-card
+    .reserve-card__wrapper
+      form.reserve-card__form
+        .reserve-card__number-and-price-container
+          h1.reserve-card__number-symbol №
+            span.reserve-card__room-number  888
+            span.reserve-card__lux-mark
+              +button({
+                textButton: true,
+                text: 'Люкс'
+                })
+          span.reserve-card_-price 9 990
+            span.reserve-card__currency &#8381;
+            span.reserve-card__time-interval  в сутки
+        .reserve-card__date-dropdown-container
+          +date-dropdown({
+            title: ['Прибытие', 'Выезд'],
+            dateFrom: options.dateFrom,
+            dateTo: options.dateTo
+            })
+        .reserve-card__guests-dropdown-container
+          +dropdown({
+            items: ['Взрослые', 'Дети', 'Младенцы'],
+            addingButtons: true,
+            isGuests: true,
+            isClicked: true,
+            title: 'Гости',
+            buttonsNum: options.dropdownButtonsNum,
+            clicksNum: options.dropdownClicksNum
+            })
+        .reserve-card__price-block
+          each val in serviceSum
+            .reserve-card__sum
+              .reserve-card__sum-description
+                span.reserve-card__sum-text=val[0]
+                if val[2]
+                  .reserve-card__information-icon-container
+                    .reserve-card__information-icon i
+              span.reserve-card__service-sum=val[1]
+                span.reserve-card__currency &#8381;
+
+        .reserve-card__total-sum-block
+          span.reserve-card__total-text Итого
+          span.reserve-card__dotted-border
+          span.reserve-card__total-sum 38 081&#8381;
+        .reserve-card__button-container
+          +button({
+            longButton: true,
+            text: 'Забронировать',
+            type: 'submit'
+            })
