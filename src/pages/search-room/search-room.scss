@@ -1,3 +1,4 @@
+@import '../../components/logo/logo';
 @import '../../components/header/header';
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
 @import '../../components/dropdown/dropdown';
@@ -5,10 +6,14 @@
 @import '../../components/checkbox-button/checkbox-button';
 @import '../../components/expandable-checkbox-list/expandable-checkbox-list';
 @import '../../components/pagination/pagination';
+@import '../../components/rate-button/rate-button';
+@import '../../components/button/button';
 @import '../../components/room-card/room-card';
+@import '../../components/subscription-text-field/subscription-text-field';
+@import '../../components/social-icons/social-icons';
 @import '../../components/footer/footer';
 @import '../../components/footer-mobile/footer-mobile';
-@import '../../templates/vars-and-mixins.scss';
+@import '../../templates/vars-and-mixins';
 
 html, body {
   margin: 0;

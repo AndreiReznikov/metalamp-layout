@@ -1,4 +1,4 @@
-@import '../../templates/vars-and-mixins.scss';
+@import '../../templates/vars-and-mixins';
 
 .iqdropdown-title {
   @include H3();
@@ -12,7 +12,7 @@
   border: 1px solid $Dark-Shade-25;
   box-sizing: border-box;
   border-radius: 4px;
-  
+
   @media screen and (max-width: 480px) {
     width: 260px;
     padding: 0 10px;
@@ -98,11 +98,11 @@
     .iqdropdown-item-controls button.button-decrement:disabled {
       border: 1px solid $Dark-Shade-5;
     }
-    
+
     .iqdropdown-item-controls button.button-increment {
       border-radius: 22px;
     }
-    
+
     .iqdropdown--buttons {
       position: relative;
       display: flex;
@@ -111,13 +111,13 @@
       margin: 22px 0 12px 0;
       padding: 0 7px 0 14px;
     }
-    
+
     .iqdropdown--button {
       @include H3();
       color: #BC9CFF;
       cursor: pointer;
     }
-    
+
     .iqdropdown--button-clear {
       visibility: hidden;
       opacity: 0;
@@ -168,4 +168,4 @@
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-radius: 50%;
-}   
+}

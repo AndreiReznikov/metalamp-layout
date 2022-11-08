@@ -1,11 +1,19 @@
 @import '../../components/logo/logo';
 @import '../../components/search-card/search-card';
+@import '../../components/text-field/text-field';
+@import '../../components/radio-buttons/radio-buttons';
+@import '../../components/masked-text-field/masked-text-field';
+@import '../../components/toggle-button/toggle-button';
 @import '../../components/registration-card/registration-card';
+@import '../../components/date-dropdown/date-dropdown';
+@import '../../components/dropdown/dropdown';
+@import '../../components/button/button';
 @import '../../components/reserve-card/reserve-card';
 @import '../../components/entry-card/entry-card';
+@import '../../components/rate-button/rate-button';
 @import '../../components/room-card/room-card';
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
-@import '../../templates/vars-and-mixins.scss';
+@import '../../templates/vars-and-mixins';
 
 html {
   color: #1F2041;

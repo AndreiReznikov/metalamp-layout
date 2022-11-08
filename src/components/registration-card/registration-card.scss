@@ -1,9 +1,4 @@
-@import '../../templates/vars-and-mixins.scss';
-@import '../text-field/text-field';
-@import '../radio-buttons/radio-buttons';
-@import '../masked-text-field/masked-text-field';
-@import '../toggle-button/toggle-button';
-@import '../button/button';
+@import '../../templates/vars-and-mixins';
 
 .registration-card {
   max-width: 380px;

@@ -1,9 +1,17 @@
+@import '../../components/logo/logo';
 @import '../../components/header/header';
+@import '../../components/radio-buttons/radio-buttons';
+@import '../../components/masked-text-field/masked-text-field';
+@import '../../components/toggle-button/toggle-button';
 @import '../../components/registration-card/registration-card';
+@import '../../components/text-field/text-field';
+@import '../../components/button/button';
 @import '../../components/entry-card/entry-card';
+@import '../../components/subscription-text-field/subscription-text-field';
+@import '../../components/social-icons/social-icons';
 @import '../../components/footer/footer';
 @import '../../components/footer-mobile/footer-mobile';
-@import '../../templates/vars-and-mixins.scss';
+@import '../../templates/vars-and-mixins';
 
 html, body {
   margin: 0;
