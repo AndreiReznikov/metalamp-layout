@@ -11,11 +11,10 @@
 @import '../../templates/vars-and-mixins';
 
 html, body {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero();
   height: 100%;
   background-color: #fff;
-  color: #1F2041;
+  color: $Dark-Shade-100;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
 }
@@ -27,12 +26,11 @@ html, body {
 }
 
 .landing-page-background-container {
+  @include background-position(cover);
   flex: 1 0 auto;
   position: relative;
   width: 100%;
   background-image: url('../../img/landing-background.jpg');
-  background-size: cover;
-  background-position: center;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -41,9 +39,9 @@ html, body {
 }
 
 .landing-page-background-wrapper {
-  padding: 0 140px;
-  max-width: 1440px;
+  max-width: $max-width;
   min-height: 830px;
+  padding: 0 140px;
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {

@@ -25,8 +25,7 @@
 
   &__username {
     @include H3();
-    margin: 0;
-    padding: 0;
+    @include margin-padding-zero();
     line-height: 24px;
     font-size: 14px;
     color: $Dark-Shade-75;
@@ -49,7 +48,7 @@
 
   &__text {
     @include Body-font();
-    padding: 0 0 0 15px;
+    padding-left: 15px;
     line-height: 24px;
   }
 }

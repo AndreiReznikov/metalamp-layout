@@ -4,13 +4,13 @@
 
 html {
   background-color: #fff;
-  color: #1F2041;
+  color: $Dark-Shade-100;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
 }
 
 .colors-and-type-container {
-  max-width: 1440px;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -29,9 +29,8 @@ html {
 }
 
 .colors-and-type-colors-description-list {
+  @include margin-padding-zero();
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 
   &__item {
     margin: 0 0 20px 0;

@@ -3,13 +3,13 @@
 .reserve-card {
   max-width: 380px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: $cardBorder;
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: $cardShadowLarge;
   border-radius: 4px;
 
   @media screen and (max-width: 400px) {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadowSmall;
   }
 
   &__wrapper {
@@ -21,9 +21,7 @@
   }
 
   &__number-and-price-container    {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center();
   }
 
   &__number-symbol {
@@ -87,9 +85,7 @@
 
   &__information-icon {
     @include H3();
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @iclude flex-center();
     width: 20px;
     height: 20px;
     border: 1px solid $Dark-Shade-25;

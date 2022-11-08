@@ -1,18 +1,17 @@
+@import '../../templates/vars-and-mixins';
+
 html, body {
+  @include margin-padding-zero();
   height: 100%;
-  margin: 0;
-  padding: 0;
   background-color: #fff;
-  color: #1F2041;
+  color: $Dark-Shade-100;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
 }
 
 .metalamp-layout-container {
-  display: flex;
+  @include flex-center();
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
 }

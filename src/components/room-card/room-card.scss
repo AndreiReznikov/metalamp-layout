@@ -21,7 +21,7 @@
     margin: 20px 20px 0 20px;
     padding-bottom: 11px;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);;
+    border-bottom: 1px solid $Dark-Shade-10;
   }
 
   &__number-symbol {
@@ -53,11 +53,8 @@
   }
 
   &__rate {
-    display: flex;
-    align-items: center;
+    @include flex-between-center();
     margin: 10px 21px 0 21px;
-    display: flex;
-    justify-content: space-between;
   }
 
   &__reviews-number {

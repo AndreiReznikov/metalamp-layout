@@ -8,8 +8,8 @@ $expandableListsCollection.each(function () {
   const $checkboxList = $($expandableList.find('.js-expandable-checkbox-list__list'));
   const $listArrow = $($expandableList.find('.js-expandable-checkbox-list__arrow'));
 
-  const showList = () => { $checkboxList.toggleClass('js-expandable-checkbox-list__list_opened'); };
-  const transformArrow = () => { $listArrow.toggleClass('js-expandable-checkbox-list__arrow_transformed'); };
+  const showList = () => { $checkboxList.toggleClass('expandable-checkbox-list__list_opened'); };
+  const transformArrow = () => { $listArrow.toggleClass('expandable-checkbox-list__arrow_transformed'); };
   const handleListTitleToggleList = () => {
     showList();
     transformArrow();

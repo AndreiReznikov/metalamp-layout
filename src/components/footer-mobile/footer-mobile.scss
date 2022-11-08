@@ -8,18 +8,14 @@
   min-height: 367px;
 
   &_visible {
-    display: flex;
+    @include flex-center();
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 768px;
   }
 
   @media screen and (max-width: 768px) {
-    display: flex;
+    @include flex-center();
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   &__text {

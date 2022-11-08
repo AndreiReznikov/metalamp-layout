@@ -15,11 +15,10 @@
 @import '../../templates/vars-and-mixins';
 
 html, body {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero();
   height: 100%;
   background-color: #fff;
-  color: #1F2041;
+  color: $Dark-Shade-100;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
 }
@@ -36,10 +35,9 @@ html, body {
 }
 
 .room-details-background {
+  @include one-hundred-width-and-height();
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
@@ -89,7 +87,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   flex: 1 0 auto;
-  max-width: 1440px;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 70px 140px 62px 140px;
   border-bottom: 1px solid $Dark-Shade-5;
@@ -172,10 +170,8 @@ html, body {
 }
 
 .room-details-chart-text-container {
+  @include flex-center();
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 162px;
 
   @media screen and (max-width: 400px) {
@@ -226,7 +222,7 @@ html, body {
 }
 
 .room-details-block-title {
-  @include H2;
+  @include H2();
 
   @media screen and (max-width: 680px) {
     margin-bottom: 30px;

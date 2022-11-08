@@ -1,9 +1,5 @@
 @import '../../templates/vars-and-mixins';
 
-$toggle-width: 38px;
-$circle-width: 12px;
-$circle-margin: 3px;
-
 .toggle-button {
 
   @include Body-font();
@@ -18,9 +14,7 @@ $circle-margin: 3px;
   }
 
   &__input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    @include appearance-none();
   }
 
   &__custom-input {

@@ -10,18 +10,16 @@
   }
 
   &__radio {
+    @include appearance-none();
     width: 20px;
     height: 20px;
     margin: 0;
     padding: 0;
     background-image: url('../../img/star-border.svg');
     background-repeat: no-repeat;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     cursor: pointer;
   }
-  
+
   &__radio:checked, &__radio:checked ~ &__radio {
     background-image: url('../../img/star.svg');
     background-repeat: no-repeat;

@@ -1,3 +1,5 @@
+@import '../../templates/vars-and-mixins';
+
 $logos:
   'colorful-icon' 106px 40px '../../img/logo-toxin.svg',
   'icon' 48px 48px '../../img/logo.svg';
@@ -7,12 +9,10 @@ $logos:
 
   @each $element, $width, $height, $url in $logos {
     &__#{$element} {
+      @include background-position(cover);
       width: $width;
       height: $height;
       background-image: url($url);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   }
 }

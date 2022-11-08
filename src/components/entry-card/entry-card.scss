@@ -3,13 +3,13 @@
 .entry-card {
   max-width: 380px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: $cardBorder;
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: $cardShadowLarge;
   border-radius: 4px;
 
   @media screen and (max-width: 400px) {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadowSmall;
   }
 
   &__title {
@@ -45,10 +45,7 @@
   }
 
   &__registration-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center();
     max-width: 320px;
     margin-top: 30px;
 

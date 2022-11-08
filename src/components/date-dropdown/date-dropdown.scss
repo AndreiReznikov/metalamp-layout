@@ -13,8 +13,7 @@
 
   &__title {
     @include H3();
-    margin: 0;
-    padding: 0;
+    @include margin-padding-zero();
   }
 
   &__input-wrapper {
@@ -26,17 +25,17 @@
     @include Body-font();
     width: 150px;
     height: 44px;
+    padding-left: 15px;
     background: #fff;
     border: 1px solid $Dark-Shade-25;
     border-radius: 4px;
-    padding: 0 0 0 15px;
     box-sizing: border-box;
     outline: none;
     cursor: pointer;
 
     @media screen and (max-width: 480px) {
       width: 125px;
-      padding: 0 0 0 10px;
+      padding-left: 10px;
     }
   }
 

@@ -3,13 +3,13 @@
 .registration-card {
   max-width: 380px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: $cardBorder;
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: $cardShadowLarge;
   border-radius: 4px;
 
   @media screen and (max-width: 400px) {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadowSmall;
   }
 
   &__title {
@@ -56,7 +56,7 @@
 
   &__data-title {
     @include H3();
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
   }
 
   &__entry-data-input-wrapper {
@@ -78,10 +78,7 @@
   }
 
   &__login-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center();
     width: 100%;
     margin-top: 30px;
 

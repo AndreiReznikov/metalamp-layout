@@ -8,14 +8,14 @@
 @import '../../templates/vars-and-mixins';
 
 html {
-  color: #1F2041;
+  color: $Dark-Shade-100;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
   background-color: $Dark-Shade-5;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 0 30px;
 }

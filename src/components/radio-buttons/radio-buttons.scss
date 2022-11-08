@@ -9,7 +9,7 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: row-reverse;
-    margin: 0 20px 0 0;
+    margin-right: 20px;
   }
 
   &__input {
@@ -24,10 +24,8 @@
   }
 
   &__custom-input {
+    @include flex-center();
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 20px;
     height: 20px;
     background: #fff;

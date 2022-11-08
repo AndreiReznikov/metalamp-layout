@@ -16,6 +16,10 @@
     padding: 2px 14px 0 0;
   }
 
+  &__arrow_transformed {
+    transform: rotateX(180deg);
+  }
+
   &__arrow::after {
     @include arrow;
   }
@@ -24,11 +28,7 @@
     display: none;
   }
 
-  .js-expandable-checkbox-list__arrow_transformed {
-    transform: rotateX(180deg);
-  }
-
-  .js-expandable-checkbox-list__list_opened {
+  &__list_opened {
     display: block;
   }
 }

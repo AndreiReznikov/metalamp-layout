@@ -19,7 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1440px;
+    max-width: $max-width;
     min-height: 372px;
     margin: 0 auto;
     padding: 100px 140px 40px 140px;
@@ -35,8 +35,7 @@
   }
 
   &__list {
-    margin: 0;
-    padding: 0;
+    @include margin-padding-zero();
   }
 
   &__list-item  {
@@ -133,10 +132,8 @@
   }
 
   &__bottom-section-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1440px;
+    @include flex-between-center();
+    max-width: $max-width;
     min-height: 70px;
     margin: 0 auto;
     padding: 0 140px;

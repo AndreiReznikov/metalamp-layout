@@ -4,7 +4,7 @@
 
   &__title {
     @include H3();
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
   }
 
   &__input-container {
@@ -21,7 +21,7 @@
     @include Body-font();
     width: 100%;
     height: 44px;
-    padding: 0 0 0 15px;
+    padding-left: 15px;
     text-transform: lowercase;
     background: #fff;
     border: 1px solid $Dark-Shade-25;

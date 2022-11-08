@@ -2,11 +2,20 @@ $Dark-Shade-100: #1F2041;
 $Dark-Shade-75: rgba(31, 32, 65, 0.75);
 $Dark-Shade-50: rgba(31, 32, 65, 0.50);
 $Dark-Shade-25: rgba(31, 32, 65, 0.25);
+$Dark-Shade-10: rgba(31, 32, 65, 0.1);
 $Dark-Shade-5: rgba(31, 32, 65, 0.05);
 $Purple: #BC9CFF;
 $Green: #6FCF97;
 $gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $semitransparentGradient: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+$cardBorder: 1px solid rgba(0, 0, 0, 0.12);
+$cardShadowLarge: 0px 0px 25px rgba(0, 0, 0, 0.2);
+$cardShadowSmall: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+$max-width: 1440px;
+$toggle-width: 38px;
+$circle-width: 12px;
+$circle-margin: 3px;
 
 @mixin H1() {
   margin: 0;
@@ -58,4 +67,62 @@ $semitransparentGradient: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, r
   border-width: 0 2px 2px 0;
   box-sizing: border-box;
   transform: rotate(45deg);
+}
+
+@mixin longButtonArrow() {
+  position: absolute;
+  right: 13px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../img/long-button-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inline-flex-center() {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between-center() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin background-position($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+@mixin one-hundred-width-and-height() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin margin-padding-zero() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button-radius() {
+  border-radius: 22px;
+  border: none;
+}
+
+@mixin appearance-none() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

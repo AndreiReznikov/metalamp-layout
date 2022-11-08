@@ -10,9 +10,8 @@ $types:
   font-family: Montserrat, Arial, sans-serif;
 
   &__text{
+    @include margin-padding-zero();
     display: flex;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
 

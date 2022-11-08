@@ -6,15 +6,13 @@
   padding-bottom: 20px;
 
   &_bordered {
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    border-bottom: 1px solid $Dark-Shade-10;
   }
 
   &__icon {
+    @include background-position(contain);
     min-width: 48px;
     margin-left: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   &__text {
