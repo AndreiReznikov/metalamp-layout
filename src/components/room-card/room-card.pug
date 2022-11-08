@@ -20,17 +20,17 @@ mixin room-card(options = {})
           .room-card__lux-mark
             +button({
               textButton: true,
-              text: 'Люкс'
-              })
+              text: 'Люкс',
+            })
       .room-card__price-container
-        span.room-card__price!=options.price
+        span.room-card__price=options.price
           span.room-card__currency &#8381;
           span.room-card__time-interval  в сутки
     .room-card__rate
       +rate-button({
         starsNumber: options.starsNumber,
         checkedButton: options.checkedButton,
-        name: `${Math.random()}`
-        })
+        name: `${Math.random()}`,
+      })
       .room-card__reviews-number!=options.reviewsNumber
         span.room-card__reviews-number-text  Отзывов

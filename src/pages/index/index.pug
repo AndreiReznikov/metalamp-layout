@@ -16,8 +16,16 @@ html(lang="ru")
           ul.metalamp-layout-ui-kit-list
             each page in pages
               li.metalamp-layout-ui-kit-item
-                a.metalamp-layout-ui-kit-link(href=page[0] target="_blank" rel="noopener noreferrer")=page[1]
+                a.metalamp-layout-ui-kit-link(
+                  href=page[0]
+                  target="_blank"
+                  rel="noopener noreferrer"
+                )=page[1]
 
         .metalamp-layout-website-pages-container
-          a.metalamp-layout-website-pages-link(href="landing-page.html" target="_blank" rel="noopener noreferrer")
+          a.metalamp-layout-website-pages-link(
+            href="landing-page.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          )
             h2.metalamp-layout-website-pages-title Website Pages

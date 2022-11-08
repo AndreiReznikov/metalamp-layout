@@ -9,18 +9,18 @@ mixin search-card()
       .search-card__wrapper
         .search-card__date-dropdown-container
           +date-dropdown({
-            title: ['Прибытие', 'Выезд']
-            })
+            title: ['Прибытие', 'Выезд'],
+          })
         .search-card__guests-dropdown-container
           +dropdown({
             items: ['Взрослые', 'Дети', 'Младенцы'],
             addingButtons: true,
             isGuests: true,
-            title: 'Гости'
-            })
+            title: 'Гости',
+          })
         .search-card__long-button-container
           +button({
             longLinkButton: true,
             text: 'Подобрать номер',
-            href: 'search-room.html'
-            })
+            href: 'search-room.html',
+          })

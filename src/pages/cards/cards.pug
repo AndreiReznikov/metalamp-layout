@@ -5,6 +5,7 @@ include ../../components/reserve-card/reserve-card
 include ../../components/entry-card/entry-card
 include ../../components/room-card/room-card
 include ../../components/filter-date-dropdown/filter-date-dropdown
+include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="ru")
@@ -18,22 +19,27 @@ html(lang="ru")
     .cards-container
       .cards-logo-container
         +logo({
-          href: 'index.html'
+          href: 'index.html',
         })
 
       .cards-left-block
         +search-card()
 
         .cards-registration-block-container
-          +registration-card({buttonText: 'Перейти к оплате'})
+          +registration-card({
+            buttonText: 'Перейти к оплате',
+          })
 
       .cards-central-block
         +reserve-card({
+          roomNumber: '888',
+          price: '9 900',
+          totalSum: '38 081',
           dateFrom: 'new Date(2019, 7, 19)',
           dateTo: 'new Date(2019, 7, 23)',
           dropdownButtonsNum: [0, 1],
-          dropdownClicksNum: [2, 1]
-          })
+          dropdownClicksNum: [2, 1],
+        })
 
         .cards-entry-block-container
           +entry-card()
@@ -44,34 +50,10 @@ html(lang="ru")
             isHidden: true,
             isOpened: true,
             dateFrom: 'new Date(2019, 7, 19)',
-            dateTo: 'new Date(2019, 7, 23)'
-            })
+            dateTo: 'new Date(2019, 7, 23)',
+          })
 
         .cards-room-cards-container
-          -
-            const roomCards = [
-              {
-                photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'],
-                number: '888',
-                price: '9 990',
-                starsNumber: 5,
-                checkedButton: 5,
-                reviewsNumber: 145,
-                isLux: true,
-                isSlickArrows: true
-              },
-              {
-                photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'],
-                number: '840',
-                price: '9 990',
-                starsNumber: 5,
-                checkedButton: 4,
-                reviewsNumber: 65,
-                isLux: false,
-                isSlickArrows: false
-              }
-            ];
-
           each val in roomCards
             +room-card({
               photos: val.photos,
@@ -81,5 +63,5 @@ html(lang="ru")
               checkedButton: val.checkedButton,
               reviewsNumber: val.reviewsNumber,
               isLux: val.isLux,
-              isSlickArrows: val.isSlickArrows
-              })
+              isSlickArrows: val.isSlickArrows,
+            })

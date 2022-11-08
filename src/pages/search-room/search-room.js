@@ -47,7 +47,7 @@ $roomCard.each(function () {
 const showItemsNum = () => {
   const paginationSize = 12;
   const paginationItemsNum = $('.js-pagination__list-item').length;
-  const paginationSubText = $('.js-pagination__number');
+  const paginationSubText = $('.js-pagination__numbers');
   const pageNum = $('.js-pagination__container').pagination('getSelectedPageNum');
 
   const paginationText = `${(paginationSize * pageNum - paginationSize + 1)} - ${paginationSize * pageNum - (paginationSize - paginationItemsNum)} `;

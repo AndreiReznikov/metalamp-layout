@@ -8,6 +8,7 @@ include ../../components/pagination/pagination
 include ../../components/room-card/room-card
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
+include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
@@ -33,8 +34,8 @@ html(lang="en")
                 +filter-date-dropdown({
                   title: 'Даты пребывания в отеле',
                   dateFrom: 'new Date(2020, 7, 19)',
-                  dateTo: 'new Date(2020, 7, 23)'
-                  })
+                  dateTo: 'new Date(2020, 7, 23)',
+                })
               .search-room-guests-dropdown-container
                 +dropdown({
                   title: 'Гости',
@@ -43,53 +44,31 @@ html(lang="en")
                   isGuests: true,
                   width: '266px',
                   buttonsNum: [0, 2],
-                  clicksNum: [3, 1]
-                  })
+                  clicksNum: [3, 1],
+                })
               .search-room-range-slider-container
                 +range-slider({
-                  title: 'Диапазон цены'
-                  })
+                  title: 'Диапазон цены',
+                })
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
-                  -
-                    const checkboxes = [
-                      { text: 'Можно курить', title: 'Правила дома' },
-                      { text: 'Можно с питомцами', checked: true },
-                      { text: 'Можно пригласить гостей (до 10 человек)', checked: true }
-                    ];
-
-                  each val in checkboxes
+                  each val in searchRoomCheckboxes
                     +checkbox-button({
                       text: val.text,
                       title: val.title,
-                      checked: val.checked
-                      })
+                      checked: val.checked,
+                    })
 
               .search-room-rich-checkbox-buttons-container
                 .search-room-rich-checkbox-buttons-wrapper
-                  -
-                    const richCheckboxes = [
-                      {
-                        title: 'Доступность',
-                        richButtonTitle: 'Широкий коридор',
-                        text: `Ширина коридоров в номере ${String.fromCharCode(160)}менее 91 см.`,
-                        isRich: true
-                      },
-                      {
-                        richButtonTitle: 'Помощник для инвалидов',
-                        text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
-                        isRich: true
-                      }
-                    ];
-
-                  each val in richCheckboxes
+                  each val in searchRoomRichCheckboxButtons
                     +checkbox-button({
                       title: val.title,
                       richButtonTitle: val.richButtonTitle,
                       text: val.text,
-                      isRich: val.isRich
-                      })
+                      isRich: val.isRich,
+                    })
 
               .search-room-conveniences-dropdown-container
                 +dropdown({
@@ -98,47 +77,35 @@ html(lang="en")
                   width: '266px',
                   isConveniences: true,
                   buttonsNum: [0, 1],
-                  clicksNum: [2, 2]
-                  })
+                  clicksNum: [2, 2],
+                })
               .search-room-expandable-checkbox-list-container
                 +expandable-checkbox-list({
                   title: 'Дополнительные удобства',
-                  checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
-                  })
+                  checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+                })
         section.search-room-cards-container
           h1.search-room-title Номера, которые мы для вас подобрали
-          +pagination()
+          +pagination({
+            numbers: '1 - 12',
+            totalNumber: 'из 100+ вариантов аренды',
+          })
       +footer()
       +footer-mobile()
       .search-room-pagination-container
         -
-          let roomsCardsProperties = [
-            ['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, true],
-            ['room-photo2.jpg', '840', '9 990', 5, 4, 65, false, false],
-            ['room-photo3.jpg', '980', '8 500', 5, 3, 35, true, false],
-            ['room-photo4.jpg', '856', '7 300', 5, 5, 19, false, false],
-            ['room-photo5.jpg', '740', '6 000', 5, 4, 44, false, false],
-            ['room-photo6.jpg', '982', '5 800', 5, 3, 56, false, false],
-            ['room-photo7.jpg', '678', '5 500', 5, 5, 45, false, false],
-            ['room-photo8.jpg', '450', '5 300', 5, 4, 39, false, false],
-            ['room-photo9.jpg', '350', '5 000', 5, 3, 77, false, false],
-            ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false, false],
-            ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false, false],
-            ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false, false]
-          ];
-
           for (let i = 0; i < 160; i += 1) {
             roomsCardsProperties.push(['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, false])
           };
 
-        - for (let i = 0; i < roomsCardsProperties.length; i++)
-          +room-card({
-            photos: [roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0]],
-            number: roomsCardsProperties[i][1],
-            price: roomsCardsProperties[i][2],
-            starsNumber: roomsCardsProperties[i][3],
-            checkedButton: roomsCardsProperties[i][4],
-            reviewsNumber: roomsCardsProperties[i][5],
-            isLux: roomsCardsProperties[i][6],
-            isSlickArrows: roomsCardsProperties[i][7]
-            })
+          for (let i = 0; i < roomsCardsProperties.length; i++)
+        +room-card({
+          photos: [roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0]],
+          number: roomsCardsProperties[i][1],
+          price: roomsCardsProperties[i][2],
+          starsNumber: roomsCardsProperties[i][3],
+          checkedButton: roomsCardsProperties[i][4],
+          reviewsNumber: roomsCardsProperties[i][5],
+          isLux: roomsCardsProperties[i][6],
+          isSlickArrows: roomsCardsProperties[i][7]
+        })

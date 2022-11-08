@@ -5,4 +5,4 @@ mixin social-icons(options = {})
   .social-icons
     each val in socials
       a(class="social-icons__link" href=`https://${val}.com/` target="_blank" rel="noopener noreferrer")
-        div(class="social-icons__image" style=`background-image: url(${require('../../img/' + val + '.svg')});`)
+        .social-icons__image(style=`background-image: url(${require('../../img/' + val + '.svg')});`)

@@ -15,7 +15,7 @@ html(lang="en")
     .colors-and-type-container
       .colors-and-type-logo-container
       +logo({
-        href: 'index.html'
+        href: 'index.html',
       })
 
       main.colors-and-type-wrapper
@@ -25,8 +25,8 @@ html(lang="en")
               li.colors-and-type-colors-description-list__item
                 +color({
                   title: val[0],
-                  hex: val[1]
-                  })
+                  hex: val[1],
+                })
 
         .colors-and-type-type-description-list-container
           ul.colors-and-type-type-description-list
@@ -34,5 +34,5 @@ html(lang="en")
               li.colors-and-type-type-description-list__item
                 +type({
                   title: val[0],
-                  description: val[1]
-                  })
+                  description: val[1],
+                })

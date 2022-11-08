@@ -11,18 +11,18 @@ mixin entry-card()
             .entry-card__input-wrapper
               +text-field({
                 placeholder: val[0],
-                type: val[1]
-                })
+                type: val[1],
+              })
         .entry-card__long-button-wrapper
           +button({
             longButton: true,
             text: 'Войти',
-            type: 'submit'
-            })
+            type: 'submit',
+          })
         .entry-card__registration-wrapper
           .entry-card__registration-text Нет аккаунта на Toxin?
           +button({
             emptyButton: true,
             text: 'Создать',
-            href: 'registration-and-sign-in.html'
-            })
+            href: 'registration-and-sign-in.html',
+          })

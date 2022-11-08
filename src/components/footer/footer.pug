@@ -6,7 +6,7 @@ include ../social-icons/social-icons
   const sections = [
     ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги']],
     ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']],
-    ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']]
+    ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']],
   ];
 
 mixin footer()
@@ -16,8 +16,8 @@ mixin footer()
         .footer__first-section
           +logo({
             isColorful: true,
-            href: 'landing-page.html'
-            })
+            href: 'landing-page.html',
+          })
           .footer__first-section-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__items-section
           each value in sections
@@ -40,5 +40,5 @@ mixin footer()
       .footer__copyright-text Copyright &#169; 2018 Toxin отель. Все права защищены.
       .footer__social-icons-container
         +social-icons({
-          socials: ['twitter', 'facebook', 'instagram']
+          socials: ['twitter', 'facebook', 'instagram'],
         })

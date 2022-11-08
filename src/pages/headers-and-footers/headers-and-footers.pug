@@ -15,24 +15,24 @@ html(lang="ru")
     .container
       .headers-and-footers-logo-container
         +logo({
-          href: 'index.html'
+          href: 'index.html',
         })
 
       .headers-and-footers-header-container
         +header({
-          isBoldItem: true
-          })
+          isBoldItem: true,
+        })
 
       .headers-and-footers-header-with-logged-in-user-container
         +header({
           isLoggedIn: true,
           isBoldItem: true,
-          username: 'Юлий Цезарь'
-          })
+          username: 'Юлий Цезарь',
+        })
 
       .headers-and-footers-footer-container
         +footer()
       .headers-and-footers-footer-mobile-container
         +footer-mobile({
-          isVisible: true
-          })
+          isVisible: true,
+        })

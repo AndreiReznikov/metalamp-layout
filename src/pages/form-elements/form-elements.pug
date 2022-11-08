@@ -32,7 +32,7 @@ html(lang="ru")
     .form-elements-container
       .form-elements-logo-container
         +logo({
-          href: 'index.html'
+          href: 'index.html',
         })
       .form-elements-wrapper
         .form-elements-left-block
@@ -40,76 +40,76 @@ html(lang="ru")
             div(class=val.class)
               +element-description({
                 title: val.title,
-                status: val.status
-                })
+                status: val.status,
+              })
               +text-field({
                 type: val.type,
                 placeholder: val.placeholder,
                 value: val.value,
-                isFocused: val.isFocused
-                })
+                isFocused: val.isFocused,
+              })
 
           .form-elements-dropdown-first-container
             +dropdown({
               items: ['Взрослые', 'Дети', 'Младенцы'],
               addingButtons: true,
               isGuests: true,
-              title: 'Dropdown'
-              })
+              title: 'Dropdown',
+            })
 
           .form-elements-masked-text-field-container
             +masked-text-field({
               type: 'text',
               placeholder: 'ДД.ММ.ГГГГ',
-              title: 'Masked text field'
-              })
+              title: 'Masked text field',
+            })
 
           .form-elements-date-dropdown-container
             +date-dropdown({
               title: ['Date dropdown', 'Date dropdown'],
               dateFrom: 'new Date(2019, 7, 15)',
               dateTo: 'new Date(2019, 7, 19)',
-              isFromEmpty: 'true'
-              })
+              isFromEmpty: 'true',
+            })
 
           .form-elements-filter-date-dropdown-container
             +filter-date-dropdown({
               title: 'Filter date dropdown',
               dateFrom: 'new Date(2020, 7, 19)',
-              dateTo: 'new Date(2020, 7, 23)'
-              })
+              dateTo: 'new Date(2020, 7, 23)',
+            })
 
           .form-elements-subscription-text-field-container
             +subscription-text-field({
-              title: 'Subscription text field'
-              })
+              title: 'Subscription text field',
+            })
 
           .form-elements-dropdown-second-container
             +element-description({
               title: 'Dropdown',
-              status: 'Default'
-              })
+              status: 'Default',
+            })
             +dropdown({
               items: ['Спальни', 'Кровати', 'Ванные комнаты'],
               width: '266px',
               isConveniences: true,
               buttonsNum: [0, 1],
-              clicksNum: [2, 2]
-              })
+              clicksNum: [2, 2],
+            })
 
           .form-elements-dropdown-third-container
             +element-description({
               title: 'Dropdown',
-              status: 'Expanded'
-              })
+              status: 'Expanded',
+            })
             +dropdown({
               items: ['Спальни', 'Кровати', 'Ванные комнаты'],
               width: '266px',
               isConveniences: true,
               isOpened: true,
               buttonsNum: [0, 1],
-              clicksNum: [2, 2]
-              })
+              clicksNum: [2, 2],
+            })
 
           each val in checkboxLists
             div(class=val.class)
@@ -117,8 +117,8 @@ html(lang="ru")
                 title: val.title,
                 checkboxTexts: val.checkboxTexts,
                 checkedItems: val.checkedItems,
-                isOpened: val.isOpened
-                })
+                isOpened: val.isOpened,
+              })
 
 
         .form-elements-central-block
@@ -127,54 +127,54 @@ html(lang="ru")
               +checkbox-button({
                 text: val.text,
                 title: val.title,
-                checked: val.checked
-                })
+                checked: val.checked,
+              })
 
           .form-elements-radio-buttons-container
             .form-elements-radio-buttons-description-container
               +element-description({
-                title: 'Radio buttons'
+                title: 'Radio buttons',
               })
             +radio-buttons({
               title: 'Radio buttons',
               radioNames: ['Мужчина', 'Женщина'],
-              checkedNumber: 0
-              })
+              checkedNumber: 0,
+            })
 
           .form-elements-toggle-buttons-container
             .form-elements-toggle-description-container
               +element-description({
-                title: 'Toggle'
-                })
+                title: 'Toggle',
+              })
             .form-elements-toggle-buttons-wrapper
               each val in toggleButtons
                 +toggle-button({
                   text: val[0],
-                  checked: val[1]
-                  })
+                  checked: val[1],
+                })
 
           .form-elements-like-button-container
             +element-description({
-              title: 'Like button'
-              })
+              title: 'Like button',
+            })
             .form-elements-like-buttons-wrapper
               each val in likeButtons
                 +like-button({
                   count: val[0],
-                  isLiked: val[1]
-                  })
+                  isLiked: val[1],
+                })
 
           .form-elements-rate-buttons-container
             +element-description({
-              title: 'Rate button'
-              })
+              title: 'Rate button',
+            })
             .form-elemetns-rate-buttons-wrapper
               each val in rateButtons
                 +rate-button({
                   starsNumber: val.starsNumber,
                   checkedButton: val.checkedButton,
-                  name: val.name
-                  })
+                  name: val.name,
+                })
 
           .form-elements-dropdown-fourth-container
             +dropdown({
@@ -182,8 +182,8 @@ html(lang="ru")
               isOpened: true,
               addingButtons: true,
               isGuests: true,
-              title: 'Dropdown'
-              })
+              title: 'Dropdown',
+            })
 
           .form-elements-rich-checkbox-buttons-container
             each val in richCheckboxButtons
@@ -191,20 +191,20 @@ html(lang="ru")
                 title: val.title,
                 richButtonTitle: val.richButtonTitle,
                 text: val.text,
-                isRich: val.isRich
-                })
+                isRich: val.isRich,
+              })
 
         .form-elements-right-block
           .form-elements-range-slider-container
             +range-slider({
-              title: 'Range slider'
-              })
+              title: 'Range slider',
+            })
 
           .form-elements-buttons-container
             .form-elements-buttons-description-container
               +element-description({
-                title: 'Buttons'
-                })
+                title: 'Buttons',
+              })
 
             each val in buttons
               div(class=val.class)
@@ -215,15 +215,18 @@ html(lang="ru")
                     textButton: button.textButton,
                     longButton: button.longButton,
                     size: button.size,
-                    text: button.text
-                    })
+                    text: button.text,
+                  })
 
           .form-elements-pagination-container
             .form-elements-pagination-description-container
               +element-description({
-                title: 'Pagination'
-                })
-            +pagination()
+                title: 'Pagination',
+              })
+            +pagination({
+              numbers: '1 - 12',
+              totalNumber: 'из 100+ вариантов аренды',
+            })
 
           .form-elements-dropdown-fifth-container
             +dropdown({
@@ -233,20 +236,20 @@ html(lang="ru")
               addingButtons: true,
               isGuests: true,
               buttonsNum: [0, 1],
-              clicksNum: [2, 1]
-              })
+              clicksNum: [2, 1],
+            })
 
           .form-elements-bullet-list-container
             .form-elements-bullet-list-description-container
               +element-description({
-                title: 'Bullet list'
-                })
+                title: 'Bullet list',
+              })
             +bullet-list({
               bulletItems: [
                 'Нельзя с питомцами',
                 'Без вечеринок и мероприятий',
-                'Время прибытия — после 13:00, а выезд до 12:00'
-                ]
+                'Время прибытия — после 13:00, а выезд до 12:00',
+                ],
               })
 
         .form-elements-bottom-block
@@ -256,8 +259,8 @@ html(lang="ru")
                 title: val.title,
                 description: val.description,
                 image: val.image,
-                isBorder: val.isBorder
-                })
+                isBorder: val.isBorder,
+              })
 
           .form-elements-comment-container
             +comment({
@@ -266,5 +269,5 @@ html(lang="ru")
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
               username: 'Мурад Сарафанов',
               likeCount: 12,
-              isLiked: true
-              })
+              isLiked: true,
+            })

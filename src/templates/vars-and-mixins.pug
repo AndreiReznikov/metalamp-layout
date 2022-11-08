@@ -12,7 +12,7 @@
       title: 'Text field',
       status: 'Default',
       type: 'email',
-      placeholder: 'Email'
+      placeholder: 'Email',
     },
     {
       class: 'form-elements-second-text-field',
@@ -21,8 +21,8 @@
       type: 'email',
       placeholder: 'Email',
       value: 'This is pretty awesome',
-      isFocused: true
-    }
+      isFocused: true,
+    },
   ];
 
   const checkboxLists = [
@@ -36,33 +36,33 @@
       title: 'Expandable checkbox list',
       checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
       checkedItems: [1, 2, 3],
-      isOpened: true
+      isOpened: true,
     },
   ];
 
   const checkboxes = [
     {
       text: 'Можно курить',
-      title: 'Checkbox buttons'
+      title: 'Checkbox buttons',
     },
     {
       text: 'Можно с питомцами',
-      checked: true
+      checked: true,
     },
     {
       text: 'Можно пригласить гостей (до 10 человек)',
-      checked: true
-    }
+      checked: true,
+    },
   ];
 
   const toggleButtons = [
     ['Получать спецпредложения', true],
-    ['Получать спецпредложения', false]
+    ['Получать спецпредложения', false],
   ];
 
   const likeButtons = [
     [2, false],
-    [12, true]
+    [12, true],
   ];
 
   const rateButtons = [
@@ -75,7 +75,7 @@
       starsNumber: 5,
       checkedButton: 5,
       name: 'Second rate'
-    }
+    },
   ];
 
   const richCheckboxButtons = [
@@ -83,13 +83,13 @@
       title: 'Rich checkbox buttons',
       richButtonTitle: 'Широкий коридор',
       text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
-      isRich: true
+      isRich: true,
     },
     {
       richButtonTitle: 'Помощник для инвалидов',
       text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
-      isRich: true
-    }
+      isRich: true,
+    },
   ];
 
   const buttons = [
@@ -98,13 +98,13 @@
       buttons: [
         {
           filledButton: true,
-          text: 'Click me'
+          text: 'Click me',
         },
         {
           filledButton: true,
-          text: 'Click me'
+          text: 'Click me',
         }
-      ]
+      ],
     },
     {
       class: 'form-elements-empty-buttons-container',
@@ -112,36 +112,36 @@
         {
           emptyButton: true,
           size: 'L',
-          text: 'Click me'
+          text: 'Click me',
         },
         {
           emptyButton: true,
           size: 'L',
-          text: 'Click me'
+          text: 'Click me',
         }
-      ]
+      ],
     },
     {
       class: 'form-elements-text-buttons-container',
       buttons: [
         {
           textButton: true,
-          text: 'Click me'
+          text: 'Click me',
         },
         {
           textButton: true,
-          text: 'Click me'
+          text: 'Click me',
         }
-      ]
+      ],
     },
     {
       class: 'form-elements-long-button-container',
       buttons: [
         {
           longButton: true,
-          text: 'Перейти к оплате'
+          text: 'Перейти к оплате',
         }
-      ]
+      ],
     },
   ];
 
@@ -150,13 +150,13 @@
       title: 'Комфорт',
       description: 'Шумопоглощающие стены',
       image: 'insert-emoticon.svg',
-      isBorder: true
+      isBorder: true,
     },
     {
       title: 'Удобство',
       description: 'Окно в каждой из спален',
       image: 'location-city.svg',
-      isBorder: true
+      isBorder: true,
     }
   ];
 
@@ -167,14 +167,14 @@
     ['Dark Shade 25%', '#1F2041'],
     ['Dark Shade 5%', '#1F2041'],
     ['Purple', '#BC9CFF'],
-    ['Green', '#6FCF97']
+    ['Green', '#6FCF97'],
   ];
 
   const types = [
     ['H1', 'This one is the sub-section or widget title'],
     ['H2', 'Next one is the item title inside widgets'],
     ['H3', 'This is a label or CTA text'],
-    ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']
+    ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'],
   ];
 
   const comments = [
@@ -184,7 +184,7 @@
       'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
       'Мурад Сарафанов',
       12,
-      true
+      true,
     ],
     [
       'image2.jpg',
@@ -192,14 +192,81 @@
       'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
       'Патрисия Стёклышкова',
       2,
-      false
+      false,
     ]
   ];
 
   const advantagesRoom = [
     ['Комфорт', 'Шумопоглощающие стены', 'insert-emoticon.svg', true],
     ['Удобство', 'Окно в каждой из спален', 'location-city.svg', true],
-    ['Уют', 'Номер оснащён камином', 'whatshot.svg', false]
+    ['Уют', 'Номер оснащён камином', 'whatshot.svg', false],
+  ];
+
+  const roomCards = [
+    {
+      photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'],
+      number: '888',
+      price: '9 990',
+      starsNumber: 5,
+      checkedButton: 5,
+      reviewsNumber: 145,
+      isLux: true,
+      isSlickArrows: true,
+    },
+    {
+      photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'],
+      number: '840',
+      price: '9 990',
+      starsNumber: 5,
+      checkedButton: 4,
+      reviewsNumber: 65,
+      isLux: false,
+      isSlickArrows: false,
+    }
+  ];
+
+  const searchRoomCheckboxes = [
+    {
+      text: 'Можно курить',
+      title: 'Правила дома',
+    },
+    {
+      text: 'Можно с питомцами',
+      checked: true,
+    },
+    {
+      text: 'Можно пригласить гостей (до 10 человек)',
+      checked: true,
+    },
+  ];
+
+  const searchRoomRichCheckboxButtons = [
+    {
+      title: 'Доступность',
+      richButtonTitle: 'Широкий коридор',
+      text: `Ширина коридоров в номере ${String.fromCharCode(160)}менее 91 см.`,
+      isRich: true,
+    },
+    {
+      richButtonTitle: 'Помощник для инвалидов',
+      text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+      isRich: true,
+    },
+  ];
+
+  let roomsCardsProperties = [
+    ['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, true],
+    ['room-photo2.jpg', '840', '9 990', 5, 4, 65, false, false],
+    ['room-photo3.jpg', '980', '8 500', 5, 3, 35, true, false],
+    ['room-photo4.jpg', '856', '7 300', 5, 5, 19, false, false],
+    ['room-photo5.jpg', '740', '6 000', 5, 4, 44, false, false],
+    ['room-photo6.jpg', '982', '5 800', 5, 3, 56, false, false],
+    ['room-photo7.jpg', '678', '5 500', 5, 5, 45, false, false],
+    ['room-photo8.jpg', '450', '5 300', 5, 4, 39, false, false],
+    ['room-photo9.jpg', '350', '5 000', 5, 3, 77, false, false],
+    ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false, false],
+    ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false, false],
+    ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false, false],
   ];
 
 mixin roomTitle(text)

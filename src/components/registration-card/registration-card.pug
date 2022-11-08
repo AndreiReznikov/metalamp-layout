@@ -14,19 +14,19 @@ mixin registration-card(options = {})
             .registration-card__username-input-wrapper
               +text-field({
                 placeholder: val,
-                type: 'text'
-                })
+                type: 'text',
+              })
         .registration-card__radio-buttons-container
           +radio-buttons({
             radioNames: ['Мужчина', 'Женщина'],
-            checkedNumber: 0
-            })
+            checkedNumber: 0,
+          })
         .registration-card__date-input-container
           +masked-text-field({
             type: 'text',
             placeholder: 'ДД.ММ.ГГГГ',
-            title: 'Дата рождения'
-            })
+            title: 'Дата рождения',
+          })
         .registration-card__entry-data-container
           .registration-card__data-title Данные для входа в сервис
           .registration-card__entry-data-inputs-container
@@ -34,20 +34,22 @@ mixin registration-card(options = {})
               .registration-card__entry-data-input-wrapper
                 +text-field({
                   placeholder: val[0],
-                  type: val[1]
-                  })
+                  type: val[1],
+                })
         .registration-card__toggle-button-container
-          +toggle-button({text: 'Получать спецпредложения'})
+          +toggle-button({
+            text: 'Получать спецпредложения',
+          })
         .registration-card__long-button-container
           +button({
             longButton: true,
             text: options.buttonText,
-            type: 'submit'
-            })
+            type: 'submit',
+          })
         .registration-card__login-container
           .registration-card__login-text Уже есть аккаунт на Toxin
           +button({
             emptyButton: true,
             text: 'Войти',
-            href: 'registration-and-sign-in.html?page=entry'
-            })
+            href: 'registration-and-sign-in.html?page=entry',
+          })
