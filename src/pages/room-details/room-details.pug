@@ -9,12 +9,11 @@ include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="Room details, components, MetaLamp, education")
-    meta(name="description" content="Отель Toxin, подобрать номер")
-    title Room details
+  +pageBase({
+    title: 'Room details',
+    keywords: 'Room details, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
   body
     .room-details-wrapper
       +header()

@@ -2,15 +2,16 @@ include ../../components/header/header
 include ../../components/search-card/search-card
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
+include ../../templates/vars-and-mixins
+
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="Landing page, components, MetaLamp, education")
-    meta(name="description" content="Отель Toxin, подобрать номер")
-    title Landing page
+  +pageBase({
+    title: 'Landing page',
+    keywords: 'Landing page, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
   body
     .landing-page-wrapper
       +header()

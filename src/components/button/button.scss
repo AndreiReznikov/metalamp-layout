@@ -3,7 +3,7 @@
 .filled-button {
   @include H3();
   @include button-radius();
-  width: 99px;
+  width: 98px;
   height: 44px;
   color: #fff;
   background: $gradient;
@@ -28,7 +28,7 @@
 
 .empty-button {
   @include button-radius();
-  width: 87px;
+  width: 86px;
   height: 34px;
   padding: 2px;
   background: $gradient;
@@ -38,8 +38,8 @@
   z-index: 1;
 
   &_size_l {
-    width: 99px;
-    height: 44px;
+    width: 98px;
+    height: 45px;
   }
 
   &:hover {

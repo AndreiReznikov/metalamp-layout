@@ -12,12 +12,11 @@ include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="Search room, components, MetaLamp, education")
-    meta(name="description" content="Отель Toxin, подобрать номер")
-    title Search room
+  +pageBase({
+    title: 'Search room',
+    keywords: 'Search room, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
   body
     .search-room-wrapper
       +header()

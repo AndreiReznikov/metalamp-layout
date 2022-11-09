@@ -18,12 +18,12 @@ class ExpandableCheckboxList {
       const $list = $($expandableList.find('.js-expandable-checkbox-list__list'));
       const $arrow = $($expandableList.find('.js-expandable-checkbox-list__arrow'));
 
-      const handleListTitleTransformList = () => {
+      const handleTitleTransformList = () => {
         $list.toggleClass('expandable-checkbox-list__list_opened');
         $arrow.toggleClass('expandable-checkbox-list__arrow_transformed');
       };
 
-      $title.click(handleListTitleTransformList);
+      $title.click(handleTitleTransformList);
     });
   }
 

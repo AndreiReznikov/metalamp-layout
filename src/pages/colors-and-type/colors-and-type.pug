@@ -5,12 +5,11 @@ include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
-  head
-    title Colors & Type
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="keywords" content="Colors & Type, components, MetaLamp, education")
-    meta(name="description" content="Цвета и шрифты, используемые для сайта Toxin")
+  +pageBase({
+    title: 'Colors & Type',
+    keywords: 'Colors & Type, components, MetaLamp, education',
+    description: 'Цвета и шрифты, используемые для сайта Toxin',
+  })
   body
     .colors-and-type-container
       .colors-and-type-logo-container

@@ -8,9 +8,11 @@ import '../../components/header/header';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date-dropdown/filter-date-dropdown';
 import '../../components/range-slider/range-slider';
-import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
+
+const expandableCheckboxList = new ExpandableCheckboxList();
 
 const $filterButton = $('.js-search-room-filter__button');
 const $filterItems = $('.js-search-room-widgets-container');

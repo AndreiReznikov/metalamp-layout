@@ -22,18 +22,18 @@ include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="Form Elements, components, MetaLamp, education")
-    meta(name="description" content="Компоненты формы для сайта Toxin")
-    title Form Elements
+  +pageBase({
+    title: 'Form Elements',
+    keywords: 'Form Elements, components, MetaLamp, education',
+    description: 'Компоненты формы для сайта Toxin',
+  })
   body
     .form-elements-container
       .form-elements-logo-container
         +logo({
           href: 'index.html',
         })
+
       .form-elements-wrapper
         .form-elements-left-block
           each val in textFields

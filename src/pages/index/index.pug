@@ -2,12 +2,11 @@ include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="MetaLamp layout, components, MetaLamp, education")
-    meta(name="description" content="Отель Toxin, подобрать номер")
-    title MetaLamp layout
+  +pageBase({
+    title: 'MetaLamp layout',
+    keywords: 'MetaLamp layout, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
   body
     .metalamp-layout-container
       .metalamp-layout-wrapper

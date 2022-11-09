@@ -3,15 +3,15 @@ include ../../components/registration-card/registration-card
 include ../../components/entry-card/entry-card
 include ../../components/footer/footer
 include ../../components/footer-mobile/footer-mobile
+include ../../templates/vars-and-mixins
 
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords" content="Registration and sign in, components, MetaLamp, education")
-    meta(name="description" content="Отель Toxin, подобрать номер")
-    title Registration and sign in
+  +pageBase({
+    title: 'Registration and sign in',
+    keywords: 'Registration and sign in, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
   body
     .registration-and-sign-in-wrapper
       +header()
