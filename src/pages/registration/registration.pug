@@ -1,0 +1,23 @@
+include ../../components/header/header
+include ../../components/registration-card/registration-card
+include ../../components/footer/footer
+include ../../components/footer-mobile/footer-mobile
+include ../../templates/vars-and-mixins
+
+doctype html
+html(lang="en")
+  +pageBase({
+    title: 'Registration',
+    keywords: 'Registration, components, MetaLamp, education',
+    description: 'Отель Toxin, подобрать номер',
+  })
+  body
+    .registration-wrapper
+      +header()
+      main.registration-background-container
+        .registration-card-wrapper.js-registration-card-wrapper
+          +registration-card({
+            buttonText: 'Зарегистрироваться',
+          })
+      +footer()
+      +footer-mobile()

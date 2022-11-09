@@ -6,7 +6,7 @@ const PATHS = {
   dist: path.resolve(process.cwd(), 'dist'),
 };
 
-const PAGES = ['headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration-and-sign-in'];
+const PAGES = ['headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration', 'sign-in'];
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -26,7 +26,8 @@ module.exports = {
     'landing-page': `${PATHS.src}/pages/landing-page/landing-page`,
     'search-room': `${PATHS.src}/pages/search-room/search-room`,
     'room-details': `${PATHS.src}/pages/room-details/room-details`,
-    'registration-and-sign-in': `${PATHS.src}/pages/registration-and-sign-in/registration-and-sign-in`,
+    registration: `${PATHS.src}/pages/registration/registration`,
+    'sign-in': `${PATHS.src}/pages/sign-in/sign-in`,
   },
   output: {
     assetModuleFilename: 'assets/[hash][ext][query]',

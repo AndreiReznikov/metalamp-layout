@@ -9,7 +9,7 @@
 @import '../../components/dropdown/dropdown';
 @import '../../components/button/button';
 @import '../../components/reserve-card/reserve-card';
-@import '../../components/entry-card/entry-card';
+@import '../../components/sign-in-card/sign-in-card';
 @import '../../components/rate-button/rate-button';
 @import '../../components/room-card/room-card';
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
@@ -56,7 +56,7 @@ html, body {
   margin-top: 69px;
 }
 
-.cards-entry-block-container {
+.cards-sign-in-block-container {
   margin-top: 39px;
 }
 

@@ -1,0 +1,28 @@
+include ../text-field/text-field
+include ../button/button
+
+mixin sign-in-card()
+  .sign-in-card
+    h1.sign-in-card__title Войти
+    .sign-in-card__wrapper
+      form.sign-in-card__form
+        .sign-in-card__inputs-container
+          each val in [['Email', 'email'], ['Пароль', 'password']]
+            .sign-in-card__input-wrapper
+              +text-field({
+                placeholder: val[0],
+                type: val[1],
+              })
+        .sign-in-card__long-button-wrapper
+          +button({
+            longButton: true,
+            text: 'Войти',
+            type: 'submit',
+          })
+        .sign-in-card__registration-wrapper
+          .sign-in-card__registration-text Нет аккаунта на Toxin?
+          +button({
+            emptyButton: true,
+            text: 'Создать',
+            href: 'registration.html',
+          })
