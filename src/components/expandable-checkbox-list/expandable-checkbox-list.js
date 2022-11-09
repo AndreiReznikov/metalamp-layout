@@ -1,25 +1,39 @@
-const $expandableListsCollection = $('.js-expandable-checkbox-list');
-const $openedListsCollection = $('.js-expandable-checkbox-list__title_opened');
+class ExpandableCheckboxList {
+  constructor() {
+    this._findLists();
+    this._transformLists();
+    this._openListsDefault();
+  }
 
-$expandableListsCollection.each(function () {
-  const $expandableList = $(this);
+  _findLists() {
+    this.$lists = $('.js-expandable-checkbox-list');
+    this.$openedLists = $('.js-expandable-checkbox-list__title_opened');
+  }
 
-  const $listTitle = $($expandableList.find('.js-expandable-checkbox-list__title'));
-  const $checkboxList = $($expandableList.find('.js-expandable-checkbox-list__list'));
-  const $listArrow = $($expandableList.find('.js-expandable-checkbox-list__arrow'));
+  _transformLists() {
+    this.$lists.each(function () {
+      const $expandableList = $(this);
 
-  const showList = () => { $checkboxList.toggleClass('expandable-checkbox-list__list_opened'); };
-  const transformArrow = () => { $listArrow.toggleClass('expandable-checkbox-list__arrow_transformed'); };
-  const handleListTitleToggleList = () => {
-    showList();
-    transformArrow();
-  };
+      const $title = $($expandableList.find('.js-expandable-checkbox-list__title'));
+      const $list = $($expandableList.find('.js-expandable-checkbox-list__list'));
+      const $arrow = $($expandableList.find('.js-expandable-checkbox-list__arrow'));
 
-  $listTitle.click(handleListTitleToggleList);
-});
+      const handleListTitleTransformList = () => {
+        $list.toggleClass('expandable-checkbox-list__list_opened');
+        $arrow.toggleClass('expandable-checkbox-list__arrow_transformed');
+      };
 
-$openedListsCollection.each(function () {
-  const $openedList = $(this);
+      $title.click(handleListTitleTransformList);
+    });
+  }
 
-  $openedList.trigger('click');
-});
+  _openListsDefault() {
+    this.$openedLists.each(function () {
+      const $openedList = $(this);
+
+      $openedList.trigger('click');
+    });
+  }
+}
+
+export default ExpandableCheckboxList;
