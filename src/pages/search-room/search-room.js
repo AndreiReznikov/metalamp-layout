@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Header from '../../components/header/header';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date-dropdown/filter-date-dropdown';
-import '../../components/range-slider/range-slider';
 import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
