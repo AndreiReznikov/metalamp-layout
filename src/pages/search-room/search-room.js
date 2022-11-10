@@ -7,13 +7,27 @@ import 'slick-carousel/slick/slick-theme.css';
 import Header from '../../components/header/header';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date-dropdown/filter-date-dropdown';
+import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
 import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 
 const header = new Header();
-
 const expandableCheckboxList = new ExpandableCheckboxList();
+
+// const ionRangeSlider = new IonRangeslider('.js-range-slider');
+
+// ionRangeSlider.initializePlugin({
+//   skin: 'flat',
+//   min: 600,
+//   max: 15250,
+//   from: 5000,
+//   to: 10000,
+//   type: 'double',
+// });
+
+// ionRangeSlider.addTooltips();
+// ionRangeSlider.setTooltipsValues();
 
 const $filterButton = $('.js-search-room-filter__button');
 const $filterItems = $('.js-search-room-widgets-container');
@@ -23,12 +37,14 @@ $filterButton.click(showFilterItems);
 
 function simpleTemplating(data) {
   let html = '<ul class="pagination__list">';
+
   $.each(data, (index, item) => {
     html += '<li class="pagination__list-item js-pagination__list-item">'
       + `<a class="pagination__list-link" href="room-details.html">${item}</a>`
       + '</li>';
   });
   html += '</ul>';
+
   return html;
 }
 
