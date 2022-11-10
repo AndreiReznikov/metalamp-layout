@@ -7,11 +7,11 @@ mixin header(options = {})
     boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal';
 
     const items = [
-      ['О нас', [], 'bold'],
-      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт']],
-      ['Вакансии', []],
-      ['Новости', []],
-      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения']],
+      ['О нас', [], '/mock-address/change-me', 'bold'],
+      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт'], '/mock-address/change-me'],
+      ['Вакансии', [], '/mock-address/change-me'],
+      ['Новости', [], '/mock-address/change-me'],
+      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения'], '/mock-address/change-me'],
     ];
 
     const buttons = [
@@ -40,12 +40,11 @@ mixin header(options = {})
         .header__right-block-container
           nav.header__nav
             ul.header__menu-list
-
               each item in items
                 if item[1].length
                   li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
                     a.header__list-link.js-header__list-link(
-                      href="/mock-address/change-me"
+                      href=item[2]
                     )
                       span.header__list-link-text=item[0]
                       .header__list-arrow.js-header__list-arrow
@@ -55,14 +54,14 @@ mixin header(options = {})
                         each val in item[1]
                           li.header__expanded-menu-item
                             a.header__expanded-menu-link(
-                              href="/mock-address/change-me"
+                              href=item[2]
                             )=val
                 else
                   li.header__list-item
                     a.header__list-link.js-header__list-link(
-                      href="/mock-address/change-me"
+                      href=item[2]
                     )
-                      if item[2]
+                      if item[3]
                         span(class=boldItemClass)=item[0]
                       else
                         span.header__list-link-text=item[0]
@@ -91,14 +90,13 @@ mixin header(options = {})
               size: button.size,
               href: button.href,
             })
-
       nav.mobile-menu__nav
         ul.mobile-menu__list
           each item in items
             if item[1].length
               li.mobile-menu__list-item
                 a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(
-                  href="/mock-address/change-me"
+                  href=item[2]
                 )
                   span.mobile-menu__list-bold-item=item[0]
                   .mobile-menu__list-arrow.js-mobile-menu__list-arrow
@@ -106,12 +104,12 @@ mixin header(options = {})
                   each val in item[1]
                     li.mobile-menu__expanded-list-item
                       a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
-                        href="/mock-address/change-me"
+                        href=item[2]
                       )=val
             else
               li.mobile-menu__list-item
                 a.mobile-menu__list-link.js-mobile-menu__list-link(
-                  href="/mock-address/change-me"
+                  href=item[2]
                 )
                   span.mobile-menu__list-bold-item=item[0]
 

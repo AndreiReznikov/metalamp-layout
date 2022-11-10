@@ -4,13 +4,15 @@ import 'slick-carousel/slick/slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import '../../components/header/header';
+import Header from '../../components/header/header';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date-dropdown/filter-date-dropdown';
 import '../../components/range-slider/range-slider';
 import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
+
+const header = new Header();
 
 const expandableCheckboxList = new ExpandableCheckboxList();
 

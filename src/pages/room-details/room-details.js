@@ -1,10 +1,12 @@
 import Chart from 'chart.js/auto';
 
-import '../../components/header/header';
+import Header from '../../components/header/header';
 import '../../components/reserve-card/reserve-card';
 import '../../components/comment/comment';
 import '../../templates/fonts.scss';
 import './room-details.scss';
+
+const header = new Header();
 
 const canvasContainer = document.querySelector('.js-room-details-doughnut-wrapper');
 
