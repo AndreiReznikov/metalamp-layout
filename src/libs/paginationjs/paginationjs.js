@@ -7,7 +7,51 @@ class PaginationJS {
   }
 
   initializePlugin(options) {
-    this.$paginationContainer.pagination(options);
+    this.$paginationContainer.pagination({
+      dataSource: options.dataSource,
+      autoHidePrevious: options.autoHidePrevious,
+      autoHideNext: options.autoHideNext,
+      pageRange: options.pageRange,
+      showPageNumbers: options.showPageNumbers,
+      showNavigator: options.showNavigator,
+      prevText: options.prevText,
+      nextText: options.nextText,
+      pageSize: options.pageSize,
+      callback: (data) => {
+        const html = this.templatePaginationItems(data, options.callback);
+
+        this.$paginationDataContainer.html(html);
+      },
+      afterPaging: options.afterPaging,
+      afterNextOnClick: () => this.showItemsNumber(options.pageSize),
+      afterPreviousOnClick: () => this.showItemsNumber(options.pageSize),
+      afterPageOnClick: () => this.showItemsNumber(options.pageSize),
+    });
+  }
+
+  showDataContainer() {
+    this.$paginationDataContainer.addClass('pagination__data-container_visible');
+  }
+
+  showItemsNumber(pageSize) {
+    this.pageSize = pageSize;
+    this.paginationItemsNumber = $('.js-pagination__list-item').length;
+    this.paginationSubText = this.$pagination.find('.js-pagination__numbers');
+    this.pageNumber = this.$paginationContainer.pagination('getSelectedPageNum');
+
+    const paginationText = `${(this.pageSize * this.pageNumber - this.pageSize + 1)} -
+          ${this.pageSize * this.pageNumber - (this.pageSize - this.paginationItemsNumber)} `;
+
+    this.paginationSubText.text(paginationText);
+  }
+
+  templatePaginationItems(data, callback) {
+    this.html = '<ul class="pagination__list">';
+    $.each(data, (index, item) => {
+      this.html += callback(item);
+    });
+    this.html += '</ul>';
+    return this.html;
   }
 
   _findElement(pagination) {

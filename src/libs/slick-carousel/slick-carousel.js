@@ -1,0 +1,19 @@
+import 'slick-carousel/slick/slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+class SlickCarousel {
+  constructor(element) {
+    this._findElements(element);
+  }
+
+  _findElements(element) {
+    this.$slickItem = $(element);
+  }
+
+  initializePlugin(options) {
+    this.$slickItem.slick(options);
+  }
+}
+
+export default SlickCarousel;

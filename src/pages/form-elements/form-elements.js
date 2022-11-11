@@ -34,27 +34,21 @@ ionRangeSlider.initializePlugin({
 ionRangeSlider.addTooltips();
 ionRangeSlider.setTooltipsValues();
 
-const $paginationDataContainer = $('.js-pagination__data-container');
+const addPaginationItem = (item) => {
+  const paginationItem = `<li class="pagination__list-item">${item}</li>`;
 
-function templatePaginationItems(data) {
-  let html = '<ul class="pagination__list">';
-  $.each(data, (index, item) => {
-    html += `<li class="pagination__list-item">${item}</li>`;
-  });
-  html += '</ul>';
-  return html;
-}
+  return paginationItem;
+};
 
-const paginationArray = [];
-
+const paginationItems = [];
 for (let i = 0; i < 180; i += 1) {
-  paginationArray.push(i);
+  paginationItems.push(i);
 }
 
 const pagination = new PaginationJS('.js-pagination');
 
 pagination.initializePlugin({
-  dataSource: paginationArray,
+  dataSource: paginationItems,
   autoHidePrevious: true,
   autoHideNext: true,
   pageRange: 1,
@@ -63,9 +57,5 @@ pagination.initializePlugin({
   prevText: '',
   nextText: '',
   pageSize: 12,
-  callback: (data) => {
-    const html = templatePaginationItems(data);
-
-    $paginationDataContainer.html(html);
-  },
+  callback: addPaginationItem,
 });
