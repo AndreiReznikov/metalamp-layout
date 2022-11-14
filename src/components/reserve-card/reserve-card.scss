@@ -85,7 +85,7 @@
 
   &__information-icon {
     @include H3();
-    @iclude flex-center();
+    @include flex-center();
     width: 20px;
     height: 20px;
     border: 1px solid $Dark-Shade-25;

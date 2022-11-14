@@ -4,9 +4,9 @@ include ../social-icons/social-icons
 
 -
   const sections = [
-    ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги']],
-    ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']],
-    ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами']],
+    ['footer__second-section', ['О нас', 'Новости', 'Служба поддержки', 'Услуги'], "/mock-address/change-me"],
+    ['footer__third-section', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'], "/mock-address/change-me"],
+    ['footer__fourth-section', ['Соглашения', 'Сообщества', 'Связь с нами'], "/mock-address/change-me"],
   ];
 
 mixin footer()
@@ -28,7 +28,7 @@ mixin footer()
                 each val in value[1]
                   li.footer__list-item
                     a.footer__link(
-                      href="/mock-address/change-me"
+                      href=value[2]
                     )=val
 
         .footer__fifth-section
