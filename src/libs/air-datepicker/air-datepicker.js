@@ -7,92 +7,133 @@ class AirDatepicker {
   }
 
   initializePlugin(options) {
-    this.$datepickerInput.datepicker({
-      range: options.range,
-      clearButton: options.clearButton,
-      dateFormat: options.dateFormat,
-      keyboardNav: options.keyboardNav,
-      navTitles: options.navTitles,
-      prevHtml: options.prevHtml,
-      nextHtml: options.nextHtml,
-      onShow: () => this._calculateCalendarWidth(),
-      onSelect: (date) => this._setDates(date),
+    this.$datepickerCollection.each(function () {
+      const $datepicker = $(this);
+      let $datepickerInput;
+
+      if ($datepicker.hasClass('js-date-dropdown')) {
+        $datepickerInput = $datepicker.find('.js-date-dropdown__input');
+      } else {
+        $datepickerInput = $datepicker.find('.js-filter-date-dropdown__input');
+      }
+
+      const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
+      const $dateTo = $datepicker.find('.js-date-dropdown__input-to');
+
+      $datepickerInput.datepicker({
+        range: options.range,
+        clearButton: options.clearButton,
+        dateFormat: options.dateFormat,
+        keyboardNav: options.keyboardNav,
+        navTitles: options.navTitles,
+        prevHtml: options.prevHtml,
+        nextHtml: options.nextHtml,
+        onSelect: (date) => {
+          const dates = date.split(' - ');
+          $dateFrom.val(dates[0]);
+          $dateTo.val(dates[1]);
+        },
+      });
     });
   }
 
   openDatepickerDefault() {
     if (this.$datepickerOpened.length > 0) {
       this.datepickerOpened = this.$datepickerOpened.data('datepicker');
+
       this.datepickerOpened.show();
     }
   }
 
   openDatepickerMultiple() {
-    const handleDateFromOrDateToShowDatepicker = () => this.datepicker.show();
+    if (this.$datepickerCollection.hasClass('js-date-dropdown')) {
+      this.$datepickerCollection.each(function () {
+        const $datepicker = $(this);
+        const $datepickerInput = $datepicker.find('.js-date-dropdown__input');
+        const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
+        const $dateTo = $datepicker.find('.js-date-dropdown__input-to');
+        const datepicker = $datepickerInput.data('datepicker');
 
-    this.$dateFrom.click(handleDateFromOrDateToShowDatepicker);
-    this.$dateTo.click(handleDateFromOrDateToShowDatepicker);
+        const handleDateFromOrDateToShowDatepicker = () => datepicker.show();
+
+        $dateFrom.click(handleDateFromOrDateToShowDatepicker);
+        $dateTo.click(handleDateFromOrDateToShowDatepicker);
+      });
+    }
   }
 
   setDatesDefault() {
-    this.datepicker = this.$datepickerInput.data('datepicker');
-    const dateFrom = this.$datepickerInput.data('from');
-    const dateTo = this.$datepickerInput.data('to');
+    this.$datepickerCollection.each(function () {
+      const $datepicker = $(this);
+      let $datepickerInput;
 
-    this.datepicker.selectDate([eval(dateFrom), eval(dateTo)]);
+      if ($datepicker.hasClass('js-date-dropdown')) {
+        $datepickerInput = $datepicker.find('.js-date-dropdown__input');
+      } else {
+        $datepickerInput = $datepicker.find('.js-filter-date-dropdown__input');
+      }
+
+      const userDateFrom = $datepickerInput.data('from');
+      const userDateTo = $datepickerInput.data('to');
+
+      if (!userDateFrom || !userDateTo) return;
+
+      const dateFrom = new Date(userDateFrom);
+      const dateTo = new Date(userDateTo);
+      const datepicker = $datepickerInput.data('datepicker');
+
+      datepicker.selectDate([dateFrom, dateTo]);
+    });
   }
 
   checkEmptyValue() {
-    const isFromEmpty = this.$dateFrom.data('from-empty');
-    const isToEmpty = this.$dateTo.data('to-empty');
+    if (this.$datepickerCollection.hasClass('js-date-dropdown')) {
+      this.$datepickerCollection.each(function () {
+        const $datepicker = $(this);
+        const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
+        const $dateTo = $datepicker.find('.js-date-dropdown__input-to');
+        const isFromEmpty = $dateFrom.data('from-empty');
+        const isToEmpty = $dateTo.data('to-empty');
 
-    const setEmptyValue = (element) => element.val('');
+        const setEmptyValue = (element) => element.val('');
 
-    if (isFromEmpty) setEmptyValue(this.$dateFrom);
-    if (isToEmpty) setEmptyValue(this.$dateTo);
+        if (isFromEmpty) setEmptyValue($dateFrom);
+        if (isToEmpty) setEmptyValue($dateTo);
+      });
+    }
   }
 
   addApplyButton() {
-    const datepickerElements = this.datepicker.$datepicker;
-    const $applyButton = $('<span class=\'datepicker--button\'>Применить</span>');
+    this.$datepickerCollection.each(function () {
+      const $datepicker = $(this);
+      let $datepickerInput;
 
-    datepickerElements.find('.datepicker--buttons').append($applyButton);
+      if ($datepicker.hasClass('js-date-dropdown')) {
+        $datepickerInput = $datepicker.find('.js-date-dropdown__input');
+      } else {
+        $datepickerInput = $datepicker.find('.js-filter-date-dropdown__input');
+      }
 
-    const handleApplyButtonHideDatepicker = () => {
-      if (this.datepicker.selectedDates.length < 2) return;
-      this.datepicker.hide();
-    };
+      const datepicker = $datepickerInput.data('datepicker');
+      const datepickerElements = datepicker.$datepicker;
+      const $applyButton = $('<span class=\'datepicker--button\'>Применить</span>');
 
-    $applyButton.click(handleApplyButtonHideDatepicker);
-  }
+      datepickerElements.find('.datepicker--buttons').append($applyButton);
 
-  _calculateCalendarWidth() {
-    if (this.$datepicker.hasClass('js-filter-date-dropdown')) {
-      this.$calendar = $('.datepicker');
-      const inputWidth = this.$datepickerInput.width() + parseFloat(this.$datepickerInput.css('padding-left'));
+      const handleApplyButtonHideDatepicker = () => {
+        if (datepicker.selectedDates.length < 2) return;
+        datepicker.hide();
+      };
 
-      this.$calendar.width(inputWidth);
-    }
-  }
-
-  _setDates(date) {
-    if (this.$datepicker.hasClass('js-date-dropdown')) {
-      const dates = date.split(' - ');
-      this.$dateFrom.val(dates[0]);
-      this.$dateTo.val(dates[1]);
-    }
+      $applyButton.click(handleApplyButtonHideDatepicker);
+    });
   }
 
   _findElement(element) {
-    this.$datepicker = $(element);
+    this.$datepickerCollection = $(element);
 
     if (element === '.js-filter-date-dropdown') {
-      this.$datepickerInput = this.$datepicker.find('.js-filter-date-dropdown__input');
-      this.$datepickerOpened = this.$datepicker.find('.js-filter-date-dropdown__input_opened');
-    } else if (element === '.js-date-dropdown') {
-      this.$datepickerInput = this.$datepicker.find('.js-datepicker-multi');
-      this.$dateFrom = this.$datepicker.find('.js-date-dropdown__input-from');
-      this.$dateTo = this.$datepicker.find('.js-date-dropdown__input-to');
+      this.$datepickerOpened = this.$datepickerCollection.find('.js-filter-date-dropdown__input_opened');
     }
   }
 }

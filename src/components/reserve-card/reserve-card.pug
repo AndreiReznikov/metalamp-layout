@@ -23,7 +23,7 @@ mixin reserve-card(options = {})
               })
           span.reserve-card__price=options.price
             span.reserve-card__currency &#8381;
-            span.reserve-card__time-interval  в сутки
+            span.reserve-card__time-interval=' ' + 'в сутки'
         .reserve-card__date-dropdown-container
           +date-dropdown({
             title: ['Прибытие', 'Выезд'],

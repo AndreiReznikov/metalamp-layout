@@ -1,10 +1,9 @@
-import Header from '../../components/header/header';
-import '../../components/dropdown/dropdown';
-import '../../components/filter-date-dropdown/filter-date-dropdown';
 import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
+import Header from '../../components/header/header';
 import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import SlickCarousel from '../../libs/slick-carousel/slick-carousel';
 import PaginationJS from '../../libs/paginationjs/paginationjs';
+import '../../components/dropdown/dropdown';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 

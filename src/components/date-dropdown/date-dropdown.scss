@@ -16,6 +16,18 @@
     @include margin-padding-zero();
   }
 
+  &__input  {
+    position: absolute;
+    padding: 0;
+    top: 55px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    border: 0;
+    box-sizing: border-box;
+  }
+
   &__input-wrapper {
     position: relative;
     margin-top: 5px;
@@ -64,18 +76,6 @@
   &__arrow::after {
     @include arrow;
   }
-}
-
-.datepicker-multi {
-  position: absolute;
-  padding: 0;
-  top: 55px;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  border: 0;
-  box-sizing: border-box;
 }
 
 .datepicker {
