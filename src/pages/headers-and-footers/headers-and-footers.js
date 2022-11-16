@@ -2,4 +2,10 @@ import Header from '../../components/header/header';
 import '../../templates/fonts.scss';
 import './headers-and-footers.scss';
 
-const header = new Header();
+class HeadersAndFooters {
+  constructor() {
+    this.header = new Header();
+  }
+}
+
+const headersAndFooters = new HeadersAndFooters();

@@ -80,8 +80,8 @@ class AirDatepicker {
 
       const dateFrom = new Date(userDateFrom);
       const dateTo = new Date(userDateTo);
-      const datepicker = $datepickerInput.data('datepicker');
 
+      const datepicker = $datepickerInput.data('datepicker');
       datepicker.selectDate([dateFrom, dateTo]);
     });
   }

@@ -1,3 +1,9 @@
 import LikeButton from '../like-button/like-button';
 
-const likeButton = new LikeButton();
+class Comment {
+  constructor() {
+    this.likeButton = new LikeButton();
+  }
+}
+
+export default Comment;

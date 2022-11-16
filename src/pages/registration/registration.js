@@ -3,4 +3,10 @@ import '../../components/registration-card/registration-card';
 import '../../templates/fonts.scss';
 import './registration.scss';
 
-const header = new Header();
+class Registration {
+  constructor() {
+    this.header = new Header();
+  }
+}
+
+const registration = new Registration();
