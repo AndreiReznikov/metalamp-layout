@@ -22,15 +22,14 @@
 .slick-dots li {
   width: 11px;
   height: 10px;
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .slick-dots li button {
+  @include margin-padding-zero();
   width: 8px;
   height: 8px;
-  padding: 0;
-  margin: 0;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 50%;
