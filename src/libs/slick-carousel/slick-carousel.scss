@@ -1,0 +1,46 @@
+@import '../../templates/vars-and-mixins';
+
+.slick-arrow {
+  height: 14px;
+}
+
+.slick-next {
+  right: 12px;
+}
+
+.slick-prev {
+  left: 12px;
+  z-index: 100;
+}
+
+.slick-dots {
+  width: auto;
+  bottom: 17px;
+  right: 12px;
+}
+
+.slick-dots li {
+  width: 11px;
+  height: 10px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.slick-dots li button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.slick-dots .slick-active button {
+  background-color: #fff;
+}

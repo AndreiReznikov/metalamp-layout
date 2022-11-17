@@ -1,0 +1,107 @@
+@import '../../templates/vars-and-mixins';
+
+.paginationjs {
+  display: flex;
+  justify-content: center;
+
+  & .paginationjs-pages li {
+    border: none;
+  }
+
+  & .paginationjs-pages li {
+    border: none;
+  }
+
+  & .paginationjs-pages li:last-child {
+    border: none;
+  }
+
+  & .paginationjs-pages li > a {
+    @include Body-font();
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    font-size: 12px;
+    color: $Dark-Shade-50;
+  }
+
+  & .paginationjs-pages li:hover > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: -7px;
+    border-radius: 22px;
+  }
+
+  & .paginationjs-pages li.paginationjs-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: -7px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+
+    @media screen and (max-width: 600px) {
+      margin-left: 30px;
+    }
+  }
+
+  & .paginationjs-pages li.paginationjs-next a {
+    background: url('../../img/pagination-arrow-forward.svg') center;
+    background-repeat: no-repeat;
+  }
+
+  & .paginationjs-pages li.paginationjs-prev a {
+    background: url('../../img/pagination-arrow-forward.svg') center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+
+  & .paginationjs-pages li:first-child {
+    border-radius: 22px;
+  }
+
+  & .paginationjs-pages .paginationjs-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: -7px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+
+    @media screen and (max-width: 600px) {
+      margin-right: 30px;
+    }
+  }
+
+  & .paginationjs-pages li.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: -7px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+  }
+
+  & .paginationjs-pages li.active > a {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    font-weight: bold;
+  }
+
+  & .paginationjs-pages li.disabled > a {
+    opacity: 1;
+  }
+
+  & .paginationjs-nav {
+    @include Body-font();
+    position: absolute;
+  }
+}
