@@ -6,16 +6,19 @@ class Dropdown {
 
     this._findElement(element);
     this._setSelectionDefaultText();
+    this._toggleMenu();
+    this._openMenuDefault();
     this._addCounters();
     this._changeCounterValue();
     this._clickCountButtonsDefault();
   }
 
   _addCounters() {
-    const $counter = this.$optionsCollection.append('<div class="dropdown__counter"></div>');
+    this.$optionsCollection.append('<div class="dropdown__counter"></div>');
+    const $counter = this.$optionsCollection.find('.dropdown__counter');
 
     $counter.append(
-      '<span class="dropdown__counter-decrement js-dropdown__counter-decrement">-</span>',
+      '<span class="dropdown__counter-decrement dropdown__counter-decrement_dim js-dropdown__counter-decrement">-</span>',
     ).append(
       '<span class="dropdown__counter-value js-dropdown__counter-value">0</span>',
     ).append(
@@ -25,6 +28,29 @@ class Dropdown {
 
   _setSelectionDefaultText() {
     this.$selectionCollection.text(this.selectionDefaultText);
+  }
+
+  _toggleMenu() {
+    this.$dropdownsCollection.each(function () {
+      const $dropdown = $(this);
+      const $selection = $dropdown.find('.js-dropdown__selection');
+      const $menu = $dropdown.find('.js-dropdown__menu');
+
+      const handleSelectionToggleMenu = () => $menu.toggleClass('dropdown__menu_visible');
+
+      $selection.click(handleSelectionToggleMenu);
+    });
+  }
+
+  _openMenuDefault() {
+    this.$dropdownsCollection.each(function () {
+      const $dropdown = $(this);
+      const $selection = $dropdown.find('.js-dropdown__selection');
+
+      if ($dropdown.hasClass('dropdown__wrapper_opened')) {
+        $selection.trigger('click');
+      }
+    });
   }
 
   _changeCounterValue() {
@@ -54,6 +80,10 @@ class Dropdown {
         const handleMinusDecrementValue = () => {
           $value.text(`${getOptionCount() - 1}`);
 
+          if (getOptionCount() === 0) {
+            $minus.addClass('dropdown__counter-decrement_dim');
+          }
+
           if (getOptionCount() < 0) {
             $value.text('0');
             return;
@@ -64,6 +94,7 @@ class Dropdown {
           totalSum -= 1;
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
         };
+
         const handlePlusIncrementValue = () => {
           $value.text(`${getOptionCount() + 1}`);
 
@@ -71,6 +102,8 @@ class Dropdown {
 
           totalSum += 1;
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
+
+          $minus.removeClass('dropdown__counter-decrement_dim');
         };
 
         $minus.click(handleMinusDecrementValue);

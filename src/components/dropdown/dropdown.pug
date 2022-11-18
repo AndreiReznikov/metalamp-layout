@@ -1,6 +1,6 @@
 mixin dropdown(options = {})
   -
-    let className = "dropdown__wrapper"
+    let className = "dropdown__wrapper js-dropdown__wrapper"
     className += options.isOpened ? " dropdown__wrapper_opened" : ""
     className += options.isGuests ? " dropdown__wrapper_guests js-dropdown__wrapper_guests" : ""
     className += options.isConveniences ? " dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences" : ""
@@ -13,8 +13,11 @@ mixin dropdown(options = {})
         data-clicks=options.clicksNum
         data-buttons=options.buttonsNum
       )
-      output.dropdown__selection.js-dropdown__selection
-      .dropdown__menu
+      .dropdown__selection-container.js-dropdown__selection-container
+        output.dropdown__selection.js-dropdown__selection
+        .dropdown__arrow-container
+          span.dropdown__arrow
+      .dropdown__menu.js-dropdown__menu
         - let i = 0;
           while i < options.items.length
             - i += 1
@@ -25,4 +28,3 @@ mixin dropdown(options = {})
             .dropdown__buttons-container
               button.dropdown__clear-button.js-dropdown__clear-button(type="reset") Очистить
               button.dropdown__apply-button.js-dropdown__apply-button(type="submit") Применить
-      span.dropdown__arrow
