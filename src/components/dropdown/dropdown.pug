@@ -1,28 +1,28 @@
 mixin dropdown(options = {})
   -
-    let className = "iqdropdown"
-    className += options.isOpened ? " menu-open" : ""
-    className += options.isGuests ? " iqdropdown-guests js-iqdropdown-guests" : ""
-    className += options.isConveniences ? " iqdropdown-conveniences js-iqdropdown-conveniences" : ""
+    let className = "dropdown__wrapper"
+    className += options.isOpened ? " dropdown__wrapper_opened" : ""
+    className += options.isGuests ? " dropdown__wrapper_guests js-dropdown__wrapper_guests" : ""
+    className += options.isConveniences ? " dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences" : ""
 
-  .iqdropdown-container.js-iqdropdown-container(
-    data-clicks=options.clicksNum
-    data-buttons=options.buttonsNum
-  )
+  .dropdown.js-dropdown
     if options.title
-      h3.iqdropdown-title!=options.title
-    div(class=className style=`width: ${options.width ? options.width : ''}`)
-      p.iqdropdown-selection
-      .iqdropdown-menu
+      h3.dropdown__title=options.title
+    div(
+        class=className
+        data-clicks=options.clicksNum
+        data-buttons=options.buttonsNum
+      )
+      output.dropdown__selection.js-dropdown__selection
+      .dropdown__menu
         - let i = 0;
           while i < options.items.length
             - i += 1
-            .iqdropdown-menu-option(data-id=`${i}`)
-              .dropdown-item-container
-                p.iqdrodown-item
-                  = options.items[i-1]
+            .dropdown__option.js-dropdown__option(data-id=`${i}`)
+              span.drodown__item
+                = options.items[i-1]
           if options.addingButtons
-            .iqdropdown--buttons
-              button.iqdropdown--button.iqdropdown--button-clear.js-iqdropdown--button-clear(type="reset") Очистить
-              button.iqdropdown--button.iqdropdown--button-apply.js-iqdropdown--button-apply(type="submit") Применить
-      //- img(src=require("../../img/expand-arrow.svg") class="iqdropdown-arrow" alt="Arrow")
+            .dropdown__buttons-container
+              button.dropdown__clear-button.js-dropdown__clear-button(type="reset") Очистить
+              button.dropdown__apply-button.js-dropdown__apply-button(type="submit") Применить
+      span.dropdown__arrow

@@ -52,7 +52,6 @@
     "chart.js": "^3.4.1",
     "inputmask": "^5.0.6",
     "ion-rangeslider": "^2.3.1",
-    "item-quantity-dropdown": "./src/components/iqdropdown/item-quantity-dropdown",
     "jquery": "^3.6.0",
     "paginationjs": "^2.1.5",
     "popper.js": "^1.16.1",

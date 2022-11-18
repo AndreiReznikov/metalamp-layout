@@ -1,129 +1,210 @@
-import './item-quantity-dropdown/src/index';
-import './item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+class Dropdown {
+  constructor(element, setSelectionText, selectionDefaultText) {
+    this.totalSum = 0;
+    this.selectionDefaultText = selectionDefaultText || '';
+    this.setSelectionText = setSelectionText;
 
-$('.js-iqdropdown-guests').iqDropdown({
-  setSelectionText(itemCount, totalItems) {
-    let guests;
-    let babies;
+    this._findElement(element);
+    this._setSelectionDefaultText();
+    this._addCounters();
+    this._changeCounterValue();
+    this._clickCountButtonsDefault();
+  }
 
-    const babiesNumber = itemCount[3];
+  _addCounters() {
+    const $counter = this.$optionsCollection.append('<div class="dropdown__counter"></div>');
 
-    const firstGuestWordCondition = (totalItems - babiesNumber)
-      % 10 === 1 && (totalItems - babiesNumber) !== 11;
-    const secondGuestWordCondition = [2, 3, 4].includes((totalItems - babiesNumber) % 10)
-      && ![12, 13, 14].includes(totalItems - babiesNumber);
+    $counter.append(
+      '<span class="dropdown__counter-decrement js-dropdown__counter-decrement">-</span>',
+    ).append(
+      '<span class="dropdown__counter-value js-dropdown__counter-value">0</span>',
+    ).append(
+      '<span class="dropdown__counter-increment js-dropdown__counter-increment">+</span>',
+    );
+  }
 
-    if (totalItems === 0) return 'Сколько гостей';
+  _setSelectionDefaultText() {
+    this.$selectionCollection.text(this.selectionDefaultText);
+  }
 
-    if (firstGuestWordCondition) guests = 'гость';
-    else if (secondGuestWordCondition) guests = 'гостя';
-    else guests = 'гостей';
+  _changeCounterValue() {
+    const setSelectionText = this.setSelectionText || ((itemsCount, totalSum) => `${totalSum} items`);
+    const changeSelectionText = (element, callback) => element.text(callback);
 
-    const firstBabyWordCondition = babiesNumber % 10 === 1 && babiesNumber !== 11;
-    const secondBabyWordCondition = [2, 3, 4].includes(babiesNumber % 10)
-      && ![12, 13, 14].includes(babiesNumber);
+    this.$dropdownsCollection.each(function () {
+      const $dropdown = $(this);
+      const $selection = $dropdown.find('.js-dropdown__selection');
+      const $optionsCollection = $dropdown.find('.js-dropdown__option');
 
-    if (firstBabyWordCondition) babies = 'младенец';
-    else if (secondBabyWordCondition) babies = 'младенца';
-    else babies = 'младенцев';
+      let totalSum = 0;
+      const itemsCount = [];
 
-    const firstGuestsStringCondition = babiesNumber !== 0 && (totalItems - babiesNumber) == 0;
-    const secondGuestsStringCondition = babiesNumber !== 0 && (totalItems - babiesNumber) !== 0;
+      $optionsCollection.each(function (index) {
+        const $option = $(this);
+        const $minus = $option.find('.js-dropdown__counter-decrement');
+        const $plus = $option.find('.js-dropdown__counter-increment');
+        const $value = $option.find('.js-dropdown__counter-value');
 
-    if (firstGuestsStringCondition) {
-      return `${babiesNumber} ${babies}`;
-    }
-    if (secondGuestsStringCondition) {
-      return `${totalItems - babiesNumber} ${guests}, ${babiesNumber} ${babies}`;
-    }
-    return `${totalItems} ${guests}`;
-  },
-});
+        const getOptionCount = () => {
+          const valueCount = Number($value.text());
 
-$('.js-iqdropdown-conveniences').iqDropdown({
-  setSelectionText(itemCount, totalItems) {
-    let bedrooms;
-    let beds;
-    let bathrooms;
+          return valueCount;
+        };
 
-    const bedroomsNumber = itemCount[1];
-    const bedsNumber = itemCount[2];
-    const bathroomsNumber = itemCount[3];
+        const handleMinusDecrementValue = () => {
+          $value.text(`${getOptionCount() - 1}`);
 
-    const firstBedroomWordCondition = bedroomsNumber !== 0
-      && bedroomsNumber % 10 === 1 && bedroomsNumber !== 11;
-    const secondBedroomWordCondition = [2, 3, 4].includes(bedroomsNumber % 10)
-      && ![12, 13, 14].includes(bedroomsNumber);
+          if (getOptionCount() < 0) {
+            $value.text('0');
+            return;
+          }
 
-    if (totalItems === 0) return 'Выберите удобства';
+          itemsCount[index] = getOptionCount();
 
-    if (firstBedroomWordCondition) bedrooms = 'спальня';
-    else if (secondBedroomWordCondition) bedrooms = 'спальни';
-    else bedrooms = 'спален';
+          totalSum -= 1;
+          changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
+        };
+        const handlePlusIncrementValue = () => {
+          $value.text(`${getOptionCount() + 1}`);
 
-    const firstBedWordCondition = bedsNumber !== 0 && bedsNumber % 10 === 1 && bedsNumber !== 11;
-    const secondBedWordCondition = [2, 3, 4].includes(bedsNumber % 10)
-      && ![12, 13, 14].includes(bedsNumber);
+          itemsCount[index] = getOptionCount();
 
-    if (firstBedWordCondition) beds = 'кровать';
-    else if (secondBedWordCondition) beds = 'кровати';
-    else beds = 'кроватей';
+          totalSum += 1;
+          changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
+        };
 
-    const firstBathroomWordCondition = bathroomsNumber !== 0
-      && bathroomsNumber % 10 === 1 && bathroomsNumber !== 11;
-    const secondBathroomWordCondition = [2, 3, 4].includes(bathroomsNumber % 10)
-      && ![12, 13, 14].includes(bathroomsNumber);
+        $minus.click(handleMinusDecrementValue);
+        $plus.click(handlePlusIncrementValue);
+      });
+    });
+  }
 
-    if (firstBathroomWordCondition) bathrooms = 'ванная комната';
-    else if (secondBathroomWordCondition) bathrooms = 'ванные комнаты';
-    else bathrooms = 'ванных комнат';
+  _clickCountButtonsDefault() {
+    this.$dropdownsCollection.each(function () {
+      const $dropdown = $(this);
+      const $plusButtons = $dropdown.find('.js-dropdown__counter-increment');
 
-    const firstConveniencesStringCondition = bedroomsNumber !== 0
-      && totalItems - bedroomsNumber === 0;
-    const secondConveniencesStringCondition = bedsNumber !== 0 && totalItems - bedsNumber === 0;
-    const thirdConveniencesStringCondition = bathroomsNumber !== 0
-      && totalItems - bathroomsNumber === 0;
-    const fourthConveniencesStringCondition = bedroomsNumber !== 0
-      && bedsNumber !== 0 && totalItems - bedroomsNumber - bedsNumber === 0;
-    const sixthConveniencesStringCondition = bedroomsNumber !== 0
-      && bathroomsNumber !== 0 && totalItems - bedroomsNumber - bathroomsNumber === 0;
-    const seventhConveniencesStringCondition = bedsNumber !== 0
-      && bathroomsNumber !== 0 && totalItems - bedsNumber - bathroomsNumber === 0;
-    const eighthConveniencesStringCondition = bedroomsNumber !== 0
-      && bedsNumber !== 0 && bathroomsNumber !== 0;
+      const buttonsNums = $dropdown.data('buttons');
+      const clicksNums = $dropdown.data('clicks');
 
-    if (firstConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}...`;
-    if (secondConveniencesStringCondition) return `${bedsNumber} ${beds}...`;
-    if (thirdConveniencesStringCondition) return `${bathroomsNumber} ${bathrooms}...`;
-    if (fourthConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}, ${bedsNumber} ${beds}...`;
-    if (sixthConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}, ${bathroomsNumber} ${bathrooms}...`;
-    if (seventhConveniencesStringCondition) return `${bedsNumber} ${beds}, ${bathroomsNumber} ${bathrooms}...`;
-    if (eighthConveniencesStringCondition) return `${bedroomsNumber} ${bedrooms}, ${bedsNumber} ${beds}, ${bathroomsNumber} ван...`;
+      if (buttonsNums && clicksNums) {
+        for (let i = 0; i < buttonsNums.length; i += 1) {
+          const $plusButton = $($plusButtons[buttonsNums[i]]);
 
-    return '';
-  },
-});
-
-function clickDropdownButtons() {
-  const $dropdownsCollection = $('.js-iqdropdown-container');
-
-  $dropdownsCollection.each(function () {
-    const $dropdown = $(this);
-    const incrementButtons = $dropdown.find('.js-button-increment');
-
-    const buttonsNums = eval($dropdown.data('buttons'));
-    const clicksNums = eval($dropdown.data('clicks'));
-
-    if (buttonsNums && clicksNums) {
-      for (let i = 0; i < buttonsNums.length; i += 1) {
-        const $incrementButton = $(incrementButtons[buttonsNums[i]]);
-
-        for (let j = 0; j < clicksNums[i]; j += 1) {
-          $incrementButton.trigger('click');
+          for (let j = 0; j < clicksNums[i]; j += 1) {
+            $plusButton.trigger('click');
+          }
         }
       }
-    }
-  });
+    });
+  }
+
+  _findElement(element) {
+    this.$dropdownsCollection = $(element);
+    this.$selectionCollection = this.$dropdownsCollection.find('.js-dropdown__selection');
+    this.$optionsCollection = this.$dropdownsCollection.find('.js-dropdown__option');
+  }
 }
 
-clickDropdownButtons();
+const setSelectionGuestsText = (itemsCount, totalSum) => {
+  let guests;
+  let babies;
+
+  const babiesNumber = itemsCount[2] ? itemsCount[2] : 0;
+
+  const firstGuestWordCondition = (totalSum - babiesNumber)
+    % 10 === 1 && (totalSum - babiesNumber) !== 11;
+  const secondGuestWordCondition = [2, 3, 4].includes((totalSum - babiesNumber) % 10)
+    && ![12, 13, 14].includes(totalSum - babiesNumber);
+
+  if (totalSum === 0) return 'Сколько гостей';
+
+  if (firstGuestWordCondition) guests = 'гость';
+  else if (secondGuestWordCondition) guests = 'гостя';
+  else guests = 'гостей';
+
+  const firstBabyWordCondition = babiesNumber % 10 === 1 && babiesNumber !== 11;
+  const secondBabyWordCondition = [2, 3, 4].includes(babiesNumber % 10)
+    && ![12, 13, 14].includes(babiesNumber);
+
+  if (firstBabyWordCondition) babies = 'младенец';
+  else if (secondBabyWordCondition) babies = 'младенца';
+  else babies = 'младенцев';
+
+  const babiesOnly = babiesNumber !== 0 && (totalSum - babiesNumber) === 0;
+  const babiesAndGuests = babiesNumber !== 0 && (totalSum - babiesNumber) !== 0;
+
+  let selectionText = `${totalSum} ${guests}`;
+
+  if (babiesOnly) selectionText = `${babiesNumber} ${babies}`;
+  else if (babiesAndGuests) selectionText = `${totalSum - babiesNumber} ${guests}, ${babiesNumber} ${babies}`;
+
+  return selectionText;
+};
+
+const setSelectionConveniencesText = (itemsCount, totalSum) => {
+  let bedrooms;
+  let beds;
+  let bathrooms;
+
+  const bedroomsNumber = itemsCount[0] ? itemsCount[0] : 0;
+  const bedsNumber = itemsCount[1] ? itemsCount[1] : 0;
+  const bathroomsNumber = itemsCount[2] ? itemsCount[2] : 0;
+
+  const firstBedroomWordCondition = bedroomsNumber !== 0
+    && bedroomsNumber % 10 === 1 && bedroomsNumber !== 11;
+  const secondBedroomWordCondition = [2, 3, 4].includes(bedroomsNumber % 10)
+    && ![12, 13, 14].includes(bedroomsNumber);
+
+  if (totalSum === 0) return 'Выберите удобства';
+
+  if (firstBedroomWordCondition) bedrooms = 'спальня';
+  else if (secondBedroomWordCondition) bedrooms = 'спальни';
+  else bedrooms = 'спален';
+
+  const firstBedWordCondition = bedsNumber !== 0 && bedsNumber % 10 === 1 && bedsNumber !== 11;
+  const secondBedWordCondition = [2, 3, 4].includes(bedsNumber % 10)
+    && ![12, 13, 14].includes(bedsNumber);
+
+  if (firstBedWordCondition) beds = 'кровать';
+  else if (secondBedWordCondition) beds = 'кровати';
+  else beds = 'кроватей';
+
+  const firstBathroomWordCondition = bathroomsNumber !== 0
+    && bathroomsNumber % 10 === 1 && bathroomsNumber !== 11;
+  const secondBathroomWordCondition = [2, 3, 4].includes(bathroomsNumber % 10)
+    && ![12, 13, 14].includes(bathroomsNumber);
+
+  if (firstBathroomWordCondition) bathrooms = 'ванная комната';
+  else if (secondBathroomWordCondition) bathrooms = 'ванные комнаты';
+  else bathrooms = 'ванных комнат';
+
+  const bedroomsOnly = bedroomsNumber !== 0
+    && totalSum - bedroomsNumber === 0;
+  const bedsOnly = bedsNumber !== 0 && totalSum - bedsNumber === 0;
+  const bathroomsOnly = bathroomsNumber !== 0
+    && totalSum - bathroomsNumber === 0;
+  const bedroomsAndBeds = bedroomsNumber !== 0
+    && bedsNumber !== 0 && totalSum - bedroomsNumber - bedsNumber === 0;
+  const bedroomsAndBathrooms = bedroomsNumber !== 0
+    && bathroomsNumber !== 0 && totalSum - bedroomsNumber - bathroomsNumber === 0;
+  const bedsAndBathrooms = bedsNumber !== 0
+    && bathroomsNumber !== 0 && totalSum - bedsNumber - bathroomsNumber === 0;
+  const allConveniences = bedroomsNumber !== 0
+    && bedsNumber !== 0 && bathroomsNumber !== 0;
+
+  let selectionText = '';
+
+  if (bedroomsOnly) selectionText = `${bedroomsNumber} ${bedrooms}...`;
+  else if (bedsOnly) selectionText = `${bedsNumber} ${beds}...`;
+  else if (bathroomsOnly) selectionText = `${bathroomsNumber} ${bathrooms}...`;
+  else if (bedroomsAndBeds) selectionText = `${bedroomsNumber} ${bedrooms}, ${bedsNumber} ${beds}...`;
+  else if (bedroomsAndBathrooms) selectionText = `${bedroomsNumber} ${bedrooms}, ${bathroomsNumber} ${bathrooms}...`;
+  else if (bedsAndBathrooms) selectionText = `${bedsNumber} ${beds}, ${bathroomsNumber} ${bathrooms}...`;
+  else if (allConveniences) selectionText = `${bedroomsNumber} ${bedrooms}, ${bedsNumber} ${beds}, ${bathroomsNumber} ван...`;
+
+  return selectionText;
+};
+
+const dropdownGuests = new Dropdown('.js-dropdown__wrapper_guests', setSelectionGuestsText, 'Сколько гостей');
+const dropdownConveniences = new Dropdown('.js-dropdown__wrapper_conveniences', setSelectionConveniencesText, 'Выберите удобства');

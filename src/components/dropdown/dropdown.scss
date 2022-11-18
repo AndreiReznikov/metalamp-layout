@@ -5,9 +5,12 @@
   margin: 0 0 5px 0;
 }
 
-.iqdropdown {
+.dropdown__selection {
+  display: inline-flex;
+  align-items: center;
   width: 320px;
   height: 44px;
+  padding-left: 15px;
   background: #fff;
   border: 1px solid $Dark-Shade-25;
   box-sizing: border-box;
