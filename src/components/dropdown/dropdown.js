@@ -34,11 +34,17 @@ class Dropdown {
     this.$dropdownsCollection.each(function () {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
+      const $applyButton = $dropdown.find('.js-dropdown__apply-button');
       const $menu = $dropdown.find('.js-dropdown__menu');
 
-      const handleSelectionToggleMenu = () => $menu.toggleClass('dropdown__menu_visible');
+      const handleSelectionToggleMenu = () => {
+        $dropdown.toggleClass('dropdown__wrapper_opened');
+        $menu.toggleClass('dropdown__menu_visible');
+      };
 
-      $selection.click(handleSelectionToggleMenu);
+      const elements = [$selection, $applyButton];
+
+      elements.forEach(($element) => $element.click(handleSelectionToggleMenu));
     });
   }
 
@@ -46,9 +52,11 @@ class Dropdown {
     this.$dropdownsCollection.each(function () {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
+      const isDropdownOpened = $dropdown.hasClass('dropdown__wrapper_opened');
 
-      if ($dropdown.hasClass('dropdown__wrapper_opened')) {
+      if (isDropdownOpened) {
         $selection.trigger('click');
+        $dropdown.addClass('dropdown__wrapper_opened');
       }
     });
   }
@@ -61,9 +69,10 @@ class Dropdown {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
       const $optionsCollection = $dropdown.find('.js-dropdown__option');
+      const $clearButton = $dropdown.find('.js-dropdown__clear-button');
 
       let totalSum = 0;
-      const itemsCount = [];
+      let itemsCount = [];
 
       $optionsCollection.each(function (index) {
         const $option = $(this);
@@ -92,6 +101,11 @@ class Dropdown {
           itemsCount[index] = getOptionCount();
 
           totalSum -= 1;
+
+          if (totalSum === 0) {
+            $clearButton.removeClass('dropdown__clear-button_visible');
+          }
+
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
         };
 
@@ -101,13 +115,25 @@ class Dropdown {
           itemsCount[index] = getOptionCount();
 
           totalSum += 1;
+
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
 
           $minus.removeClass('dropdown__counter-decrement_dim');
+          $clearButton.addClass('dropdown__clear-button_visible');
+        };
+
+        const handleClearButtonClearCount = () => {
+          itemsCount = [];
+          totalSum = 0;
+          $value.text(0);
+          $minus.addClass('dropdown__counter-decrement_dim');
+          $clearButton.removeClass('dropdown__clear-button_visible');
+          changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
         };
 
         $minus.click(handleMinusDecrementValue);
         $plus.click(handlePlusIncrementValue);
+        $clearButton.click(handleClearButtonClearCount);
       });
     });
   }
