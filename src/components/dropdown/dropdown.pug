@@ -4,6 +4,12 @@ mixin dropdown(options = {})
     className += options.isOpened ? ' dropdown__wrapper_opened' : '';
     className += options.isGuests ? ' dropdown__wrapper_guests js-dropdown__wrapper_guests' : '';
     className += options.isConveniences ? ' dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences' : '';
+    className += options.size === 'L' ? ' dropdown__wrapper_size_l' : '';
+
+    const buttons = [
+      ['dropdown__clear-button js-dropdown__clear-button', 'Очистить'],
+      ['dropdown__apply-button js-dropdown__apply-button', 'Применить'],
+    ];
 
   .dropdown.js-dropdown
     if options.title
@@ -26,5 +32,5 @@ mixin dropdown(options = {})
                 = options.items[i-1]
           if options.addingButtons
             .dropdown__buttons-container
-              button.dropdown__clear-button.js-dropdown__clear-button(type="reset") Очистить
-              button.dropdown__apply-button.js-dropdown__apply-button(type="submit") Применить
+              each val in buttons
+                button(class=val[0] type="button")=val[1]
