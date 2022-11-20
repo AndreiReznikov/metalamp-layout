@@ -1,9 +1,9 @@
 mixin dropdown(options = {})
   -
-    let className = "dropdown__wrapper js-dropdown__wrapper"
-    className += options.isOpened ? " dropdown__wrapper_opened" : ""
-    className += options.isGuests ? " dropdown__wrapper_guests js-dropdown__wrapper_guests" : ""
-    className += options.isConveniences ? " dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences" : ""
+    let className = 'dropdown__wrapper js-dropdown__wrapper';
+    className += options.isOpened ? ' dropdown__wrapper_opened' : '';
+    className += options.isGuests ? ' dropdown__wrapper_guests js-dropdown__wrapper_guests' : '';
+    className += options.isConveniences ? ' dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences' : '';
 
   .dropdown.js-dropdown
     if options.title

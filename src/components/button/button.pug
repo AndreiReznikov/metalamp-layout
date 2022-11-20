@@ -7,8 +7,10 @@ mixin button(options = {})
       options.longButton ? 'long-button' :
       options.longLinkButton ? 'long-link-button' : '';
 
-    className += options.size === 'L' ? ' ' + className + '_size_l' : '';
+    const largeClassName = options.size === 'L' ? ' ' + className + '_size_l' : '';
+    const hoveredClassName = options.isHovered ? ' ' + className + '_hovered' : '';
 
+    className += largeClassName + hoveredClassName;
 
   if options.filledButton || options.emptyButton
     a(

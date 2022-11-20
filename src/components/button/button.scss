@@ -11,7 +11,7 @@
   box-sizing: border-box;
   cursor: pointer;
 
-    &:hover {
+    &:hover, &_hovered {
       opacity: 0.5;
     }
 
@@ -42,7 +42,7 @@
     height: 45px;
   }
 
-  &:hover {
+  &:hover, &_hovered {
     background: $semitransparentGradient;
   }
 
@@ -67,7 +67,7 @@
   box-sizing: border-box;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &_hovered {
     color: $Dark-Shade-50;
   }
 }
@@ -93,7 +93,7 @@
     color: #fff;
     cursor: pointer;
 
-    &:hover {
+    &:hover, &_hovered {
       opacity: 0.5;
     }
 
