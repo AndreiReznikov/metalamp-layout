@@ -17,6 +17,7 @@
     border: 2px solid #fff;
     border-radius: 50%;
     box-shadow: 0 10px 10px $Dark-Shade-5;
+    box-sizing: border-box;
   }
 
   &__user-info {

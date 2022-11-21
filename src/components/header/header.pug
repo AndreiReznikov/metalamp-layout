@@ -47,7 +47,7 @@ mixin header(options = {})
                       href=item[2]
                     )
                       span.header__list-link-text=item[0]
-                      .header__list-arrow.js-header__list-arrow
+                      span.header__list-arrow.js-header__list-arrow
 
                     .header__expanded-menu.js-header__expanded-menu
                       ul.header__expanded-menu-list
@@ -67,7 +67,7 @@ mixin header(options = {})
                         span.header__list-link-text=item[0]
 
           if (options.isLoggedIn)
-            span.header__user-name!=options.username
+            span.header__user-name=options.username
           else
             .header__buttons-container
               each button in buttons
@@ -99,7 +99,7 @@ mixin header(options = {})
                   href=item[2]
                 )
                   span.mobile-menu__list-bold-item=item[0]
-                  .mobile-menu__list-arrow.js-mobile-menu__list-arrow
+                  span.mobile-menu__list-arrow.js-mobile-menu__list-arrow
                 ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
                   each val in item[1]
                     li.mobile-menu__expanded-list-item

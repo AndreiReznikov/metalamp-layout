@@ -4,7 +4,7 @@ mixin dropdown(options = {})
     className += options.isOpened ? ' dropdown__wrapper_opened' : '';
     className += options.isGuests ? ' dropdown__wrapper_guests js-dropdown__wrapper_guests' : '';
     className += options.isConveniences ? ' dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences' : '';
-    className += options.size === 'L' ? ' dropdown__wrapper_size_l' : '';
+    className += options.size === 'S' ? ' dropdown__wrapper_size_s' : '';
 
     const buttons = [
       ['dropdown__clear-button js-dropdown__clear-button', 'Очистить'],

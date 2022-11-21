@@ -12,13 +12,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: 21px;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 12px 0 40px 0;
+    margin: 12px 0 30px 0;
     padding: 0;
     list-style-type: none;
 
@@ -36,7 +37,7 @@
     @include Body-font();
     position: absolute;
     min-width: 200px;
-    margin-top: 43px;
+    margin-top: 50px;
     text-align: center;
   }
 

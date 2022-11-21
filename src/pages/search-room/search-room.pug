@@ -43,7 +43,7 @@ html(lang="en")
                   isGuests: true,
                   buttonsNum: [0, 2],
                   clicksNum: [3, 1],
-                  size: 'L',
+                  size: 'S',
                 })
               .search-room-range-slider-container
                 +range-slider({
@@ -52,7 +52,10 @@ html(lang="en")
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
-                  each val in searchRoomCheckboxes
+                  each val in checkboxes
+                    -
+                      val.title && val.title !== 'Правила дома' ? val.title = 'Правила дома' : val.title
+
                     +checkbox-button({
                       text: val.text,
                       title: val.title,
@@ -76,7 +79,7 @@ html(lang="en")
                   isConveniences: true,
                   buttonsNum: [0, 1],
                   clicksNum: [2, 2],
-                  size: 'L',
+                  size: 'S',
                 })
               .search-room-expandable-checkbox-list-container
                 +expandable-checkbox-list({

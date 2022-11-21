@@ -45,13 +45,13 @@
     @include Body-font();
     display: flex;
     justify-content: space-between;
-    margin-right: 25px;
+    margin-right:  18px;
     list-style-type: none;
   }
 
   &__list-item {
     position: relative;
-    padding-left: 21px;
+    padding-left: 20px;
     cursor: pointer;
   }
 
@@ -59,12 +59,9 @@
     padding: 0;
   }
 
-  &__list-link-text {
-    padding-right: 8px;
-  }
-
   &__list-arrow {
     display: inline-block;
+    margin: 0 9px;
     transition: 0.4s;
   }
 

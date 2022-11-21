@@ -3,7 +3,7 @@
 .advantage {
   display: flex;
   width: 280px;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 
   &_bordered {
     border-bottom: 1px solid $Dark-Shade-10;
@@ -12,11 +12,11 @@
   &__icon {
     @include background-position(contain);
     min-width: 48px;
-    margin-left: 5px;
+    // margin-left: 5px;
   }
 
   &__text {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   &__title {

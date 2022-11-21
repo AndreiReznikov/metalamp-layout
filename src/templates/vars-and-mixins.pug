@@ -61,7 +61,7 @@ mixin roomTitle(text)
       checked: true,
     },
     {
-      text: 'Можно пригласить гостей (до 10 человек)',
+      text: `Можно пригласить гостей (до${String.fromCharCode(160)}10${String.fromCharCode(160)}человек)`,
       checked: true,
     },
   ];
@@ -237,21 +237,6 @@ mixin roomTitle(text)
       isLux: false,
       isSlickArrows: false,
     }
-  ];
-
-  const searchRoomCheckboxes = [
-    {
-      text: 'Можно курить',
-      title: 'Правила дома',
-    },
-    {
-      text: 'Можно с питомцами',
-      checked: true,
-    },
-    {
-      text: 'Можно пригласить гостей (до 10 человек)',
-      checked: true,
-    },
   ];
 
   const searchRoomRichCheckboxButtons = [
