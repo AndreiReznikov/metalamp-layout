@@ -16,7 +16,7 @@ html {
 }
 
 .colors-and-type-logo-container {
-  margin: 30px 0 0 30px;
+  margin: 30px;
 }
 
 .colors-and-type-wrapper {
@@ -25,7 +25,7 @@ html {
 }
 
 .colors-and-type-colors-description-list-container {
-  margin: 63px 0 0 150px;
+  margin: 33px 0 0 150px;
 }
 
 .colors-and-type-colors-description-list {
@@ -33,13 +33,13 @@ html {
   list-style-type: none;
 
   &__item {
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
     padding: 0;
   }
 }
 
 .colors-and-type-type-description-list-container {
-  margin: 47px 82px 0 0;
+  margin: 17px 82px 0 0;
 }
 
 .colors-and-type-type-description-list {
@@ -47,7 +47,7 @@ html {
   padding: 0;
 
   &__item {
-    margin: 0 0 52px 0;
+    margin-bottom: 51px;
     padding: 0;
   }
 }
