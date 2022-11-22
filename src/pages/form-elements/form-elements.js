@@ -107,6 +107,10 @@ class FormElements {
       pageSize: 12,
       callback: addPaginationItem,
     });
+
+    const $paginationContainer = $('.pagination__container');
+
+    $paginationContainer.removeClass('pagination__container_indented');
   }
 }
 

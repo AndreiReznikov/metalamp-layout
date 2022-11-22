@@ -7,12 +7,12 @@ class SlickCarousel {
     this._findElements(element);
   }
 
-  _findElements(element) {
-    this.$slickItem = $(element);
-  }
-
   initializePlugin(options) {
     this.$slickItem.slick(options);
+  }
+
+  _findElements(element) {
+    this.$slickItem = $(element);
   }
 }
 

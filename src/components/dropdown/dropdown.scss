@@ -65,7 +65,7 @@
     display: inline-block;
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 18px;
     transform: translateY(-50%);
     pointer-events: none;
   }
@@ -78,7 +78,7 @@
     display: none;
     position: absolute;
     width: inherit;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     background: #fff;
     border: 1px solid $Dark-Shade-50;
     border-top: none;
@@ -103,7 +103,7 @@
   &__counter {
     @include H3();
     @include flex-between-center();
-    width: 75px;
+    width: 90px;
     height: 30px;
     border: none;
   }
@@ -128,8 +128,8 @@
 
   &__buttons-container {
     @include flex-between-center();
-    margin-top: 22px;
-    padding: 0 7px 0 14px;
+    margin-top: 20px;
+    padding: 0 7px 5px 14px;
   }
 
   &__clear-button, &__apply-button {

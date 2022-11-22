@@ -18,6 +18,7 @@ class SearchRoom {
     this._initializePaginationJS();
     this._initializeIonRangeSlider();
     this._toggleFilterItems();
+    this._preventDefault();
   }
 
   _initializeFilterDateDropdown() {
@@ -131,6 +132,17 @@ class SearchRoom {
 
     const showFilterItems = () => this.$filterItems.toggle();
     this.$filterButton.click(showFilterItems);
+  }
+
+  _preventDefault() {
+    this.$slickArrows = $('.slick-arrow');
+    this.$slickDots = $('.slick-dots');
+
+    const preventDefaultElements = [this.$slickArrows, this.$slickDots];
+
+    preventDefaultElements.forEach(($element) => {
+      $element.click((event) => event.preventDefault());
+    });
   }
 }
 

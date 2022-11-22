@@ -12,6 +12,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  &__container_indented {
     margin-right: 21px;
   }
 
@@ -24,7 +27,7 @@
     list-style-type: none;
 
     &-item {
-      margin: 10px 5px 11px 0;
+      margin: 10px 7px 11px 0;
     }
 
     &-link {
