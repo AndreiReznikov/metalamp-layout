@@ -7,6 +7,8 @@ mixin button(options = {})
       options.longButton ? 'long-button' :
       options.longLinkButton ? 'long-link-button' : '';
 
+    className += options.isMobile ? ' ' + className + '_mobile' : '';
+
     const largeClassName = options.size === 'L' ? ' ' + className + '_size_l' : '';
     const hoveredClassName = options.isHovered ? ' ' + className + '_hovered' : '';
 

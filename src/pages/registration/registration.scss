@@ -13,12 +13,8 @@
 @import '../../templates/vars-and-mixins';
 
 html, body {
-  @include margin-padding-zero();
-  height: 100%;
+  @include Body-font();
   background-color: #fff;
-  color: $Dark-Shade-100;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 14px;
 }
 
 .registration-wrapper {
@@ -37,6 +33,5 @@ html, body {
 
   @media screen and (max-width: 480px) {
     height: 720px;
-    padding: 0 5px;
   }
 }

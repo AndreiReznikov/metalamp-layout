@@ -1,6 +1,9 @@
 @import '../../templates/vars-and-mixins';
 
 .filter-date-dropdown {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1000000;
 
   &__title {
     @include H3();
@@ -10,17 +13,18 @@
   &__input-container {
     position: relative;
     width: 266px;
+    height: 44px;
   }
 
   &__input-container_hidden {
     width: 320px;
-    opacity: 0;
+    display: none;
   }
 
   &__input {
     @include Body-font();
-    width: 100%;
-    height: 44px;
+    width: inherit;
+    height: inherit;
     padding-left: 15px;
     text-transform: lowercase;
     background: #fff;

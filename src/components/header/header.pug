@@ -82,10 +82,14 @@ mixin header(options = {})
     .mobile-menu.js-mobile-menu
       .mobile-menu__buttons-container
         each button in buttons
+          -
+            if (button.emptyButton && !button.isMobile) button.isMobile = true;
+
           .mobile-menu__button-container
             +button({
               emptyButton: button.emptyButton,
               filledButton: button.filledButton,
+              isMobile: button.isMobile,
               text: button.text,
               size: button.size,
               href: button.href,

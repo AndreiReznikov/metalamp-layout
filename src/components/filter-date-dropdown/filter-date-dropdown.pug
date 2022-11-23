@@ -7,7 +7,8 @@ mixin filter-date-dropdown(options = {})
     inputContainerClassName += options.isHidden ? ' filter-date-dropdown__input-container_hidden' : '';
 
   .filter-date-dropdown.js-filter-date-dropdown
-    h3.filter-date-dropdown__title=options.title
+    if options.title
+      h3.filter-date-dropdown__title=options.title
     div(class=inputContainerClassName)
       .filter-date-dropdown__arrow
       input(
@@ -17,4 +18,5 @@ mixin filter-date-dropdown(options = {})
         placeholder="Выберите даты"
         data-from=options.dateFrom
         data-to=options.dateTo
+        readonly
       )

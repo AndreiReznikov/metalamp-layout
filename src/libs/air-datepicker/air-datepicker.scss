@@ -1,13 +1,19 @@
 @import '../../templates/vars-and-mixins';
 
 .datepicker {
-  width: 320px;
+  top: 70px;
+  left: 0;
+  width: 100%;
   min-height: 369px;
   box-sizing: border-box;
-  z-index: 100000;
+  z-index: 1000000;
 
   @media screen and (max-width: 480px) {
     width: 260px;
+  }
+
+  &.active {
+    z-index: 1000000;
   }
 
   &--pointer {
@@ -64,7 +70,6 @@
 
   &--cell {
     @include Body-font();
-    height: 39px;
     font-size: 12px;
     line-height: 15px;
     text-align: center;
@@ -129,7 +134,7 @@
 
   &--buttons {
     justify-content: space-between;
-    padding: 15px 20px 0 20px;
+    padding: 12px 20px 0 20px;
     border-top: none;
   }
 

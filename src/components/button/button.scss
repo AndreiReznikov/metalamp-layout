@@ -42,6 +42,11 @@
     height: 45px;
   }
 
+  &_mobile {
+    width: 196px;
+    height: 34px;
+  }
+
   &:hover, &_hovered {
     background: $semitransparentGradient;
   }

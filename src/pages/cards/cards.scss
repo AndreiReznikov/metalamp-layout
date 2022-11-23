@@ -18,9 +18,7 @@
 @import '../../templates/vars-and-mixins';
 
 html {
-  color: $Dark-Shade-100;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 14px;
+  @include Body-font();
 }
 
 html, body {
@@ -62,13 +60,12 @@ html, body {
 .cards-right-block {
   width: 320px;
   margin-left: 40px;
-  margin-top: 7px;
 }
 
 .cards-room-cards-container {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  margin-top: 421px;
+  margin-top: 478px;
   height: 554px;
 }

@@ -20,6 +20,35 @@ class AirDatepicker {
       const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
       const $dateTo = $datepicker.find('.js-date-dropdown__input-to');
 
+      let cellWidth = 0;
+
+      const handleCalendarCalculateCellHeight = () => {
+        const $cell = $('.datepicker--cell');
+
+        cellWidth = $cell.width();
+      };
+
+      const handleCalendarSetCellHeight = () => {
+        const $cell = $('.datepicker--cell');
+
+        $cell.height(cellWidth);
+      };
+
+      const handleCalendarAddOrRemoveToDropdown = (show) => {
+        const $calendar = $('.datepicker');
+        const handleCalendarNullifyStyleAttr = () => $calendar.attr('style', '');
+
+        if (show === 'show') {
+          $datepicker.append($calendar);
+          $calendar.attr('style', '');
+          $calendar.click(handleCalendarNullifyStyleAttr, handleCalendarSetCellHeight);
+
+          return;
+        }
+
+        $datepicker.remove($calendar);
+      };
+
       $datepickerInput.datepicker({
         range: options.range,
         clearButton: options.clearButton,
@@ -33,6 +62,12 @@ class AirDatepicker {
           $dateFrom.val(dates[0]);
           $dateTo.val(dates[1]);
         },
+        onShow: () => {
+          handleCalendarAddOrRemoveToDropdown('show');
+          handleCalendarCalculateCellHeight();
+          handleCalendarSetCellHeight();
+        },
+        onHide: () => handleCalendarAddOrRemoveToDropdown(),
       });
     });
   }
