@@ -8,7 +8,7 @@ class AirDatepicker {
   }
 
   initializePlugin(options) {
-    let size = this.size;
+    const { size } = this;
 
     this.$datepickerCollection.each(function () {
       const $datepicker = $(this);
@@ -42,8 +42,7 @@ class AirDatepicker {
 
         if (size === 'S') {
           $calendar.addClass('datepicker_size_s');
-        }
-        else {
+        } else {
           $calendar.removeClass('datepicker_size_s');
         }
 

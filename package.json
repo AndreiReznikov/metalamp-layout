@@ -8,7 +8,8 @@
     "prod": "webpack --mode production",
     "dev": "webpack --mode development",
     "server": "webpack serve --open",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "fix": "eslint --fix"
   },
   "author": "Andrei Reznikov",
   "license": "ISC",
