@@ -1,15 +1,17 @@
 @import '../../templates/vars-and-mixins';
 
 .datepicker {
-  top: 70px;
-  left: 0;
-  width: 100%;
+  width: 320px;
   min-height: 369px;
   box-sizing: border-box;
   z-index: 1000000;
 
   @media screen and (max-width: 480px) {
-    width: 260px;
+    width: 266px;
+  }
+
+  &_size_s {
+    width: 266px;
   }
 
   &.active {

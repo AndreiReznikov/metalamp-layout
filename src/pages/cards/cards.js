@@ -1,12 +1,20 @@
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
 import SlickCarousel from '../../libs/slick-carousel/slick-carousel';
-import '../../components/search-card/search-card';
-import '../../components/reserve-card/reserve-card';
+import Dropdown from '../../components/dropdown/dropdown';
+import setSelectionTextFunctions from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './cards.scss';
 
 class Cards {
-  constructor() {
+  initializeComponents() {
+    this.dropdownGuests = new Dropdown(
+      '.js-dropdown__wrapper_guests',
+      setSelectionTextFunctions.guestsText,
+      'Сколько гостей',
+    );
+  }
+
+  initializePlugins() {
     this._initializeDateDropdown();
     this._initializeFilterDateDropdown();
     this._initializeSlickCarousel();
@@ -79,3 +87,6 @@ class Cards {
 }
 
 const cards = new Cards();
+
+cards.initializeComponents();
+cards.initializePlugins();

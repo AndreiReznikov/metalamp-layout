@@ -2,17 +2,30 @@ import MaskedTextField from '../../libs/inputmask/inputmask';
 import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
 import PaginationJS from '../../libs/paginationjs/paginationjs';
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
-import '../../components/dropdown/dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
 import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import LikeButton from '../../components/like-button/like-button';
+import setSelectionTextFunctions from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './form-elements.scss';
 
 class FormElements {
-  constructor() {
+  initializeComponents() {
     this.expandableCheckboxList = new ExpandableCheckboxList();
     this.likeButton = new LikeButton();
+    this.dropdownGuests = new Dropdown(
+      '.js-dropdown__wrapper_guests',
+      setSelectionTextFunctions.guestsText,
+      'Сколько гостей',
+    );
+    this.dropdownConveniences = new Dropdown(
+      '.js-dropdown__wrapper_conveniences',
+      setSelectionTextFunctions.conveniencesText,
+      'Выберите удобства',
+    );
+  }
 
+  initializePlugins() {
     this._initializeDateDropdown();
     this._initializeFilterDateDropdown();
     this._initializeMaskedTextField();
@@ -38,7 +51,7 @@ class FormElements {
   }
 
   _initializeFilterDateDropdown() {
-    this.filterDateDropdown = new AirDatepicker('.js-filter-date-dropdown');
+    this.filterDateDropdown = new AirDatepicker('.js-filter-date-dropdown', 'S');
 
     this.filterDateDropdown.initializePlugin({
       range: true,
@@ -115,3 +128,6 @@ class FormElements {
 }
 
 const formElements = new FormElements();
+
+formElements.initializeComponents();
+formElements.initializePlugins();

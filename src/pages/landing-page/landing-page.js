@@ -1,13 +1,21 @@
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
 import Header from '../../components/header/header';
-import '../../components/search-card/search-card';
+import Dropdown from '../../components/dropdown/dropdown';
+import setSelectionTextFunctions from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './landing-page.scss';
 
 class LandingPage {
-  constructor() {
+  initializeComponents() {
     this.header = new Header();
+    this.dropdownGuests = new Dropdown(
+      '.js-dropdown__wrapper_guests',
+      setSelectionTextFunctions.guestsText,
+      'Сколько гостей',
+    );
+  }
 
+  initializePlugins() {
     this._initializeDateDropdown();
   }
 
@@ -30,3 +38,6 @@ class LandingPage {
 }
 
 const landingPage = new LandingPage();
+
+landingPage.initializeComponents();
+landingPage.initializePlugins();

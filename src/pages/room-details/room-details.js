@@ -1,16 +1,24 @@
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
 import Chart from '../../libs/chart/chart';
 import Header from '../../components/header/header';
+import Dropdown from '../../components/dropdown/dropdown';
 import Comment from '../../components/comment/comment';
-import '../../components/reserve-card/reserve-card';
+import setSelectionTextFunctions from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './room-details.scss';
 
 class RoomDetails {
-  constructor() {
+  initializeComponents() {
     this.header = new Header();
     this.comment = new Comment();
+    this.dropdownGuests = new Dropdown(
+      '.js-dropdown__wrapper_guests',
+      setSelectionTextFunctions.guestsText,
+      'Сколько гостей',
+    );
+  }
 
+  initializePlugins() {
     this._initializeDateDropdown();
     this._initializeChart();
     this._addTextToChart();
@@ -145,3 +153,6 @@ class RoomDetails {
 }
 
 const roomDetails = new RoomDetails();
+
+roomDetails.initializeComponents();
+roomDetails.initializePlugins();

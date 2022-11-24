@@ -3,9 +3,11 @@ import '../../templates/fonts.scss';
 import './sign-in.scss';
 
 class SignIn {
-  constructor() {
+  initializeComponents() {
     this.header = new Header();
   }
 }
 
 const signIn = new SignIn();
+
+signIn.initializeComponents();

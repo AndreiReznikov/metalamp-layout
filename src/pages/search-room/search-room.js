@@ -1,18 +1,31 @@
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
 import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
-import Header from '../../components/header/header';
-import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
 import SlickCarousel from '../../libs/slick-carousel/slick-carousel';
 import PaginationJS from '../../libs/paginationjs/paginationjs';
-import '../../components/dropdown/dropdown';
+import Header from '../../components/header/header';
+import Dropdown from '../../components/dropdown/dropdown';
+import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
+import setSelectionTextFunctions from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 
 class SearchRoom {
-  constructor() {
+  initializeComponents() {
     this.header = new Header();
     this.expandableCheckboxList = new ExpandableCheckboxList();
+    this.dropdownGuests = new Dropdown(
+      '.js-dropdown__wrapper_guests',
+      setSelectionTextFunctions.guestsText,
+      'Сколько гостей',
+    );
+    this.dropdownConveniences = new Dropdown(
+      '.js-dropdown__wrapper_conveniences',
+      setSelectionTextFunctions.conveniencesText,
+      'Выберите удобства',
+    );
+  }
 
+  initializePlugins() {
     this._initializeFilterDateDropdown();
     this._initializeSlickCarousel();
     this._initializePaginationJS();
@@ -147,3 +160,6 @@ class SearchRoom {
 }
 
 const searchRoom = new SearchRoom();
+
+searchRoom.initializeComponents();
+searchRoom.initializePlugins();

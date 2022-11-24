@@ -12,19 +12,14 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'airbnb',
-    'airbnb/hooks',
+    'airbnb-base',
   ],
   plugins: [
+    'fsd',
     'pug',
   ],
   rules: {
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
-    'no-underscore-dangle': ['error', {
-      enforceInMethodNames: false,
-      enforceInClassFields: false,
-      allowAfterThisConstructor: false,
-      allowAfterThis: true,
-    }],
+    'no-underscore-dangle': 0,
   },
 };

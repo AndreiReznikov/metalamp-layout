@@ -2,11 +2,14 @@ import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
 class AirDatepicker {
-  constructor(element) {
+  constructor(element, size) {
+    this.size = size;
     this._findElement(element);
   }
 
   initializePlugin(options) {
+    let size = this.size;
+
     this.$datepickerCollection.each(function () {
       const $datepicker = $(this);
       let $datepickerInput;
@@ -34,19 +37,20 @@ class AirDatepicker {
         $cell.height(cellWidth);
       };
 
-      const handleCalendarAddOrRemoveToDropdown = (show) => {
+      const handleDatepickerSetCalendarWidth = () => {
         const $calendar = $('.datepicker');
-        const handleCalendarNullifyStyleAttr = () => $calendar.attr('style', '');
 
-        if (show === 'show') {
-          $datepicker.append($calendar);
-          $calendar.attr('style', '');
-          $calendar.click(handleCalendarNullifyStyleAttr, handleCalendarSetCellHeight);
-
-          return;
+        if (size === 'S') {
+          $calendar.addClass('datepicker_size_s');
+        }
+        else {
+          $calendar.removeClass('datepicker_size_s');
         }
 
-        $datepicker.remove($calendar);
+        $calendar.click(handleCalendarSetCellHeight);
+
+        handleCalendarCalculateCellHeight();
+        handleCalendarSetCellHeight();
       };
 
       $datepickerInput.datepicker({
@@ -62,12 +66,11 @@ class AirDatepicker {
           $dateFrom.val(dates[0]);
           $dateTo.val(dates[1]);
         },
-        onShow: () => {
-          handleCalendarAddOrRemoveToDropdown('show');
-          handleCalendarCalculateCellHeight();
-          handleCalendarSetCellHeight();
-        },
-        onHide: () => handleCalendarAddOrRemoveToDropdown(),
+        onShow: handleDatepickerSetCalendarWidth,
+        onChangeMonth: handleDatepickerSetCalendarWidth,
+        onChangeYear: handleDatepickerSetCalendarWidth,
+        onChangeDecade: handleDatepickerSetCalendarWidth,
+        onChangeView: handleDatepickerSetCalendarWidth,
       });
     });
   }

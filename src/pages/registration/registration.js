@@ -4,9 +4,11 @@ import '../../templates/fonts.scss';
 import './registration.scss';
 
 class Registration {
-  constructor() {
+  initializeComponents() {
     this.header = new Header();
   }
 }
 
 const registration = new Registration();
+
+registration.initializeComponents();
