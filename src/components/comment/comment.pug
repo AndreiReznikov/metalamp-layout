@@ -5,7 +5,7 @@ mixin comment(options = {})
     .comment__user-wrapper
       img.comment__user-photo(
         src=require(`../../img/${options.image}`),
-        alt="User photo"
+        alt=options.alt
         )
       .comment__user-info
         h3.comment__username=options.username

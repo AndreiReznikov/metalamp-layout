@@ -113,6 +113,11 @@ $circle-margin: 3px;
   height: 100%;
 }
 
+@mixin zero-width-and-height() {
+  width: 0;
+  height: 0;
+}
+
 @mixin margin-padding-zero() {
   margin: 0;
   padding: 0;

@@ -2,7 +2,7 @@ import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
 import Chart from '../../libs/chart/chart';
 import Header from '../../components/header/header';
 import Dropdown from '../../components/dropdown/dropdown';
-import Comment from '../../components/comment/comment';
+import LikeButton from '../../components/like-button/like-button';
 import vars from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './room-details.scss';
@@ -10,7 +10,7 @@ import './room-details.scss';
 class RoomDetails {
   initializeComponents() {
     this.header = new Header();
-    this.comment = new Comment();
+    this.likeButton = new LikeButton();
     this.dropdownGuests = new Dropdown(
       '.js-dropdown__wrapper_guests',
       vars.setSelectionGuestsText,
@@ -128,6 +128,8 @@ class RoomDetails {
     };
 
     const chart = new Chart(this.canvas, options);
+
+    return chart;
   }
 
   _addTextToChart() {

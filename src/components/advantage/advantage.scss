@@ -12,7 +12,6 @@
   &__icon {
     @include background-position(contain);
     min-width: 48px;
-    // margin-left: 5px;
   }
 
   &__text {
@@ -21,7 +20,7 @@
 
   &__title {
     @include H2();
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
     font-size: 14px;
   }
 

@@ -1,10 +1,10 @@
 class LikeButton {
   constructor() {
-    this._findButtons();
+    this._findElements();
     this._toggleButtons();
   }
 
-  _findButtons() {
+  _findElements() {
     this.$likeButtonsCollection = $('.js-like-button');
   }
 
@@ -12,7 +12,7 @@ class LikeButton {
     const unlikeIcon = '../../img/unliked.svg';
     const likeIcon = '../../img/liked.svg';
 
-    this.$likeButtonsCollection.each(function () {
+    this.$likeButtonsCollection.each(function toggleButtons() {
       const $this = $(this);
       const $button = $this.find('.js-like-button__button');
       const $icon = $this.find('.js-like-button__icon');

@@ -10,7 +10,7 @@ class AirDatepicker {
   initializePlugin(options) {
     const { size } = this;
 
-    this.$datepickerCollection.each(function () {
+    this.$datepickerCollection.each(function initializePlugin() {
       const $datepicker = $(this);
       let $datepickerInput;
 
@@ -84,7 +84,7 @@ class AirDatepicker {
 
   openDatepickerMultiple() {
     if (this.$datepickerCollection.hasClass('js-date-dropdown')) {
-      this.$datepickerCollection.each(function () {
+      this.$datepickerCollection.each(function openDatepickerMultiple() {
         const $datepicker = $(this);
         const $datepickerInput = $datepicker.find('.js-date-dropdown__input');
         const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
@@ -100,7 +100,7 @@ class AirDatepicker {
   }
 
   setDatesDefault() {
-    this.$datepickerCollection.each(function () {
+    this.$datepickerCollection.each(function setDatesDefault() {
       const $datepicker = $(this);
       let $datepickerInput;
 
@@ -125,7 +125,7 @@ class AirDatepicker {
 
   checkEmptyValue() {
     if (this.$datepickerCollection.hasClass('js-date-dropdown')) {
-      this.$datepickerCollection.each(function () {
+      this.$datepickerCollection.each(function checkEmptyValue() {
         const $datepicker = $(this);
         const $dateFrom = $datepicker.find('.js-date-dropdown__input-from');
         const $dateTo = $datepicker.find('.js-date-dropdown__input-to');
@@ -141,7 +141,7 @@ class AirDatepicker {
   }
 
   addApplyButton() {
-    this.$datepickerCollection.each(function () {
+    this.$datepickerCollection.each(function addApplyButton() {
       const $datepicker = $(this);
       let $datepickerInput;
 

@@ -1,17 +1,17 @@
 class ExpandableCheckboxList {
   constructor() {
-    this._findLists();
+    this._findElements();
     this._toggleLists();
     this._openListsDefault();
   }
 
-  _findLists() {
+  _findElements() {
     this.$listsCollection = $('.js-expandable-checkbox-list');
     this.$openedListsCollection = $('.js-expandable-checkbox-list__title_opened');
   }
 
   _toggleLists() {
-    this.$listsCollection.each(function () {
+    this.$listsCollection.each(function toggleLists() {
       const $expandableList = $(this);
 
       const $title = $expandableList.find('.js-expandable-checkbox-list__title');
@@ -28,7 +28,7 @@ class ExpandableCheckboxList {
   }
 
   _openListsDefault() {
-    this.$openedListsCollection.each(function () {
+    this.$openedListsCollection.each(function openListsDefault() {
       const $openedList = $(this);
 
       $openedList.trigger('click');

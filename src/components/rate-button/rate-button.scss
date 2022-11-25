@@ -10,11 +10,10 @@
   }
 
   &__radio {
+    @include margin-padding-zero();
     @include appearance-none();
     width: 20px;
     height: 20px;
-    margin: 0;
-    padding: 0;
     background-image: url('../../img/star-border.svg');
     background-repeat: no-repeat;
     cursor: pointer;

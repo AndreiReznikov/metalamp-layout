@@ -17,6 +17,28 @@ mixin roomTitle(text)
     ['headers-and-footers.html', 'Headers and Footers'],
   ];
 
+  const headerItems = [
+      ['О нас', [], '/mock-address/change-me', 'bold'],
+      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт'], '/mock-address/change-me'],
+      ['Вакансии', [], '/mock-address/change-me'],
+      ['Новости', [], '/mock-address/change-me'],
+      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения'], '/mock-address/change-me'],
+    ];
+
+  const headerButtons = [
+    {
+      emptyButton: true,
+      text: 'Войти',
+      href: 'sign-in.html',
+    },
+    {
+      filledButton: true,
+      text: 'Зарегистрироваться',
+      size: 'L',
+      href: 'registration.html',
+    }
+  ];
+
   const textFields = [
     {
       class: 'form-elements-first-text-field',
@@ -194,6 +216,7 @@ mixin roomTitle(text)
   const comments = [
     [
       'image.jpg',
+      'user photo',
       '5 дней назад',
       'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
       'Мурад Сарафанов',
@@ -202,6 +225,7 @@ mixin roomTitle(text)
     ],
     [
       'image2.jpg',
+      'user photo',
       'Неделю назад',
       'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
       'Патрисия Стёклышкова',
@@ -237,6 +261,12 @@ mixin roomTitle(text)
       isLux: false,
       isSlickArrows: false,
     }
+  ];
+
+  const serviceSum = [
+    ['9 990₽ x 4 суток', '39 960'],
+    ['Сбор за услуги: скидка 2 179₽', '0', 'info'],
+    ['Сбор за дополнительные услуги', '300', 'info'],
   ];
 
   const searchRoomRichCheckboxButtons = [

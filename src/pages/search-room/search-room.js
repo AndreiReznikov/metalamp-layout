@@ -95,7 +95,7 @@ class SearchRoom {
     const paginationItems = [];
     const $roomCardsCollection = $('.js-room-card');
 
-    $roomCardsCollection.each(function () {
+    $roomCardsCollection.each(function addCards() {
       const card = this;
       const cardElement = card.outerHTML;
 

@@ -17,11 +17,10 @@
   }
 
   &__input  {
+    @include zero-width-and-height();
     position: absolute;
     padding: 0;
     top: 55px;
-    width: 0;
-    height: 0;
     overflow: hidden;
     visibility: hidden;
     border: 0;

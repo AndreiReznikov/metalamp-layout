@@ -31,7 +31,7 @@ class Header {
     ];
 
     menuItems.forEach((item) => {
-      item[0].each(function () {
+      item[0].each(function expandItems() {
         const $expandableItem = $(this);
         const $expandableMenu = $expandableItem.find(item[1]);
         const $arrow = $expandableItem.find(item[2]);
@@ -53,7 +53,7 @@ class Header {
   }
 
   _showMobileMenu() {
-    this.$headersCollection.each(function () {
+    this.$headersCollection.each(function showMobileMenu() {
       const $header = $(this);
       const $burgerContainer = $header.find('.js-header__burger-container');
       const $burger = $header.find('.js-header__burger');

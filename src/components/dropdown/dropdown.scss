@@ -109,7 +109,7 @@
   }
 
   &__counter-decrement, &__counter-increment {
-    @include flex-center();
+    @include inline-flex-center();
     width: 30px;
     height: 30px;
     padding: 0;

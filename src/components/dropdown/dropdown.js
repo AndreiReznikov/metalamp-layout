@@ -4,7 +4,7 @@ class Dropdown {
     this.selectionDefaultText = selectionDefaultText || '';
     this.setSelectionText = setSelectionText;
 
-    this._findElement(element);
+    this._findElements(element);
     this._setSelectionDefaultText();
     this._toggleMenu();
     this._openMenuDefault();
@@ -31,7 +31,7 @@ class Dropdown {
   }
 
   _toggleMenu() {
-    this.$dropdownsCollection.each(function () {
+    this.$dropdownsCollection.each(function toggleMenu() {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
       const $applyButton = $dropdown.find('.js-dropdown__apply-button');
@@ -49,7 +49,7 @@ class Dropdown {
   }
 
   _openMenuDefault() {
-    this.$dropdownsCollection.each(function () {
+    this.$dropdownsCollection.each(function openMenuDefault() {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
       const isDropdownOpened = $dropdown.hasClass('dropdown__wrapper_opened');
@@ -65,7 +65,7 @@ class Dropdown {
     const setSelectionText = this.setSelectionText || ((itemsCount, totalSum) => `${totalSum} items`);
     const changeSelectionText = (element, callback) => element.text(callback);
 
-    this.$dropdownsCollection.each(function () {
+    this.$dropdownsCollection.each(function changeCounterValue() {
       const $dropdown = $(this);
       const $selection = $dropdown.find('.js-dropdown__selection');
       const $optionsCollection = $dropdown.find('.js-dropdown__option');
@@ -74,7 +74,7 @@ class Dropdown {
       let totalSum = 0;
       let itemsCount = [];
 
-      $optionsCollection.each(function (index) {
+      $optionsCollection.each(function changeValue(index) {
         const $option = $(this);
         const $minus = $option.find('.js-dropdown__counter-decrement');
         const $plus = $option.find('.js-dropdown__counter-increment');
@@ -139,7 +139,7 @@ class Dropdown {
   }
 
   _clickCountButtonsDefault() {
-    this.$dropdownsCollection.each(function () {
+    this.$dropdownsCollection.each(function clickCountButtonsDefault() {
       const $dropdown = $(this);
       const $plusButtons = $dropdown.find('.js-dropdown__counter-increment');
 
@@ -158,7 +158,7 @@ class Dropdown {
     });
   }
 
-  _findElement(element) {
+  _findElements(element) {
     this.$dropdownsCollection = $(element);
     this.$selectionCollection = this.$dropdownsCollection.find('.js-dropdown__selection');
     this.$optionsCollection = this.$dropdownsCollection.find('.js-dropdown__option');

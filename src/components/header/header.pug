@@ -6,28 +6,6 @@ mixin header(options = {})
     let boldItemClass = 'header__list-bold-item';
     boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal';
 
-    const items = [
-      ['О нас', [], '/mock-address/change-me', 'bold'],
-      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт'], '/mock-address/change-me'],
-      ['Вакансии', [], '/mock-address/change-me'],
-      ['Новости', [], '/mock-address/change-me'],
-      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения'], '/mock-address/change-me'],
-    ];
-
-    const buttons = [
-      {
-        emptyButton: true,
-        text: 'Войти',
-        href: 'sign-in.html',
-      },
-      {
-        filledButton: true,
-        text: 'Зарегистрироваться',
-        size: 'L',
-        href: 'registration.html',
-      }
-    ];
-
   .header.js-header
     header.header__container.js-header__container
       .header__wrapper
@@ -40,7 +18,7 @@ mixin header(options = {})
         .header__right-block-container
           nav.header__nav
             ul.header__menu-list
-              each item in items
+              each item in headerItems
                 if item[1].length
                   li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
                     a.header__list-link.js-header__list-link(
@@ -70,7 +48,7 @@ mixin header(options = {})
             span.header__user-name=options.username
           else
             .header__buttons-container
-              each button in buttons
+              each button in headerButtons
                 +button({
                   emptyButton: button.emptyButton,
                   filledButton: button.filledButton,
@@ -81,7 +59,7 @@ mixin header(options = {})
 
     .mobile-menu.js-mobile-menu
       .mobile-menu__buttons-container
-        each button in buttons
+        each button in headerButtons
           -
             if (button.emptyButton && !button.isMobile) button.isMobile = true;
 
@@ -96,7 +74,7 @@ mixin header(options = {})
             })
       nav.mobile-menu__nav
         ul.mobile-menu__list
-          each item in items
+          each item in headerItems
             if item[1].length
               li.mobile-menu__list-item
                 a.mobile-menu__list-link.js-mobile-menu__list-link_expandable(

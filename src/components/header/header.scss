@@ -108,12 +108,7 @@
     text-align: center;
   }
 
-  &__expanded-menu-link {
-    color: $Dark-Shade-50;
-    text-decoration: none;
-  }
-
-  &__list-link {
+  &__expanded-menu-link, &__list-link {
     color: $Dark-Shade-50;
     text-decoration: none;
   }
@@ -187,18 +182,19 @@
     height: 0;
   }
 
-  &__burger_transformed::after {
+  &__burger_transformed::after, &__burger_transformed::before {
     transform: rotate(45deg);
     top: 0;
     bottom: 0;
     transition: 0.6s;
   }
 
+  &__burger_transformed::after {
+    transform: rotate(45deg);
+  }
+
   &__burger_transformed::before {
     transform: rotate(-45deg);
-    top: 0;
-    bottom: 0;
-    transition: 0.6s;
   }
 }
 

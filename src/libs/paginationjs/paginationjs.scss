@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
 
-  & .paginationjs-pages li, & .paginationjs-pages li:last-child {
+  & .paginationjs-pages li,
+  & .paginationjs-pages li:last-child {
     border: none;
   }
 
@@ -17,7 +18,11 @@
     color: $Dark-Shade-50;
   }
 
-  & .paginationjs-pages li.paginationjs-next, & .paginationjs-pages .paginationjs-prev, & .paginationjs-pages li.active, & .paginationjs-pages li, & .paginationjs-pages li:hover > a {
+  & .paginationjs-pages li.paginationjs-next,
+  & .paginationjs-pages .paginationjs-prev,
+  & .paginationjs-pages li.active,
+  & .paginationjs-pages li,
+  & .paginationjs-pages li:hover > a {
     @include flex-center();
     width: 40px;
     height: 40px;
@@ -48,7 +53,8 @@
     }
   }
 
-  & .paginationjs-pages li.paginationjs-next a, & .paginationjs-pages li.paginationjs-prev a {
+  & .paginationjs-pages li.paginationjs-next a,
+  & .paginationjs-pages li.paginationjs-prev a {
     background: url('../../img/pagination-arrow-forward.svg') center;
     background-repeat: no-repeat;
   }
