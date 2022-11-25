@@ -7,7 +7,7 @@ mixin like-button(options = {})
     button(class=className)
       span.like-button__inner-conainer
         if options.isLiked
-          .like-button__icon.like-button__icon_liked.js-like-button__icon
+          span.like-button__icon.like-button__icon_liked.js-like-button__icon
         else
-          .like-button__icon.js-like-button__icon
+          span.like-button__icon.js-like-button__icon
         span.like-button__count.js-like-button__count=options.count

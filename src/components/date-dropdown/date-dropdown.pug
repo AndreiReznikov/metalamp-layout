@@ -20,9 +20,7 @@ mixin date-dropdown(options = {})
             class=`date-dropdown__input-${val} js-date-dropdown__input-${val}`
             type="text"
             placeholder="дд.мм.гггг"
-            if val = 'from'
-              data-from-empty=options.isFromEmpty
-            else
-              data-to-empty=options.isToEmpty
+            data-from-empty=options.isFromEmpty
+            data-to-empty=options.isToEmpty
             readonly
             )
