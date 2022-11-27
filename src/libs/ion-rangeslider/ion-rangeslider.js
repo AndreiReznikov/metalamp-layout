@@ -23,9 +23,7 @@ class IonRangeslider {
     this.$rangeSliderValues = $(this.$ionRangeSlider.find('.js-range-slider__values'));
     this.$rangeSliderValues.append(
       '<span class="range-slider__from js-range-slider__from"></span>',
-    ).append(
       '<span class=range-slider__value-separator> - </span>',
-    ).append(
       '<span class="range-slider__to js-range-slider__to"></span>',
     );
   }

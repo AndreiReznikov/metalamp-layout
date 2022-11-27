@@ -1,4 +1,5 @@
 import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
+import MaskedTextField from '../../libs/inputmask/inputmask';
 import SlickCarousel from '../../libs/slick-carousel/slick-carousel';
 import Dropdown from '../../components/dropdown/dropdown';
 import vars from '../../templates/vars';
@@ -16,6 +17,7 @@ class Cards {
 
   initializePlugins() {
     this._initializeDateDropdown();
+    this._initializeMaskedTextField()
     this._initializeFilterDateDropdown();
     this._initializeSlickCarousel();
   }
@@ -52,6 +54,16 @@ class Cards {
     this.filterDateDropdown.setDatesDefault();
     this.filterDateDropdown.openDatepickerDefault();
     this.filterDateDropdown.addApplyButton();
+  }
+
+  _initializeMaskedTextField() {
+    this.maskedTextField = new MaskedTextField('.js-masked-text-field__input');
+
+    this.maskedTextField.initializePlugin({
+      placeholder: 'ДД.ММ.ГГГГ',
+      alias: 'datetime',
+      inputFormat: 'dd.mm.yyyy',
+    });
   }
 
   _initializeSlickCarousel() {
