@@ -1,6 +1,6 @@
 # MetaLamp layout project
 
-This is a project to find hotel rooms, to which I have devoted quite a lot of time. It was a necessary and interesting experience. While I was doing this project, I realized what component layout, preprocessors, assemblers, plugins, and much more are. That was cool.
+This is a training project to find hotel rooms, to which I have devoted quite a lot of time. It was a necessary and interesting experience. While I was doing this project, I realized what component layout, preprocessors, assemblers, plugins, and much more are. That was cool.
 
 # Demo: https://andreireznikov.github.io/metalamp-layout-demo
 
@@ -22,4 +22,19 @@ Due to incorrectly connected fonts at the initial stage of development, css file
 
 # Start
 
-To start the project, use the command __"npm run server"__ in the project folder.
+First you have to create a copy of the remote repository locally:
+
+```
+git clone https://github.com/AndreiReznikov/metalamp-layout
+```
+
+Then you have to install all the necessary packages to work with the project. Use the following command in the local repository:
+
+```
+npm install
+```
+To start the project, use the command:
+
+```
+npm run server
+```
