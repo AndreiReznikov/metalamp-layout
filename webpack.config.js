@@ -6,7 +6,7 @@ const PATHS = {
   dist: path.resolve(process.cwd(), 'dist'),
 };
 
-const PAGES = ['headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration', 'sign-in'];
+const PAGES = ['index', 'headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration', 'sign-in'];
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -15,20 +15,15 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const { NODE_ENV } = process.env;
 
+const entryPoints = {};
+
+PAGES.forEach((page) => {
+  entryPoints[page] = `${PATHS.src}/pages/${page}/${page}`;
+});
+
 module.exports = {
   mode: NODE_ENV || 'development',
-  entry: {
-    index: `${PATHS.src}/pages/index/index`,
-    'headers-and-footers': `${PATHS.src}/pages/headers-and-footers/headers-and-footers`,
-    'colors-and-type': `${PATHS.src}/pages/colors-and-type/colors-and-type`,
-    'form-elements': `${PATHS.src}/pages/form-elements/form-elements`,
-    cards: `${PATHS.src}/pages/cards/cards`,
-    'landing-page': `${PATHS.src}/pages/landing-page/landing-page`,
-    'search-room': `${PATHS.src}/pages/search-room/search-room`,
-    'room-details': `${PATHS.src}/pages/room-details/room-details`,
-    registration: `${PATHS.src}/pages/registration/registration`,
-    'sign-in': `${PATHS.src}/pages/sign-in/sign-in`,
-  },
+  entry: entryPoints,
   output: {
     assetModuleFilename: 'assets/[hash][ext][query]',
     publicPath: '',
@@ -94,11 +89,6 @@ module.exports = {
       filename: `${page}.html`,
       chunks: [`${page}`],
     })),
-    new HTMLWebpackPlugin({
-      filename: 'index.html',
-      template: './src/pages/index/index.pug',
-      chunks: ['index'],
-    }),
     new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
