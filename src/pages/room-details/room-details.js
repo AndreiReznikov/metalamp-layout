@@ -1,8 +1,8 @@
-import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
-import Chart from '../../libs/chart/chart';
-import Header from '../../components/header/header';
-import Dropdown from '../../components/dropdown/dropdown';
-import LikeButton from '../../components/like-button/like-button';
+import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import Chart from '../../libs/chart/Chart';
+import Header from '../../components/header/Header';
+import Dropdown from '../../components/dropdown/Dropdown';
+import LikeButton from '../../components/like-button/LikeButton';
 import vars from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './room-details.scss';

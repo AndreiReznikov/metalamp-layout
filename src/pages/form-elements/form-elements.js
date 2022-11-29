@@ -1,10 +1,10 @@
-import MaskedTextField from '../../libs/inputmask/inputmask';
-import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
-import PaginationJS from '../../libs/paginationjs/paginationjs';
-import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
-import Dropdown from '../../components/dropdown/dropdown';
-import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
-import LikeButton from '../../components/like-button/like-button';
+import Inputmask from '../../libs/inputmask/Inputmask';
+import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
+import PaginationJS from '../../libs/paginationjs/PaginationJS';
+import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import Dropdown from '../../components/dropdown/Dropdown';
+import ExpandableCheckboxList from '../../components/expandable-checkbox-list/ExpandableCheckboxList';
+import LikeButton from '../../components/like-button/LikeButton';
 import vars from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './form-elements.scss';
@@ -28,7 +28,7 @@ class FormElements {
   initializePlugins() {
     this._initializeDateDropdown();
     this._initializeFilterDateDropdown();
-    this._initializeMaskedTextField();
+    this._initializeInputmask();
     this._initializeIonRangeSlider();
     this._initializePaginationJS();
   }
@@ -68,10 +68,10 @@ class FormElements {
     this.filterDateDropdown.addApplyButton();
   }
 
-  _initializeMaskedTextField() {
-    this.maskedTextField = new MaskedTextField('.js-masked-text-field__input');
+  _initializeInputmask() {
+    this.inputmask = new Inputmask('.js-masked-text-field__input');
 
-    this.maskedTextField.initializePlugin({
+    this.inputmask.initializePlugin({
       placeholder: 'ДД.ММ.ГГГГ',
       alias: 'datetime',
       inputFormat: 'dd.mm.yyyy',

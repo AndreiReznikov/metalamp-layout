@@ -1,5 +1,5 @@
-import MaskedTextField from '../../libs/inputmask/inputmask';
-import Header from '../../components/header/header';
+import Inputmask from '../../libs/inputmask/Inputmask';
+import Header from '../../components/header/Header';
 import '../../templates/fonts.scss';
 import './registration.scss';
 
@@ -9,13 +9,13 @@ class Registration {
   }
 
   initializePlugins() {
-    this._initializeMaskedTextField();
+    this._initializeInputmask();
   }
 
-  _initializeMaskedTextField() {
-    this.maskedTextField = new MaskedTextField('.js-masked-text-field__input');
+  _initializeInputmask() {
+    this.inputmask = new Inputmask('.js-masked-text-field__input');
 
-    this.maskedTextField.initializePlugin({
+    this.inputmask.initializePlugin({
       placeholder: 'ДД.ММ.ГГГГ',
       alias: 'datetime',
       inputFormat: 'dd.mm.yyyy',

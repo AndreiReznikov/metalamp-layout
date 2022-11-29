@@ -1,10 +1,10 @@
-import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
-import IonRangeslider from '../../libs/ion-rangeslider/ion-rangeslider';
-import SlickCarousel from '../../libs/slick-carousel/slick-carousel';
-import PaginationJS from '../../libs/paginationjs/paginationjs';
-import Header from '../../components/header/header';
-import Dropdown from '../../components/dropdown/dropdown';
-import ExpandableCheckboxList from '../../components/expandable-checkbox-list/expandable-checkbox-list';
+import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
+import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
+import PaginationJS from '../../libs/paginationjs/PaginationJS';
+import Header from '../../components/header/Header';
+import Dropdown from '../../components/dropdown/Dropdown';
+import ExpandableCheckboxList from '../../components/expandable-checkbox-list/ExpandableCheckboxList';
 import vars from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './search-room.scss';

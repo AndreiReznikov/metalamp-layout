@@ -1,6 +1,6 @@
 import 'inputmask/dist/jquery.inputmask';
 
-class MaskedTextField {
+class Inputmask {
   constructor(input) {
     this._findInputs(input);
   }
@@ -18,4 +18,4 @@ class MaskedTextField {
   }
 }
 
-export default MaskedTextField;
+export default Inputmask;

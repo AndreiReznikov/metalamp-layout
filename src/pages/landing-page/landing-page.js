@@ -1,6 +1,6 @@
-import AirDatepicker from '../../libs/air-datepicker/air-datepicker';
-import Header from '../../components/header/header';
-import Dropdown from '../../components/dropdown/dropdown';
+import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import Header from '../../components/header/Header';
+import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
 import '../../templates/fonts.scss';
 import './landing-page.scss';
