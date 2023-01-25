@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 10px;
   line-height: 24px;
+  cursor: pointer;
 
   &__text {
     padding-left: 50px;
@@ -29,7 +30,6 @@
     border: 1px solid $Dark-Shade-25;
     border-radius: 10px;
     box-sizing: content-box;
-    cursor: pointer;
     z-index: 1;
   }
 

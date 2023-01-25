@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: row-reverse;
     margin-right: 20px;
+    cursor: pointer;
   }
 
   &__input {
@@ -31,7 +32,6 @@
     border: 1px solid $Purple;
     box-sizing: border-box;
     border-radius: 10px;
-    cursor: pointer;
     z-index: 1;
   }
 
