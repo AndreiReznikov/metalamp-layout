@@ -41,6 +41,11 @@ mixin reserve-card(options = {})
                 if val[2]
                   .reserve-card__information-icon-container
                     .reserve-card__information-icon i
+                    .reserve-card__information-tooltip Подробнее в разделе:
+                      a.reserve-card__information-tooltip-link(
+                        href='/mock-address/change-me'
+                        target='_blank'
+                      )  Договор&nbsp;по&nbsp;оказанию&nbsp;услуг
               span.reserve-card__service-sum=val[1]
                 span.reserve-card__currency &#8381;
 

@@ -84,6 +84,14 @@
     width: 75.5%;
   }
 
+  &__information-icon-container {
+    position: relative;
+  }
+
+  &__information-icon-container:hover > &__information-tooltip {
+    display: block;
+  }
+
   &__information-icon {
     @include H3();
     @include flex-center();
@@ -94,6 +102,25 @@
     color: $Dark-Shade-25;
     text-transform: none;
     cursor: pointer;
+  }
+
+  &__information-tooltip {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    padding: 4px;
+    font-size: 12px;
+    background-color: #fff;
+    color: $Dark-Shade-50;
+    text-align: center;
+    border: 1px solid $Dark-Shade-25;
+    z-index: 50000000;
+  }
+
+  &__information-tooltip-link {
+    color: $Dark-Shade-75;
+    text-decoration: none;
   }
 
   &__total-sum-block {
