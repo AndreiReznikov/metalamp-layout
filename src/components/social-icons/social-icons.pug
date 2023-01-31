@@ -1,8 +1,5 @@
 mixin social-icons(options = {})
-  -
-    const socials = options.socials;
-
   .social-icons
-    each val in socials
-      a(class="social-icons__link" href=`https://${val}.com/` target="_blank" rel="noopener noreferrer")
-        .social-icons__image(style=`background-image: url(${require('../../img/' + val + '.svg')});`)
+    each social in options.socials
+      a(class="social-icons__link" href=`https://${social}.com/` target="_blank" rel="noopener noreferrer")
+        .social-icons__image(style=`background-image: url(${require('../../img/' + social + '.svg')});`)

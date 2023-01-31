@@ -52,24 +52,26 @@ html(lang="en")
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
-                  each val in checkboxes
+                  each checkbox in checkboxes
                     -
-                      val.title && val.title !== 'Правила дома' ? val.title = 'Правила дома' : val.title
+                      let { text, title, checked } = checkbox;
+                      title && title !== 'Правила дома' ? title = 'Правила дома' : title
 
                     +checkbox-button({
-                      text: val.text,
-                      title: val.title,
-                      checked: val.checked,
+                      text,
+                      title,
+                      checked,
                     })
 
               .search-room-rich-checkbox-buttons-container
                 .search-room-rich-checkbox-buttons-wrapper
-                  each val in searchRoomRichCheckboxButtons
+                  each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
+                    - const { title, richButtonTitle, text, isRich } = searchRoomRichCheckboxButton;
                     +checkbox-button({
-                      title: val.title,
-                      richButtonTitle: val.richButtonTitle,
-                      text: val.text,
-                      isRich: val.isRich,
+                      title,
+                      richButtonTitle,
+                      text,
+                      isRich,
                     })
 
               .search-room-conveniences-dropdown-container

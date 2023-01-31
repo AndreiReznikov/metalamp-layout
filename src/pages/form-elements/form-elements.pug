@@ -36,17 +36,18 @@ html(lang="ru")
 
       .form-elements-wrapper
         .form-elements-left-block
-          each val in textFields
-            div(class=val.class)
+          each textField in textFields
+            - const { className, title, status, type, placeholder, value, isFocused } = textField;
+            div(class=className)
               +element-description({
-                title: val.title,
-                status: val.status,
+                title,
+                status,
               })
               +text-field({
-                type: val.type,
-                placeholder: val.placeholder,
-                value: val.value,
-                isFocused: val.isFocused,
+                type,
+                placeholder,
+                value,
+                isFocused,
               })
 
           .form-elements-dropdown-first-container
@@ -111,23 +112,25 @@ html(lang="ru")
               size: 'S',
             })
 
-          each val in checkboxLists
-            div(class=val.class)
+          each checkboxList in checkboxLists
+            - const { className, title, checkboxTexts, checkedItems, isOpened } = checkboxList;
+            div(class=className)
               +expandable-checkbox-list({
-                title: val.title,
-                checkboxTexts: val.checkboxTexts,
-                checkedItems: val.checkedItems,
-                isOpened: val.isOpened,
+                title,
+                checkboxTexts,
+                checkedItems,
+                isOpened,
               })
 
 
         .form-elements-central-block
           .form-elements-checkbox-buttons-container
-            each val in checkboxes
+            each checkbox in checkboxes
+              - const { text, title, checked } = checkbox;
               +checkbox-button({
-                text: val.text,
-                title: val.title,
-                checked: val.checked,
+                text,
+                title,
+                checked,
               })
 
           .form-elements-radio-buttons-container
@@ -147,10 +150,11 @@ html(lang="ru")
                 title: 'Toggle',
               })
             .form-elements-toggle-buttons-wrapper
-              each val in toggleButtons
+              each toggleButton in toggleButtons
+                - const [ text, checked ] = toggleButton;
                 +toggle-button({
-                  text: val[0],
-                  checked: val[1],
+                  text,
+                  checked,
                 })
 
           .form-elements-like-button-container
@@ -158,10 +162,11 @@ html(lang="ru")
               title: 'Like button',
             })
             .form-elements-like-buttons-wrapper
-              each val in likeButtons
+              each likeButton in likeButtons
+                - const [ count, isLiked ] = likeButton;
                 +like-button({
-                  count: val[0],
-                  isLiked: val[1],
+                  count,
+                  isLiked,
                 })
 
           .form-elements-rate-buttons-container
@@ -169,11 +174,12 @@ html(lang="ru")
               title: 'Rate button',
             })
             .form-elemetns-rate-buttons-wrapper
-              each val in rateButtons
+              each rateButton in rateButtons
+                - const { starsNumber, checkedButton, name } = rateButton;
                 +rate-button({
-                  starsNumber: val.starsNumber,
-                  checkedButton: val.checkedButton,
-                  name: val.name,
+                  starsNumber,
+                  checkedButton,
+                  name,
                 })
 
           .form-elements-dropdown-fourth-container
@@ -186,12 +192,13 @@ html(lang="ru")
             })
 
           .form-elements-rich-checkbox-buttons-container
-            each val in richCheckboxButtons
+            each richCheckboxButton in richCheckboxButtons
+              - const { title, richButtonTitle, text, isRich } = richCheckboxButton;
               +checkbox-button({
-                title: val.title,
-                richButtonTitle: val.richButtonTitle,
-                text: val.text,
-                isRich: val.isRich,
+                title,
+                richButtonTitle,
+                text,
+                isRich,
               })
 
         .form-elements-right-block
@@ -206,17 +213,28 @@ html(lang="ru")
                 title: 'Buttons',
               })
 
-            each val in buttons
-              div(class=val.class)
-                each button in val.buttons
+            each formElementsButton in formElementsButtons
+              - const { className, buttons } = formElementsButton;
+              div(class=className)
+                each button in buttons
+                  -
+                    const {
+                      filledButton,
+                      emptyButton,
+                      textButton,
+                      longButton,
+                      size,
+                      text,
+                      isHovered,
+                    } = button;
                   +button({
-                    filledButton: button.filledButton,
-                    emptyButton: button.emptyButton,
-                    textButton: button.textButton,
-                    longButton: button.longButton,
-                    size: button.size,
-                    text: button.text,
-                    isHovered: button.isHovered,
+                    filledButton,
+                    emptyButton,
+                    textButton,
+                    longButton,
+                    size,
+                    text,
+                    isHovered,
                   })
 
           .form-elements-pagination-container
@@ -255,12 +273,13 @@ html(lang="ru")
 
         .form-elements-bottom-block
           .form-elements-advantages-container
-            each val in advantages
+            each advantage in advantages
+              - const { title, description, image, isBorder } = advantage;
               +advantage({
-                title: val.title,
-                description: val.description,
-                image: val.image,
-                isBorder: val.isBorder,
+                title,
+                description,
+                image,
+                isBorder,
               })
 
           .form-elements-comment-container

@@ -109,18 +109,24 @@
     position: absolute;
     right: 0;
     bottom: 20px;
-    padding: 4px;
+    padding: 2px 15px;
     font-size: 12px;
     background-color: #fff;
     color: $Dark-Shade-50;
     text-align: center;
+    line-height: normal;
     border: 1px solid $Dark-Shade-25;
+    box-shadow: $cardShadowSmall;
     z-index: 50000000;
   }
 
   &__information-tooltip-link {
-    color: $Dark-Shade-75;
+    color: $Purple;
     text-decoration: none;
+  }
+
+  &__information-tooltip-link:hover {
+    opacity: 0.5;
   }
 
   &__total-sum-block {

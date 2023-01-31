@@ -14,12 +14,13 @@ html(lang="ru")
           h2.metalamp-layout-ui-kit-title UI Kit
           ul.metalamp-layout-ui-kit-list
             each page in pages
+              - const [ href, name ] = page;
               li.metalamp-layout-ui-kit-item
                 a.metalamp-layout-ui-kit-link(
-                  href=page[0]
+                  href=href
                   target="_blank"
                   rel="noopener noreferrer"
-                )=page[1]
+                )=name
 
         .metalamp-layout-website-pages-container
           a.metalamp-layout-website-pages-link(

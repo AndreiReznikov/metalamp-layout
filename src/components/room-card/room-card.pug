@@ -10,8 +10,8 @@ mixin room-card(options = {})
   .room-card.js-room-card
     .room-card__image-container
       div(class=className)
-        each val in options.photos
-          img.room-card__image(src=require(`../../img/${val}`) alt="Room photo")
+        each photo in options.photos
+          img.room-card__image(src=require(`../../img/${photo}`) alt="Room photo")
     .room-card__information
       .room-card__room-number-container
         span.room-card__number-symbol №

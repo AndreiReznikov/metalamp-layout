@@ -32,5 +32,6 @@ mixin dropdown(options = {})
                 = options.items[i-1]
           if options.addingButtons
             .dropdown__buttons-container
-              each val in buttons
-                button(class=val[0] type="button")=val[1]
+              each button in buttons
+                - const [ className, value ] = button;
+                button(class=className type="button")=value

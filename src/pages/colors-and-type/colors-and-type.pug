@@ -20,18 +20,20 @@ html(lang="en")
       main.colors-and-type-wrapper
         .colors-and-type-colors-description-list-container
           ul.colors-and-type-colors-description-list
-            each val in colors
+            each color in colors
+              - const [ title, hex ] = color;
               li.colors-and-type-colors-description-list__item
                 +color({
-                  title: val[0],
-                  hex: val[1],
+                  title,
+                  hex,
                 })
 
         .colors-and-type-type-description-list-container
           ul.colors-and-type-type-description-list
-            each val in types
+            each typeValues in types
+              - const [ title, description ] = typeValues;
               li.colors-and-type-type-description-list__item
                 +type({
-                  title: val[0],
-                  description: val[1],
+                  title,
+                  description,
                 })

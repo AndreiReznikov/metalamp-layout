@@ -4,9 +4,24 @@ include ../social-icons/social-icons
 
 -
   const sections = [
-    ['footer__second-section', 'Навигация', ['О нас', 'Новости', 'Служба поддержки', 'Услуги'], '/mock-address/change-me'],
-    ['footer__third-section', 'О нас', ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'], '/mock-address/change-me'],
-    ['footer__fourth-section', 'Служба поддержки', ['Соглашения', 'Сообщества', 'Связь с нами'], '/mock-address/change-me'],
+    {
+      className: 'footer__second-section',
+      title: 'Навигация',
+      items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги'],
+      link: '/mock-address/change-me'
+    },
+    {
+      className: 'footer__third-section',
+      title: 'О нас',
+      items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'],
+      link: '/mock-address/change-me'
+    },
+    {
+      className: 'footer__fourth-section',
+      title: 'Служба поддержки',
+      items: ['Соглашения', 'Сообщества', 'Связь с нами'],
+      link: '/mock-address/change-me'
+    },
   ];
 
 mixin footer()
@@ -20,16 +35,17 @@ mixin footer()
           })
           .footer__first-section-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__items-section
-          each value in sections
-            div(class=value[0])
+          each section in sections
+            - const { className, title, items, link } = section;
+            div(class=className)
               ul.footer__list
                 li.footer__list-item
-                  h3.footer__title=value[1]
-                each val in value[2]
+                  h3.footer__title=title
+                each item in items
                   li.footer__list-item
                     a.footer__link(
-                      href=value[3]
-                    )=val
+                      href=link
+                    )=item
 
         .footer__fifth-section
           h3.footer__subscription-title Подписка

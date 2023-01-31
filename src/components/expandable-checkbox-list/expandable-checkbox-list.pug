@@ -9,7 +9,7 @@ mixin expandable-checkbox-list(options = {})
     h3(class=className)=options.title
       span.expandable-checkbox-list__arrow.js-expandable-checkbox-list__arrow
     .expandable-checkbox-list__list.js-expandable-checkbox-list__list
-      each val, index in options.checkboxTexts
+      each text, index in options.checkboxTexts
         -
           let check;
           if (options.checkedItems) {
@@ -23,6 +23,6 @@ mixin expandable-checkbox-list(options = {})
           }
 
         +checkbox-button({
-          text: val,
+          text,
           checked: check,
         })

@@ -7,11 +7,12 @@ mixin sign-in-card()
     .sign-in-card__wrapper
       form.sign-in-card__form
         .sign-in-card__inputs-container
-          each val in [['Email', 'email'], ['Пароль', 'password']]
+          each inputValues in [['Email', 'email'], ['Пароль', 'password']]
+            - const [ placeholder, type ] = inputValues;
             .sign-in-card__input-wrapper
               +text-field({
-                placeholder: val[0],
-                type: val[1],
+                placeholder,
+                type,
               })
         .sign-in-card__long-button-wrapper
           +button({

@@ -41,13 +41,14 @@ html(lang="en")
             +roomTitle('Сведения о номере')
             .room-details-advantages-wrapper
 
-              each val in advantagesRoom
+              each advantageRoom in advantagesRoom
+                - const [ title, description, image, isBorder ] = advantageRoom;
                 .room-details-advantage-wrapper
                   +advantage({
-                    title: val[0],
-                    description: val[1],
-                    image: val[2],
-                    isBorder: val[3],
+                    title,
+                    description,
+                    image,
+                    isBorder,
                   })
 
           .room-details-doughnut-container
@@ -62,16 +63,26 @@ html(lang="en")
                 +roomTitle('Отзывы посетителей номера')
               span.room-details-commenst-number-text 2 отзыва
 
-            each val in comments
+            each comment in comments
+              -
+                const [
+                  image,
+                  alt,
+                  date,
+                  text,
+                  username,
+                  likeCount,
+                  isLiked,
+                ] = comment;
               article.room-details-comment-wrapper
                 +comment({
-                  image: val[0],
-                  alt: val[1],
-                  date: val[2],
-                  text: val[3],
-                  username: val[4],
-                  likeCount: val[5],
-                  isLiked: val[6],
+                  image,
+                  alt,
+                  date,
+                  text,
+                  username,
+                  likeCount,
+                  isLiked,
                 })
 
           .room-details-rules-and-cancel-wrapper

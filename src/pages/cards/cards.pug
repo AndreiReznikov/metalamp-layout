@@ -53,14 +53,25 @@ html(lang="ru")
           })
 
         .cards-room-cards-container
-          each val in roomCards
+          each roomCard in roomCards
+            -
+              const {
+                photos,
+                number,
+                price,
+                starsNumber,
+                checkedButton,
+                reviewsNumber,
+                isLux,
+                isSlickArrows
+              } = roomCard;
             +room-card({
-              photos: val.photos,
-              number: val.number,
-              price: val.price,
-              starsNumber: val.starsNumber,
-              checkedButton: val.checkedButton,
-              reviewsNumber: val.reviewsNumber,
-              isLux: val.isLux,
-              isSlickArrows: val.isSlickArrows,
+              photos,
+              number,
+              price,
+              starsNumber,
+              checkedButton,
+              reviewsNumber,
+              isLux,
+              isSlickArrows,
             })

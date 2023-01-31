@@ -41,14 +41,14 @@ mixin roomTitle(text)
 
   const textFields = [
     {
-      class: 'form-elements-first-text-field',
+      className: 'form-elements-first-text-field',
       title: 'Text field',
       status: 'Default',
       type: 'email',
       placeholder: 'Email',
     },
     {
-      class: 'form-elements-second-text-field',
+      className: 'form-elements-second-text-field',
       title: 'Text field',
       status: 'Hover / Focus',
       type: 'email',
@@ -60,12 +60,12 @@ mixin roomTitle(text)
 
   const checkboxLists = [
     {
-      class: 'form-elements-expandable-checkbox-list-container',
+      className: 'form-elements-expandable-checkbox-list-container',
       title: 'Expandable checkbox list',
       checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
     },
     {
-      class: 'form-elements-opened-expandable-checkbox-list-container',
+      className: 'form-elements-opened-expandable-checkbox-list-container',
       title: 'Expandable checkbox list',
       checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
       checkedItems: [1, 2, 3],
@@ -125,9 +125,9 @@ mixin roomTitle(text)
     },
   ];
 
-  const buttons = [
+  const formElementsButtons = [
     {
-      class: 'form-elements-filled-buttons-container',
+      className: 'form-elements-filled-buttons-container',
       buttons: [
         {
           filledButton: true,
@@ -141,7 +141,7 @@ mixin roomTitle(text)
       ],
     },
     {
-      class: 'form-elements-empty-buttons-container',
+      className: 'form-elements-empty-buttons-container',
       buttons: [
         {
           emptyButton: true,
@@ -157,7 +157,7 @@ mixin roomTitle(text)
       ],
     },
     {
-      class: 'form-elements-text-buttons-container',
+      className: 'form-elements-text-buttons-container',
       buttons: [
         {
           textButton: true,
@@ -171,7 +171,7 @@ mixin roomTitle(text)
       ],
     },
     {
-      class: 'form-elements-long-button-container',
+      className: 'form-elements-long-button-container',
       buttons: [
         {
           longButton: true,
@@ -263,7 +263,7 @@ mixin roomTitle(text)
     }
   ];
 
-  const serviceSum = [
+  const amountsForServices = [
     ['9 990₽ x 4 суток', '39 960'],
     ['Сбор за услуги: скидка 2 179₽', '0', 'info'],
     ['Сбор за дополнительные услуги', '300', 'info'],

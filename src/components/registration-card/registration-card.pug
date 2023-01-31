@@ -10,10 +10,10 @@ mixin registration-card(options = {})
     .registration-card__wrapper
       form.registration-card__form
         .registration-card__username-inputs-container
-          each val in ['Имя', 'Фамилия']
+          each placeholder in ['Имя', 'Фамилия']
             .registration-card__username-input-wrapper
               +text-field({
-                placeholder: val,
+                placeholder,
                 type: 'text',
               })
         .registration-card__radio-buttons-container
@@ -30,11 +30,12 @@ mixin registration-card(options = {})
         .registration-card__entry-data-container
           .registration-card__data-title Данные для входа в сервис
           .registration-card__entry-data-inputs-container
-            each val in [['Email', 'email'], ['Пароль', 'password']]
+            each inputValues in [['Email', 'email'], ['Пароль', 'password']]
+              - const [ placeholder, type ] = inputValues;
               .registration-card__entry-data-input-wrapper
                 +text-field({
-                  placeholder: val[0],
-                  type: val[1],
+                  placeholder,
+                  type,
                 })
         .registration-card__toggle-button-container
           +toggle-button({
