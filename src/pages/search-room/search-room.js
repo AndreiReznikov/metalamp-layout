@@ -148,14 +148,9 @@ class SearchRoom {
   }
 
   _preventDefault() {
-    this.$slickArrows = $('.slick-arrow');
-    this.$slickDots = $('.slick-dots');
+    this.$imageContainer = $('.room-card__image-container');
 
-    const preventDefaultElements = [this.$slickArrows, this.$slickDots];
-
-    preventDefaultElements.forEach(($element) => {
-      $element.click((event) => event.preventDefault());
-    });
+    this.$imageContainer.click((event) => event.preventDefault());
   }
 }
 
