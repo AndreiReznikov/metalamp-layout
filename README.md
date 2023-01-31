@@ -14,6 +14,11 @@ This is a training project to find hotel rooms, to which I have devoted quite a 
  - paginationjs": ^2.1.5,
  - slick-carousel": ^1.8.1
 
+# Technologies:
+
+ - npm: 8.1.2
+ - Node.js 16.13.2
+
 # Important
 
 Most of the commits were lost in the process, due to the inexperience of the author. The project files from the folder were moved manually to a remote repository.
