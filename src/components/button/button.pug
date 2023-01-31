@@ -1,16 +1,16 @@
 mixin button(options = {})
   -
-    let className = '';
-    className += options.filledButton ? 'filled-button' :
-      options.emptyButton ? 'empty-button' :
-      options.textButton ? 'text-button' :
-      options.longButton ? 'long-button' :
-      options.longLinkButton ? 'long-link-button' : '';
+    let className = 'button';
+    className += options.filledButton ? ' button_filled' :
+      options.emptyButton ? ' button_empty' :
+      options.textButton ? ' button_simple' :
+      options.longButton ? ' button_long' :
+      options.longLinkButton ? ' button_long_link' : '';
 
-    className += options.isMobile ? ' ' + className + '_mobile' : '';
+    className += options.isMobile ? ' button_mobile' : '';
 
-    const largeClassName = options.size === 'L' ? ' ' + className + '_size_l' : '';
-    const hoveredClassName = options.isHovered ? ' ' + className + '_hovered' : '';
+    const largeClassName = options.size === 'L' ? ' button_size_l' : '';
+    const hoveredClassName = options.isHovered ? ' button_hovered' : '';
 
     className += largeClassName + hoveredClassName;
 
@@ -20,29 +20,29 @@ mixin button(options = {})
       href=options.href
       )
       if options.filledButton
-        span.filled-button__text=options.text
+        span.button__text_filled=options.text
       else
-        span.empty-button__background=options.text
+        span.button__background_empty=options.text
 
   else if options.textButton
     button(
       class=className
       type='button'
       )
-      span.text-button__text=options.text
+      span.button__text_simple=options.text
 
   else if options.longButton || options.longLinkButton
     div(class=className)
       if options.longButton
         button(
-          class='long-button__button'
+          class='button__button_long'
           type=options.type
           )=options.text
-        span.long-button__arrow
+        span.button__arrow
       else
         a(
-          class='long-link-button__link'
+          class='button__link'
           href=options.href
           )=options.text
-        span.long-link-button__arrow
+        span.button__arrow
 

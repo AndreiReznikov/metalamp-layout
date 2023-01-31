@@ -1,6 +1,6 @@
 @import '../../templates/vars-and-mixins';
 
-.filled-button {
+.button_filled {
   @include H3();
   @include button-radius();
   width: 98px;
@@ -11,22 +11,22 @@
   box-sizing: border-box;
   cursor: pointer;
 
-    &:hover, &_hovered {
+    &:hover, &.button_hovered {
       opacity: 0.5;
     }
 
-    &_size_l {
+    &.button_size_l {
       width: 196px;
       height: 34px;
     }
 
-    &__text {
+    .button__text_filled {
       @include flex-center();
       @include one-hundred-width-and-height();
     }
 }
 
-.empty-button {
+.button_empty {
   @include button-radius();
   width: 86px;
   height: 34px;
@@ -37,21 +37,21 @@
   cursor: pointer;
   z-index: 1;
 
-  &_size_l {
+  &.button_size_l {
     width: 98px;
     height: 45px;
   }
 
-  &_mobile {
+  &.button_mobile {
     width: 196px;
     height: 34px;
   }
 
-  &:hover, &_hovered {
+  &:hover, &.button_hovered {
     background: $semitransparentGradient;
   }
 
-  &__background {
+  .button__background_empty {
     @include H3();
     @include inline-flex-center();
     @include one-hundred-width-and-height();
@@ -63,7 +63,7 @@
   }
 }
 
-.text-button {
+.button_simple {
   @include H3();
   border: none;
   background: none;
@@ -72,12 +72,12 @@
   box-sizing: border-box;
   cursor: pointer;
 
-  &:hover, &_hovered {
+  &:hover, &.button_hovered {
     color: $Dark-Shade-50;
   }
 }
 
-.long-button {
+.button_long {
   position: relative;
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@
     width: 250px;
   }
 
-  &__button {
+  .button__button_long {
     @include H3();
     @include one-hundred-width-and-height();
     @include button-radius();
@@ -98,7 +98,7 @@
     color: #fff;
     cursor: pointer;
 
-    &:hover, &_hovered {
+    &:hover, &.button_hovered {
       opacity: 0.5;
     }
 
@@ -107,12 +107,12 @@
     }
   }
 
-  &__arrow {
+  .button__arrow {
     @include longButtonArrow;
   }
 }
 
-.long-link-button {
+.button_long_link {
   position: relative;
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@
     width: 250px;
   }
 
-  &__link {
+  .button__link {
     @include H3();
     @include inline-flex-center();
     @include one-hundred-width-and-height();
@@ -143,7 +143,7 @@
     }
   }
 
-  &__arrow {
+  .button__arrow {
     @include longButtonArrow;
   }
 }
