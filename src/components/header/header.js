@@ -54,7 +54,7 @@ class Header {
         $expandableMenu.toggle();
       };
 
-      this.$document.click((event) => {
+      const handleDocumentToggleMenu = (event) => {
         const $target = $(event.target);
         const isClickOnMenu = $target.closest('.js-header__expanded-menu').length
           || $target.closest('.js-mobile-menu__expanded-list').length;
@@ -93,7 +93,9 @@ class Header {
             closeExpandableMenu($expandableMenu, $arrow);
           });
         }
-      });
+      };
+
+      this.$document.click(handleDocumentToggleMenu);
     });
   }
 

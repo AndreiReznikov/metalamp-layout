@@ -29,31 +29,64 @@ class Dropdown {
   }
 
   _toggleMenu() {
-    this.$dropdownsCollection.each(function toggleMenu() {
-      const $dropdown = $(this);
-      const $selection = $dropdown.find('.js-dropdown__selection');
-      const $applyButton = $dropdown.find('.js-dropdown__apply-button');
-      const $menu = $dropdown.find('.js-dropdown__menu');
+    const handleDocumentToggleMenu = (event) => {
+      const $target = $(event.target);
+      const isClickOnMenuOrApplyButton = $target.closest('.js-dropdown__menu').length
+        && !$target.hasClass('js-dropdown__apply-button');
+      const isClickOnDropdown = $target.closest('.js-dropdown__wrapper').length;
 
-      const handleSelectionToggleMenu = () => {
+      if (isClickOnMenuOrApplyButton) return;
+
+      const toggleDropdownMenu = ($dropdown, $menu) => {
         $dropdown.toggleClass('dropdown__wrapper_opened');
         $menu.toggleClass('dropdown__menu_visible');
       };
 
-      const elements = [$selection, $applyButton];
+      const removeDropdownMenu = ($dropdown, $menu) => {
+        $dropdown.removeClass('dropdown__wrapper_opened');
+        $menu.removeClass('dropdown__menu_visible');
+      };
 
-      elements.forEach(($element) => $element.click(handleSelectionToggleMenu));
-    });
+      let $dropdown = $(this);
+      let $menu = $dropdown.find('.js-dropdown__menu');
+      let $applyButton = $dropdown.find('.js-dropdown__apply-button');
+
+      if (isClickOnDropdown) {
+        this.$dropdownsCollection.each(function toggleMenu() {
+          $dropdown = $(this);
+          $menu = $dropdown.find('.js-dropdown__menu');
+          $applyButton = $dropdown.find('.js-dropdown__apply-button');
+
+          const isClickOnDropdownOrApplyButton = $target.closest('.js-dropdown').is($dropdown.closest('.js-dropdown'))
+            || $target.is($applyButton);
+
+          if (isClickOnDropdownOrApplyButton) {
+            toggleDropdownMenu($dropdown, $menu);
+          } else {
+            removeDropdownMenu($dropdown, $menu);
+          }
+        });
+      } else {
+        this.$dropdownsCollection.each(function toggleMenu() {
+          $dropdown = $(this);
+          $menu = $dropdown.find('.js-dropdown__menu');
+
+          removeDropdownMenu($dropdown, $menu);
+        });
+      }
+    };
+
+    this.$document.click(handleDocumentToggleMenu);
   }
 
   _openMenuDefault() {
     this.$dropdownsCollection.each(function openMenuDefault() {
       const $dropdown = $(this);
-      const $selection = $dropdown.find('.js-dropdown__selection');
+      const $menu = $dropdown.find('.js-dropdown__menu');
       const isDropdownOpened = $dropdown.hasClass('dropdown__wrapper_opened');
 
       if (isDropdownOpened) {
-        $selection.trigger('click');
+        $menu.addClass('dropdown__menu_visible');
         $dropdown.addClass('dropdown__wrapper_opened');
       }
     });
@@ -157,6 +190,7 @@ class Dropdown {
   }
 
   _findElements(element) {
+    this.$document = $(document);
     this.$dropdownsCollection = $(element);
     this.$selectionCollection = this.$dropdownsCollection.find('.js-dropdown__selection');
     this.$optionsCollection = this.$dropdownsCollection.find('.js-dropdown__option');
