@@ -6,48 +6,89 @@ class Header {
   }
 
   _findElements() {
+    this.$document = $(document);
     this.$headersCollection = $('.js-header__container');
-    this.$menuExpandableItemsCollection = $('.js-header__list-link');
+    this.$menuExpandableItemsCollection = $('.js-header__list-item_expandable');
     this.$mobileMenu = $('.js-header__container').find('~ .js-mobile-menu');
-    this.$mobileMenuExpandableItems = this.$mobileMenu.find('.js-mobile-menu__list-link_expandable');
+    this.$mobileMenuExpandableItemsCollection = this.$mobileMenu.find('.js-mobile-menu__list-item_expandable');
   }
 
   _expandItems() {
-    const menuItems = [
+    this.menuItems = [
       [
         this.$menuExpandableItemsCollection,
-        '~ .js-header__expanded-menu',
+        '.js-header__expanded-menu',
         '.js-header__list-arrow',
         'header__list-arrow_transformed',
         'toggle',
       ],
       [
-        this.$mobileMenuExpandableItems,
-        '~ .js-mobile-menu__expanded-list',
+        this.$mobileMenuExpandableItemsCollection,
+        '.js-mobile-menu__expanded-list',
         '.js-mobile-menu__list-arrow',
         'mobile-menu__list-arrow_transformed',
         'slideToggle',
       ],
     ];
 
-    menuItems.forEach((item) => {
-      item[0].each(function expandItems() {
-        const $expandableItem = $(this);
-        const $expandableMenu = $expandableItem.find(item[1]);
-        const $arrow = $expandableItem.find(item[2]);
+    this.menuItems.forEach((item) => {
+      const [$elements, menuClass, menuArrowClass, arrowTransformedClass, method] = item;
 
-        const toggleMenu = (event) => {
+      const closeExpandableMenu = ($element) => {
+        if (method === 'slideToggle') {
+          $element.slideUp();
+        } else {
+          $element.hide();
+        }
+      };
+
+      this.$document.click((event) => {
+        const $target = $(event.target);
+        const clickOnMenu = $target.closest('.js-header__expanded-menu').length
+          || $target.closest('.js-mobile-menu__expanded-list').length;
+        const clickOnExpandableItem = $target.closest('.js-header__list-item_expandable').length
+          || $target.closest('.js-mobile-menu__list-item_expandable').length;
+
+        if (clickOnMenu) return;
+
+        if (clickOnExpandableItem) {
           event.preventDefault();
-          $arrow.toggleClass(item[3]);
+          event.stopPropagation();
 
-          if (item[4] === 'slideToggle') {
-            $expandableMenu.slideToggle();
-            return;
-          }
-          $expandableMenu.toggle();
-        };
+          $elements.each(function toggleMenu() {
+            const $expandableItem = $(this);
+            const $expandableMenu = $expandableItem.find(menuClass);
+            const $arrow = $expandableItem.find(menuArrowClass);
+            const isTargetCurrentExpandableItem = $target.closest('.js-header__list-item_expandable').is($expandableItem)
+              || $target.closest('.js-mobile-menu__list-item_expandable').is($expandableItem);
 
-        $expandableItem.click(toggleMenu);
+            const toggleExpandableMenu = () => {
+              $arrow.toggleClass(arrowTransformedClass);
+
+              if (method === 'slideToggle') {
+                $expandableMenu.slideToggle();
+                return;
+              }
+              $expandableMenu.toggle();
+            };
+
+            if (isTargetCurrentExpandableItem) {
+              toggleExpandableMenu();
+            } else {
+              closeExpandableMenu($expandableMenu);
+              $arrow.removeClass(arrowTransformedClass);
+            }
+          });
+        } else {
+          $elements.each(function closeMenu() {
+            const $expandableItem = $(this);
+            const $expandableMenu = $expandableItem.find(menuClass);
+            const $arrow = $expandableItem.find(menuArrowClass);
+
+            closeExpandableMenu($expandableMenu);
+            $arrow.removeClass(arrowTransformedClass);
+          });
+        }
       });
     });
   }
