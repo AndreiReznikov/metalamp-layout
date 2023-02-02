@@ -34,59 +34,63 @@ class Header {
     this.menuItems.forEach((item) => {
       const [$elements, menuClass, menuArrowClass, arrowTransformedClass, method] = item;
 
-      const closeExpandableMenu = ($element) => {
+      const closeExpandableMenu = ($expandableMenu, $arrow) => {
         if (method === 'slideToggle') {
-          $element.slideUp();
+          $expandableMenu.slideUp();
         } else {
-          $element.hide();
+          $expandableMenu.hide();
         }
+
+        $arrow.removeClass(arrowTransformedClass);
+      };
+
+      const toggleExpandableMenu = ($expandableMenu, $arrow) => {
+        $arrow.toggleClass(arrowTransformedClass);
+
+        if (method === 'slideToggle') {
+          $expandableMenu.slideToggle();
+          return;
+        }
+        $expandableMenu.toggle();
       };
 
       this.$document.click((event) => {
         const $target = $(event.target);
-        const clickOnMenu = $target.closest('.js-header__expanded-menu').length
+        const isClickOnMenu = $target.closest('.js-header__expanded-menu').length
           || $target.closest('.js-mobile-menu__expanded-list').length;
-        const clickOnExpandableItem = $target.closest('.js-header__list-item_expandable').length
+        const isClickOnExpandableItem = $target.closest('.js-header__list-item_expandable').length
           || $target.closest('.js-mobile-menu__list-item_expandable').length;
 
-        if (clickOnMenu) return;
+        if (isClickOnMenu) return;
 
-        if (clickOnExpandableItem) {
+        let $expandableItem;
+        let $expandableMenu;
+        let $arrow;
+
+        if (isClickOnExpandableItem) {
           event.preventDefault();
           event.stopPropagation();
 
           $elements.each(function toggleMenu() {
-            const $expandableItem = $(this);
-            const $expandableMenu = $expandableItem.find(menuClass);
-            const $arrow = $expandableItem.find(menuArrowClass);
+            $expandableItem = $(this);
+            $expandableMenu = $expandableItem.find(menuClass);
+            $arrow = $expandableItem.find(menuArrowClass);
             const isTargetCurrentExpandableItem = $target.closest('.js-header__list-item_expandable').is($expandableItem)
               || $target.closest('.js-mobile-menu__list-item_expandable').is($expandableItem);
 
-            const toggleExpandableMenu = () => {
-              $arrow.toggleClass(arrowTransformedClass);
-
-              if (method === 'slideToggle') {
-                $expandableMenu.slideToggle();
-                return;
-              }
-              $expandableMenu.toggle();
-            };
-
             if (isTargetCurrentExpandableItem) {
-              toggleExpandableMenu();
+              toggleExpandableMenu($expandableMenu, $arrow);
             } else {
-              closeExpandableMenu($expandableMenu);
-              $arrow.removeClass(arrowTransformedClass);
+              closeExpandableMenu($expandableMenu, $arrow);
             }
           });
         } else {
           $elements.each(function closeMenu() {
-            const $expandableItem = $(this);
-            const $expandableMenu = $expandableItem.find(menuClass);
-            const $arrow = $expandableItem.find(menuArrowClass);
+            $expandableItem = $(this);
+            $expandableMenu = $expandableItem.find(menuClass);
+            $arrow = $expandableItem.find(menuArrowClass);
 
-            closeExpandableMenu($expandableMenu);
-            $arrow.removeClass(arrowTransformedClass);
+            closeExpandableMenu($expandableMenu, $arrow);
           });
         }
       });
