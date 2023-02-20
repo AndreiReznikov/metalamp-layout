@@ -2,17 +2,15 @@ import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
 import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
 import PaginationJS from '../../libs/paginationjs/PaginationJS';
-import Header from '../../components/header/Header';
 import Dropdown from '../../components/dropdown/Dropdown';
-import ExpandableCheckboxList from '../../components/expandable-checkbox-list/ExpandableCheckboxList';
 import vars from '../../templates/vars';
+import '../../components/header';
+import '../../components/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 
 class SearchRoom {
   initializeComponents() {
-    this.header = new Header();
-    this.expandableCheckboxList = new ExpandableCheckboxList();
     this.dropdownGuests = new Dropdown(
       '.js-dropdown__wrapper_guests',
       vars.setSelectionGuestsText,

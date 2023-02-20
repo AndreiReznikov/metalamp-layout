@@ -3,16 +3,14 @@ import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
 import PaginationJS from '../../libs/paginationjs/PaginationJS';
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 import Dropdown from '../../components/dropdown/Dropdown';
-import ExpandableCheckboxList from '../../components/expandable-checkbox-list/ExpandableCheckboxList';
-import LikeButton from '../../components/like-button/LikeButton';
 import vars from '../../templates/vars';
+import '../../components/expandable-checkbox-list';
+import '../../components/like-button';
 import '../../templates/fonts.scss';
 import './form-elements.scss';
 
 class FormElements {
   initializeComponents() {
-    this.expandableCheckboxList = new ExpandableCheckboxList();
-    this.likeButton = new LikeButton();
     this.dropdownGuests = new Dropdown(
       '.js-dropdown__wrapper_guests',
       vars.setSelectionGuestsText,

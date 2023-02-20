@@ -1,13 +1,9 @@
 import Inputmask from '../../libs/inputmask/Inputmask';
-import Header from '../../components/header/Header';
+import '../../components/header';
 import '../../templates/fonts.scss';
 import './registration.scss';
 
 class Registration {
-  initializeComponents() {
-    this.header = new Header();
-  }
-
   initializePlugins() {
     this._initializeInputmask();
   }
@@ -25,5 +21,4 @@ class Registration {
 
 const registration = new Registration();
 
-registration.initializeComponents();
 registration.initializePlugins();

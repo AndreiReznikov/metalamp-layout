@@ -1,13 +1,12 @@
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import Header from '../../components/header/Header';
 import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
+import '../../components/header';
 import '../../templates/fonts.scss';
 import './landing-page.scss';
 
 class LandingPage {
   initializeComponents() {
-    this.header = new Header();
     this.dropdownGuests = new Dropdown(
       '.js-dropdown__wrapper_guests',
       vars.setSelectionGuestsText,

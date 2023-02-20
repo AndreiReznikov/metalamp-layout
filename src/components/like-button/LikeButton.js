@@ -1,5 +1,5 @@
 class LikeButton {
-  constructor() {
+  init() {
     this._findElements();
     this._toggleButtons();
   }

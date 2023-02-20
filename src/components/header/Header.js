@@ -1,5 +1,5 @@
 class Header {
-  constructor() {
+  init() {
     this._findElements();
     this._expandItems();
     this._showMobileMenu();

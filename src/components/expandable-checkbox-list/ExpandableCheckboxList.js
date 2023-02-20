@@ -1,5 +1,5 @@
 class ExpandableCheckboxList {
-  constructor() {
+  init() {
     this._findElements();
     this._toggleLists();
     this._openListsDefault();
