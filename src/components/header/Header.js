@@ -9,8 +9,8 @@ class Header {
     this.$document = $(document);
     this.$headersCollection = $('.js-header__container');
     this.$menuExpandableItemsCollection = $('.js-header__list-item_expandable');
-    this.$mobileMenu = $('.js-header__container').find('~ .js-mobile-menu');
-    this.$mobileMenuExpandableItemsCollection = this.$mobileMenu.find('.js-mobile-menu__list-item_expandable');
+    this.$mobileMenu = $('.js-header__container').find('~ .js-header__mobile-menu');
+    this.$mobileMenuExpandableItemsCollection = this.$mobileMenu.find('.js-header__mobile-list-item_expandable');
   }
 
   _expandItems() {
@@ -24,9 +24,9 @@ class Header {
       ],
       [
         this.$mobileMenuExpandableItemsCollection,
-        '.js-mobile-menu__expanded-list',
-        '.js-mobile-menu__list-arrow',
-        'mobile-menu__list-arrow_transformed',
+        '.js-header__mobile-expanded-list',
+        '.js-header__mobile-list-arrow',
+        'header__mobile-list-arrow_transformed',
         'slideToggle',
       ],
     ];
@@ -57,9 +57,9 @@ class Header {
       const handleDocumentToggleMenu = (event) => {
         const $target = $(event.target);
         const isClickOnMenu = $target.closest('.js-header__expanded-menu').length
-          || $target.closest('.js-mobile-menu__expanded-list').length;
+          || $target.closest('.js-header__mobile-expanded-list').length;
         const isClickOnExpandableItem = $target.closest('.js-header__list-item_expandable').length
-          || $target.closest('.js-mobile-menu__list-item_expandable').length;
+          || $target.closest('.js-header__mobile-list-item_expandable').length;
 
         if (isClickOnMenu) return;
 
@@ -76,7 +76,7 @@ class Header {
             $expandableMenu = $expandableItem.find(menuClass);
             $arrow = $expandableItem.find(menuArrowClass);
             const isTargetCurrentExpandableItem = $target.closest('.js-header__list-item_expandable').is($expandableItem)
-              || $target.closest('.js-mobile-menu__list-item_expandable').is($expandableItem);
+              || $target.closest('.js-header__mobile-list-item_expandable').is($expandableItem);
 
             if (isTargetCurrentExpandableItem) {
               toggleExpandableMenu($expandableMenu, $arrow);
@@ -104,14 +104,14 @@ class Header {
       const $header = $(this);
       const $burgerContainer = $header.find('.js-header__burger-container');
       const $burger = $header.find('.js-header__burger');
-      const $mobileMenu = $header.find('~ .js-mobile-menu');
+      const $mobileMenu = $header.find('~ .js-header__mobile-menu');
       const $html = $('html');
-      const $scrim = $('.scrim');
+      const $scrim = $('.header__scrim');
 
       const handleBurgerContainerToggleMobileMenu = () => {
-        $mobileMenu.toggleClass('mobile-menu_visible');
+        $mobileMenu.toggleClass('header__mobile-menu_visible');
         $burger.toggleClass('header__burger_transformed');
-        $html.toggleClass('non-scrollable');
+        $html.toggleClass('html_non-scrollable');
         $scrim.toggle();
       };
 

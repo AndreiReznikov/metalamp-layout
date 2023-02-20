@@ -16,6 +16,12 @@ html, body {
   background-color: #fff;
 }
 
+.html_non-scrollable {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
 .landing-page-wrapper {
   display: flex;
 	flex-direction: column;

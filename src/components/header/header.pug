@@ -59,14 +59,14 @@ mixin header(options = {})
                   href,
                 })
 
-    .mobile-menu.js-mobile-menu
-      .mobile-menu__buttons-container
+    .header__mobile-menu.js-header__mobile-menu
+      .header__mobile-buttons-container
         each button in headerButtons
           -
             let { emptyButton, filledButton, text, size, href, isMobile } = button;
             if (emptyButton && !isMobile) isMobile = true;
 
-          .mobile-menu__button-container
+          .header__mobile-button-container
             +button({
               emptyButton,
               filledButton,
@@ -75,28 +75,28 @@ mixin header(options = {})
               size,
               href,
             })
-      nav.mobile-menu__nav
-        ul.mobile-menu__list
+      nav.header__mobile-nav
+        ul.header__mobile-list
           each headerItem in headerItems
             - const [ title, items, link ] = headerItem;
             if items.length
-              li.mobile-menu__list-item.mobile-menu__list-item_expandable.js-mobile-menu__list-item.js-mobile-menu__list-item_expandable
-                a.mobile-menu__list-link.mobile-menu__list-link_expandable.js-mobile-menu__list-link_expandable(
+              li.header__mobile-list-item.header__mobile-list-item_expandable.js-header__mobile-list-item.js-header__mobile-list-item_expandable
+                a.header__mobile-list-link.header__mobile-list-link_expandable.js-header__mobile-list-link_expandable(
                   href=link
                 )
-                  span.mobile-menu__list-bold-item=title
-                  span.mobile-menu__list-arrow.js-mobile-menu__list-arrow
-                ul.mobile-menu__expanded-list.js-mobile-menu__expanded-list
+                  span.header__mobile-list-bold-item=title
+                  span.header__mobile-list-arrow.js-header__mobile-list-arrow
+                ul.header__mobile-expanded-list.js-header__mobile-expanded-list
                   each item in items
-                    li.mobile-menu__expanded-list-item
-                      a.mobile-menu__expanded-list-link.js-mobile-menu__list-link(
+                    li.header__mobile-expanded-list-item
+                      a.header__mobile-expanded-list-link.js-header__mobile-list-link(
                         href=link
                       )=item
             else
-              li.mobile-menu__list-item
-                a.mobile-menu__list-link.js-mobile-menu__list-link(
+              li.header__mobile-list-item
+                a.header__mobile-list-link.js-header__mobile-list-link(
                   href=link
                 )
-                  span.mobile-menu__list-bold-item=title
+                  span.header__mobile-list-bold-item=title
 
-    .scrim
+    .header__scrim

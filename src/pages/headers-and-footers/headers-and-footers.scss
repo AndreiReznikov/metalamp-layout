@@ -13,6 +13,12 @@ html {
   background-color: $Dark-Shade-5;
 }
 
+.html_non-scrollable {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
 .container {
   max-width: $max-width;
   margin: 0 auto;

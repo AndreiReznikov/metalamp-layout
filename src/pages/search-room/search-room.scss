@@ -24,6 +24,12 @@ html, body {
   background-color: #fff;
 }
 
+.html_non-scrollable {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
 .search-room-wrapper {
   display: flex;
 	flex-direction: column;
