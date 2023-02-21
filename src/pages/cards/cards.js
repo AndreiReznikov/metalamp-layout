@@ -1,20 +1,12 @@
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 import Inputmask from '../../libs/inputmask/Inputmask';
 import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
-import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
+import '../../components/dropdown';
 import '../../templates/fonts.scss';
 import './cards.scss';
 
 class Cards {
-  initializeComponents() {
-    this.dropdownGuests = new Dropdown(
-      '.js-dropdown__wrapper_guests',
-      vars.setSelectionGuestsText,
-      'Сколько гостей',
-    );
-  }
-
   initializePlugins() {
     this._initializeDateDropdown();
     this._initializeInputmask();
@@ -100,5 +92,4 @@ class Cards {
 
 const cards = new Cards();
 
-cards.initializeComponents();
 cards.initializePlugins();

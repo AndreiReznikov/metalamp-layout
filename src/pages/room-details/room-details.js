@@ -1,21 +1,13 @@
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 import Chart from '../../libs/chart/Chart';
-import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
 import '../../components/header';
+import '../../components/dropdown';
 import '../../components/like-button';
 import '../../templates/fonts.scss';
 import './room-details.scss';
 
 class RoomDetails {
-  initializeComponents() {
-    this.dropdownGuests = new Dropdown(
-      '.js-dropdown__wrapper_guests',
-      vars.setSelectionGuestsText,
-      'Сколько гостей',
-    );
-  }
-
   initializePlugins() {
     this._initializeDateDropdown();
     this._initializeChart();
@@ -154,5 +146,4 @@ class RoomDetails {
 
 const roomDetails = new RoomDetails();
 
-roomDetails.initializeComponents();
 roomDetails.initializePlugins();

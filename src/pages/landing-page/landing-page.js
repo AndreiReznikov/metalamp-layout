@@ -1,19 +1,11 @@
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
 import '../../components/header';
+import '../../components/dropdown';
 import '../../templates/fonts.scss';
 import './landing-page.scss';
 
 class LandingPage {
-  initializeComponents() {
-    this.dropdownGuests = new Dropdown(
-      '.js-dropdown__wrapper_guests',
-      vars.setSelectionGuestsText,
-      'Сколько гостей',
-    );
-  }
-
   initializePlugins() {
     this._initializeDateDropdown();
   }
@@ -38,5 +30,4 @@ class LandingPage {
 
 const landingPage = new LandingPage();
 
-landingPage.initializeComponents();
 landingPage.initializePlugins();

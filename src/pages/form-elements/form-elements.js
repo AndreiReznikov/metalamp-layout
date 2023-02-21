@@ -2,27 +2,14 @@ import Inputmask from '../../libs/inputmask/Inputmask';
 import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
 import PaginationJS from '../../libs/paginationjs/PaginationJS';
 import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
 import '../../components/expandable-checkbox-list';
+import '../../components/dropdown';
 import '../../components/like-button';
 import '../../templates/fonts.scss';
 import './form-elements.scss';
 
 class FormElements {
-  initializeComponents() {
-    this.dropdownGuests = new Dropdown(
-      '.js-dropdown__wrapper_guests',
-      vars.setSelectionGuestsText,
-      'Сколько гостей',
-    );
-    this.dropdownConveniences = new Dropdown(
-      '.js-dropdown__wrapper_conveniences',
-      vars.setSelectionConveniencesText,
-      'Выберите удобства',
-    );
-  }
-
   initializePlugins() {
     this._initializeDateDropdown();
     this._initializeFilterDateDropdown();
@@ -127,5 +114,4 @@ class FormElements {
 
 const formElements = new FormElements();
 
-formElements.initializeComponents();
 formElements.initializePlugins();

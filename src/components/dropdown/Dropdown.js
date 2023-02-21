@@ -5,6 +5,9 @@ class Dropdown {
     this.setSelectionText = setSelectionText;
 
     this._findElements(element);
+  }
+
+  init() {
     this._setSelectionDefaultText();
     this._toggleMenu();
     this._openMenuDefault();

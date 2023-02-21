@@ -2,27 +2,14 @@ import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
 import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
 import PaginationJS from '../../libs/paginationjs/PaginationJS';
-import Dropdown from '../../components/dropdown/Dropdown';
 import vars from '../../templates/vars';
 import '../../components/header';
+import '../../components/dropdown';
 import '../../components/expandable-checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 
 class SearchRoom {
-  initializeComponents() {
-    this.dropdownGuests = new Dropdown(
-      '.js-dropdown__wrapper_guests',
-      vars.setSelectionGuestsText,
-      'Сколько гостей',
-    );
-    this.dropdownConveniences = new Dropdown(
-      '.js-dropdown__wrapper_conveniences',
-      vars.setSelectionConveniencesText,
-      'Выберите удобства',
-    );
-  }
-
   initializePlugins() {
     this._initializeFilterDateDropdown();
     this._initializeSlickCarousel();
@@ -154,5 +141,4 @@ class SearchRoom {
 
 const searchRoom = new SearchRoom();
 
-searchRoom.initializeComponents();
 searchRoom.initializePlugins();
