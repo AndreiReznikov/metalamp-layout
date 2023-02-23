@@ -6,10 +6,12 @@ class Inputmask {
   }
 
   initializePlugin(options) {
+    const { placeholder, alias, inputFormat } = options;
+
     this.$maskedInputs.inputmask({
-      placeholder: options.placeholder,
-      alias: options.alias,
-      inputFormat: options.inputFormat,
+      placeholder,
+      alias,
+      inputFormat,
     });
   }
 

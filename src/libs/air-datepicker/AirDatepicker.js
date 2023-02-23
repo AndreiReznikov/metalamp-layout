@@ -52,18 +52,30 @@ class AirDatepicker {
         handleCalendarSetCellHeight();
       };
 
+      const {
+        range,
+        clearButton,
+        dateFormat,
+        keyboardNav,
+        navTitles,
+        prevHtml,
+        nextHtml,
+      } = options;
+
       $datepickerInput.datepicker({
-        range: options.range,
-        clearButton: options.clearButton,
-        dateFormat: options.dateFormat,
-        keyboardNav: options.keyboardNav,
-        navTitles: options.navTitles,
-        prevHtml: options.prevHtml,
-        nextHtml: options.nextHtml,
+        range,
+        clearButton,
+        dateFormat,
+        keyboardNav,
+        navTitles,
+        prevHtml,
+        nextHtml,
         onSelect: (date) => {
           const dates = date.split(' - ');
-          $dateFrom.val(dates[0]);
-          $dateTo.val(dates[1]);
+          const [dateFrom, dateTo] = dates;
+
+          $dateFrom.val(dateFrom);
+          $dateTo.val(dateTo);
         },
         onShow: handleDatepickerSetCalendarWidth,
         onChangeMonth: handleDatepickerSetCalendarWidth,

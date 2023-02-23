@@ -97,19 +97,24 @@ html(lang="en")
       +footer()
       +footer-mobile()
       .search-room-pagination-container
-        -
-          for (let i = 0; i < 160; i += 1) {
-            roomsCardsProperties.push(['room-photo1.jpg', '888', '9 990', 5, 5, 145, true, false])
-          };
+        each roomCardProperty in roomsCardsProperties
+          -
+            const [
+              photo,
+              number,
+              price,
+              starsNumber,
+              checkedButton,
+              reviewsNumber,
+              isLux
+            ] = roomCardProperty;
 
-          for (let i = 0; i < roomsCardsProperties.length; i++)
-        +room-card({
-          photos: [roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0], roomsCardsProperties[i][0]],
-          number: roomsCardsProperties[i][1],
-          price: roomsCardsProperties[i][2],
-          starsNumber: roomsCardsProperties[i][3],
-          checkedButton: roomsCardsProperties[i][4],
-          reviewsNumber: roomsCardsProperties[i][5],
-          isLux: roomsCardsProperties[i][6],
-          isSlickArrows: roomsCardsProperties[i][7]
-        })
+          +room-card({
+            photos: [photo, photo, photo, photo],
+            number,
+            price,
+            starsNumber,
+            checkedButton,
+            reviewsNumber,
+            isLux,
+          })

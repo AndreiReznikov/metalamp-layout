@@ -7,25 +7,39 @@ class PaginationJS {
   }
 
   initializePlugin(options) {
+    const {
+      dataSource,
+      autoHidePrevious,
+      autoHideNext,
+      pageRange,
+      showPageNumbers,
+      showNavigator,
+      prevText,
+      nextText,
+      pageSize,
+      callback,
+      afterPaging,
+    } = options;
+
     this.$paginationContainer.pagination({
-      dataSource: options.dataSource,
-      autoHidePrevious: options.autoHidePrevious,
-      autoHideNext: options.autoHideNext,
-      pageRange: options.pageRange,
-      showPageNumbers: options.showPageNumbers,
-      showNavigator: options.showNavigator,
-      prevText: options.prevText,
-      nextText: options.nextText,
-      pageSize: options.pageSize,
+      dataSource,
+      autoHidePrevious,
+      autoHideNext,
+      pageRange,
+      showPageNumbers,
+      showNavigator,
+      prevText,
+      nextText,
+      pageSize,
       callback: (data) => {
-        const html = this.templatePaginationItems(data, options.callback);
+        const html = this.templatePaginationItems(data, callback);
 
         this.$paginationDataContainer.html(html);
       },
-      afterPaging: options.afterPaging,
-      afterNextOnClick: () => this.showItemsNumber(options.pageSize),
-      afterPreviousOnClick: () => this.showItemsNumber(options.pageSize),
-      afterPageOnClick: () => this.showItemsNumber(options.pageSize),
+      afterPaging,
+      afterNextOnClick: () => this.showItemsNumber(pageSize),
+      afterPreviousOnClick: () => this.showItemsNumber(pageSize),
+      afterPageOnClick: () => this.showItemsNumber(pageSize),
     });
   }
 

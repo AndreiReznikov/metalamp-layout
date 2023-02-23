@@ -181,13 +181,13 @@ class Dropdown {
       const clicksNums = $dropdown.data('clicks');
 
       if (buttonsNums && clicksNums) {
-        for (let i = 0; i < buttonsNums.length; i += 1) {
-          const $plusButton = $($plusButtons[buttonsNums[i]]);
+        buttonsNums.forEach((index) => {
+          const $plusButton = $($plusButtons[buttonsNums[index]]);
 
-          for (let j = 0; j < clicksNums[i]; j += 1) {
+          for (let i = 0; i < clicksNums[index]; i += 1) {
             $plusButton.trigger('click');
           }
-        }
+        });
       }
     });
   }
