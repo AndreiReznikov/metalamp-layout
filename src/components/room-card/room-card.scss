@@ -9,6 +9,13 @@
   box-shadow: 0px 10px 20px $Dark-Shade-5;
   border-radius: 4px;
 
+  &__slider:hover > &__arrow-prev,
+  &__slider:hover > &__arrow-next {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+
   &__image-container {
     width: 100%;
     height: 151px;
@@ -16,27 +23,48 @@
     cursor: pointer;
   }
 
-  &__arrow-prev, &__arrow-next {
+  &__arrow-prev, &__arrow-next{
+    position: absolute;
+    width: 42px;
+    height: 151px;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  &__arrow-prev {
+    top: 0;
+    left: 0;
+  }
+
+  &__arrow-next {
+    top: 0;
+    right: 0;
+  }
+
+  &__arrow-prev::after, &__arrow-next::after {
+    content: '';
     position: absolute;
     top: 50%;
     display: inline-block;
     width: 8px;
     height: 8px;
     transform: translateY(-50%);
-    z-index: 1000;
     border: 1px solid #fff;
     border-width: 0 3px 3px 0;
     box-sizing: border-box;
   }
 
-  &__arrow-prev {
-    left: 20px;
+  &__arrow-prev::after {
+    left: 18px;
     transform: rotate(135deg);
   }
 
-  &__arrow-next {
-    right: 20px;
-    transform: rotate(320deg);
+  &__arrow-next::after {
+    right: 18px;
+    transform: rotate(-35deg);
   }
 
   &__information {

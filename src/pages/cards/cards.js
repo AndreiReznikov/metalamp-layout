@@ -59,30 +59,14 @@ class Cards {
   }
 
   _initializeSlickCarousel() {
-    const slickItems = [
-      [
-        '.js-room-card__slider',
-        {
-          arrows: false,
-          dots: true,
-        },
-      ],
-      [
-        '.js-room-card__slider_with_arrows',
-        {
-          arrows: true,
-          dots: true,
-          prevArrow: '<span class="room-card__arrow-prev"></span>',
-          nextArrow: '<span class="room-card__arrow-next"></span>',
-        },
-      ],
-    ];
-
     const initializeSlick = () => {
-      slickItems.forEach((item) => {
-        this.slickCarousel = new SlickCarousel(item[0]);
+      this.slickCarousel = new SlickCarousel('.js-room-card__slider');
 
-        this.slickCarousel.initializePlugin(item[1]);
+      this.slickCarousel.initializePlugin({
+        arrows: true,
+        dots: true,
+        prevArrow: '<div class="room-card__arrow-prev"></div>',
+        nextArrow: '<div class="room-card__arrow-next"></div>',
       });
     };
 

@@ -2,14 +2,9 @@ include ../button/button
 include ../rate-button/rate-button
 
 mixin room-card(options = {})
-  -
-    let className = options.isSlickArrows ?
-      'room-card__slider_with_arrows js-room-card__slider_with_arrows' :
-      'room-card__slider js-room-card__slider';
-
   .room-card.js-room-card
     .room-card__image-container
-      div(class=className)
+      .room-card__slider.js-room-card__slider
         each photo in options.photos
           img.room-card__image(src=require(`../../img/${photo}`) alt="Room photo")
     .room-card__information
