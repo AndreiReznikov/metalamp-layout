@@ -12,11 +12,18 @@
   &__radio {
     @include margin-padding-zero();
     @include appearance-none();
-    width: 20px;
+    display: flex;
+    flex-basis: 100%;
     height: 20px;
     background-image: url('../../img/star-border.svg');
     background-repeat: no-repeat;
     cursor: pointer;
+  }
+
+  &__radio:hover, &__radio:hover ~ &__radio {
+    background-image: url('../../img/star.svg');
+    background-repeat: no-repeat;
+    opacity: 0.5;
   }
 
   &__radio:checked, &__radio:checked ~ &__radio {
