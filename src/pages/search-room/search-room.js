@@ -1,7 +1,7 @@
-import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
-import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
-import PaginationJS from '../../libs/paginationjs/PaginationJS';
+import AirDatepicker from '../../libs/air-datepicker';
+import IonRangeslider from '../../libs/ion-rangeslider';
+import SlickCarousel from '../../libs/slick-carousel';
+import PaginationJS from '../../libs/paginationjs';
 import vars from '../../templates/vars';
 import '../../components/header';
 import '../../components/dropdown';

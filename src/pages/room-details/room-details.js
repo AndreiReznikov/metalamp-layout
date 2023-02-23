@@ -1,5 +1,5 @@
-import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import Chart from '../../libs/chart/Chart';
+import AirDatepicker from '../../libs/air-datepicker';
+import Chart from '../../libs/chart';
 import vars from '../../templates/vars';
 import '../../components/header';
 import '../../components/dropdown';

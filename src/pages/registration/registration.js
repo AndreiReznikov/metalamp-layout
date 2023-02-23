@@ -1,4 +1,4 @@
-import Inputmask from '../../libs/inputmask/Inputmask';
+import Inputmask from '../../libs/inputmask';
 import '../../components/header';
 import '../../templates/fonts.scss';
 import './registration.scss';

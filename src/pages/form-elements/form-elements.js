@@ -1,7 +1,7 @@
-import Inputmask from '../../libs/inputmask/Inputmask';
-import IonRangeslider from '../../libs/ion-rangeslider/IonRangeslider';
-import PaginationJS from '../../libs/paginationjs/PaginationJS';
-import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import Inputmask from '../../libs/inputmask';
+import IonRangeslider from '../../libs/ion-rangeslider';
+import PaginationJS from '../../libs/paginationjs';
+import AirDatepicker from '../../libs/air-datepicker';
 import vars from '../../templates/vars';
 import '../../components/expandable-checkbox-list';
 import '../../components/dropdown';

@@ -1,6 +1,6 @@
-import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
-import Inputmask from '../../libs/inputmask/Inputmask';
-import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
+import AirDatepicker from '../../libs/air-datepicker';
+import Inputmask from '../../libs/inputmask';
+import SlickCarousel from '../../libs/slick-carousel';
 import vars from '../../templates/vars';
 import '../../components/dropdown';
 import '../../templates/fonts.scss';

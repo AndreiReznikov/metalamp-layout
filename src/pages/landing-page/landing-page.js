@@ -1,4 +1,4 @@
-import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
+import AirDatepicker from '../../libs/air-datepicker';
 import vars from '../../templates/vars';
 import '../../components/header';
 import '../../components/dropdown';
