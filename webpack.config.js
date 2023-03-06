@@ -6,7 +6,18 @@ const PATHS = {
   dist: path.resolve(process.cwd(), 'dist'),
 };
 
-const PAGES = ['index', 'headers-and-footers', 'colors-and-type', 'form-elements', 'cards', 'landing-page', 'search-room', 'room-details', 'registration', 'sign-in'];
+const PAGES = [
+  'index',
+  'headers-and-footers',
+  'colors-and-type',
+  'form-elements',
+  'cards',
+  'landing-page',
+  'search-room',
+  'room-details',
+  'registration',
+  'sign-in',
+];
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
