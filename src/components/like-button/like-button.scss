@@ -2,6 +2,10 @@
 
 .like-button {
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   &__inner-conainer{
     @include flex-between-center();
     width: 100%;

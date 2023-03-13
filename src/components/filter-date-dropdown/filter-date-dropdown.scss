@@ -35,6 +35,10 @@
     cursor: pointer;
   }
 
+  &__input:hover {
+    border: 1px solid $Dark-Shade-5;
+  }
+
   &__input::placeholder {
     text-transform: none;
   }

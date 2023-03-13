@@ -112,6 +112,10 @@
     text-decoration: none;
   }
 
+  &__expanded-menu-link:hover, &__list-link:hover {
+    opacity: 0.5;
+  }
+
   &__list-bold-item {
     font-weight: bold;
     color: $Dark-Shade-75;

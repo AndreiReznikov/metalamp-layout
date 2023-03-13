@@ -14,6 +14,10 @@
     width: 267px;
   }
 
+  &__input-container:hover > &__input {
+    background-color: $Dark-Shade-5;
+  }
+
   &__input {
     @include Body-font();
     width: 100%;
@@ -45,7 +49,7 @@
     right: 7px;
     width: 30px;
     height: 20px;
-    background: #fff;
+    background: none;
     border: none;
     cursor: pointer;
   }

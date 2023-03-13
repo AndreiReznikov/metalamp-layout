@@ -117,6 +117,10 @@
     color: $Dark-Shade-50;
   }
 
+  &__link:hover {
+    opacity: 0.5;
+  }
+
   &__subscription-title {
     @include H3();
     line-height: 22px;

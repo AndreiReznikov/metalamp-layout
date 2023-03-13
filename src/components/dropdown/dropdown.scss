@@ -12,7 +12,7 @@
   &__wrapper {
     width: 320px;
     position: relative;
-    border-color: $Dark-Shade-25;;
+    border-color: $Dark-Shade-25;
     box-sizing: border-box;
 
     @media screen and (max-width: 480px) {
@@ -59,6 +59,14 @@
     border-radius: inherit;
     box-sizing: border-box;
     cursor: pointer;
+  }
+
+  &__selection-container:hover > &__selection {
+    border: 1px solid $Dark-Shade-5;
+  }
+
+  &__selection-container:hover ~ &__menu {
+    border-color: $Dark-Shade-5;
   }
 
   &__arrow-container {

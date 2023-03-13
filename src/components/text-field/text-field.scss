@@ -15,6 +15,10 @@
   box-sizing: border-box;
   border-radius: 4px;
 
+    &:hover {
+      background-color: $Dark-Shade-5;
+    }
+
     &:focus {
       outline: none;
       border: 1px solid $Dark-Shade-50;
