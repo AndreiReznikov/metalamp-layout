@@ -18,7 +18,7 @@
   }
 
   &__label:hover > &__input:not(:checked) + &__custom-input {
-    opacity: 0.5;
+    background-color: $Dark-Shade-5;
   }
 
   &__text-container {
