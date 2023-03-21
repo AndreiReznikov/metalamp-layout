@@ -17,13 +17,12 @@
     box-sizing: border-box;
     border-radius: 4px;
 
-      &:hover {
-        background-color: $Dark-Shade-5;
+      &:hover, &:focus {
+        border: 1px solid $Dark-Shade-50;
       }
 
       &:focus {
         outline: none;
-        border: 1px solid $Dark-Shade-50;
       }
 
       &::placeholder {

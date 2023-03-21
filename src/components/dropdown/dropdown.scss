@@ -62,11 +62,11 @@
   }
 
   &__selection-container:hover > &__selection {
-    border: 1px solid $Dark-Shade-5;
+    border: 1px solid $Dark-Shade-75;
   }
 
   &__selection-container:hover ~ &__menu {
-    border-color: $Dark-Shade-5;
+    border-color: $Dark-Shade-75;
   }
 
   &__arrow-container {

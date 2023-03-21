@@ -14,10 +14,6 @@
     width: 267px;
   }
 
-  &__input-container:hover > &__input {
-    background-color: $Dark-Shade-5;
-  }
-
   &__input {
     @include Body-font();
     width: 100%;
@@ -29,9 +25,12 @@
     border-radius: 4px;
   }
 
+  &__input:hover, &__input:focus {
+    border: 1px solid $Dark-Shade-50;
+  }
+
   &__input:focus {
     outline: none;
-    border: 1px solid $Dark-Shade-50;
   }
 
   &__input::placeholder {

@@ -6,15 +6,17 @@
   &__label {
     @include Body-font();
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    flex-direction: row-reverse;
     margin-right: 20px;
     cursor: pointer;
   }
 
+  &__label:hover > &__input:not(:checked) ~ &__text {
+    color: $Dark-Shade-75;
+  }
+
   &__label:hover > &__input:not(:checked) + &__custom-input {
-    opacity: 0.4;
+    border: 1px solid $Dark-Shade-50;
   }
 
   &__input {
@@ -25,6 +27,14 @@
     box-sizing: border-box;
     cursor: pointer;
     z-index: 2;
+  }
+
+  &__input:not(:checked) + &__custom-input {
+    border: 1px solid $Dark-Shade-25;
+  }
+
+  &__input:not(:checked) ~ &__text {
+    color: $Dark-Shade-50;
   }
 
   &__custom-input {

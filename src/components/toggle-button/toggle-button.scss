@@ -1,7 +1,6 @@
 @import '../../templates/vars-and-mixins';
 
 .toggle-button {
-
   @include Body-font();
   display: flex;
   align-items: center;
@@ -11,11 +10,21 @@
   cursor: pointer;
 
   &:hover > &__input:not(:checked) + &__custom-input {
-    opacity: 0.4;
+    border: 1px solid $Dark-Shade-50;
+  }
+
+  &:hover > &__input:not(:checked) + &__custom-input::after {
+    background: $Dark-Shade-50;
+  }
+
+  &:hover > &__text,
+  & > &__input:checked ~ &__text {
+    color: $Dark-Shade-75;
   }
 
   &__text {
     padding-left: 50px;
+    color: $Dark-Shade-50;
   }
 
   &__input {
@@ -29,8 +38,6 @@
     width: $toggle-width;
     height: 18px;
     background-color: #fff;
-    -webkit-transition: .4s;
-    transition: .4s;
     border: 1px solid $Dark-Shade-25;
     border-radius: 10px;
     box-sizing: content-box;

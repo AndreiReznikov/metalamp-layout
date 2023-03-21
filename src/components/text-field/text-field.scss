@@ -1,36 +1,38 @@
 @import '../../templates/vars-and-mixins';
 
-.text-field__title {
-  @include H3();
-  margin-bottom: 5px;
-}
+.text-field {
 
-.text-field__input {
-  @include Body-font();
-  width: 100%;
-  height: 44px;
-  padding: 0 15px;
-  background: #fff;
-  border: 1px solid $Dark-Shade-25;
-  box-sizing: border-box;
-  border-radius: 4px;
+  &__title {
+    @include H3();
+    margin-bottom: 5px;
+  }
 
-    &:hover {
-      background-color: $Dark-Shade-5;
-    }
+  &__input {
+    @include Body-font();
+    width: 100%;
+    height: 44px;
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid $Dark-Shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
 
-    &:focus {
-      outline: none;
-      border: 1px solid $Dark-Shade-50;
-    }
+      &:hover, &:focus {
+        border: 1px solid $Dark-Shade-50;
+      }
 
-    &::placeholder {
-      color: $Dark-Shade-25;
-    }
+      &:focus {
+        outline: none;
+      }
 
-    &:disabled {
-      color: $Dark-Shade-5;
-      border: 1px solid $Dark-Shade-5;
-      cursor: default;
-    }
+      &::placeholder {
+        color: $Dark-Shade-25;
+      }
+
+      &:disabled {
+        color: $Dark-Shade-5;
+        border: 1px solid $Dark-Shade-5;
+        cursor: default;
+      }
+  }
 }
