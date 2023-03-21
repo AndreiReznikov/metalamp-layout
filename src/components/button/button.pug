@@ -1,48 +1,48 @@
 mixin button(options = {})
   -
-    let className = 'button';
-    className += options.filledButton ? ' button_filled' :
-      options.emptyButton ? ' button_empty' :
-      options.textButton ? ' button_simple' :
-      options.longButton ? ' button_long' :
-      options.longLinkButton ? ' button_long_link' : '';
+    let className = 'button__base';
+    className += options.filledButton ? ' button__base_filled' :
+      options.unfilledButton ? ' button__base_unfilled' :
+      options.unborderedButton ? ' button__base_unbordered' :
+      options.longButton ? ' button__base_long' :
+      options.longLinkButton ? ' button__base_long_link' : '';
 
-    className += options.isMobile ? ' button_mobile' : '';
+    className += options.isMobile ? ' button__base_mobile' : '';
 
-    const largeClassName = options.size === 'L' ? ' button_size_l' : '';
-    const hoveredClassName = options.isHovered ? ' button_hovered' : '';
+    const largeClassName = options.size === 'L' ? ' button__base_size_l' : '';
+    const hoveredClassName = options.isHovered ? ' button__base_hovered' : '';
 
     className += largeClassName + hoveredClassName;
 
-  if options.filledButton || options.emptyButton
-    a(
-      class=className,
-      href=options.href
-      )
-      if options.filledButton
-        span.button__text_filled=options.text
-      else
-        span.button__background_empty=options.text
+  .button
+    if options.filledButton || options.unfilledButton
+      a(
+        class=className,
+        href=options.href
+        )
+        if options.filledButton
+          span.button__text=options.text
+        else
+          span.button__background=options.text
 
-  else if options.textButton
-    button(
-      class=className
-      type='button'
-      )
-      span.button__text_simple=options.text
+    else if options.unborderedButton
+      button(
+        class=className
+        type='button'
+        )
+        span.button__text=options.text
 
-  else if options.longButton || options.longLinkButton
-    div(class=className)
-      if options.longButton
-        button(
-          class='button__button_long'
-          type=options.type
-          )=options.text
-        span.button__arrow
-      else
-        a(
-          class='button__link'
-          href=options.href
-          )=options.text
+    else if options.longButton || options.longLinkButton
+      div(class=className)
+        if options.longButton
+          button(
+            class='button__item'
+            type=options.type
+            )=options.text
+        else
+          a(
+            class='button__link'
+            href=options.href
+            )=options.text
         span.button__arrow
 

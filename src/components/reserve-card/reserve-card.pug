@@ -11,7 +11,7 @@ mixin reserve-card(options = {})
             span.reserve-card__room-number=' ' + options.roomNumber
             span.reserve-card__lux-mark
               +button({
-                textButton: true,
+                unborderedButton: true,
                 text: 'Люкс',
               })
           span.reserve-card__price=options.price

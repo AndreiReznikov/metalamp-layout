@@ -1,149 +1,148 @@
 @import '../../templates/vars-and-mixins';
 
-.button_filled {
-  @include H3();
-  @include button-radius();
-  width: 98px;
-  height: 44px;
-  color: #fff;
-  background: $gradient;
-  text-decoration: none;
-  box-sizing: border-box;
-  cursor: pointer;
+.button {
+  &__base_filled {
+    @include H3();
+    @include inline-flex-center();
+    @include button-radius();
+    width: 98px;
+    height: 44px;
+    color: #fff;
+    background: $gradient;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
 
-    &:hover, &.button_hovered {
-      opacity: 0.5;
+      &:hover, &.button__base_hovered {
+        opacity: 0.5;
+      }
+
+      &.button__base_size_l {
+        width: 196px;
+        height: 34px;
+      }
+  }
+
+  &__base_unfilled {
+    @include button-radius();
+    display: inline-block;
+    width: 86px;
+    height: 34px;
+    padding: 2px;
+    background: $gradient;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1;
+
+    &.button__base_size_l {
+      width: 98px;
+      height: 45px;
     }
 
-    &.button_size_l {
+    &.button__base_mobile {
       width: 196px;
       height: 34px;
     }
 
-    .button__text_filled {
-      @include flex-center();
+    &:hover, &.button__base_hovered {
+      background: $semitransparentGradient;
+    }
+
+    & > .button__background {
+      @include H3();
+      @include inline-flex-center();
       @include one-hundred-width-and-height();
+      color: $Purple;
+      background-color: #fff;
+      border-radius: 22px;
+      pointer-events: none;
+      z-index: 2;
     }
-}
-
-.button_empty {
-  @include button-radius();
-  width: 86px;
-  height: 34px;
-  padding: 2px;
-  background: $gradient;
-  text-decoration: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  z-index: 1;
-
-  &.button_size_l {
-    width: 98px;
-    height: 45px;
   }
 
-  &.button_mobile {
-    width: 196px;
-    height: 34px;
-  }
-
-  &:hover, &.button_hovered {
-    background: $semitransparentGradient;
-  }
-
-  .button__background_empty {
+  &__base_unbordered {
     @include H3();
-    @include inline-flex-center();
-    @include one-hundred-width-and-height();
+    border: none;
+    background: none;
     color: $Purple;
-    background-color: #fff;
-    border-radius: 22px;
-    pointer-events: none;
-    z-index: 2;
-  }
-}
-
-.button_simple {
-  @include H3();
-  border: none;
-  background: none;
-  color: $Purple;
-  text-decoration: none;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  &:hover, &.button_hovered {
-    color: $Dark-Shade-50;
-  }
-}
-
-.button_long {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 320px;
-  height: 44px;
-
-  @include media-max(480px) {
-    width: 250px;
-  }
-
-  .button__button_long {
-    @include H3();
-    @include one-hundred-width-and-height();
-    @include button-radius();
-    background: $gradient;
-    text-align: center;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-
-    &:hover, &.button_hovered {
-      opacity: 0.5;
-    }
-
-    @include media-max(480px) {
-      width: 250px;
-    }
-  }
-
-  .button__arrow {
-    @include longButtonArrow;
-  }
-}
-
-.button_long_link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 320px;
-  height: 44px;
-
-  @include media-max(480px) {
-    width: 250px;
-  }
-
-  .button__link {
-    @include H3();
-    @include inline-flex-center();
-    @include one-hundred-width-and-height();
-    @include button-radius();
-    padding: 0;
-    background: $gradient;
     text-decoration: none;
     box-sizing: border-box;
-    color: #fff;
+    cursor: pointer;
 
-    &:hover {
-      opacity: 0.5;
+    &:hover, &.button__base_hovered {
+      color: $Dark-Shade-50;
     }
+  }
+
+  &__base_long {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 44px;
 
     @include media-max(480px) {
       width: 250px;
     }
+
+    & > .button__item {
+      @include H3();
+      @include one-hundred-width-and-height();
+      @include button-radius();
+      background: $gradient;
+      text-align: center;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover, &.button__base_hovered {
+        opacity: 0.5;
+      }
+
+      @include media-max(480px) {
+        width: 250px;
+      }
+    }
+
+    & > .button__arrow {
+      @include longButtonArrow;
+    }
   }
 
-  .button__arrow {
-    @include longButtonArrow;
+  .button__base_long_link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 44px;
+
+    @include media-max(480px) {
+      width: 250px;
+    }
+
+    & > .button__link {
+      @include H3();
+      @include inline-flex-center();
+      @include one-hundred-width-and-height();
+      @include button-radius();
+      padding: 0;
+      background: $gradient;
+      text-decoration: none;
+      box-sizing: border-box;
+      color: #fff;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      @include media-max(480px) {
+        width: 250px;
+      }
+    }
+
+    & > .button__arrow {
+      @include longButtonArrow;
+    }
   }
 }

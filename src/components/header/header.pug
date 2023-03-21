@@ -50,9 +50,9 @@ mixin header(options = {})
           else
             .header__buttons-container
               each button in headerButtons
-                - const { emptyButton, filledButton, text, size, href } = button;
+                - const { unfilledButton, filledButton, text, size, href } = button;
                 +button({
-                  emptyButton,
+                  unfilledButton,
                   filledButton,
                   text,
                   size,
@@ -63,12 +63,12 @@ mixin header(options = {})
       .header__mobile-buttons-container
         each button in headerButtons
           -
-            let { emptyButton, filledButton, text, size, href, isMobile } = button;
-            if (emptyButton && !isMobile) isMobile = true;
+            let { unfilledButton, filledButton, text, size, href, isMobile } = button;
+            if (unfilledButton && !isMobile) isMobile = true;
 
           .header__mobile-button-container
             +button({
-              emptyButton,
+              unfilledButton,
               filledButton,
               isMobile,
               text,
