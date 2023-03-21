@@ -153,6 +153,11 @@
     background: transparent;
   }
 
+  &__clear-button:hover,
+  &__apply-button:hover {
+    opacity: 0.5;
+  }
+
   &__clear-button {
     visibility: hidden;
     opacity: 0;
