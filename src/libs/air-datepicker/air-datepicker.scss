@@ -4,7 +4,7 @@
   width: 320px;
   min-height: 369px;
   box-sizing: border-box;
-  z-index: 1000000;
+  z-index: 100;
 
   @media screen and (max-width: 480px) {
     width: 266px;
@@ -15,7 +15,7 @@
   }
 
   &.active {
-    z-index: 1000000;
+    z-index: 300;
   }
 
   &--pointer {

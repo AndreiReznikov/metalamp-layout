@@ -3,7 +3,7 @@
 .filter-date-dropdown {
   position: relative;
   box-sizing: border-box;
-  z-index: 1000000;
+  z-index: 100;
 
   &__title {
     @include H3();

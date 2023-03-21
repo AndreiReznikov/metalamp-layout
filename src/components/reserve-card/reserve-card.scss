@@ -117,7 +117,7 @@
     line-height: normal;
     border: 1px solid $Dark-Shade-25;
     box-shadow: $cardShadowSmall;
-    z-index: 50000000;
+    z-index: 100;
   }
 
   &__information-tooltip-link {
