@@ -13,7 +13,7 @@
     width: 768px;
   }
 
-  @media screen and (max-width: 768px) {
+  @include media-max(768px) {
     @include flex-center();
     flex-direction: column;
   }

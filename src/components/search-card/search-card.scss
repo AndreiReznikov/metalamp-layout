@@ -16,7 +16,7 @@
     @include H1();
     margin: 39px 29px 0 29px;
 
-    @media screen and (max-width: 480px) {
+    @include media-max(480px) {
       width: 260px;
       margin: 39px 0 0 0;
       font-size: 20px;

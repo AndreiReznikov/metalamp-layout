@@ -32,7 +32,7 @@
   & .paginationjs-pages li.paginationjs-next {
     background: $greenblueGradient;
 
-    @media screen and (max-width: 600px) {
+    @include media-max(600px) {
       margin-left: 30px;
     }
   }
@@ -40,7 +40,7 @@
   & .paginationjs-pages .paginationjs-prev {
     background: $greenblueGradient;
 
-    @media screen and (max-width: 600px) {
+    @include media-max(600px) {
       margin-right: 30px;
     }
   }
@@ -48,7 +48,7 @@
   & .paginationjs-pages li.active {
     background: $gradient;
 
-    @media screen and (max-width: 600px) {
+    @include media-max(600px) {
       margin-right: 0;
     }
   }

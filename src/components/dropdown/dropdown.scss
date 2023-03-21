@@ -15,7 +15,7 @@
     border-color: $Dark-Shade-25;
     box-sizing: border-box;
 
-    @media screen and (max-width: 480px) {
+    @include media-max(480px) {
       width: 266px;
     }
   }

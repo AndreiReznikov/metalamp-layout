@@ -35,7 +35,7 @@ html, body {
   width: 100%;
   background-image: url('../../img/landing-background.jpg');
 
-  @media screen and (max-width: 768px) {
+  @include media-max(768px) {
     display: flex;
     justify-content: center;
   }
@@ -47,7 +47,7 @@ html, body {
   padding: 0 180px;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @include media-max(768px) {
     display: flex;
     justify-content: center;
     min-height: 600px;
@@ -69,7 +69,7 @@ html, body {
   text-align: right;
   box-sizing: border-box;
 
-  @media screen and (max-width: 768px) {
+  @include media-max(768px) {
     max-width: 100%;
     right: auto;
     padding: 25px;

@@ -8,7 +8,7 @@
   box-shadow: $cardShadowLarge;
   border-radius: 4px;
 
-  @media screen and (max-width: 400px) {
+  @include media-max(400px) {
     box-shadow: $cardShadowSmall;
   }
 
@@ -16,12 +16,12 @@
     @include H1();
     margin: 39px 29px 0 29px;
 
-    @media screen and (max-width: 480px) {
+    @include media-max(480px) {
       text-align: center;
       font-size: 20px;
     }
 
-    @media screen and (max-width: 400px) {
+    @include media-max(400px) {
       margin: 39px 5px 0 5px;
     }
   }
@@ -29,7 +29,7 @@
   &__wrapper {
     padding: 21px 29px 29px 29px;
 
-    @media screen and (max-width: 400px) {
+    @include media-max(400px) {
       padding: 21px 10px 29px 10px;
     }
   }
@@ -82,7 +82,7 @@
     width: 100%;
     margin-top: 30px;
 
-    @media screen and (max-width: 480px) {
+    @include media-max(480px) {
       justify-content: center;
     }
   }
@@ -90,7 +90,7 @@
   &__login-text {
     @include Body-font();
 
-    @media screen and (max-width: 480px) {
+    @include media-max(480px) {
       width: 100%;
       margin-bottom: 20px;
       text-align: center;

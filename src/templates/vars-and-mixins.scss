@@ -133,3 +133,9 @@ $circle-margin: 3px;
   -moz-appearance: none;
   appearance: none;
 }
+
+@mixin media-max($px) {
+  @media screen and (max-width: $px) {
+    @content;
+  };
+}
