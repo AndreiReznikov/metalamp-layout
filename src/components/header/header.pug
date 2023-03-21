@@ -2,10 +2,6 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options = {})
-  -
-    let boldItemClass = 'header__list-bold-item';
-    boldItemClass += options.isBoldItem ? '' : ' header__list-bold-item_font_normal';
-
   .header.js-header
     header.header__container.js-header__container
       .header__wrapper
@@ -40,10 +36,7 @@ mixin header(options = {})
                     a.header__list-link.js-header__list-link(
                       href=link
                     )
-                      if fontWeight
-                        span(class=boldItemClass)=title
-                      else
-                        span.header__list-link-text=title
+                      span.header__list-link-text=title
 
           if (options.isLoggedIn)
             span.header__user-name=options.username

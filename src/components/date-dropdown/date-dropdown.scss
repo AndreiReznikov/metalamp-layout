@@ -50,10 +50,7 @@
     }
   }
 
-  &__input-from:hover, &__input-to:hover {
-    border: 1px solid $Dark-Shade-75;
-  }
-
+  &__input-from:hover, &__input-to:hover,
   &__input-from:focus, &__input-to:focus {
     border: 1px solid $Dark-Shade-50;
   }

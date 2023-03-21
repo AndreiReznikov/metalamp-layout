@@ -35,14 +35,11 @@
     cursor: pointer;
   }
 
-  &__input:hover {
-    border: 1px solid $Dark-Shade-75;
-  }
-
   &__input::placeholder {
     text-transform: none;
   }
 
+  &__input:hover,
   &__input:focus {
     outline: none;
     border: 1px solid $Dark-Shade-50;

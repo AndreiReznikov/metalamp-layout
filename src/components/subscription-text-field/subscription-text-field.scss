@@ -25,6 +25,7 @@
     border-radius: 4px;
   }
 
+  &__button:hover + &__input,
   &__input:hover, &__input:focus {
     border: 1px solid $Dark-Shade-50;
   }

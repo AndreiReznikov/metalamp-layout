@@ -112,18 +112,10 @@
     text-decoration: none;
   }
 
-  &__expanded-menu-link:hover, &__list-link:hover {
+  &__user-name:hover,
+  &__expanded-menu-link:hover,
+  &__list-link:hover {
     color: $Dark-Shade-75;
-  }
-
-  &__list-bold-item {
-    font-weight: bold;
-    color: $Dark-Shade-75;
-  }
-
-  &__list-bold-item_font_normal {
-    font-weight: normal;
-    color: $Dark-Shade-50;
   }
 
   &__buttons-container {
