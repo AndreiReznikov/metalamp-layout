@@ -12,7 +12,8 @@ mixin expandable-checkbox-list(options = {})
       each text, index in options.checkboxTexts
         -
           let check;
-          if (options.checkedItems) {
+
+          options.checkedItems?.forEach((item, i) => {
             for (let i = 0; i < options.checkedItems.length; i++) {
               if (index === options.checkedItems[i]) {
                 check = true;
@@ -20,7 +21,7 @@ mixin expandable-checkbox-list(options = {})
               };
               check = false;
             }
-          }
+          })
 
         +checkbox-button({
           text,
