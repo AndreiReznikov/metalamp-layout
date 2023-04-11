@@ -37,7 +37,7 @@ html, body {
   background: url('../../img/sign-in-background.jpg');
   @include background-position(cover);
 
-  @include media-max(480px) {
+  @include media-max($sm) {
     height: 720px;
   }
 }

@@ -8,14 +8,14 @@
   box-shadow: $cardShadowLarge;
   border-radius: 4px;
 
-  @include media-max(400px) {
+  @include media-max($sm) {
     box-shadow: $cardShadowSmall;
   }
 
   &__wrapper {
     padding: 45px 29px 29px 29px;
 
-    @include media-max(400px) {
+    @include media-max($sm) {
       padding: 45px 15px 29px 15px;
     }
   }

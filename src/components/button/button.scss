@@ -82,7 +82,7 @@
     width: 320px;
     height: 44px;
 
-    @include media-max(480px) {
+    @include media-max($sm) {
       width: 250px;
     }
 
@@ -100,7 +100,7 @@
         opacity: 0.5;
       }
 
-      @include media-max(480px) {
+      @include media-max($sm) {
         width: 250px;
       }
     }
@@ -117,7 +117,7 @@
     width: 320px;
     height: 44px;
 
-    @include media-max(480px) {
+    @include media-max($sm) {
       width: 250px;
     }
 
@@ -136,7 +136,7 @@
         opacity: 0.5;
       }
 
-      @include media-max(480px) {
+      @include media-max($sm) {
         width: 250px;
       }
     }

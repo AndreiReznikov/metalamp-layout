@@ -19,6 +19,12 @@ $toggle-width: 38px;
 $circle-width: 12px;
 $circle-margin: 3px;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 @mixin H1() {
   margin: 0;
   padding: 0;

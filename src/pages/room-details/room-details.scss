@@ -36,7 +36,7 @@ html, body {
   width: 100%;
   height: 485px;
 
-  @include media-max(680px) {
+  @include media-max($md) {
     height: 380px;
   }
 }
@@ -46,7 +46,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
 
-  @include media-max(680px) {
+  @include media-max($md) {
     flex-direction: column;
     height: 380px;
   }
@@ -55,7 +55,7 @@ html, body {
     width: 67.2%;
     height: 100%;
 
-    @include media-max(680px) {
+    @include media-max($md) {
       width: 100%;
       height: 280px;
     }
@@ -65,7 +65,7 @@ html, body {
     width: 32.8%;
     height: 100%;
 
-    @include media-max(680px) {
+    @include media-max($md) {
       width: 100%;
       height: 100px;
     }
@@ -78,7 +78,7 @@ html, body {
     object-fit: cover;
     object-position: center;
 
-    @include media-max(680px) {
+    @include media-max($md) {
       width: 50%;
       height: 100%;
     }
@@ -99,11 +99,11 @@ html, body {
   padding: 70px 180px 62px 180px;
   border-bottom: 1px solid $Dark-Shade-5;
 
-  @include media-max(1024px) {
+  @include media-max($xl) {
     padding: 50px 15px 62px 15px;
   }
 
-  @include media-max(400px) {
+  @include media-max($sm) {
     padding: 70px 5px 62px 5px;
   }
 }
@@ -113,7 +113,7 @@ html, body {
   flex-wrap: wrap;
   flex: 5;
 
-  @include media-max(900px) {
+  @include media-max($lg) {
     flex-basis: 100%;
   }
 }
@@ -121,15 +121,15 @@ html, body {
 .room-details-advantages-container {
   flex-basis: 43.6%;
 
-  @include media-max(1080px) {
+  @include media-max($xl) {
     flex-basis: 100%;
   }
 
-  @include media-max(900px) {
+  @include media-max($lg) {
     flex-basis: 50%;
   }
 
-  @include media-max(680px) {
+  @include media-max($md) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -153,7 +153,7 @@ html, body {
   position: relative;
   height: 180px;
 
-  @include media-max(680px) {
+  @include media-max($md) {
     flex-basis: 100%;
   }
 }
@@ -161,7 +161,7 @@ html, body {
 .room-details-doughnut-title-container {
   margin: 0 0 16px 22px;
 
-  @include media-max(1080px) {
+  @include media-max($xl) {
     margin-left: 0;
   }
 }
@@ -172,7 +172,7 @@ html, body {
   justify-content: flex-start;
   align-items: center;
 
-  @include media-max(680px) {
+  @include media-max($md) {
     margin-top: 20px;
     top: 50%;
     left: 50%;
@@ -185,7 +185,7 @@ html, body {
   position: absolute;
   width: 162px;
 
-  @include media-max(400px) {
+  @include media-max($sm) {
     width: 110px;
     margin-left: 0;
   }
@@ -219,7 +219,7 @@ html, body {
   align-items: flex-end;
   margin: 0 2px 23px 0;
 
-  @include media-max(480px) {
+  @include media-max($sm) {
     flex-direction: column;
     align-items: flex-start;
     margin-right: 0;
@@ -235,7 +235,7 @@ html, body {
 .room-details-title {
   @include H2();
 
-  @include media-max(680px) {
+  @include media-max($md) {
     margin-bottom: 10px;
     text-align: center;
     flex-basis: 100%;
@@ -249,11 +249,11 @@ html, body {
   line-height: 20px;
   color: $Dark-Shade-50;
 
-  @include media-max(1380px) {
+  @include media-max($xxl) {
     margin-right: 15px;
   }
 
-  @include media-max(680px) {
+  @include media-max($md) {
     margin-bottom: 10px;
   }
 }
@@ -262,7 +262,7 @@ html, body {
   display: flex;
   width: 100%;
 
-  @include media-max(680px) {
+  @include media-max($md) {
     flex-direction: column;
     align-items: center;
   }
@@ -273,11 +273,11 @@ html, body {
   padding-right: 20px;
   flex-basis: 46.5%;
 
-  @include media-max(900px) {
+  @include media-max($lg) {
     flex-basis: 50%;
   }
 
-  @include media-max(480px) {
+  @include media-max($sm) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -299,15 +299,15 @@ html, body {
   padding-right: 25px;
   flex-basis: 53.5%;
 
-  @include media-max(900px) {
+  @include media-max($lg) {
     flex-basis: 50%;
   }
 
-  @include media-max(680px) {
+  @include media-max($md) {
     text-align: center;
   }
 
-  @include media-max(480px) {
+  @include media-max($sm) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -330,7 +330,7 @@ html, body {
   flex-wrap: wrap;
   flex: 1;
 
-  @include media-max(900px) {
+  @include media-max($lg) {
     margin-top: 50px;
     display: flex;
     justify-content: center;

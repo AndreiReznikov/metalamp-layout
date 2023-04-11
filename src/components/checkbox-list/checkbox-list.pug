@@ -1,0 +1,31 @@
+include ../checkbox-button/checkbox-button
+
+mixin checkbox-list(options = {})
+  -
+    let titleClass = 'checkbox-list__title js-checkbox-list__title';
+      titleClass += options.isExpandable ? ' js-checkbox-list__title_expandable' : '';
+      titleClass += options.isOpened ? ' js-checkbox-list__title_opened' : '';
+    let listClass = 'checkbox-list__list js-checkbox-list__list';
+      listClass += options.isExpandable ? '' : ' checkbox-list__list_opened';
+
+  .checkbox-list.js-checkbox-list
+    h3(class=titleClass)=options.title
+      if options.isExpandable
+        span.checkbox-list__arrow.js-checkbox-list__arrow
+    div(class=listClass)
+      each text, index in options.checkboxTexts
+        -
+          const checked = options.checkedItems?.includes(index);
+          let richButtonTitle;
+
+          if (options.richTitles) {
+            richButtonTitle = options.richTitles[index];
+            console.log(richButtonTitle)
+          }
+
+        +checkbox-button({
+          text,
+          checked,
+          isRich: options.isRich,
+          richButtonTitle,
+        })
