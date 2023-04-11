@@ -4,35 +4,35 @@ include ../../components/type/type
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="en")
+html.colors-and-type(lang="en")
   +pageBase({
     title: 'Colors & Type',
     keywords: 'Colors & Type, components, MetaLamp, education',
     description: 'Цвета и шрифты, используемые для сайта Toxin',
   })
-  body
-    .colors-and-type-container
-      .colors-and-type-logo-container
+  body.colors-and-type__body
+    .colors-and-type__container
+      .colors-and-type__logo-container
         +logo({
           href: 'index.html',
         })
 
-      main.colors-and-type-wrapper
-        .colors-and-type-colors-description-list-container
-          ul.colors-and-type-colors-description-list
+      main.colors-and-type__wrapper
+        .colors-and-type__colors-description-list-container
+          ul.colors-and-type__colors-description-list
             each color in colors
               - const [ title, hex ] = color;
-              li.colors-and-type-colors-description-list__item
+              li.colors-and-type__colors-description-list__item
                 +color({
                   title,
                   hex,
                 })
 
-        .colors-and-type-type-description-list-container
-          ul.colors-and-type-type-description-list
+        .colors-and-type__type-description-list-container
+          ul.colors-and-type__type-description-list
             each typeValues in types
               - const [ title, description ] = typeValues;
-              li.colors-and-type-type-description-list__item
+              li.colors-and-type__type-description-list__item
                 +type({
                   title,
                   description,

@@ -6,17 +6,17 @@ include ../../components/footer-mobile/footer-mobile
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="en")
+html.sign-in(lang="en")
   +pageBase({
     title: 'Sign in',
     keywords: 'Sign in, components, MetaLamp, education',
     description: 'Отель Toxin, подобрать номер',
   })
-  body
-    .sign-in-wrapper
+  body.sign-in__body
+    .sign-in__wrapper
       +header()
-      main.sign-in-background-container
-        .sign-in-card-wrapper.js-sign-in-card-wrapper
+      main.sign-in__background-container
+        .sign-in__card-wrapper
           +sign-in-card()
       +footer()
       +footer-mobile()

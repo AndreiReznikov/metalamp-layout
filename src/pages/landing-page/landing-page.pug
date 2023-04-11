@@ -6,19 +6,19 @@ include ../../templates/vars-and-mixins
 
 
 doctype html
-html(lang="ru")
+html.landing-page(lang="ru")
   +pageBase({
     title: 'Landing page',
     keywords: 'Landing page, components, MetaLamp, education',
     description: 'Отель Toxin, подобрать номер',
   })
-  body
-    .landing-page-wrapper
+  body.landing-page__body
+    .landing-page__wrapper
       +header()
-      main.landing-page-background-container
-        .landing-page-background-wrapper
-          article.landing-page-search-card-container
+      main.landing-page__background-container
+        .landing-page__background-wrapper
+          article.landing-page__search-card-container
             +search-card()
-        p.landing-page-background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
+        p.landing-page__background-description Лучшие номера для вашей работы, отдыха и просто вдохновения
       +footer()
       +footer-mobile()

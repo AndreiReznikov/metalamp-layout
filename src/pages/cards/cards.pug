@@ -8,28 +8,28 @@ include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="ru")
+html.cards(lang="ru")
   +pageBase({
     title: 'Cards',
     keywords: 'Cards, components, MetaLamp, education',
     description: 'Компоненты карточек для сайта Toxin',
   })
-  body
-    .cards-container
-      .cards-logo-container
+  body.cards__body
+    .cards__container
+      .cards__logo-container
         +logo({
           href: 'index.html',
         })
 
-      .cards-left-block
+      .cards__left-block
         +search-card()
 
-        .cards-registration-block-container
+        .cards__registration-block-container
           +registration-card({
             buttonText: 'Перейти к оплате',
           })
 
-      .cards-central-block
+      .cards__central-block
         +reserve-card({
           roomNumber: '888',
           price: '9 900',
@@ -40,11 +40,11 @@ html(lang="ru")
           dropdownClicksNum: [2, 1],
         })
 
-        .cards-sign-in-block-container
+        .cards__sign-in-block-container
           +sign-in-card()
 
-      .cards-right-block
-        .cards-date-dropdown-container
+      .cards__right-block
+        .cards__date-dropdown-container
           +filter-date-dropdown({
             isHidden: true,
             isOpened: true,
@@ -52,7 +52,7 @@ html(lang="ru")
             dateTo: '2019, 8, 23',
           })
 
-        .cards-room-cards-container
+        .cards__room-cards-container
           each roomCard in roomCards
             -
               const {
@@ -64,7 +64,7 @@ html(lang="ru")
                 reviewsNumber,
                 isLux,
               } = roomCard;
-  
+
             +room-card({
               photos,
               number,

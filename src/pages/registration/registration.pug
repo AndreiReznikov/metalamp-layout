@@ -5,17 +5,17 @@ include ../../components/footer-mobile/footer-mobile
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="en")
+html.registration(lang="en")
   +pageBase({
     title: 'Registration',
     keywords: 'Registration, components, MetaLamp, education',
     description: 'Отель Toxin, подобрать номер',
   })
-  body
-    .registration-wrapper
+  body.registration__body
+    .registration__wrapper
       +header()
-      main.registration-background-container
-        .registration-card-wrapper.js-registration-card-wrapper
+      main.registration__background-container
+        .registration__card-wrapper
           +registration-card({
             buttonText: 'Зарегистрироваться',
           })

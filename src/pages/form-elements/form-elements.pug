@@ -21,21 +21,21 @@ include ../../components/comment/comment
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="ru")
+html.form-elements(lang="ru")
   +pageBase({
     title: 'Form Elements',
     keywords: 'Form Elements, components, MetaLamp, education',
     description: 'Компоненты формы для сайта Toxin',
   })
-  body
-    .form-elements-container
-      .form-elements-logo-container
+  body.form-elements__body
+    .form-elements__container
+      .form-elements__logo-container
         +logo({
           href: 'index.html',
         })
 
-      .form-elements-wrapper
-        .form-elements-left-block
+      .form-elements__wrapper
+        .form-elements__left-block
           each textField in textFields
             - const { className, title, status, type, placeholder, value, isFocused } = textField;
             div(class=className)
@@ -50,7 +50,7 @@ html(lang="ru")
                 isFocused,
               })
 
-          .form-elements-dropdown-first-container
+          .form-elements__dropdown-first-container
             +dropdown({
               items: ['Взрослые', 'Дети', 'Младенцы'],
               addingButtons: true,
@@ -58,14 +58,14 @@ html(lang="ru")
               title: 'Dropdown',
             })
 
-          .form-elements-masked-text-field-container
+          .form-elements__masked-text-field-container
             +masked-text-field({
               type: 'text',
               placeholder: 'ДД.ММ.ГГГГ',
               title: 'Masked text field',
             })
 
-          .form-elements-date-dropdown-container
+          .form-elements__date-dropdown-container
             +date-dropdown({
               title: ['Date dropdown', 'Date dropdown'],
               dateFrom: '2019, 8, 15',
@@ -73,19 +73,19 @@ html(lang="ru")
               isFromEmpty: 'true',
             })
 
-          .form-elements-filter-date-dropdown-container
+          .form-elements__filter-date-dropdown-container
             +filter-date-dropdown({
               title: 'Filter date dropdown',
               dateFrom: '2020, 8, 19',
               dateTo: '2020, 8, 23',
             })
 
-          .form-elements-subscription-text-field-container
+          .form-elements__subscription-text-field-container
             +subscription-text-field({
               title: 'Subscription text field',
             })
 
-          .form-elements-dropdown-second-container
+          .form-elements__dropdown-second-container
             +element-description({
               title: 'Dropdown',
               status: 'Default',
@@ -98,7 +98,7 @@ html(lang="ru")
               size: 'S',
             })
 
-          .form-elements-dropdown-third-container
+          .form-elements__dropdown-third-container
             +element-description({
               title: 'Dropdown',
               status: 'Expanded',
@@ -124,8 +124,8 @@ html(lang="ru")
               })
 
 
-        .form-elements-central-block
-          .form-elements-checkbox-buttons-container
+        .form-elements__central-block
+          .form-elements__checkbox-buttons-container
               - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
               +checkbox-list({
                 title,
@@ -135,8 +135,8 @@ html(lang="ru")
                 isOpened,
               })
 
-          .form-elements-radio-buttons-container
-            .form-elements-radio-buttons-description-container
+          .form-elements__radio-buttons-container
+            .form-elements__radio-buttons-description-container
               +element-description({
                 title: 'Radio buttons',
               })
@@ -146,12 +146,12 @@ html(lang="ru")
               checkedNumber: 0,
             })
 
-          .form-elements-toggle-buttons-container
-            .form-elements-toggle-description-container
+          .form-elements__toggle-buttons-container
+            .form-elements__toggle-description-container
               +element-description({
                 title: 'Toggle',
               })
-            .form-elements-toggle-buttons-wrapper
+            .form-elements__toggle-buttons-wrapper
               each toggleButton in toggleButtons
                 - const [ text, checked ] = toggleButton;
                 +toggle-button({
@@ -159,11 +159,11 @@ html(lang="ru")
                   checked,
                 })
 
-          .form-elements-like-button-container
+          .form-elements__like-button-container
             +element-description({
               title: 'Like button',
             })
-            .form-elements-like-buttons-wrapper
+            .form-elements__like-buttons-wrapper
               each likeButton in likeButtons
                 - const [ count, isLiked ] = likeButton;
                 +like-button({
@@ -171,11 +171,11 @@ html(lang="ru")
                   isLiked,
                 })
 
-          .form-elements-rate-buttons-container
+          .form-elements__rate-buttons-container
             +element-description({
               title: 'Rate button',
             })
-            .form-elemetns-rate-buttons-wrapper
+            .form-elements__rate-buttons-wrapper
               each rateButton in rateButtons
                 - const { starsNumber, checkedButton, name } = rateButton;
                 +rate-button({
@@ -184,7 +184,7 @@ html(lang="ru")
                   name,
                 })
 
-          .form-elements-dropdown-fourth-container
+          .form-elements__dropdown-fourth-container
             +dropdown({
               items: ['Взрослые', 'Дети', 'Младенцы'],
               isOpened: true,
@@ -193,7 +193,7 @@ html(lang="ru")
               title: 'Dropdown',
             })
 
-          .form-elements-rich-checkbox-buttons-container
+          .form-elements__rich-checkbox-buttons-container
             each richCheckboxButton in richCheckboxButtons
               - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
               +checkbox-list({
@@ -204,14 +204,14 @@ html(lang="ru")
                 isRich,
               })
 
-        .form-elements-right-block
-          .form-elements-range-slider-container
+        .form-elements__right-block
+          .form-elements__range-slider-container
             +range-slider({
               title: 'Range slider',
             })
 
-          .form-elements-buttons-container
-            .form-elements-buttons-description-container
+          .form-elements__buttons-container
+            .form-elements__buttons-description-container
               +element-description({
                 title: 'Buttons',
               })
@@ -240,8 +240,8 @@ html(lang="ru")
                     isHovered,
                   })
 
-          .form-elements-pagination-container
-            .form-elements-pagination-description-container
+          .form-elements__pagination-container
+            .form-elements__pagination-description-container
               +element-description({
                 title: 'Pagination',
               })
@@ -250,7 +250,7 @@ html(lang="ru")
               totalNumber: 'из 100+ вариантов аренды',
             })
 
-          .form-elements-dropdown-fifth-container
+          .form-elements__dropdown-fifth-container
             +dropdown({
               title: 'Dropdown',
               items: ['Взрослые', 'Дети', 'Младенцы'],
@@ -261,8 +261,8 @@ html(lang="ru")
               clicksNum: [2, 1],
             })
 
-          .form-elements-bullet-list-container
-            .form-elements-bullet-list-description-container
+          .form-elements__bullet-list-container
+            .form-elements__bullet-list-description-container
               +element-description({
                 title: 'Bullet list',
               })
@@ -274,8 +274,8 @@ html(lang="ru")
                 ],
               })
 
-        .form-elements-bottom-block
-          .form-elements-advantages-container
+        .form-elements__bottom-block
+          .form-elements__advantages-container
             each advantage in advantages
               - const { title, description, image, isBorder } = advantage;
               +advantage({
@@ -285,7 +285,7 @@ html(lang="ru")
                 isBorder,
               })
 
-          .form-elements-comment-container
+          .form-elements__comment-container
             +comment({
               image: 'image.jpg',
               alt: 'user photo',

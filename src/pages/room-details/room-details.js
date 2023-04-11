@@ -36,7 +36,7 @@ class RoomDetails {
     const $window = $(window);
     this.windowWidth = $window.width();
 
-    this.canvas = document.querySelector('.js-room-details-chart').getContext('2d');
+    this.canvas = document.querySelector('.js-room-details__chart').getContext('2d');
 
     const purple = this.canvas.createLinearGradient(0, 0, 0, 130);
     const green = this.canvas.createLinearGradient(0, 0, 0, 130);
@@ -123,9 +123,9 @@ class RoomDetails {
   }
 
   _addTextToChart() {
-    this.$canvasContainer = $('.js-room-details-doughnut-wrapper');
+    this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
     this.$canvasContainer.append(vars.canvas);
-    this.$chartRatingSum = this.$canvasContainer.find('.js-room-details-chart-text__number');
+    this.$chartRatingSum = this.$canvasContainer.find('.js-room-details__chart-text-number');
 
     const getRatingSum = () => this.userRatings.reduce((a, b) => a + b, 0);
 
@@ -133,7 +133,7 @@ class RoomDetails {
   }
 
   _expandCanvas() {
-    const $chart = $('.js-room-details-chart');
+    const $chart = $('.js-room-details__chart');
 
     const expandCanvas = () => {
       if (this.windowWidth < 400) $chart.width(280);

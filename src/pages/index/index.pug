@@ -1,31 +1,31 @@
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="ru")
+html.index(lang="ru")
   +pageBase({
     title: 'MetaLamp layout',
     keywords: 'MetaLamp layout, components, MetaLamp, education',
     description: 'Отель Toxin, подобрать номер',
   })
-  body
-    .metalamp-layout-container
-      .metalamp-layout-wrapper
-        .metalamp-layout-ui-kit-container
-          h2.metalamp-layout-ui-kit-title UI Kit
-          ul.metalamp-layout-ui-kit-list
+  body.index__body
+    .index__container
+      .index__wrapper
+        .index__ui-kit-container
+          h2.index__ui-kit-title UI Kit
+          ul.index__ui-kit-list
             each page in pages
               - const [ href, name ] = page;
-              li.metalamp-layout-ui-kit-item
-                a.metalamp-layout-ui-kit-link(
+              li.index__ui-kit-item
+                a.index__ui-kit-link(
                   href=href
                   target="_blank"
                   rel="noopener noreferrer"
                 )=name
 
-        .metalamp-layout-website-pages-container
-          a.metalamp-layout-website-pages-link(
+        .index__website-pages-container
+          a.index__website-pages-link(
             href="landing-page.html"
             target="_blank"
             rel="noopener noreferrer"
           )
-            h2.metalamp-layout-website-pages-title Website Pages
+            h2.index__website-pages-title Website Pages

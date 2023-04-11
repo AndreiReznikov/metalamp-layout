@@ -108,8 +108,8 @@ class SearchRoom {
   }
 
   _toggleFilterItems() {
-    this.$filterButton = $('.js-search-room-filter__button');
-    this.$filterItems = $('.js-search-room-widgets-container');
+    this.$filterButton = $('.js-search-room__filter-button');
+    this.$filterItems = $('.js-search-room__widgets-container');
 
     const showFilterItems = () => this.$filterItems.toggle();
     this.$filterButton.click(showFilterItems);

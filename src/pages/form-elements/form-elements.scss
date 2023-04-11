@@ -22,224 +22,226 @@
 @import '../../components/range-slider/range-slider';
 @import '../../components/pagination/pagination';
 
-html {
-  @include Body-font();
-  background-color: #fff;
-  color: $Dark-Shade-100;
-}
+.form-elements {
+  &, &__body {
+    @include Body-font();
+    background-color: #fff;
+    color: $Dark-Shade-100;
+  }
 
-.form-elements-container {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 30px;
-}
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 
-.form-elements-logo-container {
-  margin: 30px;
-}
+  &__logo-container {
+    margin: 30px;
+  }
 
-.form-elements-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1160px;
-  margin: 61px auto 131px auto;
-}
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1160px;
+    margin: 61px auto 131px auto;
+  }
 
-.form-elements-left-block {
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  width: 320px;
-}
+  &__left-block {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 320px;
+  }
 
-.form-elements-first-text-field {
-  width: 100%;
-}
+  &__first-text-field {
+    width: 100%;
+  }
 
-.form-elements-second-text-field {
-  width: 100%;
-  margin-top: 20px;
-}
+  &__second-text-field {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-.form-elements-dropdown-first-container {
-  margin-top: 20px;
-}
+  &__dropdown-first-container {
+    margin-top: 20px;
+  }
 
-.form-elements-masked-text-field-container {
-  width: 100%;
-  margin-top: 23px;
-}
+  &__masked-text-field-container {
+    width: 100%;
+    margin-top: 23px;
+  }
 
-.form-elements-date-dropdown-container {
-  margin-top: 40px;
-}
+  &__date-dropdown-container {
+    margin-top: 40px;
+  }
 
-.form-elements-filter-date-dropdown-container {
-  width: 266px;
-  margin-top: 41px;
-}
+  &__filter-date-dropdown-container {
+    width: 266px;
+    margin-top: 41px;
+  }
 
-.form-elements-subscription-text-field-container {
-  margin-top: 41px;
-}
+  &__subscription-text-field-container {
+    margin-top: 41px;
+  }
 
-.form-elements-dropdown-second-container {
-  margin-top: 99px;
-}
+  &__dropdown-second-container {
+    margin-top: 99px;
+  }
 
-.form-elements-dropdown-third-container {
-  margin-top: 19px;
-}
+  &__dropdown-third-container {
+    margin-top: 19px;
+  }
 
-.form-elements-checkbox-list-container {
-  margin-top: 172px;
-}
+  &__checkbox-list-container {
+    margin-top: 172px;
+  }
 
-.form-elements-opened-checkbox-list-container {
-  margin-top: 31px;
-}
+  &__opened-checkbox-list-container {
+    margin-top: 31px;
+  }
 
-.form-elements-central-block {
-  width: 320px;
-  margin-left: 127px;
-  box-sizing: border-box;
-}
+  &__central-block {
+    width: 320px;
+    margin-left: 127px;
+    box-sizing: border-box;
+  }
 
-.form-elements-radio-buttons-container {
-  margin-top: 42px;
-}
+  &__radio-buttons-container {
+    margin-top: 42px;
+  }
 
-.form-elements-radio-buttons-description-container {
-  margin-bottom: 16px;
-}
+  &__radio-buttons-description-container {
+    margin-bottom: 16px;
+  }
 
-.form-elements-toggle-buttons-container {
-  margin-top: 40px;
-}
+  &__toggle-buttons-container {
+    margin-top: 40px;
+  }
 
-.form-elements-toggle-description-container {
-  margin-bottom: 14px;
-}
+  &__toggle-description-container {
+    margin-bottom: 14px;
+  }
 
-.form-elements-toggle-buttons-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+  &__toggle-buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.form-elements-like-button-container {
-  margin-top: 34px;
-}
+  &__like-button-container {
+    margin-top: 34px;
+  }
 
-.form-elements-like-buttons-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 90px;
-  margin-top: 14px;
-}
+  &__like-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    margin-top: 14px;
+  }
 
-.form-elements-rate-buttons-container {
-  margin-top: 40px;
-}
+  &__rate-buttons-container {
+    margin-top: 40px;
+  }
 
-.form-elements-buttons-description-container {
-  margin-bottom: 14px;
-}
+  &__buttons-description-container {
+    margin-bottom: 14px;
+  }
 
-.form-elemetns-rate-buttons-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 256px;
-  margin: 18px 0 0 2px;
-}
+  &__rate-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 256px;
+    margin: 18px 0 0 2px;
+  }
 
-.form-elements-dropdown-fourth-container {
-  margin-top: 198px;
-}
+  &__dropdown-fourth-container {
+    margin-top: 198px;
+  }
 
-.form-elements-rich-checkbox-buttons-container {
-  margin-top: 256px;
-}
+  &__rich-checkbox-buttons-container {
+    margin-top: 256px;
+  }
 
-.form-elements-right-block {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  margin-left: 72px;
-  box-sizing: border-box;
-  width: 320px;
-}
+  &__right-block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 72px;
+    box-sizing: border-box;
+    width: 320px;
+  }
 
-.form-elements-buttons-container {
-  margin-top: 88px;
-}
+  &__buttons-container {
+    margin-top: 88px;
+  }
 
-.form-elements-filled-buttons-container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1px;
-  margin-top: 16px;
-  width: 217px;
-}
+  &__filled-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1px;
+    margin-top: 16px;
+    width: 217px;
+  }
 
-.form-elements-empty-buttons-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  width: 217px;
-}
+  &__empty-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 217px;
+  }
 
-.form-elements-long-button-container {
-  margin-top: 29px;
-}
+  &__long-button-container {
+    margin-top: 29px;
+  }
 
-.form-elements-text-buttons-container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1px;
-  margin-top: 31px;
-  width: 142px;
-}
+  &__text-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1px;
+    margin-top: 31px;
+    width: 142px;
+  }
 
-.form-elements-pagination-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  max-width: 76%;
-}
+  &__pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    max-width: 76%;
+  }
 
-.form-elements-pagination-description-container {
-  margin-bottom: 12px;
-}
+  &__pagination-description-container {
+    margin-bottom: 12px;
+  }
 
-.form-elements-dropdown-fifth-container {
-  margin-top: 263px;
-}
+  &__dropdown-fifth-container {
+    margin-top: 263px;
+  }
 
-.form-elements-bullet-list-container {
-  max-width: 260px;
-  margin-top: 257px;
-}
+  &__bullet-list-container {
+    max-width: 260px;
+    margin-top: 257px;
+  }
 
-.form-elements-bullet-list-description-container {
-  margin-bottom: 12px;
-}
+  &__bullet-list-description-container {
+    margin-bottom: 12px;
+  }
 
-.form-elements-bottom-block {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 90px;
-}
+  &__bottom-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 90px;
+  }
 
-.form-elements-advantages-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  width: 280px;
-  height: 153px;
-}
+  &__advantages-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 280px;
+    height: 153px;
+  }
 
-.form-elements-comment-container {
-  margin: 7px 0 0 166px;
+  &__comment-container {
+    margin: 7px 0 0 166px;
+  }
 }

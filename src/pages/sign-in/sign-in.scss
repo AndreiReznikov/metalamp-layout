@@ -9,32 +9,34 @@
 @import '../../components/footer-mobile/footer-mobile';
 @import '../../templates/vars-and-mixins';
 
-html, body {
-  @include Body-font();
-  background-color: #fff;
-}
+.sign-in {
+  &, &__body {
+    @include Body-font();
+    background-color: #fff;
+  }
 
-.html_non-scrollable {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-}
+  &_non-scrollable {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
 
-.sign-in-wrapper {
-  display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
 
-.sign-in-background-container {
-  @include flex-center();
-  flex: 1 0 auto;
-  width: 100%;
-  height: 702px;
-  background: url('../../img/sign-in-background.jpg');
-  @include background-position(cover);
+  &__background-container {
+    @include flex-center();
+    flex: 1 0 auto;
+    width: 100%;
+    height: 702px;
+    background: url('../../img/sign-in-background.jpg');
+    @include background-position(cover);
 
-  @include media-max($sm) {
-    height: 720px;
+    @include media-max($sm) {
+      height: 720px;
+    }
   }
 }

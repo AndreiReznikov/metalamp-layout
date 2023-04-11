@@ -11,31 +11,31 @@ include ../../components/footer-mobile/footer-mobile
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="en")
+html.search-room(lang="en")
   +pageBase({
     title: 'Search room',
     keywords: 'Search room, components, MetaLamp, education',
     description: 'Отель Toxin, подобрать номер',
   })
-  body
-    .search-room-wrapper
+  body.search-room__body
+    .search-room__wrapper
       +header()
-      .search-room-filter
-        button.search-room-filter__button.js-search-room-filter__button
-          span.search-room-filter__wrapper
-            span.search-room-filter__icon
-            span.search-room-filter__text Фильтры
-      main.search-room-container
-        .search-room-widgets-container.js-search-room-widgets-container
-          form.search-room-widgets-form
-            section.search-room-widgets-wrapper
-              .search-room-filter-date-dropdown-container
+      .search-room__filter
+        button.search-room__filter-button.js-search-room__filter-button
+          span.search-room__filter-wrapper
+            span.search-room__filter-icon
+            span.search-room__filter-text Фильтры
+      main.search-room__container
+        .search-room__widgets-container.js-search-room__widgets-container
+          form.search-room__widgets-form
+            section.search-room__widgets-wrapper
+              .search-room__filter-date-dropdown-container
                 +filter-date-dropdown({
                   title: 'Даты пребывания в отеле',
                   dateFrom: '2020, 8, 19',
                   dateTo: '2020, 8, 23',
                 })
-              .search-room-guests-dropdown-container
+              .search-room__guests-dropdown-container
                 +dropdown({
                   title: 'Гости',
                   items: ['Взрослые', 'Дети', 'Младенцы'],
@@ -45,13 +45,13 @@ html(lang="en")
                   clicksNum: [3, 1],
                   size: 'S',
                 })
-              .search-room-range-slider-container
+              .search-room__range-slider-container
                 +range-slider({
                   title: 'Диапазон цены',
                 })
-                p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
-              .search-room-checkbox-buttons-container
-                .search-room-checkbox-buttons-wrapper
+                p.search-room__slider-sub-text Стоимость за сутки пребывания в номере
+              .search-room__checkbox-buttons-container
+                .search-room__checkbox-buttons-wrapper
                   -
                     const { className, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
 
@@ -63,8 +63,8 @@ html(lang="en")
                     isOpened,
                   })
 
-              .search-room-rich-checkbox-buttons-container
-                .search-room-rich-checkbox-buttons-wrapper
+              .search-room__rich-checkbox-buttons-container
+                .search-room__rich-checkbox-buttons-wrapper
                   each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
                     - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
                     +checkbox-list({
@@ -75,7 +75,7 @@ html(lang="en")
                       isRich,
                     })
 
-              .search-room-conveniences-dropdown-container
+              .search-room__conveniences-dropdown-container
                 +dropdown({
                   title: 'Удобства номера',
                   items: ['Спальни', 'Кровати', 'Ванные комнаты'],
@@ -84,21 +84,21 @@ html(lang="en")
                   clicksNum: [2, 2],
                   size: 'S',
                 })
-              .search-room-checkbox-list-container
+              .search-room__checkbox-list-container
                 +checkbox-list({
                   title: 'Дополнительные удобства',
                   isExpandable: true,
                   checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
                 })
-        section.search-room-cards-container
-          h1.search-room-title Номера, которые мы для вас подобрали
+        section.search-room__cards-container
+          h1.search-room__title Номера, которые мы для вас подобрали
           +pagination({
             numbers: '1 - 12',
             totalNumber: 'из 100+ вариантов аренды',
           })
       +footer()
       +footer-mobile()
-      .search-room-pagination-container
+      .search-room__pagination-container
         each roomCardProperty in roomsCardsProperties
           -
             const [

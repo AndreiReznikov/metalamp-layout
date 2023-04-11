@@ -5,31 +5,31 @@ include ../../components/footer-mobile/footer-mobile
 include ../../templates/vars-and-mixins
 
 doctype html
-html(lang="ru")
+html.headers-and-footers(lang="ru")
   +pageBase({
     title: 'Headers & Footers',
     keywords: 'Headers & Footers, components, MetaLamp, education',
     description: 'Компоненты header и footer для сайта Toxin',
   })
-  body
-    .container
-      .headers-and-footers-logo-container
+  body.headers-and-footers__body
+    .headers-and-footers__container
+      .headers-and-footers__logo-container
         +logo({
           href: 'index.html',
         })
 
-      .headers-and-footers-header-container
+      .headers-and-footers__header-container
         +header()
 
-      .headers-and-footers-header-with-logged-in-user-container
+      .headers-and-footers__header-with-logged-in-user-container
         +header({
           isLoggedIn: true,
           username: 'Юлий Цезарь',
         })
 
-      .headers-and-footers-footer-container
+      .headers-and-footers__footer-container
         +footer()
-      .headers-and-footers-footer-mobile-container
+      .headers-and-footers__footer-mobile-container
         +footer-mobile({
           isVisible: true,
         })

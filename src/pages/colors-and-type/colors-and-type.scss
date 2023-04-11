@@ -2,51 +2,53 @@
 @import '../../components/color/color';
 @import '../../components/type/type';
 
-html {
-  @include Body-font();
-  background-color: #fff;
-  color: $Dark-Shade-100;
-}
-
-.colors-and-type-container {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-.colors-and-type-logo-container {
-  margin: 30px;
-}
-
-.colors-and-type-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.colors-and-type-colors-description-list-container {
-  margin: 33px 0 0 150px;
-}
-
-.colors-and-type-colors-description-list {
-  @include margin-padding-zero();
-  list-style-type: none;
-
-  &__item {
-    margin-bottom: 20px;
-    padding: 0;
+.colors-and-type {
+  &, &__body {
+    @include Body-font();
+    background-color: #fff;
+    color: $Dark-Shade-100;
   }
-}
 
-.colors-and-type-type-description-list-container {
-  margin: 17px 82px 0 0;
-}
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 
-.colors-and-type-type-description-list {
-  list-style-type: none;
-  padding: 0;
+  &__logo-container {
+    margin: 30px;
+  }
 
-  &__item {
-    margin-bottom: 51px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__colors-description-list-container {
+    margin: 33px 0 0 150px;
+  }
+
+  &__colors-description-list {
+    @include margin-padding-zero();
+    list-style-type: none;
+
+    &__item {
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+
+  &__type-description-list-container {
+    margin: 17px 82px 0 0;
+  }
+
+  &__type-description-list {
+    list-style-type: none;
     padding: 0;
+
+    &__item {
+      margin-bottom: 51px;
+      padding: 0;
+    }
   }
 }

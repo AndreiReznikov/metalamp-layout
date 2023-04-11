@@ -19,52 +19,54 @@
 @import '../../components/footer-mobile/footer-mobile';
 @import '../../templates/vars-and-mixins';
 
-html, body {
-  @include Body-font();
-  background-color: #fff;
-}
-
-.html_non-scrollable {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-}
-
-.search-room-wrapper {
-  display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
-
-.search-room-container  {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 auto;
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 170px 104px 180px;
-  border-bottom: 1px solid $Dark-Shade-5;
-
-  @include media-max($xxl) {
-    padding: 0 35px 100px 35px;
+.search-room {
+  &, &__body {
+    @include Body-font();
+    background-color: #fff;
   }
 
-  @include media-max($xl) {
-    padding: 0 15px 100px 15px;
+  &_non-scrollable {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
   }
-}
 
-.search-room-filter{
-  display: none;
-  margin-top: 25px;
-  width: 100%;
-
-  @include media-max($xl) {
+  &__wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
   }
 
-  &__button {
+  &__container  {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 170px 104px 180px;
+    border-bottom: 1px solid $Dark-Shade-5;
+
+    @include media-max($xxl) {
+      padding: 0 35px 100px 35px;
+    }
+
+    @include media-max($xl) {
+      padding: 0 15px 100px 15px;
+    }
+  }
+
+  &__filter {
+    display: none;
+    margin-top: 25px;
+    width: 100%;
+
+    @include media-max($xl) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__filter-button {
     padding: 15px;
     border: 1px solid $Dark-Shade-25;
     border-radius: 4px;
@@ -72,12 +74,12 @@ html, body {
     cursor: pointer;
   }
 
-  &__wrapper {
+  &__filter-wrapper {
     display: inline-flex;
     align-items: center;
   }
 
-  &__icon {
+  &__filter-icon {
     @include background-position(contain);
     width: 15px;
     height: 15px;
@@ -85,223 +87,223 @@ html, body {
     background-image: url('../../img/filter.svg');
   }
 
-  &__text {
+  &__filter-text {
     @include Body-font();
     font-size: 22px;
     color: $Dark-Shade-100;
   }
-}
 
-.search-room-widgets-container {
-  margin-top: 30px;
-  flex: 1;
-
-  @include media-max($xl) {
-    display: none;
-    flex-basis: 100%;
-    padding: 20px 10px;
-    border: 1px solid $Dark-Shade-5;
-    border-radius: 4px;
-  }
-}
-
-.search-room-widgets-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include media-max($md) {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.search-room-filter-date-dropdown-container {
-
-  @include media-max($xl) {
-    margin-top: 0;
-    order: 0;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-guests-dropdown-container {
-  margin-top: 20px;
-
-  @include media-max($xl) {
-    margin-top: 0;
-    order: 1;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-range-slider-container {
-  margin-top: 30px;
-
-  @include media-max($xl) {
-    order: 5;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-slider-sub-text {
-  @include Body-font();
-  margin-top: 60px;
-  font-size: 12px;
-  line-height: 14px;
-  color: $Dark-Shade-50;
-}
-
-.search-room-checkbox-buttons-container {
-  margin-top: 28px;
-
-  @include media-max($xl) {
+  &__widgets-container {
     margin-top: 30px;
-    order: 3;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-rich-checkbox-buttons-container {
-  margin-top: 20px;
-
-  @include media-max($xl) {
-    margin-top: 30px;
-    order: 4;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-    order: 2;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-conveniences-dropdown-container {
-  margin-top: 18px;
-
-  @include media-max($xl) {
-    margin-top: 0;
-    order: 2;
-  }
-
-  @include media-max($md) {
-    margin-top: 30px;
-    flex-basis: 50%;
-    order: 4;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-checkbox-list-container {
-  margin-top: 30px;
-
-  @include media-max($xl) {
-    margin-top: 30px;
-    order: 6;
-  }
-
-  @include media-max($lg) {
-    flex-basis: 50%;
-  }
-
-  @include media-max($md) {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-}
-
-.search-room-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  margin: 29px 0 0 58px;
-  flex: 6;
-
-  @include media-max($xl) {
-    flex-basis: 100%;
     flex: 1;
-    margin-left: 0;
-  }
-}
 
-.search-room-title {
-  @include H1();
-
-  @include media-max($xl) {
-    width: 100%;
-    text-align: center;
+    @include media-max($xl) {
+      display: none;
+      flex-basis: 100%;
+      padding: 20px 10px;
+      border: 1px solid $Dark-Shade-5;
+      border-radius: 4px;
+    }
   }
 
-  @include media-max($sm) {
-    font-size: 20px;
+  &__widgets-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-max($md) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
-}
 
-.pagination-list {
-  margin-bottom: 36px;
+  &__filter-date-dropdown-container {
 
-  @include media-max($xxl) {
-    justify-content: space-evenly;
+    @include media-max($xl) {
+      margin-top: 0;
+      order: 0;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
   }
-}
 
-.pagination-container.js-pagination-container {
-  margin-right: 10px;
-}
+  &__guests-dropdown-container {
+    margin-top: 20px;
 
-.search-room-pagination-container {
-  position: absolute;
-  appearance: none;
-  opacity: 0;
-  visibility: hidden;
-  left: -10000px;
+    @include media-max($xl) {
+      margin-top: 0;
+      order: 1;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      flex-basis: 100%;
+    }
+  }
+
+  &__range-slider-container {
+    margin-top: 30px;
+
+    @include media-max($xl) {
+      order: 5;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &__slider-sub-text {
+    @include Body-font();
+    margin-top: 60px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $Dark-Shade-50;
+  }
+
+  &__checkbox-buttons-container {
+    margin-top: 28px;
+
+    @include media-max($xl) {
+      margin-top: 30px;
+      order: 3;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &__rich-checkbox-buttons-container {
+    margin-top: 20px;
+
+    @include media-max($xl) {
+      margin-top: 30px;
+      order: 4;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+      order: 2;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &__conveniences-dropdown-container {
+    margin-top: 18px;
+
+    @include media-max($xl) {
+      margin-top: 0;
+      order: 2;
+    }
+
+    @include media-max($md) {
+      margin-top: 30px;
+      flex-basis: 50%;
+      order: 4;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &__checkbox-list-container {
+    margin-top: 30px;
+
+    @include media-max($xl) {
+      margin-top: 30px;
+      order: 6;
+    }
+
+    @include media-max($lg) {
+      flex-basis: 50%;
+    }
+
+    @include media-max($md) {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 29px 0 0 58px;
+    flex: 6;
+
+    @include media-max($xl) {
+      flex-basis: 100%;
+      flex: 1;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    @include H1();
+
+    @include media-max($xl) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include media-max($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &.pagination-list {
+    margin-bottom: 36px;
+
+    @include media-max($xxl) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &.pagination-container {
+    margin-right: 10px;
+  }
+
+  &__pagination-container {
+    position: absolute;
+    appearance: none;
+    opacity: 0;
+    visibility: hidden;
+    left: -10000px;
+  }
 }
