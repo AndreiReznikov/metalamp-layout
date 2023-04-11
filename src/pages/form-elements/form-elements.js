@@ -3,7 +3,7 @@ import IonRangeslider from '../../libs/ion-rangeslider';
 import PaginationJS from '../../libs/paginationjs';
 import AirDatepicker from '../../libs/air-datepicker';
 import vars from '../../templates/vars';
-import '../../components/expandable-checkbox-list';
+import '../../components/checkbox-list';
 import '../../components/dropdown';
 import '../../components/like-button';
 import '../../templates/fonts.scss';

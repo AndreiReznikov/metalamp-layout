@@ -8,7 +8,7 @@
 @import '../../components/dropdown/dropdown';
 @import '../../components/range-slider/range-slider';
 @import '../../components/checkbox-button/checkbox-button';
-@import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+@import '../../components/checkbox-list/checkbox-list';
 @import '../../components/pagination/pagination';
 @import '../../components/rate-button/rate-button';
 @import '../../components/button/button';
@@ -240,7 +240,7 @@ html, body {
   }
 }
 
-.search-room-expandable-checkbox-list-container {
+.search-room-checkbox-list-container {
   margin-top: 30px;
 
   @include media-max(1024px) {

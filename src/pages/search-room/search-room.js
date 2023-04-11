@@ -5,7 +5,7 @@ import PaginationJS from '../../libs/paginationjs';
 import vars from '../../templates/vars';
 import '../../components/header';
 import '../../components/dropdown';
-import '../../components/expandable-checkbox-list';
+import '../../components/checkbox-list';
 import '../../templates/fonts.scss';
 import './search-room.scss';
 

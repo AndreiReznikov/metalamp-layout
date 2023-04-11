@@ -10,7 +10,7 @@
 @import '../../components/date-dropdown/date-dropdown';
 @import '../../components/filter-date-dropdown/filter-date-dropdown';
 @import '../../components/subscription-text-field/subscription-text-field';
-@import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+@import '../../components/checkbox-list/checkbox-list';
 @import '../../components/checkbox-button/checkbox-button';
 @import '../../components/radio-buttons/radio-buttons';
 @import '../../components/toggle-button/toggle-button';
@@ -91,11 +91,11 @@ html {
   margin-top: 19px;
 }
 
-.form-elements-expandable-checkbox-list-container {
+.form-elements-checkbox-list-container {
   margin-top: 172px;
 }
 
-.form-elements-opened-expandable-checkbox-list-container {
+.form-elements-opened-checkbox-list-container {
   margin-top: 31px;
 }
 

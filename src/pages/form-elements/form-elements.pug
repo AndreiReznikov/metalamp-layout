@@ -6,7 +6,7 @@ include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/subscription-text-field/subscription-text-field
 include ../../components/dropdown/dropdown
-include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/checkbox-list/checkbox-list
 include ../../components/checkbox-button/checkbox-button
 include ../../components/radio-buttons/radio-buttons
 include ../../components/toggle-button/toggle-button
@@ -113,24 +113,26 @@ html(lang="ru")
             })
 
           each checkboxList in checkboxLists
-            - const { className, title, checkboxTexts, checkedItems, isOpened } = checkboxList;
+            - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxList;
             div(class=className)
-              +expandable-checkbox-list({
+              +checkbox-list({
                 title,
                 checkboxTexts,
                 checkedItems,
+                isExpandable,
                 isOpened,
               })
 
 
         .form-elements-central-block
           .form-elements-checkbox-buttons-container
-            each checkbox in checkboxes
-              - const { text, title, checked } = checkbox;
-              +checkbox-button({
-                text,
+              - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
+              +checkbox-list({
                 title,
-                checked,
+                checkboxTexts,
+                checkedItems,
+                isExpandable,
+                isOpened,
               })
 
           .form-elements-radio-buttons-container
@@ -193,11 +195,12 @@ html(lang="ru")
 
           .form-elements-rich-checkbox-buttons-container
             each richCheckboxButton in richCheckboxButtons
-              - const { title, richButtonTitle, text, isRich } = richCheckboxButton;
-              +checkbox-button({
+              - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
+              +checkbox-list({
                 title,
-                richButtonTitle,
-                text,
+                richTitles,
+                checkboxTexts,
+                isExpandable,
                 isRich,
               })
 

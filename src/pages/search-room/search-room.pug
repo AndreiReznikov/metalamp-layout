@@ -3,7 +3,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/checkbox-button/checkbox-button
-include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/checkbox-list/checkbox-list
 include ../../components/pagination/pagination
 include ../../components/room-card/room-card
 include ../../components/footer/footer
@@ -52,25 +52,26 @@ html(lang="en")
                 p.search-room-slider-sub-text Стоимость за сутки пребывания в номере
               .search-room-checkbox-buttons-container
                 .search-room-checkbox-buttons-wrapper
-                  each checkbox in checkboxes
-                    -
-                      let { text, title, checked } = checkbox;
-                      title && title !== 'Правила дома' ? title = 'Правила дома' : title
+                  -
+                    const { className, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
 
-                    +checkbox-button({
-                      text,
-                      title,
-                      checked,
-                    })
+                  +checkbox-list({
+                    title: 'Правила дома',
+                    checkboxTexts,
+                    checkedItems,
+                    isExpandable,
+                    isOpened,
+                  })
 
               .search-room-rich-checkbox-buttons-container
                 .search-room-rich-checkbox-buttons-wrapper
                   each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
-                    - const { title, richButtonTitle, text, isRich } = searchRoomRichCheckboxButton;
-                    +checkbox-button({
+                    - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
+                    +checkbox-list({
                       title,
-                      richButtonTitle,
-                      text,
+                      richTitles,
+                      checkboxTexts,
+                      isExpandable,
                       isRich,
                     })
 
@@ -83,9 +84,10 @@ html(lang="en")
                   clicksNum: [2, 2],
                   size: 'S',
                 })
-              .search-room-expandable-checkbox-list-container
-                +expandable-checkbox-list({
+              .search-room-checkbox-list-container
+                +checkbox-list({
                   title: 'Дополнительные удобства',
+                  isExpandable: true,
                   checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
                 })
         section.search-room-cards-container

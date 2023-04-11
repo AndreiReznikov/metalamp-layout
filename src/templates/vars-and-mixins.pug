@@ -1,7 +1,7 @@
 mixin pageBase(options = {})
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="keywords" content=options.keywords)
     meta(name="description" content=options.description)
     title=options.title
@@ -18,11 +18,11 @@ mixin roomTitle(text)
   ];
 
   const headerItems = [
-      ['О нас', [], '/mock-address/change-me', 'bold'],
-      ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт'], '/mock-address/change-me'],
-      ['Вакансии', [], '/mock-address/change-me'],
-      ['Новости', [], '/mock-address/change-me'],
-      ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения'], '/mock-address/change-me'],
+    ['О нас', [], '/mock-address/change-me', 'bold'],
+    ['Услуги', ['Ресторан', 'Бассейн', 'Транспорт'], '/mock-address/change-me'],
+    ['Вакансии', [], '/mock-address/change-me'],
+    ['Новости', [], '/mock-address/change-me'],
+    ['Соглашения', ['Договор по оказанию услуг', 'Договор хранения'], '/mock-address/change-me'],
     ];
 
   const headerButtons = [
@@ -81,33 +81,31 @@ mixin roomTitle(text)
 
   const checkboxLists = [
     {
-      className: 'form-elements-expandable-checkbox-list-container',
+      className: 'form-elements-checkbox-list-container',
       title: 'Expandable checkbox list',
-      checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']
+      checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+      isExpandable: true,
     },
     {
-      className: 'form-elements-opened-expandable-checkbox-list-container',
+      className: 'form-elements-opened-checkbox-list-container',
       title: 'Expandable checkbox list',
       checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
       checkedItems: [1, 2, 3],
+      isExpandable: true,
       isOpened: true,
     },
   ];
 
-  const checkboxes = [
-    {
-      text: 'Можно курить',
-      title: 'Checkbox buttons',
-    },
-    {
-      text: 'Можно с питомцами',
-      checked: true,
-    },
-    {
-      text: `Можно пригласить гостей (до${String.fromCharCode(160)}10${String.fromCharCode(160)}человек)`,
-      checked: true,
-    },
-  ];
+  const checkboxes = {
+    title: 'Checkbox buttons',
+    checkboxTexts: [
+      'Можно курить',
+      'Можно с питомцами',
+      `Можно пригласить гостей (до${String.fromCharCode(160)}10${String.fromCharCode(160)}человек)`,
+    ],
+    checkedItems: [1, 2],
+    isExpandable: false,
+  };
 
   const toggleButtons = [
     ['Получать спецпредложения', true],
@@ -135,13 +133,15 @@ mixin roomTitle(text)
   const richCheckboxButtons = [
     {
       title: 'Rich checkbox buttons',
-      richButtonTitle: 'Широкий коридор',
-      text: `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
-      isRich: true,
-    },
-    {
-      richButtonTitle: 'Помощник для инвалидов',
-      text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+      checkboxTexts: [
+        `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
+        `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+      ],
+      richTitles: [
+        'Широкий коридор',
+        'Помощник для инвалидов',
+      ],
+      isExpandable: false,
       isRich: true,
     },
   ];
@@ -291,13 +291,15 @@ mixin roomTitle(text)
   const searchRoomRichCheckboxButtons = [
     {
       title: 'Доступность',
-      richButtonTitle: 'Широкий коридор',
-      text: `Ширина коридоров в номере ${String.fromCharCode(160)}менее 91 см.`,
-      isRich: true,
-    },
-    {
-      richButtonTitle: 'Помощник для инвалидов',
-      text: `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+      checkboxTexts: [
+        `Ширина коридоров в номере не${String.fromCharCode(160)}менее 91 см.`,
+        `На 1 этаже вас встретит специалист и${String.fromCharCode(160)}проводит до номера.`,
+      ],
+      richTitles: [
+        'Широкий коридор',
+        'Помощник для инвалидов',
+      ],
+      isExpandable: false,
       isRich: true,
     },
   ];
