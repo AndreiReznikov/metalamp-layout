@@ -184,9 +184,11 @@ class Dropdown {
         buttonsNums.forEach((index) => {
           const $plusButton = $($plusButtons[buttonsNums[index]]);
 
-          for (let i = 0; i < clicksNums[index]; i += 1) {
+          const clicks = new Array(clicksNums[index]).fill(0);
+
+          clicks.forEach(() => {
             $plusButton.trigger('click');
-          }
+          });
         });
       }
     });

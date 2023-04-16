@@ -86,10 +86,7 @@ class FormElements {
       return paginationItem;
     };
 
-    const paginationItems = [];
-    for (let i = 0; i < 180; i += 1) {
-      paginationItems.push(i);
-    }
+    const paginationItems = new Array(180).fill(0);
 
     this.pagination = new PaginationJS('.js-pagination');
 
