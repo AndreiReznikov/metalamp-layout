@@ -87,7 +87,10 @@ class SearchRoom {
       nextText: '',
       pageSize: 12,
       callback: addPaginationItem,
-      afterPaging: () => this.initializeSlick(),
+      afterPaging: () => {
+        this.initializeSlick();
+        this._preventDefault();
+      },
     });
   }
 
