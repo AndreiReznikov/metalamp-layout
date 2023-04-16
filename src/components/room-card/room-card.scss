@@ -1,8 +1,8 @@
 @import '../../templates/vars-and-mixins';
 
 .room-card {
+  @include width(250px, 270px);
   position: relative;
-  width: 270px;
   height: 257px;
   background: #fff;
   box-sizing: border-box;

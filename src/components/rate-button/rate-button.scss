@@ -1,11 +1,11 @@
 .rate-button {
 
   &__stars-group {
+    @include width(120px, 100%);
     position: relative;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width: 116px;
     height: 20px;
   }
 

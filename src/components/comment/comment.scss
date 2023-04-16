@@ -1,8 +1,7 @@
 @import '../../templates/vars-and-mixins';
 
 .comment {
-  max-width: 711px;
-  min-width: 280px;
+  @include width(280px, 711px);
   box-sizing: border-box;
 
   &__user-wrapper {

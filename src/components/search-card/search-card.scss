@@ -1,11 +1,11 @@
 @import '../../templates/vars-and-mixins';
 
 .search-card {
+  @include width(260px, 380px);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
-  max-width: 380px;
   background: #fff;
   border: $cardBorder;
   box-sizing: border-box;
@@ -17,7 +17,6 @@
     margin: 39px 29px 0 29px;
 
     @include media-max($sm) {
-      width: 260px;
       margin: 39px 0 0 0;
       font-size: 20px;
     }
@@ -28,6 +27,12 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 21px 0 29px 0;
+  }
+
+  &__date-dropdown-container,
+  &__guests-dropdown-container {
+    @include flex-center();
+    width: 100%;
   }
 
   &__guests-dropdown-container {

@@ -1,6 +1,7 @@
 @import '../../templates/vars-and-mixins';
 
 .dropdown {
+  @include width(250px, 320px);
   position: relative;
   z-index: 11;
 
@@ -10,14 +11,10 @@
   }
 
   &__wrapper {
-    width: 320px;
+    width: 100%;
     position: relative;
     border-color: $Dark-Shade-25;
     box-sizing: border-box;
-
-    @include media-max($sm) {
-      width: 266px;
-    }
   }
 
   &__wrapper_guests {
@@ -29,7 +26,7 @@
   }
 
   &__wrapper_size_s {
-    width: 266px;
+    @include width(266px, 100%);
   }
 
   &__wrapper_opened {

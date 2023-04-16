@@ -8,10 +8,10 @@
   }
 
   &__input-container {
+    @include width(267px, 100%);
     position: relative;
     display: flex;
     align-items: center;
-    width: 267px;
   }
 
   &__input {

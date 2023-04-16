@@ -4,7 +4,7 @@
   flex: 0 0 auto;
   display: none;
   background-color: #fff;
-  max-width: 768px;
+  @include width(320px, $md);
   min-height: 367px;
 
   &_visible {

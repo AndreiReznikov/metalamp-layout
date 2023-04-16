@@ -1,7 +1,7 @@
 @import '../../templates/vars-and-mixins';
 
 .registration-card {
-  max-width: 380px;
+  @include width(250px, 380px);
   background: #fff;
   border: $cardBorder;
   box-sizing: border-box;

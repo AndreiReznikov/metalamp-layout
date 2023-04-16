@@ -78,15 +78,21 @@ $xxl: 1400px;
 }
 
 @mixin longButtonArrow() {
-  position: absolute;
-  right: 13px;
+  display: inline-block;
   width: 20px;
   height: 20px;
+  margin-left: 10px;
   background-image: url('../../img/long-button-arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+}
+
+@mixin width($min, $max) {
+  width: 100%;
+  min-width: $min;
+  max-width: $max;
 }
 
 @mixin flex-center() {

@@ -15,7 +15,7 @@
 
   &__button {
     @include margin-padding-zero();
-    min-width: 40px;
+    @include width(40px, 100%);
     height: 20px;
     background: #fff;
     border: 1px solid $Dark-Shade-25;

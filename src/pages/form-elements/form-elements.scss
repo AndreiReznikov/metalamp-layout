@@ -63,6 +63,7 @@
   }
 
   &__dropdown-first-container {
+    width: 100%;
     margin-top: 20px;
   }
 
@@ -72,6 +73,7 @@
   }
 
   &__date-dropdown-container {
+    width: 100%;
     margin-top: 40px;
   }
 
@@ -149,12 +151,12 @@
   &__rate-buttons-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 256px;
+    width: 260px;
     margin: 18px 0 0 2px;
   }
 
   &__dropdown-fourth-container {
-    margin-top: 198px;
+    margin-top: 197px;
   }
 
   &__rich-checkbox-buttons-container {
@@ -191,7 +193,7 @@
   }
 
   &__long-button-container {
-    margin-top: 29px;
+    margin-top: 28px;
   }
 
   &__text-buttons-container {
@@ -205,7 +207,7 @@
   &__pagination-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 39px;
     max-width: 76%;
   }
 
@@ -214,6 +216,7 @@
   }
 
   &__dropdown-fifth-container {
+    width: 100%;
     margin-top: 263px;
   }
 
@@ -238,7 +241,7 @@
     flex-wrap: wrap;
     align-content: space-between;
     width: 280px;
-    height: 153px;
+    height: 152px;
   }
 
   &__comment-container {

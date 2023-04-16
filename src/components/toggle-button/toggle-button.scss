@@ -29,6 +29,7 @@
 
   &__input {
     @include appearance-none();
+    position: absolute;
   }
 
   &__custom-input {

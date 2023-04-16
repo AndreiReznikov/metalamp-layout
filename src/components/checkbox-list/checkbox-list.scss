@@ -4,9 +4,9 @@
 
   &__title {
     @include H3();
+    @include width(266px, 100%);
     display: flex;
     justify-content: space-between;
-    width: 266px;
     margin-bottom: 18px;
     box-sizing: border-box;
     cursor: pointer;

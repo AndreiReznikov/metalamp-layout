@@ -9,9 +9,9 @@
   }
 
   &__label {
+    @include width(250px, 266px);
     display: flex;
     flex-direction: column;
-    max-width: 266px;
     min-height: 20px;
     margin-bottom: 11px;
     cursor: pointer;

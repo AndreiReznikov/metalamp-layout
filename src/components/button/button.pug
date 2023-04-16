@@ -38,11 +38,14 @@ mixin button(options = {})
           button(
             class='button__item'
             type=options.type
-            )=options.text
+            )
+            span.button__text-container
+              span.button__text=options.text
+            span.button__arrow
         else
           a(
             class='button__link'
             href=options.href
             )=options.text
-        span.button__arrow
+            span.button__arrow
 

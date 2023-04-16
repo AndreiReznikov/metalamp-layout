@@ -1,15 +1,11 @@
 @import '../../templates/vars-and-mixins';
 
 .date-dropdown {
+  @include width(266px, 320px);
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 320px;
   z-index: 100;
-
-  @include media-max($sm) {
-    width: 266px;
-  }
 
   &__title {
     @include H3();
@@ -34,7 +30,7 @@
 
   &__input-from, &__input-to {
     @include Body-font();
-    width: 150px;
+    @include width(125px, 150px);
     height: 44px;
     padding-left: 15px;
     background: #fff;
@@ -45,7 +41,6 @@
     cursor: pointer;
 
     @include media-max($sm) {
-      width: 125px;
       padding-left: 10px;
     }
   }

@@ -1,8 +1,8 @@
 @import '../../templates/vars-and-mixins';
 
 .advantage {
+  @include width(200px, 280px);
   display: flex;
-  width: 280px;
   padding-bottom: 24px;
 
   &_bordered {
