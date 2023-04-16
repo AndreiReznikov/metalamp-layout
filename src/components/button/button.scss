@@ -110,16 +110,16 @@
         @include width(250px, 100%);
       }
 
-      & .button__text-container {
+      & > .button__text-container {
         display: inline-flex;
         justify-content: center;
         width: 100%;
         margin-left: 25px;
       }
-    }
 
-    & .button__arrow {
-      @include longButtonArrow;
+      & > .button__arrow {
+        @include longButtonArrow;
+      }
     }
   }
 
@@ -139,7 +139,7 @@
       @include inline-flex-center();
       @include one-hundred-width-and-height();
       @include button-radius();
-      padding: 0;
+      padding: 15px;
       background: $gradient;
       text-decoration: none;
       box-sizing: border-box;
@@ -152,10 +152,17 @@
       @include media-max($sm) {
         @include width(250px, 100%);
       }
-    }
 
-    & .button__arrow {
-      @include longButtonArrow;
+      & > .button__text-container {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 25px;
+      }
+
+      & > .button__arrow {
+        @include longButtonArrow;
+      }
     }
   }
 }

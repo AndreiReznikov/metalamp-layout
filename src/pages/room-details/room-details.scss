@@ -97,8 +97,9 @@
     flex: 1 0 auto;
     max-width: $max-width;
     margin: 0 auto;
-    padding: 70px 180px 62px 180px;
+    padding: 70px 140px 62px 140px;
     border-bottom: 1px solid $Dark-Shade-5;
+    box-sizing: border-box;
 
     @include media-max($xl) {
       padding: 50px 15px 62px 15px;

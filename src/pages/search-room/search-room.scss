@@ -43,12 +43,9 @@
     flex: 1 0 auto;
     max-width: $max-width;
     margin: 0 auto;
-    padding: 0 170px 104px 180px;
+    padding: 0 130px 104px 140px;
     border-bottom: 1px solid $Dark-Shade-5;
-
-    @include media-max($xxl) {
-      padding: 0 35px 100px 35px;
-    }
+    box-sizing: border-box;
 
     @include media-max($xl) {
       padding: 0 15px 100px 15px;
@@ -221,7 +218,7 @@
   }
 
   &__conveniences-dropdown-container {
-    margin-top: 18px;
+    margin-top: 15px;
 
     @include media-max($xl) {
       margin-top: 0;

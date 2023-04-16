@@ -8,7 +8,7 @@
   }
 
   &__input-container {
-    @include width(267px, 100%);
+    @include width(250px, 267px);
     position: relative;
     display: flex;
     align-items: center;
