@@ -11,13 +11,13 @@
   }
 
   &__input-container {
-    @include width(266px, 100%);
+    @include width(250px, 266px);
     position: relative;
     height: 44px;
   }
 
   &__input-container_hidden {
-    @include width(320px, 100%);
+    @include width(250px, 320px);
     opacity: 0;
   }
 

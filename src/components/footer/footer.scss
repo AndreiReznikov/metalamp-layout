@@ -55,11 +55,12 @@
   }
 
   &__first-section  {
-    max-width: 260px;
+    flex-basis: 260px;
     box-sizing: border-box;
 
     @include media-max($xl) {
-      margin: 40px 0 0 80px;
+      flex-basis: 30%;
+      margin: 40px 0 0 15px;
       order: 1;
     }
   }
@@ -72,43 +73,50 @@
 
   &__items-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 560px;
+    width: 100%;
     white-space: nowrap;
-    flex: 1;
 
     @include media-max($xl) {
       flex-basis: 100%;
+      max-width: 100%;
+      justify-content: center;
       order: 0;
     }
   }
 
   &__second-section  {
-    margin-left: 40px;
     box-sizing: border-box;
 
     @include media-max($xl) {
-      margin-left: 0;
+      margin-right: 60px;
     }
   }
 
   &__third-section {
-    margin-left: 58px;
+    margin-right: 32px;
     box-sizing: border-box;
+
+    @include media-max($xl) {
+      margin-right: 60px;
+    }
   }
 
   &__fourth-section {
-    margin-left: 92px;
+    margin-right: 12px;
     box-sizing: border-box;
   }
 
   &__fifth-section {
-    max-width: 260px;
-    margin-left: 52px;
+    flex-basis: 260px;
     box-sizing: border-box;
 
     @include media-max($xl) {
+      flex-basis: 30%;
       order: 2;
-      margin: 40px 80px 0 0;
+      margin: 40px 15px 0 0;
     }
   }
 

@@ -14,7 +14,7 @@ mixin date-dropdown(options = {})
       .date-dropdown__wrapper
         if options.title
           h3.date-dropdown__title=options.title[index]
-        .date-dropdown__input-wrapper
+        div(class=`date-dropdown__input-wrapper-${val}`)
           .date-dropdown__arrow
           input(
             class=`date-dropdown__input-${val} js-date-dropdown__input-${val}`

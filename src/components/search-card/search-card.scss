@@ -17,8 +17,9 @@
     margin: 39px 29px 0 29px;
 
     @include media-max($sm) {
-      margin: 39px 0 0 0;
+      margin: 39px 10px 0 10px;
       font-size: 20px;
+      text-align: center;
     }
   }
 
@@ -32,10 +33,12 @@
   &__date-dropdown-container,
   &__guests-dropdown-container {
     @include flex-center();
+    margin: 0 10px;
     width: 100%;
   }
 
   &__guests-dropdown-container {
+    margin: 0 10px;
     margin-top: 20px;
   }
 

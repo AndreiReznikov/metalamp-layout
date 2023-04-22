@@ -12,10 +12,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  &__container_indented {
     margin-right: 21px;
+
+    @include media-max($xl) {
+      margin-right: 0;
+    }
   }
 
   &__list {

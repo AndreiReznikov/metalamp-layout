@@ -11,7 +11,7 @@ mixin footer()
             isColorful: true,
             href: 'landing-page.html',
           })
-          .footer__first-section-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          .footer__first-section-text Бронирование номеров в&nbsp;лучшем отеле 2019&nbsp;года по&nbsp;версии ассоциации «Отельные&nbsp;взгляды»
         .footer__items-section
           each section in footerSections
             - const { className, title, items, link } = section;
@@ -28,7 +28,7 @@ mixin footer()
         .footer__fifth-section
           h3.footer__subscription-title Подписка
           form.footer__subscription-form
-            .footer__subscription-text Получайте специальные предложения и новости сервиса
+            .footer__subscription-text Получайте специальные предложения и&nbsp;новости сервиса
             +subscription-text-field()
     .footer__bottom-section-wrapper
       .footer__copyright-text Copyright &#169; 2018 Toxin отель. Все права защищены.

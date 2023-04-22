@@ -136,7 +136,7 @@ class RoomDetails {
     const $chart = $('.js-room-details__chart');
 
     const expandCanvas = () => {
-      if (this.windowWidth < 400) $chart.width(280);
+      if (this.windowWidth < 577) $chart.width(280);
       else $chart.width(344);
     };
 

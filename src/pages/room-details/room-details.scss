@@ -123,16 +123,16 @@
   &__advantages-container {
     flex-basis: 43.6%;
 
-    @include media-max($xl) {
-      flex-basis: 100%;
-    }
-
     @include media-max($lg) {
-      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-basis: 100%;
     }
 
     @include media-max($md) {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       flex-basis: 100%;
@@ -153,7 +153,13 @@
 
   &__doughnut-container {
     position: relative;
+    width: 100%;
     height: 180px;
+
+    @include media-max($lg) {
+      display: flex;
+      justify-content: center;
+    }
 
     @include media-max($md) {
       flex-basis: 100%;
@@ -173,6 +179,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include media-max($lg) {
+      margin-top: 30px;
+    }
 
     @include media-max($md) {
       margin-top: 20px;
@@ -209,6 +219,10 @@
 
   &__comments-container {
     margin-top: 11px;
+
+    @include media-max($lg) {
+      width: 100%;
+    }
   }
 
   &__comment-wrapper {
@@ -221,8 +235,11 @@
     align-items: flex-end;
     margin: 0 2px 23px 0;
 
-    @include media-max($sm) {
+    @include media-max($lg) {
       flex-direction: column;
+    }
+
+    @include media-max($sm) {
       align-items: flex-start;
       margin-right: 0;
     }
@@ -232,6 +249,12 @@
     margin-bottom: 0;
     text-align: start;
     flex-basis: 80%;
+
+    @include media-max($lg) {
+      width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -253,6 +276,11 @@
 
     @include media-max($xxl) {
       margin-right: 15px;
+    }
+
+    @include media-max($lg) {
+      width: 100%;
+      text-align: center;
     }
 
     @include media-max($md) {
@@ -280,9 +308,6 @@
     }
 
     @include media-max($sm) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
       flex-basis: 100%;
       padding-right: 0;
     }
@@ -310,10 +335,7 @@
     }
 
     @include media-max($sm) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-basis: 100%;
+      padding-right: 0;
     }
   }
 

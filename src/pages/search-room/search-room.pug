@@ -30,21 +30,23 @@ html.search-room(lang="en")
           form.search-room__widgets-form
             section.search-room__widgets-wrapper
               .search-room__filter-date-dropdown-container
-                +filter-date-dropdown({
-                  title: 'Даты пребывания в отеле',
-                  dateFrom: '2020, 8, 19',
-                  dateTo: '2020, 8, 23',
-                })
+                .search-room__filter-date-dropdown-wrapper
+                  +filter-date-dropdown({
+                    title: 'Даты пребывания в отеле',
+                    dateFrom: '2020, 8, 19',
+                    dateTo: '2020, 8, 23',
+                  })
               .search-room__guests-dropdown-container
-                +dropdown({
-                  title: 'Гости',
-                  items: ['Взрослые', 'Дети', 'Младенцы'],
-                  addingButtons: true,
-                  isGuests: true,
-                  buttonsNum: [0, 2],
-                  clicksNum: [3, 1],
-                  size: 'S',
-                })
+                .search-room__guests-dropdown-wrapper
+                  +dropdown({
+                    title: 'Гости',
+                    items: ['Взрослые', 'Дети', 'Младенцы'],
+                    addingButtons: true,
+                    isGuests: true,
+                    buttonsNum: [0, 2],
+                    clicksNum: [3, 1],
+                    size: 'S',
+                  })
               .search-room__range-slider-container
                 +range-slider({
                   title: 'Диапазон цены',
@@ -76,14 +78,15 @@ html.search-room(lang="en")
                     })
 
               .search-room__conveniences-dropdown-container
-                +dropdown({
-                  title: 'Удобства номера',
-                  items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                  isConveniences: true,
-                  buttonsNum: [0, 1],
-                  clicksNum: [2, 2],
-                  size: 'S',
-                })
+                .search-room__conveniences-dropdown-wrapper
+                  +dropdown({
+                    title: 'Удобства номера',
+                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                    isConveniences: true,
+                    buttonsNum: [0, 1],
+                    clicksNum: [2, 2],
+                    size: 'S',
+                  })
               .search-room__checkbox-list-container
                 +checkbox-list({
                   title: 'Дополнительные удобства',

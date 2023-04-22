@@ -23,9 +23,15 @@
     box-sizing: border-box;
   }
 
-  &__input-wrapper {
+  &__input-wrapper-from,
+  &__input-wrapper-to {
     position: relative;
     margin-top: 5px;
+    box-sizing: border-box;
+  }
+
+  &__input-wrapper-from {
+    margin-right: 5px;
   }
 
   &__input-from, &__input-to {

@@ -108,13 +108,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include media-max($md) {
+    @include media-max($lg) {
       flex-direction: column;
       justify-content: center;
     }
   }
 
   &__filter-date-dropdown-container {
+    width: 266px;
 
     @include media-max($xl) {
       margin-top: 0;
@@ -122,33 +123,31 @@
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
+  &__filter-date-dropdown-wrapper {
+    min-width: 266px;
+  }
+
   &__guests-dropdown-container {
+    width: 266px;
     margin-top: 20px;
 
     @include media-max($xl) {
       margin-top: 0;
-      order: 1;
+      order: 2;
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
-      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
@@ -160,13 +159,9 @@
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
     }
   }
 
@@ -182,18 +177,15 @@
     margin-top: 28px;
 
     @include media-max($xl) {
+      width: 350px;
       margin-top: 30px;
       order: 3;
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
     }
   }
 
@@ -206,35 +198,26 @@
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-      order: 2;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
     }
   }
 
   &__conveniences-dropdown-container {
+    width: 266px;
     margin-top: 15px;
 
     @include media-max($xl) {
       margin-top: 0;
-      order: 2;
+      order: 1;
     }
 
-    @include media-max($md) {
-      margin-top: 30px;
-      flex-basis: 50%;
-      order: 4;
-    }
-
-    @include media-max($md) {
+    @include media-max($lg) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
@@ -247,13 +230,9 @@
     }
 
     @include media-max($lg) {
-      flex-basis: 50%;
-    }
-
-    @include media-max($md) {
       display: flex;
       justify-content: center;
-      flex-basis: 100%;
+      width: 100%;
     }
   }
 
