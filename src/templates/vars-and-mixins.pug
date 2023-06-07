@@ -320,15 +320,16 @@ mixin roomTitle(text)
   ];
 
   const roomCardsItems = new Array(160).fill(0);
+  const getRandomNumber = (num) => Math.floor(Math.random() * num);
 
   roomCardsItems.forEach(() => {
-    const photoNumber = Math.floor(Math.random() * 12) + 1;
-    const roomNumber = Math.floor(Math.random() * 999) + 1;
-    let price = Math.floor(Math.random() * 10000) + 2000;
+    const photoNumber = getRandomNumber(12) + 1;
+    const roomNumber = getRandomNumber(999) + 1;
+    let price = getRandomNumber(10000) + 2000;
     price -= price % 100;
-    const rateNumber = Math.floor(Math.random() * 5) + 1;
-    const feedbackNumber = Math.floor(Math.random() * 200) + 1;
-    const luxNumber = Math.floor(Math.random() * 2);
+    const rateNumber = getRandomNumber(5) + 1;
+    const feedbackNumber = getRandomNumber(200) + 1;
+    const luxNumber = getRandomNumber(2);
 
     roomsCardsProperties.push(
       [
