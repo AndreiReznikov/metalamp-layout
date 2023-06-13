@@ -1,6 +1,6 @@
 # MetaLamp layout project
 
-This is a training project to find hotel rooms, to which I have devoted quite a lot of time. It was a necessary and interesting experience. While I was doing this project, I realized what component layout, preprocessors, assemblers, plugins, and much more are. That was cool.
+This is a training project to find hotel rooms, to which I have devoted quite a lot of time. It was a necessary and interesting experience. While I was doing this project, I realized what component layout, preprocessors, assemblers, plugins, and much more are. That was cool!
 
 # Demo: https://andreireznikov.github.io/metalamp-layout-demo
 

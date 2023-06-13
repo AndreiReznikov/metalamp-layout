@@ -154,12 +154,12 @@
 
   &__doughnut-container {
     position: relative;
-    width: 100%;
     height: 180px;
 
     @include media-max($lg) {
       display: flex;
       justify-content: center;
+      width: 100%;
     }
 
     @include media-max($md) {
