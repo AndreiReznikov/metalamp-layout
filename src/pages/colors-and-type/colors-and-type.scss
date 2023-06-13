@@ -3,6 +3,7 @@
 @import '../../components/type/type';
 
 .colors-and-type {
+  
   &, &__body {
     @include Body-font();
     background-color: #fff;

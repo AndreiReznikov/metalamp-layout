@@ -1,6 +1,7 @@
 @import '../../templates/vars-and-mixins';
 
 .index {
+  
   &, &__body {
     @include Body-font();
     height: 100%;

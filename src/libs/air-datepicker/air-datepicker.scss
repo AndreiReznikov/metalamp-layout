@@ -92,7 +92,7 @@
     content: '';
     position: absolute;
     border-radius: 22px 0 0 22px;
-    background: $highlytransparentGradient;
+    background: $highlyTransparentGradient;
   }
 
   &--cell.-range-to- {
@@ -108,18 +108,18 @@
     content: '';
     position: absolute;
     border-radius: 0 22px 22px 0;
-    background: $highlytransparentGradient;
+    background: $highlyTransparentGradient;
   }
 
   &--cell.-in-range- {
-    background: $highlytransparentGradient;
+    background: $highlyTransparentGradient;
     color: $Dark-Shade-50;
   }
 
   &--cell.-current- {
     color: #fff;
     font-weight: bold;
-    background: $greenblueGradient;
+    background: $greenBlueGradient;
   }
 
   &--cell.-current-.-in-range- {
@@ -131,7 +131,7 @@
     @include one-hundred-width-and-height();
     content: '';
     position: absolute;
-    background: $highlytransparentGradient;
+    background: $highlyTransparentGradient;
   }
 
   &--buttons {

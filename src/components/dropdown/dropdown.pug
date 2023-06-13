@@ -28,7 +28,7 @@ mixin dropdown(options = {})
           while i < options.items.length
             - i += 1
             .dropdown__option.js-dropdown__option(data-id=`${i}`)
-              span.drodown__item
+              span.dropdown__item
                 = options.items[i-1]
           if options.addingButtons
             .dropdown__buttons-container

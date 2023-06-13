@@ -63,7 +63,7 @@
     }
   }
 
-  &__base_unbordered {
+  &__base_borderless {
     @include H3();
     border: none;
     background: none;

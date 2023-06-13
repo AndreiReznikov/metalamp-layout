@@ -12,6 +12,7 @@
 @import '../../templates/vars-and-mixins';
 
 .landing-page {
+  
   &, &__body {
     @include Body-font();
     background-color: #fff;

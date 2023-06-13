@@ -3,7 +3,7 @@ mixin button(options = {})
     let className = 'button__base';
     className += options.filledButton ? ' button__base_filled' :
       options.unfilledButton ? ' button__base_unfilled' :
-      options.unborderedButton ? ' button__base_unbordered' :
+      options.borderlessButton ? ' button__base_borderless' :
       options.longButton ? ' button__base_long' :
       options.longLinkButton ? ' button__base_long_link' : '';
 
@@ -25,7 +25,7 @@ mixin button(options = {})
         else
           span.button__background=options.text
 
-    else if options.unborderedButton
+    else if options.borderlessButton
       button(
         class=className
         type='button'

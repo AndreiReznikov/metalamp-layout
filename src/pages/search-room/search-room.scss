@@ -20,6 +20,7 @@
 @import '../../templates/vars-and-mixins';
 
 .search-room {
+  
   &, &__body {
     @include Body-font();
     background-color: #fff;

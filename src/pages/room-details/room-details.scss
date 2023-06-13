@@ -16,6 +16,7 @@
 @import '../../templates/vars-and-mixins';
 
 .room-details {
+
   &, &__body {
     @include Body-font();
     background-color: #fff;
@@ -267,7 +268,7 @@
     }
   }
 
-  &__commenst-number-text {
+  &__comments-number-text {
     @include Body-font();
     display: inline-block;
     margin-top: 5px;

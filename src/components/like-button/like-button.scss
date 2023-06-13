@@ -6,7 +6,7 @@
     opacity: 0.5;
   }
 
-  &__inner-conainer{
+  &__inner-container{
     @include flex-between-center();
     width: 100%;
     padding: 0 10px 0 4px;

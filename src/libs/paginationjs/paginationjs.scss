@@ -30,7 +30,7 @@
   }
 
   & .paginationjs-pages li.paginationjs-next {
-    background: $greenblueGradient;
+    background: $greenBlueGradient;
 
     @include media-max($md) {
       margin-left: 30px;
@@ -38,7 +38,7 @@
   }
 
   & .paginationjs-pages .paginationjs-prev {
-    background: $greenblueGradient;
+    background: $greenBlueGradient;
 
     @include media-max($md) {
       margin-right: 30px;
