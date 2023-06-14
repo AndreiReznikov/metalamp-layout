@@ -116,8 +116,13 @@
     flex-wrap: wrap;
     flex: 5;
 
+    @include media-max($xxl) {
+      padding-right: 65px;
+    }
+
     @include media-max($lg) {
       flex-basis: 100%;
+      padding-right: 0;
     }
   }
 
