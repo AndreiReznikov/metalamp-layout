@@ -112,6 +112,16 @@ class RoomDetails {
                 style: 'normal',
               },
             },
+            onHover: (event) => {
+              const $legendItem = $(event.native.target);
+
+              $legendItem.css('cursor', 'pointer');
+            },
+            onLeave: (event) => {
+              const $legendItem = $(event.native.target);
+
+              $legendItem.css('cursor', 'default');
+            },
           },
         },
       },
