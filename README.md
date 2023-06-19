@@ -43,3 +43,26 @@ To start the project, use the command:
 ```
 npm run server
 ```
+
+# Npm commands
+
+- "prod": build a production bundle,
+```
+npm run prod
+```
+- "dev": build a development bundle,
+```
+npm run dev
+```
+- "server": start the local server,
+```
+npm run server
+```
+- "lint": check the project for linter errors,
+```
+npm run lint
+```
+- "fix": fix linter errors
+```
+npm run fix
+```
