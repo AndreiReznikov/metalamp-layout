@@ -2,6 +2,10 @@
 
 .checkbox-button {
 
+  &__container {
+    @include width(220px, 255px);
+  }
+
   &__title {
     @include H3();
     margin-bottom: 17px;
@@ -9,9 +13,7 @@
   }
 
   &__label {
-    @include width(250px, 266px);
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     min-height: 20px;
     margin-bottom: 11px;
     cursor: pointer;
@@ -21,38 +23,30 @@
     border: 1px solid $Dark-Shade-50;
   }
 
-  &__label:hover > &__input:not(:checked) ~ &__text-container > &__text-title,
-  &__label:hover > &__input:not(:checked) ~ &__text-container > &__text_regular,
-  &__label:hover > &__input:not(:checked) ~ &__text {
-    color: $Dark-Shade-75;
-  }
-
   &__text-container {
+    display: inline-flex;
+    flex-direction: column;
     padding-left: 30px;
   }
 
   &__text_regular {
     @include Body-font();
-    display: inline-block;
-    width: 95%;
     font-size: 12px;
-    color: $Dark-Shade-50;
+    color: $Dark-Shade-75;
   }
 
   &__text-title {
     @include H3();
-    display: flex;
     margin: 0;
     padding-bottom: 5px;
     font-size: 14px;
     text-transform: none;
-    color: $Dark-Shade-50;
+    color: $Dark-Shade-75;
   }
 
   &__text {
     @include Body-font();
-    display: flex;
-    max-width: 240px;
+    max-width: 192px;
     margin: 0;
     padding-left: 30px;
     color: $Dark-Shade-75;
@@ -82,26 +76,16 @@
     z-index: 10;
   }
 
-  &__input:checked ~ &__text-container > &__text-title ,
-  &__input:checked ~ &__text-container > &__text_regular,
-  &__input:checked ~ &__text {
-    color: $Dark-Shade-75;
-  }
-
-  &__input:not(:checked) ~ &__text {
-    color: $Dark-Shade-50;
-  }
-
   &__input:not(:checked) ~ &__custom-input {
     border: 1px solid $Dark-Shade-25;
   }
 
   &__custom-input {
-    @include flex-center();
+    @include inline-flex-center();
     position: absolute;
     width: 20px;
     height: 20px;
-    box-sizing: border-box;
     border-radius: 4px;
+    box-sizing: border-box;
   }
 }
