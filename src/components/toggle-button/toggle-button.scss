@@ -13,18 +13,9 @@
     border: 1px solid $Dark-Shade-50;
   }
 
-  &:hover > &__input:not(:checked) + &__custom-input::after {
-    background: $Dark-Shade-50;
-  }
-
-  &:hover > &__text,
-  & > &__input:checked ~ &__text {
-    color: $Dark-Shade-75;
-  }
-
   &__text {
     padding-left: 50px;
-    color: $Dark-Shade-50;
+    color: $Dark-Shade-75;
   }
 
   &__input {
