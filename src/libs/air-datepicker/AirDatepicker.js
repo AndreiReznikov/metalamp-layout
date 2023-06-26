@@ -70,6 +70,7 @@ class AirDatepicker {
         navTitles,
         prevHtml,
         nextHtml,
+        minDate: new Date(),
         onSelect: (date) => {
           const dates = date.split(' - ');
           const [dateFrom, dateTo] = dates;
@@ -129,6 +130,8 @@ class AirDatepicker {
 
       const dateFrom = new Date(userDateFrom);
       const dateTo = new Date(userDateTo);
+
+      if (dateFrom < new Date() || dateTo < new Date()) return;
 
       const datepicker = $datepickerInput.data('datepicker');
       datepicker.selectDate([dateFrom, dateTo]);
