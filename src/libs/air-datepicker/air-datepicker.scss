@@ -134,8 +134,11 @@
     background: $highlyTransparentGradient;
   }
 
+  &--cell.-disabled- {
+    opacity: 0.5;
+  }
+
   &--buttons {
-    justify-content: space-between;
     padding: 12px 20px 0 20px;
     border-top: none;
   }
@@ -143,8 +146,13 @@
   &--button {
     @include H3();
     flex: none;
+    margin-left: auto;
     line-height: 15px;
     color: $Purple;
+  }
+
+  &--button[data-action="clear"] {
+    margin-left: 0;
   }
 
   &--button:hover {

@@ -9,6 +9,7 @@ class AirDatepicker {
 
   initializePlugin(options) {
     const { size } = this;
+    const showClearButton = this.showClearButton.bind(this);
 
     this.$datepickerCollection.each(function initializePlugin() {
       const $datepicker = $(this);
@@ -77,8 +78,13 @@ class AirDatepicker {
 
           $dateFrom.val(dateFrom);
           $dateTo.val(dateTo);
+
+          showClearButton();
         },
-        onShow: handleDatepickerSetCalendarWidth,
+        onShow: () => {
+          handleDatepickerSetCalendarWidth();
+          showClearButton();
+        },
         onChangeMonth: handleDatepickerSetCalendarWidth,
         onChangeYear: handleDatepickerSetCalendarWidth,
         onChangeDecade: handleDatepickerSetCalendarWidth,
@@ -153,6 +159,33 @@ class AirDatepicker {
         if (isToEmpty) setEmptyValue($dateTo);
       });
     }
+  }
+
+  showClearButton() {
+    this.$datepickerCollection.each(function showClearButton() {
+      const $datepicker = $(this);
+
+      let $datepickerInput;
+
+      if ($datepicker.hasClass('js-date-dropdown')) {
+        $datepickerInput = $datepicker.find('.js-date-dropdown__input');
+      } else {
+        $datepickerInput = $datepicker.find('.js-filter-date-dropdown__input');
+      }
+
+      const datepicker = $datepickerInput.data('datepicker');
+      const datepickerElements = datepicker.$datepicker;
+
+      const $clearButton = datepickerElements.find('[data-action="clear"]');
+
+      if (datepicker.selectedDates.length < 1) {
+        $clearButton.hide();
+
+        return;
+      }
+
+      $clearButton.show();
+    });
   }
 
   addApplyButton() {
