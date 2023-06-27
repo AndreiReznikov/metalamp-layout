@@ -24,8 +24,8 @@ $xl: 1200px;
 $xxl: 1400px;
 
 @mixin h1() {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -34,8 +34,8 @@ $xxl: 1400px;
 }
 
 @mixin h2() {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -44,8 +44,8 @@ $xxl: 1400px;
 }
 
 @mixin h3() {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -55,8 +55,8 @@ $xxl: 1400px;
 }
 
 @mixin body-font() {
-  margin: 0;
-  padding: 0;
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -101,11 +101,13 @@ $xxl: 1400px;
   content: '';
   position: absolute;
   display: inline-block;
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
 
   @if $color {
-    border: 1px solid $purple;
+    border: 1px solid transparent;
+    border-image: $gradient;
+    border-image-slice: 1;
   } @else {
     border: 1px solid #fff;
   }
