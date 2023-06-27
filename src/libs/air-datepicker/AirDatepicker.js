@@ -53,6 +53,35 @@ class AirDatepicker {
         handleCalendarSetCellHeight();
       };
 
+      let isDatepickerVisible = false;
+
+      const handleInputShowDatepicker = () => {
+        const datepicker = $datepickerInput.data('datepicker');
+        const hideDatepicker = () => datepicker.hide();
+        const showDatepicker = () => datepicker.show();
+
+        const bindClickEvents = (eventType = 'show') => {
+          const unbindEventType = `click.${eventType}`;
+
+          $datepickerInput.off(unbindEventType);
+          $dateFrom.off(unbindEventType);
+          $dateTo.off(unbindEventType);
+
+          const bindEventType = eventType === 'show' ? 'click.hide' : 'click.show';
+          const datepickerMethod = eventType === 'show' ? hideDatepicker : showDatepicker;
+
+          $datepickerInput.on(bindEventType, datepickerMethod);
+          $dateFrom.on(bindEventType, datepickerMethod);
+          $dateTo.on(bindEventType, datepickerMethod);
+        };
+
+        if (isDatepickerVisible) {
+          bindClickEvents('show');
+        } else {
+          bindClickEvents('hide');
+        }
+      };
+
       const {
         range,
         clearButton,
@@ -82,8 +111,14 @@ class AirDatepicker {
           showClearButton('fade');
         },
         onShow: () => {
+          handleInputShowDatepicker();
+          isDatepickerVisible = true;
           handleDatepickerSetCalendarWidth();
           showClearButton();
+        },
+        onHide: () => {
+          handleInputShowDatepicker();
+          isDatepickerVisible = false;
         },
         onChangeMonth: handleDatepickerSetCalendarWidth,
         onChangeYear: handleDatepickerSetCalendarWidth,
@@ -161,7 +196,7 @@ class AirDatepicker {
     }
   }
 
-  showClearButton(animationType) {
+  showClearButton(animationType = 'show') {
     this.$datepickerCollection.each(function showClearButton() {
       const $datepicker = $(this);
 
