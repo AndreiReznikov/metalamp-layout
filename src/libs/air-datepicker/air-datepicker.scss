@@ -25,7 +25,7 @@
   &--nav {
     display: flex;
     align-items: center;
-    padding: 20px 20px 22px;
+    padding: 20px 24px 22px;
     box-sizing: border-box;
     border-bottom: none;
   }
@@ -48,9 +48,26 @@
   }
 
   &--nav-action {
-    padding: 4px 4px 0;
     width: 16px;
     height: 16px;
+  }
+
+  &--arrow-prev, &--arrow-next {
+    @include button-arrow;
+
+    justify-content: center;
+  }
+
+  &--arrow-prev {
+    transform: rotate(180deg);
+  }
+
+  &--arrow-prev::after, &--arrow-next::after {
+    @include button-arrow-after(true);
+  }
+
+  &--arrow-prev::before, &--arrow-next::before {
+    @include button-arrow-before(true);
   }
 
   &--content {

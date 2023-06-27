@@ -1,6 +1,8 @@
 @import '../../templates/vars-and-mixins';
 
 .subscription-text-field {
+  @include width(250px, 267px);
+
   &__title {
     @include h3;
 
@@ -8,11 +10,10 @@
   }
 
   &__input-container {
-    @include width(250px, 267px);
-
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   &__input {
@@ -23,8 +24,8 @@
     padding: 0 35px 0 15px;
     background: #fff;
     border: 1px solid $dark-shade-25;
-    box-sizing: border-box;
     border-radius: 4px;
+    box-sizing: border-box;
   }
 
   &__input:focus {
@@ -48,7 +49,7 @@
 
   &__button {
     position: absolute;
-    right: 7px;
+    right: 0;
     width: 30px;
     height: 20px;
     background: none;
@@ -57,10 +58,16 @@
   }
 
   &__arrow {
-    @include inline-flex-center;
-    @include one-hundred-width-and-height;
-    @include background-position(contain);
+    @include button-arrow;
 
-    background-image: url("../../img/arrow-forward.svg");
+    justify-content: center;
+  }
+
+  &__arrow::after {
+    @include button-arrow-after(true);
+  }
+
+  &__arrow::before {
+    @include button-arrow-before(true);
   }
 }

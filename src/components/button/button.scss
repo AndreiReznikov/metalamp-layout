@@ -122,11 +122,18 @@
         display: inline-flex;
         justify-content: center;
         width: 100%;
-        margin-left: 25px;
       }
 
       & > .button__arrow {
-        @include long-button-arrow;
+        @include button-arrow;
+      }
+
+      & > .button__arrow::after {
+        @include button-arrow-after;
+      }
+
+      & > .button__arrow::before {
+        @include button-arrow-before;
       }
     }
   }
@@ -171,7 +178,15 @@
       }
 
       & > .button__arrow {
-        @include long-button-arrow;
+        @include button-arrow;
+      }
+
+      & > .button__arrow::after {
+        @include button-arrow-after;
+      }
+
+      & > .button__arrow::before {
+        @include button-arrow-before;
       }
     }
   }

@@ -75,16 +75,44 @@ $xxl: 1400px;
   transform: rotate(45deg);
 }
 
-@mixin long-button-arrow() {
+@mixin button-arrow() {
+  @include zero-width-and-height;
+  @include flex-center();
+
+  position: relative;
+  justify-content: flex-end;
+}
+
+@mixin button-arrow-after($color: false) {
+  content: '';
+  position: absolute;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  background-image: url('../../img/long-button-arrow.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
+  width: 14px;
+  height: 2px;
+
+  @if $color {
+    background: $gradient;
+  } @else {
+    background-color: #fff;
+  }
+}
+
+@mixin button-arrow-before($color: false) {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+  @if $color {
+    border: 1px solid $purple;
+  } @else {
+    border: 1px solid #fff;
+  }
+
+  border-width: 0 2px 2px 0;
+  transform: rotate(315deg);
+  box-sizing: border-box;
 }
 
 @mixin width($min, $max) {
