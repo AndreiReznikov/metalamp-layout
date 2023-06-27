@@ -79,7 +79,7 @@ class AirDatepicker {
           $dateFrom.val(dateFrom);
           $dateTo.val(dateTo);
 
-          showClearButton();
+          showClearButton('fade');
         },
         onShow: () => {
           handleDatepickerSetCalendarWidth();
@@ -161,7 +161,7 @@ class AirDatepicker {
     }
   }
 
-  showClearButton() {
+  showClearButton(animationType) {
     this.$datepickerCollection.each(function showClearButton() {
       const $datepicker = $(this);
 
@@ -179,12 +179,16 @@ class AirDatepicker {
       const $clearButton = datepickerElements.find('[data-action="clear"]');
 
       if (datepicker.selectedDates.length < 1) {
-        $clearButton.hide();
+        const hideButton = animationType === 'fade' ? $clearButton.fadeOut.bind($clearButton)
+          : $clearButton.hide.bind($clearButton);
+        hideButton();
 
         return;
       }
 
-      $clearButton.show();
+      const showButton = animationType === 'fade' ? $clearButton.fadeIn.bind($clearButton)
+        : $clearButton.show.bind($clearButton);
+      showButton();
     });
   }
 
