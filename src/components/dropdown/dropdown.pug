@@ -1,3 +1,5 @@
+include ../button/button
+
 mixin dropdown(options = {})
   -
     let className = 'dropdown__wrapper js-dropdown__wrapper';
@@ -34,4 +36,8 @@ mixin dropdown(options = {})
             .dropdown__buttons-container
               each button in buttons
                 - const [ className, value ] = button;
-                button(class=className type="button")=value
+                span(class=className)
+                  +button({
+                    borderlessButton: true,
+                    text: value,
+                  })

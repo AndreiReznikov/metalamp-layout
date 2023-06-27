@@ -1,6 +1,5 @@
 class Dropdown {
   constructor(element, setSelectionText, selectionDefaultText) {
-    this.totalSum = 0;
     this.selectionDefaultText = selectionDefaultText || '';
     this.setSelectionText = setSelectionText;
 
@@ -9,11 +8,11 @@ class Dropdown {
 
   init() {
     this._setSelectionDefaultText();
-    this._toggleMenu();
     this._openMenuDefault();
     this._addCounters();
     this._changeCounterValue();
     this._clickCountButtonsDefault();
+    this._toggleMenu();
   }
 
   _addCounters() {
@@ -35,7 +34,7 @@ class Dropdown {
     const handleDocumentToggleMenu = (event) => {
       const $target = $(event.target);
       const isClickOnMenuOrApplyButton = $target.closest('.js-dropdown__menu').length
-        && !$target.hasClass('js-dropdown__apply-button');
+        && !$target.closest('.js-dropdown__apply-button').length;
       const isClickOnDropdown = $target.closest('.js-dropdown__wrapper').length;
 
       if (isClickOnMenuOrApplyButton) return;
@@ -52,18 +51,22 @@ class Dropdown {
 
       let $dropdown = $(this);
       let $menu = $dropdown.find('.js-dropdown__menu');
-      let $applyButton = $dropdown.find('.js-dropdown__apply-button');
+      let $applyButton = $dropdown.find('.js-dropdown__apply-button .button__text');
 
       if (isClickOnDropdown) {
         this.$dropdownsCollection.each(function toggleMenu() {
           $dropdown = $(this);
           $menu = $dropdown.find('.js-dropdown__menu');
-          $applyButton = $dropdown.find('.js-dropdown__apply-button');
+          $applyButton = $dropdown.find('.js-dropdown__apply-button .button__text');
 
           const isClickOnDropdownOrApplyButton = $target.closest('.js-dropdown').is($dropdown.closest('.js-dropdown'))
             || $target.is($applyButton);
 
+          const totalSum = $dropdown.data('total-sum');
+
           if (isClickOnDropdownOrApplyButton) {
+            if ($target.is($applyButton) && totalSum === 0) return;
+
             toggleDropdownMenu($dropdown, $menu);
           } else {
             removeDropdownMenu($dropdown, $menu);
@@ -108,6 +111,12 @@ class Dropdown {
       let totalSum = 0;
       let itemsCount = [];
 
+      const setSumToData = (sum = 0) => {
+        $dropdown.data('total-sum', sum);
+      };
+
+      setSumToData(totalSum);
+
       $optionsCollection.each(function changeValue(index) {
         const $option = $(this);
         const $minus = $option.find('.js-dropdown__counter-decrement');
@@ -141,6 +150,7 @@ class Dropdown {
           }
 
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
+          setSumToData(totalSum);
         };
 
         const handlePlusIncrementValue = () => {
@@ -154,6 +164,8 @@ class Dropdown {
 
           $minus.removeClass('dropdown__counter-decrement_dim');
           $clearButton.addClass('dropdown__clear-button_visible');
+
+          setSumToData(totalSum);
         };
 
         const handleClearButtonClearCount = () => {
@@ -163,6 +175,7 @@ class Dropdown {
           $minus.addClass('dropdown__counter-decrement_dim');
           $clearButton.removeClass('dropdown__clear-button_visible');
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
+          setSumToData(totalSum);
         };
 
         $minus.click(handleMinusDecrementValue);
