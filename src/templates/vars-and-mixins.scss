@@ -91,7 +91,7 @@ $xxl: 1400px;
   height: 2px;
 
   @if $color {
-    background: $gradient;
+    background: $purple;
   } @else {
     background-color: #fff;
   }
@@ -105,9 +105,7 @@ $xxl: 1400px;
   height: 12px;
 
   @if $color {
-    border: 1px solid transparent;
-    border-image: $gradient;
-    border-image-slice: 1;
+    border: 1px solid $purple;
   } @else {
     border: 1px solid #fff;
   }
