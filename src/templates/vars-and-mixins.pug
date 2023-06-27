@@ -263,7 +263,7 @@ mixin roomTitle(text)
 
   const roomCards = [
     {
-      photos: ['room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg', 'room-photo1.jpg'],
+      photos: ['room-photo-1.jpg', 'room-photo-1.jpg', 'room-photo-1.jpg', 'room-photo-1.jpg'],
       number: '888',
       price: '9 990',
       starsNumber: 5,
@@ -272,7 +272,7 @@ mixin roomTitle(text)
       isLux: true,
     },
     {
-      photos: ['room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg', 'room-photo2.jpg'],
+      photos: ['room-photo-2.jpg', 'room-photo-2.jpg', 'room-photo-2.jpg', 'room-photo-2.jpg'],
       number: '840',
       price: '9 990',
       starsNumber: 5,
@@ -305,18 +305,18 @@ mixin roomTitle(text)
   ];
 
   let roomsCardsProperties = [
-    ['room-photo1.jpg', '888', '9 990', 5, 5, 145, true],
-    ['room-photo2.jpg', '840', '9 990', 5, 4, 65, false],
-    ['room-photo3.jpg', '980', '8 500', 5, 3, 35, true],
-    ['room-photo4.jpg', '856', '7 300', 5, 5, 19, false],
-    ['room-photo5.jpg', '740', '6 000', 5, 4, 44, false],
-    ['room-photo6.jpg', '982', '5 800', 5, 3, 56, false],
-    ['room-photo7.jpg', '678', '5 500', 5, 5, 45, false],
-    ['room-photo8.jpg', '450', '5 300', 5, 4, 39, false],
-    ['room-photo9.jpg', '350', '5 000', 5, 3, 77, false],
-    ['room-photo10.jpg', '666', '5 000', 5, 5, 25, false],
-    ['room-photo11.jpg', '444', '5 000', 5, 3, 15, false],
-    ['room-photo12.jpg', '352', '5 000', 5, 3, 55, false],
+    ['room-photo-1.jpg', '888', '9 990', 5, 5, 145, true],
+    ['room-photo-2.jpg', '840', '9 990', 5, 4, 65, false],
+    ['room-photo-3.jpg', '980', '8 500', 5, 3, 35, true],
+    ['room-photo-4.jpg', '856', '7 300', 5, 5, 19, false],
+    ['room-photo-5.jpg', '740', '6 000', 5, 4, 44, false],
+    ['room-photo-6.jpg', '982', '5 800', 5, 3, 56, false],
+    ['room-photo-7.jpg', '678', '5 500', 5, 5, 45, false],
+    ['room-photo-8.jpg', '450', '5 300', 5, 4, 39, false],
+    ['room-photo-9.jpg', '350', '5 000', 5, 3, 77, false],
+    ['room-photo-10.jpg', '666', '5 000', 5, 5, 25, false],
+    ['room-photo-11.jpg', '444', '5 000', 5, 3, 15, false],
+    ['room-photo-12.jpg', '352', '5 000', 5, 3, 55, false],
   ];
 
   const roomCardsItems = new Array(160).fill(0);
@@ -333,7 +333,7 @@ mixin roomTitle(text)
 
     roomsCardsProperties.push(
       [
-        `room-photo${photoNumber}.jpg`,
+        `room-photo-${photoNumber}.jpg`,
         roomNumber,
         price,
         5,
