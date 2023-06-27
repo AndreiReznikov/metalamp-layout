@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 include ../button/button
 
-mixin search-card()
+mixin search-card(options = {})
   .search-card
     h1.search-card__title Найдём номера под ваши пожелания
     form.search-card__form
@@ -10,6 +10,8 @@ mixin search-card()
         .search-card__date-dropdown-container
           +date-dropdown({
             title: ['Прибытие', 'Выезд'],
+            dateTo: options.dateTo,
+            dateFrom: options.dateFrom,
           })
         .search-card__guests-dropdown-container
           +dropdown({
