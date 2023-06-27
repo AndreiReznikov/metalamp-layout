@@ -23,11 +23,11 @@
 @import '../../components/pagination/pagination';
 
 .form-elements {
-
   &, &__body {
-    @include Body-font();
+    @include body-font;
+
     background-color: #fff;
-    color: $Dark-Shade-100;
+    color: $dark-shade-100;
   }
 
   &__container {
@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 1160px;
-    margin: 61px auto 131px auto;
+    margin: 61px auto 131px;
   }
 
   &__left-block {

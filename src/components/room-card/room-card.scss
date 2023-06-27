@@ -2,29 +2,17 @@
 
 .room-card {
   @include width(250px, 270px);
+
   position: relative;
   height: 257px;
   background: #fff;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px $Dark-Shade-5;
+  box-shadow: 0 10px 20px $dark-shade-5;
   border-radius: 4px;
-
-  &__slider:hover > &__arrow-prev,
-  &__slider:hover > &__arrow-next {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  &__image-container {
-    width: 100%;
-    height: 151px;
-    border-radius: 4px 4px 0 0;
-    cursor: pointer;
-  }
 
   &__arrow-prev, &__arrow-next{
     position: absolute;
+    top: 0;
     width: 42px;
     height: 151px;
     z-index: 100;
@@ -35,12 +23,10 @@
   }
 
   &__arrow-prev {
-    top: 0;
     left: 0;
   }
 
   &__arrow-next {
-    top: 0;
     right: 0;
   }
 
@@ -67,24 +53,39 @@
     transform: rotate(-45deg);
   }
 
+  &__slider:hover > &__arrow-prev,
+  &__slider:hover > &__arrow-next {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__image-container {
+    width: 100%;
+    height: 151px;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+  }
+
   &__information {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 20px 20px 0 20px;
+    margin: 20px 20px 0;
     padding-bottom: 11px;
     box-sizing: border-box;
-    border-bottom: 1px solid $Dark-Shade-10;
+    border-bottom: 1px solid $dark-shade-10;
   }
 
   &__number-symbol {
-    @include Body-font();
+    @include body-font;
+
     font-weight: bold;
-    color: $Dark-Shade-100;
+    color: $dark-shade-100;
   }
 
   &__room-number {
-    @include H2();
+    @include h2;
   }
 
   &__lux-mark {
@@ -93,11 +94,12 @@
   }
 
   &__price {
-    @include Body-font();
+    @include body-font;
+
     display: inline-block;
     padding-bottom: 1px;
     font-weight: bold;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &__time-interval {
@@ -106,14 +108,16 @@
   }
 
   &__rate {
-    @include flex-between-center();
-    margin: 10px 21px 0 21px;
+    @include flex-between-center;
+
+    margin: 10px 21px 0;
   }
 
   &__reviews-number {
-    @include Body-font();
+    @include body-font;
+
     font-weight: bold;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &__reviews-number-text {

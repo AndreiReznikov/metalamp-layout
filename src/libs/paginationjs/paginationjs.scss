@@ -4,18 +4,14 @@
   display: flex;
   justify-content: center;
 
-  & .paginationjs-pages li,
-  & .paginationjs-pages li:last-child {
-    border: none;
-  }
-
   & .paginationjs-pages li > a {
-    @include Body-font();
+    @include body-font;
+
     display: flex;
     justify-content: center;
     width: 40px;
     font-size: 12px;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   & .paginationjs-pages li.paginationjs-next,
@@ -23,14 +19,20 @@
   & .paginationjs-pages li.active,
   & .paginationjs-pages li,
   & .paginationjs-pages li:hover > a {
-    @include flex-center();
+    @include flex-center;
+
     width: 40px;
     height: 40px;
     border-radius: 22px;
   }
 
+  & .paginationjs-pages li,
+  & .paginationjs-pages li:last-child {
+    border: none;
+  }
+
   & .paginationjs-pages li.paginationjs-next {
-    background: $greenBlueGradient;
+    background: $green-blue-gradient;
 
     @include media-max($md) {
       margin-left: 30px;
@@ -38,7 +40,7 @@
   }
 
   & .paginationjs-pages .paginationjs-prev {
-    background: $greenBlueGradient;
+    background: $green-blue-gradient;
 
     @include media-max($md) {
       margin-right: 30px;
@@ -78,7 +80,8 @@
   }
 
   & .paginationjs-nav {
-    @include Body-font();
+    @include body-font;
+
     position: absolute;
   }
 }

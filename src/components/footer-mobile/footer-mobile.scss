@@ -4,22 +4,27 @@
   flex: 0 0 auto;
   display: none;
   background-color: #fff;
+
   @include width(320px, $md);
+
   min-height: 367px;
 
   &_visible {
-    @include flex-center();
+    @include flex-center;
+
     flex-direction: column;
     width: 768px;
   }
 
   @include media-max($md) {
-    @include flex-center();
+    @include flex-center;
+
     flex-direction: column;
   }
 
   &__text {
-    @include Body-font();
+    @include body-font;
+
     margin: 23px 0;
     line-height: 17px;
     text-align: center;

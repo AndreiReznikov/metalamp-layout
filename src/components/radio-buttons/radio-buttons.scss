@@ -4,19 +4,12 @@
   display: flex;
 
   &__label {
-    @include Body-font();
+    @include body-font;
+
     display: flex;
     align-items: center;
     margin-right: 20px;
     cursor: pointer;
-  }
-
-  &__label:hover > &__input:not(:checked) ~ &__text {
-    color: $Dark-Shade-75;
-  }
-
-  &__label:hover > &__input:not(:checked) + &__custom-input {
-    border: 1px solid $Dark-Shade-50;
   }
 
   &__input {
@@ -29,33 +22,42 @@
     z-index: 2;
   }
 
-  &__input:not(:checked) + &__custom-input {
-    border: 1px solid $Dark-Shade-25;
+  &__input:not(:checked) ~ &__text {
+    color: $dark-shade-50;
   }
 
-  &__input:not(:checked) ~ &__text {
-    color: $Dark-Shade-50;
+  &__label:hover > &__input:not(:checked) ~ &__text {
+    color: $dark-shade-75;
   }
 
   &__custom-input {
-    @include flex-center();
+    @include flex-center;
+
     position: absolute;
     width: 20px;
     height: 20px;
     background: #fff;
-    border: 1px solid $Purple;
+    border: 1px solid $purple;
     box-sizing: border-box;
     border-radius: 10px;
     z-index: 1;
   }
 
-  &__custom-input:after {
+  &__input:not(:checked) + &__custom-input {
+    border: 1px solid $dark-shade-25;
+  }
+
+  &__label:hover > &__input:not(:checked) + &__custom-input {
+    border: 1px solid $dark-shade-50;
+  }
+
+  &__custom-input::after {
     content: "";
     position: absolute;
     display: none;
   }
 
-  &__input:checked + &__custom-input:after {
+  &__input:checked + &__custom-input::after {
     display: block;
     width: 12px;
     height: 12px;

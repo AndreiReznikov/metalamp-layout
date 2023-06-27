@@ -1,10 +1,10 @@
 @import '../../templates/vars-and-mixins';
 
 .checkbox-list{
-
   &__title {
-    @include H3();
+    @include h3;
     @include width(266px, 100%);
+
     display: flex;
     justify-content: space-between;
     margin-bottom: 18px;

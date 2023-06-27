@@ -2,19 +2,21 @@
 
 .sign-in-card {
   @include width(250px, 380px);
+
   background: #fff;
-  border: $cardBorder;
+  border: $card-border;
   box-sizing: border-box;
-  box-shadow: $cardShadowLarge;
+  box-shadow: $card-shadow-large;
   border-radius: 4px;
 
   @include media-max($sm) {
-    box-shadow: $cardShadowSmall;
+    box-shadow: $card-shadow-small;
   }
 
   &__title {
-    @include H1();
-    margin: 39px 29px 0 29px;
+    @include h1;
+
+    margin: 39px 29px 0;
 
     @include media-max($sm) {
       text-align: center;
@@ -23,10 +25,10 @@
   }
 
   &__wrapper {
-    padding: 21px 29px 31px 29px;
+    padding: 21px 29px 31px;
 
     @include media-max($sm) {
-      padding: 21px 10px 31px 10px;
+      padding: 21px 10px 31px;
     }
   }
 
@@ -45,7 +47,8 @@
   }
 
   &__registration-wrapper {
-    @include flex-between-center();
+    @include flex-between-center;
+
     max-width: 320px;
     margin-top: 30px;
 
@@ -55,7 +58,7 @@
   }
 
   &__registration-text {
-    @include Body-font();
+    @include body-font;
 
     @include media-max($sm) {
       width: 100%;

@@ -25,20 +25,22 @@
   &--nav {
     display: flex;
     align-items: center;
-    padding: 20px 20px 22px 20px;
+    padding: 20px 20px 22px;
     box-sizing: border-box;
     border-bottom: none;
   }
 
   &--nav-title {
-    @include H3();
+    @include h3;
+
     font-size: 19px;
     line-height: 23px;
     text-transform: none;
   }
 
   &--nav-title i {
-    @include H3();
+    @include h3;
+
     padding-left: 5px;
     font-size: 19px;
     line-height: 23px;
@@ -46,7 +48,7 @@
   }
 
   &--nav-action {
-    padding: 4px 4px 0 4px;
+    padding: 4px 4px 0;
     width: 16px;
     height: 16px;
   }
@@ -61,22 +63,24 @@
   }
 
   &--day-name {
-    @include H3();
+    @include h3;
+
     height: 39px;
     font-size: 12px;
     line-height: 15px;
     text-transform: none;
-    color: $Purple;
+    color: $purple;
     box-sizing: border-box;
   }
 
   &--cell {
-    @include Body-font();
+    @include body-font;
+
     font-size: 12px;
     line-height: 15px;
     text-align: center;
     border-radius: 22px;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
     box-sizing: border-box;
   }
 
@@ -89,11 +93,12 @@
   }
 
   &--cell.-range-from-::after {
-    @include one-hundred-width-and-height();
+    @include one-hundred-width-and-height;
+
     content: '';
     position: absolute;
     border-radius: 22px 0 0 22px;
-    background: $highlyTransparentGradient;
+    background: $highly-transparent-gradient;
   }
 
   &--cell.-range-to- {
@@ -105,22 +110,23 @@
   }
 
   &--cell.-range-to-::after {
-    @include one-hundred-width-and-height();
+    @include one-hundred-width-and-height;
+
     content: '';
     position: absolute;
     border-radius: 0 22px 22px 0;
-    background: $highlyTransparentGradient;
+    background: $highly-transparent-gradient;
   }
 
   &--cell.-in-range- {
-    background: $highlyTransparentGradient;
-    color: $Dark-Shade-50;
+    background: $highly-transparent-gradient;
+    color: $dark-shade-50;
   }
 
   &--cell.-current- {
     color: #fff;
     font-weight: bold;
-    background: $greenBlueGradient;
+    background: $green-blue-gradient;
   }
 
   &--cell.-current-.-in-range- {
@@ -129,10 +135,11 @@
   }
 
   &--cell.-current-.-in-range-::after {
-    @include one-hundred-width-and-height();
+    @include one-hundred-width-and-height;
+
     content: '';
     position: absolute;
-    background: $highlyTransparentGradient;
+    background: $highly-transparent-gradient;
   }
 
   &--cell.-disabled- {
@@ -140,16 +147,17 @@
   }
 
   &--buttons {
-    padding: 12px 20px 0 20px;
+    padding: 12px 20px 0;
     border-top: none;
   }
 
   &--button {
-    @include H3();
+    @include h3;
+
     flex: none;
     margin-left: auto;
     line-height: 15px;
-    color: $Purple;
+    color: $purple;
   }
 
   &--button[data-action="clear"] {
@@ -158,11 +166,11 @@
 
   &--button:hover {
     background: #fff;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &--nav-action path {
-    fill: $Purple;
+    fill: $purple;
     stroke: none;
   }
 }

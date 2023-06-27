@@ -1,53 +1,56 @@
 @import '../../templates/vars-and-mixins';
 
 .like-button {
-
   &:hover {
     opacity: 0.5;
   }
 
   &__inner-container{
-    @include flex-between-center();
+    @include flex-between-center;
+
     width: 100%;
     padding: 0 10px 0 4px;
     box-sizing: border-box;
   }
 
   &__button {
-    @include margin-padding-zero();
+    @include margin-padding-zero;
     @include width(40px, 100%);
+
     height: 20px;
     background: #fff;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
   }
 
   &__button_liked {
-    border: 1px solid $Purple;
-    color: $Purple;
+    border: 1px solid $purple;
+    color: $purple;
   }
 
   &__icon {
     @include background-position(cover);
+
     width: 8px;
     height: 8px;
     margin-right: 2px;
-    background-image: url(../../img/unliked.svg);
+    background-image: url("../../img/unliked.svg");
   }
 
   &__icon_liked {
-    background-image: url(../../img/liked.svg);
+    background-image: url("../../img/liked.svg");
   }
 
   &__count {
-    @include Body-font();
-    color: $Dark-Shade-25;
+    @include body-font;
+
+    color: $dark-shade-25;
     font-size: 10px;
   }
 
   &__icon_liked + &__count {
-    color: $Purple;
+    color: $purple;
   }
 }

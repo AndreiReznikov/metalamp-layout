@@ -18,10 +18,10 @@
 @import '../../templates/vars-and-mixins';
 
 .cards {
-  
   &, &__body {
-    @include Body-font();
-    @include margin-padding-zero();
+    @include body-font;
+    @include margin-padding-zero;
+
     background: #E5E5E5;
     min-height: 1350px;
   }

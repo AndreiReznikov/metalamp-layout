@@ -1,7 +1,7 @@
 .rate-button {
-
   &__stars-group {
     @include width(120px, 100%);
+
     position: relative;
     display: flex;
     flex-direction: row-reverse;
@@ -10,24 +10,30 @@
   }
 
   &__radio {
-    @include margin-padding-zero();
-    @include appearance-none();
+    @include margin-padding-zero;
+
     display: flex;
     flex-basis: 100%;
     height: 20px;
     background-image: url('../../img/star-border.svg');
     background-repeat: no-repeat;
+    appearance: none;
     cursor: pointer;
   }
 
-  &__radio:hover, &__radio:hover ~ &__radio {
-    background-image: url('../../img/star.svg');
-    background-repeat: no-repeat;
+  &__radio:hover {
+    @include stars-background;
+
     opacity: 0.5;
   }
 
   &__radio:checked, &__radio:checked ~ &__radio {
-    background-image: url('../../img/star.svg');
-    background-repeat: no-repeat;
+    @include stars-background;
+  }
+
+  &__radio:hover ~ &__radio {
+    @include stars-background;
+
+    opacity: 0.5;
   }
 }

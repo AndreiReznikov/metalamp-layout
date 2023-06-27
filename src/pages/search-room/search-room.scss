@@ -20,9 +20,9 @@
 @import '../../templates/vars-and-mixins';
 
 .search-room {
-  
   &, &__body {
-    @include Body-font();
+    @include body-font;
+
     background-color: #fff;
   }
 
@@ -45,11 +45,11 @@
     max-width: $max-width;
     margin: 0 auto;
     padding: 0 130px 104px 140px;
-    border-bottom: 1px solid $Dark-Shade-5;
+    border-bottom: 1px solid $dark-shade-5;
     box-sizing: border-box;
 
     @include media-max($xl) {
-      padding: 0 15px 100px 15px;
+      padding: 0 15px 100px;
     }
   }
 
@@ -66,7 +66,7 @@
 
   &__filter-button {
     padding: 15px;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 4px;
     background: none;
     cursor: pointer;
@@ -79,6 +79,7 @@
 
   &__filter-icon {
     @include background-position(contain);
+
     width: 15px;
     height: 15px;
     margin: 2px 5px 0 0;
@@ -86,9 +87,10 @@
   }
 
   &__filter-text {
-    @include Body-font();
+    @include body-font;
+
     font-size: 22px;
-    color: $Dark-Shade-100;
+    color: $dark-shade-100;
   }
 
   &__widgets-container {
@@ -99,7 +101,7 @@
       display: none;
       flex-basis: 100%;
       padding: 20px 10px;
-      border: 1px solid $Dark-Shade-5;
+      border: 1px solid $dark-shade-5;
       border-radius: 4px;
     }
   }
@@ -167,11 +169,12 @@
   }
 
   &__slider-sub-text {
-    @include Body-font();
+    @include body-font;
+
     margin-top: 60px;
     font-size: 12px;
     line-height: 14px;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &__checkbox-buttons-container {
@@ -245,14 +248,14 @@
     flex: 6;
 
     @include media-max($xl) {
-      flex-basis: 100%;
       flex: 1;
+      flex-basis: 100%;
       margin-left: 0;
     }
   }
 
   &__title {
-    @include H1();
+    @include h1;
 
     @include media-max($xl) {
       width: 100%;

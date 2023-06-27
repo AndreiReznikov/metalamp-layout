@@ -1,27 +1,14 @@
 @import '../../templates/vars-and-mixins';
 
 .toggle-button {
-  @include Body-font();
+  @include body-font;
+
   display: flex;
   align-items: center;
   position: relative;
   margin-bottom: 10px;
   line-height: 24px;
   cursor: pointer;
-
-  &:hover > &__input:not(:checked) + &__custom-input {
-    border: 1px solid $Dark-Shade-50;
-  }
-
-  &__text {
-    padding-left: 50px;
-    color: $Dark-Shade-75;
-  }
-
-  &__input {
-    @include appearance-none();
-    position: absolute;
-  }
 
   &__custom-input {
     position: absolute;
@@ -30,32 +17,43 @@
     width: $toggle-width;
     height: 18px;
     background-color: #fff;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 10px;
     box-sizing: content-box;
     z-index: 1;
   }
 
-  &__custom-input:after {
+  &__input:checked + &__custom-input {
+    border: 1px solid $purple;
+  }
+
+  &:hover > &__input:not(:checked) + &__custom-input {
+    border: 1px solid $dark-shade-50;
+  }
+
+  &__text {
+    padding-left: 50px;
+    color: $dark-shade-75;
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__custom-input::after {
     position: absolute;
     content: "";
     width: 12px;
     height: 12px;
     margin: 0 $circle-margin;
-    background: $Dark-Shade-25;
+    background: $dark-shade-25;
     border-radius: 10px;
-    -webkit-transition: .4s;
     transition: .4s;
   }
 
-  &__input:checked + &__custom-input {
-    border: 1px solid $Purple;
-  }
-
-  &__input:checked + &__custom-input:after {
-    background: $Purple;
-    -webkit-transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
-    -ms-transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
-    transform: translateX($toggle-width - $circle-width - 2*$circle-margin);
+  &__input:checked + &__custom-input::after {
+    background: $purple;
+    transform: translateX($toggle-width - $circle-width - 2 * $circle-margin);
   }
 }

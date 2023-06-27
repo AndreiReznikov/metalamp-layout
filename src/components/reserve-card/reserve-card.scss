@@ -2,36 +2,38 @@
 
 .reserve-card {
   @include width(250px, 380px);
+
   background: #fff;
-  border: $cardBorder;
+  border: $card-border;
   box-sizing: border-box;
-  box-shadow: $cardShadowLarge;
+  box-shadow: $card-shadow-large;
   border-radius: 4px;
 
   @include media-max($sm) {
-    box-shadow: $cardShadowSmall;
+    box-shadow: $card-shadow-small;
   }
 
   &__wrapper {
-    padding: 45px 29px 29px 29px;
+    padding: 45px 29px 29px;
 
     @include media-max($sm) {
-      padding: 45px 15px 29px 15px;
+      padding: 45px 15px 29px;
     }
   }
 
   &__number-and-price-container    {
-    @include flex-between-center();
+    @include flex-between-center;
   }
 
   &__number-symbol {
-    @include H3();
+    @include h3;
+
     font-size: 14px;
     line-height: 17px;
   }
 
   &__room-number{
-    @include H1();
+    @include h1;
   }
 
   &__lux-mark {
@@ -40,11 +42,12 @@
   }
 
   &__price {
-    @include Body-font();
+    @include body-font;
+
     padding-top: 4px;
     font-weight: bold;
     line-height: 18px;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &__time-interval {
@@ -65,7 +68,8 @@
   }
 
   &__price-block {
-    @include Body-font();
+    @include body-font;
+
     margin-top: 20px;
     line-height: 20px;
   }
@@ -88,18 +92,15 @@
     position: relative;
   }
 
-  &__information-icon-container:hover > &__information-tooltip {
-    display: block;
-  }
-
   &__information-icon {
-    @include H3();
-    @include flex-center();
+    @include h3;
+    @include flex-center;
+
     width: 20px;
     height: 20px;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 50%;
-    color: $Dark-Shade-25;
+    color: $dark-shade-25;
     text-transform: none;
     cursor: pointer;
   }
@@ -112,16 +113,20 @@
     padding: 2px 15px;
     font-size: 12px;
     background-color: #fff;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
     text-align: center;
     line-height: normal;
-    border: 1px solid $Dark-Shade-25;
-    box-shadow: $cardShadowSmall;
+    border: 1px solid $dark-shade-25;
+    box-shadow: $card-shadow-small;
     z-index: 100;
   }
 
+  &__information-icon-container:hover > &__information-tooltip {
+    display: block;
+  }
+
   &__information-tooltip-link {
-    color: $Purple;
+    color: $purple;
     text-decoration: none;
   }
 
@@ -130,7 +135,8 @@
   }
 
   &__total-sum-block {
-    @include H2();
+    @include h2;
+
     display: flex;
     justify-content: space-between;
     margin-top: 29px;
@@ -141,7 +147,7 @@
     flex: 1;
     margin: 0 5px;
     height: 18px;
-    border-bottom: dotted 1px $Dark-Shade-25;
+    border-bottom: dotted 1px $dark-shade-25;
   }
 
   &__button-container {

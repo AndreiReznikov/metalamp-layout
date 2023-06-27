@@ -8,9 +8,10 @@
 @import '../../templates/vars-and-mixins';
 
 .headers-and-footers {
-  @include Body-font();
-  color: $Dark-Shade-100;
-  background-color: $Dark-Shade-5;
+  @include body-font;
+
+  color: $dark-shade-100;
+  background-color: $dark-shade-5;
 
   &_non-scrollable {
     position: fixed;
@@ -43,6 +44,6 @@
   &__footer-mobile-container {
     display: flex;
     justify-content: center;
-    margin: 41px 0 140px 0;
+    margin: 41px 0 140px;
   }
 }

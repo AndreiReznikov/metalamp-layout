@@ -1,17 +1,18 @@
 @import '../../templates/vars-and-mixins';
 
 .range-slider {
-  
   &__title {
-    @include H3();
+    @include h3;
+
     position: absolute;
   }
 
   &__values {
-    @include H3();
+    @include h3;
+
     position: absolute;
     right: 0;
     font-weight: normal;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 }

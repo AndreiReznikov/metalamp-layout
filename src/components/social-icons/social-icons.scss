@@ -1,5 +1,4 @@
 .social-icons {
-
   &__link {
     display: inline-block;
     padding-left: 19px;
@@ -16,6 +15,7 @@
 
   &__image {
     @include background-position(contain);
+
     width: 24px;
     height: 24px;
   }

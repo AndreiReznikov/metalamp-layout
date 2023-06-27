@@ -2,15 +2,17 @@
 
 .advantage {
   @include width(200px, 280px);
+
   display: flex;
   padding-bottom: 24px;
 
   &_bordered {
-    border-bottom: 1px solid $Dark-Shade-10;
+    border-bottom: 1px solid $dark-shade-10;
   }
 
   &__icon {
     @include background-position(contain);
+
     min-width: 48px;
   }
 
@@ -19,12 +21,13 @@
   }
 
   &__title {
-    @include H2();
+    @include h2;
+
     margin-bottom: 5px;
     font-size: 14px;
   }
 
   &__description {
-    @include Body-font();
+    @include body-font;
   }
 }

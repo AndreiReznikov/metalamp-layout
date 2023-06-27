@@ -12,7 +12,7 @@
 
   &__top-section-container {
     width: 100%;
-    border-bottom: 1px solid $Dark-Shade-5;
+    border-bottom: 1px solid $dark-shade-5;
   }
 
   &__top-section-wrapper {
@@ -22,33 +22,35 @@
     max-width: $max-width;
     min-height: 372px;
     margin: 0 auto;
-    padding: 100px 140px 40px 140px;
+    padding: 100px 140px 40px;
     box-sizing: border-box;
 
     @include media-max($xxl) {
-      padding: 100px 35px 40px 35px;
+      padding: 100px 35px 40px;
     }
 
     @include media-max($xl) {
-      padding: 100px 15px 40px 15px;
+      padding: 100px 15px 40px;
     }
   }
 
   &__list {
-    @include margin-padding-zero();
+    @include margin-padding-zero;
   }
 
   &__list-item  {
-    @include Body-font();
+    @include body-font;
+
     display: block;
     margin-bottom: 20px;
     line-height: 17px;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
     cursor: pointer;
   }
 
   &__title {
-    @include H3();
+    @include h3;
+
     line-height: 22px;
     color: #000;
     cursor: default;
@@ -66,7 +68,8 @@
   }
 
   &__first-section-text {
-    @include Body-font();
+    @include body-font;
+
     margin-top: 13px;
     line-height: 24px;
   }
@@ -122,29 +125,32 @@
 
   &__link {
     text-decoration: none;
-    color: $Dark-Shade-50;
+    color: $dark-shade-50;
   }
 
   &__link:hover {
-    color: $Dark-Shade-75;
+    color: $dark-shade-75;
   }
 
   &__subscription-title {
-    @include H3();
+    @include h3;
+
     line-height: 22px;
     color: #000;
     cursor: default;
   }
 
   &__subscription-text {
-    @include Body-font();
-    margin: 16px 0 22px 0;
+    @include body-font;
+
+    margin: 16px 0 22px;
     line-height: 24px;
     cursor: default;
   }
 
   &__bottom-section-wrapper {
-    @include flex-between-center();
+    @include flex-between-center;
+
     max-width: $max-width;
     min-height: 70px;
     margin: 0 auto;
@@ -157,7 +163,7 @@
   }
 
   &__copyright-text {
-    @include Body-font();
+    @include body-font;
   }
 
   &__social-icons-container {

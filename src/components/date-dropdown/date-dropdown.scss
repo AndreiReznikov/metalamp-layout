@@ -2,18 +2,20 @@
 
 .date-dropdown {
   @include width(266px, 320px);
+
   position: relative;
   display: flex;
   justify-content: space-between;
   z-index: 100;
 
   &__title {
-    @include H3();
-    @include margin-padding-zero();
+    @include h3;
+    @include margin-padding-zero;
   }
 
   &__input  {
-    @include zero-width-and-height();
+    @include zero-width-and-height;
+
     position: absolute;
     padding: 0;
     top: 55px;
@@ -35,12 +37,13 @@
   }
 
   &__input-from, &__input-to {
-    @include Body-font();
+    @include body-font;
     @include width(125px, 150px);
+
     height: 44px;
     padding-left: 15px;
     background: #fff;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 4px;
     box-sizing: border-box;
     outline: none;
@@ -53,11 +56,12 @@
 
   &__input-from:hover, &__input-to:hover,
   &__input-from:focus, &__input-to:focus {
-    border: 1px solid $Dark-Shade-50;
+    border: 1px solid $dark-shade-50;
   }
 
   &__input-from::placeholder, &__input-to::placeholder {
-    @include Body-font();
+    @include body-font;
+
     text-transform: uppercase;
   }
 

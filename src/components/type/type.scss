@@ -1,7 +1,6 @@
 @import '../../templates/vars-and-mixins';
 
-$types:
-  'size_l' 520px 24px none,
+$types: 'size_l' 520px 24px none,
   'size_m' 450px 19px none,
   'size_s' auto 12px uppercase,
   'size_regular' 380px 14px none 24px;
@@ -10,7 +9,8 @@ $types:
   font-family: Montserrat, Arial, sans-serif;
 
   &__text{
-    @include margin-padding-zero();
+    @include margin-padding-zero;
+
     display: flex;
     box-sizing: border-box;
   }
@@ -19,7 +19,7 @@ $types:
     display: inline-block;
     min-width: 45px;
     margin-right: 30px;
-    color: $Dark-Shade-25;
+    color: $dark-shade-25;
     font-weight: normal;
     text-align: right;
     box-sizing: border-box;

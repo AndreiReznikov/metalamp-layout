@@ -3,11 +3,11 @@
 @import '../../components/type/type';
 
 .colors-and-type {
-  
   &, &__body {
-    @include Body-font();
+    @include body-font;
+
     background-color: #fff;
-    color: $Dark-Shade-100;
+    color: $dark-shade-100;
   }
 
   &__container {
@@ -30,7 +30,8 @@
   }
 
   &__colors-description-list {
-    @include margin-padding-zero();
+    @include margin-padding-zero;
+
     list-style-type: none;
 
     &__item {

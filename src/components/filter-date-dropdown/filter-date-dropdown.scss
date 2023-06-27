@@ -6,29 +6,33 @@
   z-index: 100;
 
   &__title {
-    @include H3();
+    @include h3;
+
     margin-bottom: 5px;
   }
 
   &__input-container {
     @include width(250px, 266px);
+
     position: relative;
     height: 44px;
   }
 
   &__input-container_hidden {
     @include width(250px, 320px);
+
     opacity: 0;
   }
 
   &__input {
-    @include Body-font();
+    @include body-font;
+
     width: inherit;
     height: inherit;
     padding-left: 15px;
     text-transform: lowercase;
     background: #fff;
-    border: 1px solid $Dark-Shade-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 4px;
     box-sizing: border-box;
     outline: none;
@@ -42,7 +46,7 @@
   &__input:hover,
   &__input:focus {
     outline: none;
-    border: 1px solid $Dark-Shade-50;
+    border: 1px solid $dark-shade-50;
   }
 
   &__arrow {

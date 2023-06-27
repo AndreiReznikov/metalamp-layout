@@ -58,11 +58,19 @@ npm run dev
 ```
 npm run server
 ```
-- "lint": check the project for linter errors,
+- "lint": check the project for eslint errors,
 ```
 npm run lint
 ```
-- "fix": fix linter errors
+- "fix": fix eslint errors
 ```
 npm run fix
+```
+- "stylelint": check the project for stylelint errors,
+```
+npm run stylelint
+```
+- "fix:stylelint": fix stylelint errors
+```
+npm run fix:stylelint
 ```
