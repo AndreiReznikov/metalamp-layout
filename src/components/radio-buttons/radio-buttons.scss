@@ -26,10 +26,6 @@
     color: $dark-shade-50;
   }
 
-  &__label:hover > &__input:not(:checked) ~ &__text {
-    color: $dark-shade-75;
-  }
-
   &__custom-input {
     @include flex-center;
 
