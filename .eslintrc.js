@@ -12,7 +12,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'airbnb-base',
+    'airbnb',
     'plugin:fsd/all',
   ],
   plugins: [
