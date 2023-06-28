@@ -16,8 +16,8 @@ This is a training project to find hotel rooms, to which I have devoted quite a 
 
 # Technologies:
 
- - npm: 8.1.2
- - Node.js 16.13.2
+ - npm: 9.5.1
+ - Node.js 18.16.1
 
 # Important
 
