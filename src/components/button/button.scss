@@ -16,7 +16,7 @@
     cursor: pointer;
 
       &:hover, &.button__base_hovered {
-        opacity: 0.5;
+        background: $semitransparent-gradient;
       }
 
       &.button__base_size_l {
