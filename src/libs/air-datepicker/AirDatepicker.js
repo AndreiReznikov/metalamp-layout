@@ -240,7 +240,7 @@ class AirDatepicker {
 
       const datepicker = $datepickerInput.data('datepicker');
       const datepickerElements = datepicker.$datepicker;
-      const $applyButton = $('<span class=\'datepicker--button\'>Применить</span>');
+      const $applyButton = $('<span data-action="selectDate" class=\'datepicker--button\'>Применить</span>');
 
       datepickerElements.find('.datepicker--buttons').append($applyButton);
 
