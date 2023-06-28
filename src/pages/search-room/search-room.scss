@@ -178,7 +178,7 @@
   }
 
   &__checkbox-buttons-container {
-    margin-top: 28px;
+    margin-top: 26px;
 
     @include media-max($xl) {
       width: 350px;
@@ -210,7 +210,7 @@
 
   &__conveniences-dropdown-container {
     width: 266px;
-    margin-top: 15px;
+    margin-top: 17px;
 
     @include media-max($xl) {
       margin-top: 0;
