@@ -98,9 +98,47 @@ const setSelectionConveniencesText = (itemsCount, totalSum) => {
   return selectionText;
 };
 
+const canvasOptions = {
+  type: 'doughnut',
+  data: {},
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    radius: '94%',
+    cutout: '91%',
+    color: 'rgba(31, 32, 65, 0.75)',
+    layout: {
+      padding: {},
+    },
+    plugins: {
+      tooltip: {
+        enabled: false,
+      },
+      legend: {
+        position: 'right',
+        align: 'end',
+        reverse: true,
+        labels: {
+          boxWidth: 8,
+          boxHeight: 8,
+          usePointStyle: true,
+          pointStyle: 'circle',
+          font: {
+            family: 'Montserrat, Arial, sans-serif',
+            size: 14,
+            style: 'normal',
+          },
+        },
+        onHover: () => false,
+        onLeave: () => false,
+      },
+    },
+  },
+};
+
 const prevArrow = '<div class="datepicker--arrow-prev"></div>';
 const nextArrow = '<div class="datepicker--arrow-next"></div>';
-const canvas = '<div class="room-details__chart-text-container"><span class="room-details__chart-text"><span class="room-details__chart-text-number js-room-details__chart-text-number">260</span> голосов</span></div>';
+const canvas = '<div class="room-details__chart-text-container"><span class="room-details__chart-text js-room-details__chart-text"><span class="room-details__chart-text-number js-room-details__chart-text-number"></span> голосов</span></div>';
 
 const vars = {
   setSelectionGuestsText,
@@ -108,6 +146,7 @@ const vars = {
   prevArrow,
   nextArrow,
   canvas,
+  canvasOptions,
 };
 
 export default vars;

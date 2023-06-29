@@ -11,7 +11,7 @@ class RoomDetails {
   initializePlugins() {
     this._initializeDateDropdown();
     this._initializeChart();
-    this._addTextToChart();
+    this._addRatingSumToChart();
     this._expandCanvas();
   }
 
@@ -37,117 +37,116 @@ class RoomDetails {
     this.windowWidth = $window.width();
 
     this.canvas = document.querySelector('.js-room-details__chart').getContext('2d');
+    this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
+    this.$canvasContainer.append(vars.canvas);
+    this.$chart = $('.js-room-details__chart');
+    this.$chartRating = this.$canvasContainer.find('.js-room-details__chart-text-number');
+    this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text');
 
-    const purple = this.canvas.createLinearGradient(0, 0, 0, 130);
-    const green = this.canvas.createLinearGradient(0, 0, 0, 130);
-    const orange = this.canvas.createLinearGradient(0, 10, 0, 130);
-    const black = this.canvas.createLinearGradient(0, 110, 0, 130);
+    this.colors = {
+      black: ['#909090', '#3D4975'],
+      purple: ['#BC9CFF', '#8BA4F9'],
+      green: ['#6FCF97', '#66D2EA'],
+      orange: ['#FFE39C', '#FFBA9C'],
+      default: '#1F2041',
+    };
 
-    purple.addColorStop(0, '#BC9CFF');
-    purple.addColorStop(1, '#8BA4F9');
+    const canvasPurple = this.canvas.createLinearGradient(0, 0, 0, 130);
+    const canvasGreen = this.canvas.createLinearGradient(0, 0, 0, 130);
+    const canvasOrange = this.canvas.createLinearGradient(0, 10, 0, 130);
+    const canvasBlack = this.canvas.createLinearGradient(0, 110, 0, 130);
 
-    green.addColorStop(0, '#6FCF97');
-    green.addColorStop(1, '#66D2EA');
+    const setCanvasColor = (options) => {
+      const [canvasColor, firstColorStop, secondColorStop] = options;
 
-    orange.addColorStop(0, '#FFE39C');
-    orange.addColorStop(0.5, '#FFBA9C');
-    orange.addColorStop(1, '#FFBA9C');
+      canvasColor.addColorStop(0, firstColorStop);
+      canvasColor.addColorStop(1, secondColorStop);
+    };
 
-    black.addColorStop(0, '#909090');
-    black.addColorStop(1, '#3D4975');
+    setCanvasColor([canvasPurple, ...this.colors.purple]);
+    setCanvasColor([canvasGreen, ...this.colors.green]);
+    setCanvasColor([canvasOrange, ...this.colors.orange]);
+    setCanvasColor([canvasBlack, ...this.colors.black]);
 
-    this.userRatings = [0, 65, 65, 130];
+    this.userRatings = [0, 260, 260, 520];
+    this.labels = [
+      'Разочарован',
+      'Удовлетворительно',
+      'Хорошо',
+      'Великолепно',
+    ];
 
-    const data = {
-      labels: [
-        'Разочарован',
-        'Удовлетворительно',
-        'Хорошо',
-        'Великолепно',
-      ],
+    this.canvasData = {
+      labels: this.labels,
       datasets: [{
-        label: 'My First Dataset',
+        label: 'Ratings',
         data: this.userRatings,
         backgroundColor: [
-          black,
-          purple,
-          green,
-          orange,
+          canvasBlack,
+          canvasPurple,
+          canvasGreen,
+          canvasOrange,
         ],
         hoverOffset: 4,
         borderWidth: 1,
       }],
     };
 
-    const options = {
-      type: 'doughnut',
-      data,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        radius: '94%',
-        cutout: '91%',
-        color: 'rgba(31, 32, 65, 0.75)',
-        layout: {
-          padding: {
-            left: this.windowWidth < 600 ? -65 : -25,
-          },
-        },
-        plugins: {
-          tooltip: {
-            enabled: false,
-          },
-          legend: {
-            position: 'right',
-            align: 'end',
-            reverse: true,
-            labels: {
-              boxWidth: 8,
-              boxHeight: 8,
-              usePointStyle: true,
-              pointStyle: 'circle',
-              font: {
-                family: 'Montserrat, Arial, sans-serif',
-                size: 14,
-                style: 'normal',
-              },
-            },
-            onHover: (event) => {
-              const $legendItem = $(event.native.target);
-
-              $legendItem.css('cursor', 'pointer');
-            },
-            onLeave: (event) => {
-              const $legendItem = $(event.native.target);
-
-              $legendItem.css('cursor', 'default');
-            },
-          },
-        },
-      },
+    this.canvasOptions = vars.canvasOptions;
+    this.canvasOptions.data = this.canvasData;
+    this.canvasOptions.options.layout.padding = {
+      left: this.windowWidth < 600 ? -65 : -25,
+    };
+    this.canvasOptions.options.plugins.legend.onHover = (event, legendItem, legend) => {
+      this._callLegendCallback(event, legendItem, legend, 'hover');
+    };
+    this.canvasOptions.options.plugins.legend.onLeave = (event, legendItem, legend) => {
+      this._callLegendCallback(event, legendItem, legend, 'leave');
     };
 
-    const chart = new Chart(this.canvas, options);
+    const doughnutChart = new Chart(this.canvas, this.canvasOptions);
 
-    return chart;
+    this.doughnutChart = doughnutChart;
   }
 
-  _addTextToChart() {
-    this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
-    this.$canvasContainer.append(vars.canvas);
-    this.$chartRatingSum = this.$canvasContainer.find('.js-room-details__chart-text-number');
+  _callLegendCallback(event, legendItem, _, eventType) {
+    const $legendItem = $(event.native.target);
 
+    $legendItem.css('cursor', eventType === 'hover' ? 'pointer' : 'default');
+    this._changeChartText(legendItem.index, eventType !== 'hover');
+  }
+
+  _addRatingSumToChart() {
     const getRatingSum = () => this.userRatings.reduce((a, b) => a + b, 0);
 
-    this.$chartRatingSum.text(`${getRatingSum()}`);
+    this.$chartRating.text(`${getRatingSum()}`);
+  }
+
+  _changeChartText(index, isOnLeaveEvent) {
+    const currentRating = this.userRatings[index];
+    const colorsProperty = Object.keys(this.colors)[index];
+    const currentColor = this.colors[colorsProperty][0];
+
+    this.$chartRating.text(`${currentRating}`);
+    this.$chartText.css('color', currentColor);
+
+    this.userRatings.forEach((_, i) => {
+      if (i === index) return;
+
+      this.doughnutChart.chart.toggleDataVisibility(i);
+      this.doughnutChart.chart.update();
+    });
+
+    if (!isOnLeaveEvent) return;
+
+    this.$chartText.css('color', this.colors.default);
+    this._addRatingSumToChart();
   }
 
   _expandCanvas() {
-    const $chart = $('.js-room-details__chart');
-
     const expandCanvas = () => {
-      if (this.windowWidth < 577) $chart.width(280);
-      else $chart.width(344);
+      if (this.windowWidth < 577) this.$chart.width(280);
+      else this.$chart.width(344);
     };
 
     expandCanvas();
