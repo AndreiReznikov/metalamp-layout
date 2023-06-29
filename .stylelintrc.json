@@ -1,3 +1,7 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "extends": "stylelint-config-standard-scss",
+  "ignoreFiles": [
+    "./src/components/button/button.scss",
+    "./src/libs/air-datepicker/air-datepicker.scss"
+  ]
 }
