@@ -131,6 +131,7 @@ const canvasOptions = {
         },
         onHover: () => false,
         onLeave: () => false,
+        onClick: () => false,
       },
     },
   },
