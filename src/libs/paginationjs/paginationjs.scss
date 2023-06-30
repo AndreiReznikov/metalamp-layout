@@ -3,6 +3,11 @@
 .paginationjs {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  & .paginationjs-pages {
+    margin-left: 0;
+  }
 
   & .paginationjs-pages li > a {
     @include body-font;

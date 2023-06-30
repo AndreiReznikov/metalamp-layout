@@ -11,6 +11,7 @@ import './search-room.scss';
 
 class SearchRoom {
   initializePlugins() {
+    this._findElements();
     this._initializeFilterDateDropdown();
     this._initializeSlickCarousel();
     this._initializePaginationJS();
@@ -71,6 +72,7 @@ class SearchRoom {
     });
 
     const windowWidth = $(window).width();
+    const isMobileResolution = windowWidth < 600;
 
     this.paginationjs = new PaginationJS('.js-pagination');
 
@@ -78,11 +80,12 @@ class SearchRoom {
 
     this.paginationjs.initializePlugin({
       dataSource: paginationItems,
-      autoHidePrevious: !(windowWidth < 600),
-      autoHideNext: !(windowWidth < 600),
+      autoHidePrevious: !isMobileResolution,
+      autoHideNext: !isMobileResolution,
       pageRange: 1,
-      showPageNumbers: !(windowWidth < 600),
-      showNavigator: windowWidth < 600,
+      showPageNumbers: !isMobileResolution,
+      showNavigator: isMobileResolution,
+      formatNavigator: '<%= currentPage %> / <%= totalPage %>',
       prevText: '',
       nextText: '',
       pageSize: 12,
@@ -111,17 +114,18 @@ class SearchRoom {
   }
 
   _toggleFilterItems() {
-    this.$filterButton = $('.js-search-room__filter-button');
-    this.$filterItems = $('.js-search-room__widgets-container');
-
     const showFilterItems = () => this.$filterItems.toggle();
     this.$filterButton.click(showFilterItems);
   }
 
   _preventDefault() {
-    this.$imageContainer = $('.room-card__image-container');
-
     this.$imageContainer.click((event) => event.preventDefault());
+  }
+
+  _findElements() {
+    this.$filterButton = $('.js-search-room__filter-button');
+    this.$filterItems = $('.js-search-room__widgets-container');
+    this.$imageContainer = $('.room-card__image-container');
   }
 }
 

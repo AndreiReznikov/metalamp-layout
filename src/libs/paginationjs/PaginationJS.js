@@ -14,6 +14,7 @@ class PaginationJS {
       pageRange,
       showPageNumbers,
       showNavigator,
+      formatNavigator,
       prevText,
       nextText,
       pageSize,
@@ -28,6 +29,7 @@ class PaginationJS {
       pageRange,
       showPageNumbers,
       showNavigator,
+      formatNavigator,
       prevText,
       nextText,
       pageSize,
@@ -61,7 +63,7 @@ class PaginationJS {
 
   templatePaginationItems(data, callback) {
     this.html = '<ul class="pagination__list">';
-    $.each(data, (index, item) => {
+    $.each(data, (_, item) => {
       this.html += callback(item);
     });
     this.html += '</ul>';
