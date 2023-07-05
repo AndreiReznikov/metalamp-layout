@@ -5,11 +5,11 @@
   justify-content: center;
   align-items: center;
 
-  & .paginationjs-pages {
+  & &-pages {
     margin-left: 0;
   }
 
-  & .paginationjs-pages li > a {
+  & &-pages li > a {
     @include body-font;
 
     display: flex;
@@ -19,11 +19,11 @@
     color: $dark-shade-50;
   }
 
-  & .paginationjs-pages li.paginationjs-next,
-  & .paginationjs-pages .paginationjs-prev,
-  & .paginationjs-pages li.active,
-  & .paginationjs-pages li,
-  & .paginationjs-pages li:hover > a {
+  & &-pages li.paginationjs-next,
+  & &-pages &-prev,
+  & &-pages li.active,
+  & &-pages li,
+  & &-pages li:hover > a {
     @include flex-center;
 
     width: 40px;
@@ -31,12 +31,12 @@
     border-radius: 22px;
   }
 
-  & .paginationjs-pages li,
-  & .paginationjs-pages li:last-child {
+  & &-pages li,
+  & &-pages li:last-child {
     border: none;
   }
 
-  & .paginationjs-pages li.paginationjs-next {
+  & &-pages li.paginationjs-next {
     background: $green-blue-gradient;
     cursor: pointer;
 
@@ -45,7 +45,7 @@
     }
   }
 
-  & .paginationjs-pages .paginationjs-prev {
+  & &-pages &-prev {
     background: $green-blue-gradient;
     cursor: pointer;
 
@@ -54,7 +54,7 @@
     }
   }
 
-  & .paginationjs-pages li.active {
+  & &-pages li.active {
     background: $gradient;
 
     @include media-max($md) {
@@ -62,42 +62,42 @@
     }
   }
 
-  & .paginationjs-pages li.paginationjs-next a,
-  & .paginationjs-pages li.paginationjs-prev a {
+  & &-pages li.paginationjs-next a,
+  & &-pages li.paginationjs-prev a {
     @include button-arrow;
 
     justify-content: center;
   }
 
-  & .paginationjs-pages li.paginationjs-next a::after,
-  & .paginationjs-pages li.paginationjs-prev a::after {
+  & &-pages li.paginationjs-next a::after,
+  & &-pages li.paginationjs-prev a::after {
     @include button-arrow-after;
   }
 
-  & .paginationjs-pages li.paginationjs-next a::before,
-  & .paginationjs-pages li.paginationjs-prev a::before {
+  & &-pages li.paginationjs-next a::before,
+  & &-pages li.paginationjs-prev a::before {
     @include button-arrow-before;
   }
 
-  & .paginationjs-pages li.paginationjs-prev a::before {
+  & &-pages li.paginationjs-prev a::before {
     transform: rotate(135deg);
   }
 
-  & .paginationjs-pages li:first-child {
+  & &-pages li:first-child {
     border-radius: 22px;
   }
 
-  & .paginationjs-pages li.active > a {
+  & &-pages li.active > a {
     background: $gradient;
     border-radius: 22px;
     font-weight: bold;
   }
 
-  & .paginationjs-pages li.disabled > a {
+  & &-pages li.disabled > a {
     opacity: 1;
   }
 
-  & .paginationjs-nav {
+  & &-nav {
     @include body-font;
 
     position: absolute;

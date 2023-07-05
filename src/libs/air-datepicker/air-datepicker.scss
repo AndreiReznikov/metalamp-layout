@@ -112,6 +112,9 @@
   &--cell.-range-from-::after {
     @include one-hundred-width-and-height;
 
+
+
+
     content: '';
     position: absolute;
     border-radius: 22px 0 0 22px;
