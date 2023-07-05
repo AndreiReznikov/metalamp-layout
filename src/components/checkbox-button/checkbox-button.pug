@@ -7,8 +7,8 @@ mixin checkbox-button(options = {})
         input.checkbox-button__input(type="checkbox" checked=options.checked)
         span.checkbox-button__custom-input
         if options.isRich
-          span.checkbox-button__text-container
-            span.checkbox-button__text-title=options.richButtonTitle
-            span.checkbox-button__text_regular=options.text
+          span.checkbox-button__text-title=options.richButtonTitle
         else
           span.checkbox-button__text=options.text
+      if options.isRich
+        span.checkbox-button__text_regular=options.text
