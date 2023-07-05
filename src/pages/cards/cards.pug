@@ -20,42 +20,52 @@ html.cards(lang="ru")
         +logo({
           href: 'index.html',
         })
+      .cards__wrapper
+        .cards__left-block
+          +search-card()
 
-      .cards__left-block
-        +search-card()
+          .cards__registration-block-container
+            +registration-card({
+              buttonText: 'Перейти к оплате',
+            })
 
-        .cards__registration-block-container
-          +registration-card({
-            buttonText: 'Перейти к оплате',
+        .cards__central-block
+          +reserve-card({
+            roomNumber: '888',
+            price: '9 900',
+            totalSum: '38 081',
+            dateFrom: '2023, 8, 15',
+            dateTo: '2023, 8, 19',
+            dropdownButtonsNum: [0, 1],
+            dropdownClicksNum: [2, 1],
           })
 
-      .cards__central-block
-        +reserve-card({
-          roomNumber: '888',
-          price: '9 900',
-          totalSum: '38 081',
-          dateFrom: '2023, 8, 15',
-          dateTo: '2023, 8, 19',
-          dropdownButtonsNum: [0, 1],
-          dropdownClicksNum: [2, 1],
-        })
+          .cards__sign-in-block-container
+            +sign-in-card()
 
-        .cards__sign-in-block-container
-          +sign-in-card()
+        .cards__right-block
+          .cards__date-dropdown-container
+            +filter-date-dropdown({
+              isHidden: true,
+              isOpened: true,
+              dateFrom: '2023, 8, 19',
+              dateTo: '2023, 8, 23',
+            })
 
-      .cards__right-block
-        .cards__date-dropdown-container
-          +filter-date-dropdown({
-            isHidden: true,
-            isOpened: true,
-            dateFrom: '2023, 8, 19',
-            dateTo: '2023, 8, 23',
-          })
+          .cards__room-cards-container
+            each roomCard in roomCards
+              -
+                const {
+                  photos,
+                  number,
+                  price,
+                  starsNumber,
+                  checkedButton,
+                  reviewsNumber,
+                  isLux,
+                } = roomCard;
 
-        .cards__room-cards-container
-          each roomCard in roomCards
-            -
-              const {
+              +room-card({
                 photos,
                 number,
                 price,
@@ -63,14 +73,4 @@ html.cards(lang="ru")
                 checkedButton,
                 reviewsNumber,
                 isLux,
-              } = roomCard;
-
-            +room-card({
-              photos,
-              number,
-              price,
-              starsNumber,
-              checkedButton,
-              reviewsNumber,
-              isLux,
-            })
+              })
