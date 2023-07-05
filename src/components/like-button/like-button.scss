@@ -1,4 +1,4 @@
-@import '../../templates/vars-and-mixins';
+@import '~templates/vars-and-mixins';
 
 .like-button {
   &:hover {
@@ -36,11 +36,11 @@
     width: 8px;
     height: 8px;
     margin-right: 2px;
-    background-image: url("../../img/unliked.svg");
+    background-image: url("~img/unliked.svg");
   }
 
   &__icon_liked {
-    background-image: url("../../img/liked.svg");
+    background-image: url("~img/liked.svg");
   }
 
   &__count {

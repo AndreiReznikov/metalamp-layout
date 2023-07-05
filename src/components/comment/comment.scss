@@ -1,4 +1,4 @@
-@import '../../templates/vars-and-mixins';
+@import '~templates/vars-and-mixins';
 
 .comment {
   @include width(280px, 711px);

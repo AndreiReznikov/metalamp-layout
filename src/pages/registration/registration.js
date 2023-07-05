@@ -1,6 +1,7 @@
-import Inputmask from '../../libs/inputmask';
-import '../../components/header';
-import '../../templates/fonts.scss';
+import Inputmask from '~libs/inputmask';
+import '~components/header';
+import '~templates/fonts.scss';
+
 import './registration.scss';
 
 class Registration {

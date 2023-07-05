@@ -1,5 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const PugPlugin = require('pug-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const PATHS = {
   src: path.resolve(process.cwd(), 'src'),
@@ -19,11 +23,6 @@ const PAGES = [
   'sign-in',
 ];
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const PugPlugin = require('pug-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-
 const { NODE_ENV } = process.env;
 
 const entryPoints = {};
@@ -38,6 +37,17 @@ module.exports = {
   output: {
     assetModuleFilename: 'assets/[hash][ext][query]',
     publicPath: '',
+  },
+  resolve: {
+    extensions: ['.js', '.pug', '.scss'],
+    alias: {
+      '~': PATHS.src,
+      '~components': `${PATHS.src}/components`,
+      '~libs': `${PATHS.src}/libs`,
+      '~img': `${PATHS.src}/img`,
+      '~fonts': `${PATHS.src}/fonts`,
+      '~templates': `${PATHS.src}/templates`,
+    },
   },
   module: {
     rules: [

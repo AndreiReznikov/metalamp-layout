@@ -1,12 +1,13 @@
-import AirDatepicker from '../../libs/air-datepicker';
-import IonRangeslider from '../../libs/ion-rangeslider';
-import SlickCarousel from '../../libs/slick-carousel';
-import PaginationJS from '../../libs/paginationjs';
-import vars from '../../templates/vars';
-import '../../components/header';
-import '../../components/dropdown';
-import '../../components/checkbox-list';
-import '../../templates/fonts.scss';
+import AirDatepicker from '~libs/air-datepicker';
+import IonRangeslider from '~libs/ion-rangeslider';
+import SlickCarousel from '~libs/slick-carousel';
+import PaginationJS from '~libs/paginationjs';
+import vars from '~templates/vars';
+import '~components/header';
+import '~components/dropdown';
+import '~components/checkbox-list';
+import '~templates/fonts.scss';
+
 import './search-room.scss';
 
 class SearchRoom {

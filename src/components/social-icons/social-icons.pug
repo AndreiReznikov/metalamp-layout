@@ -2,4 +2,4 @@ mixin social-icons(options = {})
   .social-icons
     each social in options.socials
       a(class="social-icons__link" href=`https://${social}.com/` target="_blank" rel="noopener noreferrer")
-        .social-icons__image(style=`background-image: url(${require('../../img/' + social + '.svg')});`)
+        .social-icons__image(style=`background-image: url(${require('~img/' + social + '.svg')});`)

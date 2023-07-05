@@ -1,11 +1,11 @@
-include ../../components/header/header
-include ../../components/advantage/advantage
-include ../../components/reserve-card/reserve-card
-include ../../components/comment/comment
-include ../../components/bullet-list/bullet-list
-include ../../components/footer/footer
-include ../../components/footer-mobile/footer-mobile
-include ../../templates/vars-and-mixins
+include ~components/header/header
+include ~components/advantage/advantage
+include ~components/reserve-card/reserve-card
+include ~components/comment/comment
+include ~components/bullet-list/bullet-list
+include ~components/footer/footer
+include ~components/footer-mobile/footer-mobile
+include ~templates/vars-and-mixins
 
 doctype html
 html.room-details(lang="en")
@@ -22,7 +22,7 @@ html.room-details(lang="en")
           .room-details__large-photo-wrapper
             img(
               class="room-details__background-image room-details__background-image_size_l"
-              src=require("../../img/room-photo-1.jpg")
+              src=require("~img/room-photo-1.jpg")
               alt="Room photo"
             )
 
@@ -31,7 +31,7 @@ html.room-details(lang="en")
             while i < 3
               img(
                 class="room-details__background-image"
-                src=require(`../../img/room-photo-1-${i++}.jpg`)
+                src=require(`~img/room-photo-1-${i++}.jpg`)
                 alt="Room photo"
               )
 

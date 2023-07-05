@@ -9,8 +9,8 @@ class LikeButton {
   }
 
   _toggleButtons() {
-    const unlikeIcon = '../../img/unliked.svg';
-    const likeIcon = '../../img/liked.svg';
+    const unlikeIcon = '~img/unliked.svg';
+    const likeIcon = '~img/liked.svg';
 
     this.$likeButtonsCollection.each(function toggleButtons() {
       const $this = $(this);

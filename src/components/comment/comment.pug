@@ -1,10 +1,10 @@
-include ../like-button/like-button
+include ~components/like-button/like-button
 
 mixin comment(options = {})
   .comment
     .comment__user-wrapper
       img.comment__user-photo(
-        src=require(`../../img/${options.image}`),
+        src=require(`~img/${options.image}`),
         alt=options.alt
         )
       .comment__user-info

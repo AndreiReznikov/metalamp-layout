@@ -1,4 +1,5 @@
-import vars from '../../templates/vars';
+import vars from '~templates/vars';
+
 import Dropdown from './Dropdown';
 
 $(document).ready(() => {

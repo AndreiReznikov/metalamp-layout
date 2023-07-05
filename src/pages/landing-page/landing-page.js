@@ -1,8 +1,9 @@
-import AirDatepicker from '../../libs/air-datepicker';
-import vars from '../../templates/vars';
-import '../../components/header';
-import '../../components/dropdown';
-import '../../templates/fonts.scss';
+import AirDatepicker from '~libs/air-datepicker';
+import vars from '~templates/vars';
+import '~components/header';
+import '~components/dropdown';
+import '~templates/fonts.scss';
+
 import './landing-page.scss';
 
 class LandingPage {

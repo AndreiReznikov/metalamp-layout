@@ -5,7 +5,7 @@ mixin advantage(options = {})
     className += options.isBorder ? ' advantage_bordered' : '';
 
   div(class=className)
-    .advantage__icon(style=`background-image: url(${require('../../img/' + options.image)});`)
+    .advantage__icon(style=`background-image: url(${require('~img/' + options.image)});`)
     .advantage__text
       .advantage__title=options.title
       .advantage__description=options.description

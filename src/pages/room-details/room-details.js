@@ -1,10 +1,11 @@
-import AirDatepicker from '../../libs/air-datepicker';
-import Chart from '../../libs/chart';
-import vars from '../../templates/vars';
-import '../../components/header';
-import '../../components/dropdown';
-import '../../components/like-button';
-import '../../templates/fonts.scss';
+import AirDatepicker from '~libs/air-datepicker';
+import Chart from '~libs/chart';
+import vars from '~templates/vars';
+import '~components/header';
+import '~components/dropdown';
+import '~components/like-button';
+import '~templates/fonts.scss';
+
 import './room-details.scss';
 
 class RoomDetails {

@@ -1,15 +1,15 @@
-@import '../../libs/air-datepicker/air-datepicker';
-@import '../../components/logo/logo';
-@import '../../components/button/button';
-@import '../../components/header/header';
-@import '../../components/date-dropdown/date-dropdown';
-@import '../../components/dropdown/dropdown';
-@import '../../components/search-card/search-card';
-@import '../../components/subscription-text-field/subscription-text-field';
-@import '../../components/social-icons/social-icons';
-@import '../../components/footer/footer';
-@import '../../components/footer-mobile/footer-mobile';
-@import '../../templates/vars-and-mixins';
+@import '~libs/air-datepicker/air-datepicker';
+@import '~components/logo/logo';
+@import '~components/button/button';
+@import '~components/header/header';
+@import '~components/date-dropdown/date-dropdown';
+@import '~components/dropdown/dropdown';
+@import '~components/search-card/search-card';
+@import '~components/subscription-text-field/subscription-text-field';
+@import '~components/social-icons/social-icons';
+@import '~components/footer/footer';
+@import '~components/footer-mobile/footer-mobile';
+@import '~templates/vars-and-mixins';
 
 .landing-page {
   &, &__body {
@@ -36,7 +36,7 @@
     flex: 1 0 auto;
     position: relative;
     width: 100%;
-    background-image: url('../../img/landing-background.jpg');
+    background-image: url('~img/landing-background.jpg');
 
     @include media-max($md) {
       display: flex;

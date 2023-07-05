@@ -1,19 +1,19 @@
-@import '../../libs/air-datepicker/air-datepicker';
-@import '../../components/logo/logo';
-@import '../../components/button/button';
-@import '../../components/header/header';
-@import '../../components/advantage/advantage';
-@import '../../components/date-dropdown/date-dropdown';
-@import '../../components/dropdown/dropdown';
-@import '../../components/reserve-card/reserve-card';
-@import '../../components/like-button/like-button';
-@import '../../components/comment/comment';
-@import '../../components/bullet-list/bullet-list';
-@import '../../components/subscription-text-field/subscription-text-field';
-@import '../../components/social-icons/social-icons';
-@import '../../components/footer/footer';
-@import '../../components/footer-mobile/footer-mobile';
-@import '../../templates/vars-and-mixins';
+@import '~libs/air-datepicker/air-datepicker';
+@import '~components/logo/logo';
+@import '~components/button/button';
+@import '~components/header/header';
+@import '~components/advantage/advantage';
+@import '~components/date-dropdown/date-dropdown';
+@import '~components/dropdown/dropdown';
+@import '~components/reserve-card/reserve-card';
+@import '~components/like-button/like-button';
+@import '~components/comment/comment';
+@import '~components/bullet-list/bullet-list';
+@import '~components/subscription-text-field/subscription-text-field';
+@import '~components/social-icons/social-icons';
+@import '~components/footer/footer';
+@import '~components/footer-mobile/footer-mobile';
+@import '~templates/vars-and-mixins';
 
 .room-details {
   &, &__body {
