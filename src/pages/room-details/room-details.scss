@@ -16,10 +16,12 @@
 @import '~templates/vars-and-mixins';
 
 .room-details {
-  &, &__body {
-    @include body-font;
+  @include body-font;
 
-    background-color: #fff;
+  background-color: #fff;
+
+  &__body {
+    @include margin-padding-zero;
   }
 
   &_non-scrollable {

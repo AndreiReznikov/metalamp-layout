@@ -13,6 +13,10 @@
   color: $dark-shade-100;
   background-color: $dark-shade-5;
 
+  &__body {
+    @include margin-padding-zero;
+  }
+
   &_non-scrollable {
     position: fixed;
     overflow: hidden;

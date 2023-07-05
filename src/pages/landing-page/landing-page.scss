@@ -12,10 +12,12 @@
 @import '~templates/vars-and-mixins';
 
 .landing-page {
-  &, &__body {
-    @include body-font;
+  @include body-font;
 
-    background-color: #fff;
+  background-color: #fff;
+
+  &__body {
+    @include margin-padding-zero;
   }
 
   &_non-scrollable {
@@ -67,7 +69,7 @@
     @include body-font;
 
     position: absolute;
-    bottom: 21px;
+    bottom: 6px;
     right: 134px;
     max-width: 300px;
     line-height: 24px;

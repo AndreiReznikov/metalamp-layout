@@ -1,12 +1,17 @@
 @import '~templates/vars-and-mixins';
 
 .index {
-  &, &__body {
-    @include body-font;
+  @include body-font;
 
+  color: $dark-shade-100;
+  background-color: #fff;
+
+  &, &__body {
     height: 100%;
-    color: $dark-shade-100;
-    background-color: #fff;
+  }
+
+  &__body {
+    @include margin-padding-zero;
   }
 
   &__container {

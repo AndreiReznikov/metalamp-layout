@@ -20,10 +20,12 @@
 @import '~templates/vars-and-mixins';
 
 .search-room {
-  &, &__body {
-    @include body-font;
+  @include body-font;
 
-    background-color: #fff;
+  background-color: #fff;
+
+  &__body {
+    @include margin-padding-zero;
   }
 
   &_non-scrollable {
@@ -178,7 +180,7 @@
   }
 
   &__checkbox-buttons-container {
-    margin-top: 26px;
+    margin-top: 15px;
 
     @include media-max($xl) {
       width: 350px;
@@ -194,7 +196,7 @@
   }
 
   &__rich-checkbox-buttons-container {
-    margin-top: 20px;
+    margin-top: 19px;
 
     @include media-max($xl) {
       margin-top: 30px;

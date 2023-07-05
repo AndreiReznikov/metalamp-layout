@@ -23,11 +23,13 @@
 @import '~components/pagination/pagination';
 
 .form-elements {
-  &, &__body {
-    @include body-font;
+  @include body-font;
 
-    background-color: #fff;
-    color: $dark-shade-100;
+  color: $dark-shade-100;
+  background-color: #fff;
+
+  &__body {
+    @include margin-padding-zero;
   }
 
   &__container {

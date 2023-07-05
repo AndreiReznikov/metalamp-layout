@@ -55,8 +55,6 @@ $xxl: 1400px;
 }
 
 @mixin body-font() {
-  @include margin-padding-zero;
-
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
