@@ -146,7 +146,7 @@ class Dropdown {
           totalSum -= 1;
 
           if (totalSum === 0) {
-            $clearButton.removeClass('dropdown__clear-button_visible');
+            $clearButton.fadeOut();
           }
 
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
@@ -163,7 +163,7 @@ class Dropdown {
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
 
           $minus.removeClass('dropdown__counter-decrement_dim');
-          $clearButton.addClass('dropdown__clear-button_visible');
+          $clearButton.fadeIn();
 
           setSumToData(totalSum);
         };
@@ -173,7 +173,7 @@ class Dropdown {
           totalSum = 0;
           $value.text(0);
           $minus.addClass('dropdown__counter-decrement_dim');
-          $clearButton.removeClass('dropdown__clear-button_visible');
+          $clearButton.fadeOut();
           changeSelectionText($selection, setSelectionText(itemsCount, totalSum));
           setSumToData(totalSum);
         };

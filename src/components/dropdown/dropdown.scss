@@ -145,6 +145,7 @@
   &__buttons-container {
     @include flex-between-center;
 
+    justify-content: flex-end;
     margin-top: 20px;
     padding: 0 7px 5px 14px;
   }
@@ -159,18 +160,12 @@
   }
 
   &__clear-button {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.4s;
+    display: none;
+    margin-right: auto;
   }
 
   &__clear-button:hover,
   &__apply-button:hover {
     opacity: 0.5;
-  }
-
-  &__clear-button_visible {
-    visibility: visible;
-    opacity: 1;
   }
 }
