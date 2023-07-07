@@ -2,6 +2,7 @@
 
 .radio-buttons {
   display: flex;
+  flex-wrap: wrap;
 
   &__label {
     @include body-font;

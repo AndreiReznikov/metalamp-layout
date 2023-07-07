@@ -27,7 +27,7 @@ class Dropdown {
   }
 
   _setSelectionDefaultText() {
-    this.$selectionCollection.text(this.selectionDefaultText);
+    this.$selectionCollection.val(this.selectionDefaultText);
   }
 
   _toggleMenu() {
@@ -100,7 +100,7 @@ class Dropdown {
 
   _changeCounterValue() {
     const setSelectionText = this.setSelectionText || ((itemsCount, totalSum) => `${totalSum} items`);
-    const changeSelectionText = (element, callback) => element.text(callback);
+    const changeSelectionText = (element, callback) => element.val(callback);
 
     this.$dropdownsCollection.each(function changeCounterValue() {
       const $dropdown = $(this);

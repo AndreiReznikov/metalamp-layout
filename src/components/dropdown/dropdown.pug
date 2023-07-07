@@ -22,7 +22,7 @@ mixin dropdown(options = {})
         data-buttons=options.buttonsNum
       )
       .dropdown__selection-container.js-dropdown__selection-container
-        output.dropdown__selection.js-dropdown__selection
+        input.dropdown__selection.js-dropdown__selection(readonly)
         .dropdown__arrow-container
           span.dropdown__arrow
       .dropdown__menu.js-dropdown__menu

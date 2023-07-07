@@ -2,14 +2,13 @@
 
 .checkbox-button {
   &__container {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   &__title {
     @include h3;
 
     margin-bottom: 17px;
-    padding: 0;
   }
 
   &__label {
@@ -25,6 +24,7 @@
     display: inline-flex;
     padding-left: 30px;
     font-size: 12px;
+    line-height: 14px;
     color: $dark-shade-50;
   }
 
