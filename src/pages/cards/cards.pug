@@ -1,76 +1,71 @@
-include ~components/logo/logo
+extends ~pages-base/ui-kit-base
 include ~components/search-card/search-card
 include ~components/registration-card/registration-card
 include ~components/reserve-card/reserve-card
 include ~components/sign-in-card/sign-in-card
 include ~components/room-card/room-card
 include ~components/filter-date-dropdown/filter-date-dropdown
-include ~templates/vars-and-mixins
 
-doctype html
-html.cards(lang="ru")
-  +pageBase({
-    title: 'Cards',
-    keywords: 'Cards, components, MetaLamp, education',
-    description: 'Компоненты карточек для сайта Toxin',
-  })
-  body.cards__body
-    .cards__container
-      .cards__logo-container
-        +logo({
-          href: 'index.html',
+block vars
+  -
+    const className = 'cards';
+    const title = 'Cards';
+    const keywords = 'Cards, components, MetaLamp, education';
+    const description = 'Компоненты карточек для сайта Toxin';
+
+
+block content
+  .cards__wrapper
+    .cards__left-block
+      +search-card()
+
+      .cards__registration-block-container
+        +registration-card({
+          buttonText: 'Перейти к оплате',
         })
-      .cards__wrapper
-        .cards__left-block
-          +search-card()
 
-          .cards__registration-block-container
-            +registration-card({
-              buttonText: 'Перейти к оплате',
-            })
+    .cards__central-block
+      +reserve-card({
+        roomNumber: '888',
+        price: '9 900',
+        totalSum: '38 081',
+        dateFrom: '2023, 8, 15',
+        dateTo: '2023, 8, 19',
+        dropdownButtonsNum: [0, 1],
+        dropdownClicksNum: [2, 1],
+      })
 
-        .cards__central-block
-          +reserve-card({
-            roomNumber: '888',
-            price: '9 900',
-            totalSum: '38 081',
-            dateFrom: '2023, 8, 15',
-            dateTo: '2023, 8, 19',
-            dropdownButtonsNum: [0, 1],
-            dropdownClicksNum: [2, 1],
+      .cards__sign-in-block-container
+        +sign-in-card()
+
+    .cards__right-block
+      .cards__date-dropdown-container
+        +filter-date-dropdown({
+          isHidden: true,
+          isOpened: true,
+          dateFrom: '2023, 8, 19',
+          dateTo: '2023, 8, 23',
+        })
+
+      .cards__room-cards-container
+        each roomCard in roomCards
+          -
+            const {
+              photos,
+              number,
+              price,
+              starsNumber,
+              checkedButton,
+              reviewsNumber,
+              isLux,
+            } = roomCard;
+
+          +room-card({
+            photos,
+            number,
+            price,
+            starsNumber,
+            checkedButton,
+            reviewsNumber,
+            isLux,
           })
-
-          .cards__sign-in-block-container
-            +sign-in-card()
-
-        .cards__right-block
-          .cards__date-dropdown-container
-            +filter-date-dropdown({
-              isHidden: true,
-              isOpened: true,
-              dateFrom: '2023, 8, 19',
-              dateTo: '2023, 8, 23',
-            })
-
-          .cards__room-cards-container
-            each roomCard in roomCards
-              -
-                const {
-                  photos,
-                  number,
-                  price,
-                  starsNumber,
-                  checkedButton,
-                  reviewsNumber,
-                  isLux,
-                } = roomCard;
-
-              +room-card({
-                photos,
-                number,
-                price,
-                starsNumber,
-                checkedButton,
-                reviewsNumber,
-                isLux,
-              })

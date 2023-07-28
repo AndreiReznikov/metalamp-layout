@@ -1,22 +1,15 @@
-include ~components/header/header
+extends ~pages-base/page-base
 include ~components/registration-card/registration-card
 include ~components/sign-in-card/sign-in-card
-include ~components/footer/footer
-include ~components/footer-mobile/footer-mobile
-include ~templates/vars-and-mixins
 
-doctype html
-html.sign-in(lang="en")
-  +pageBase({
-    title: 'Sign in',
-    keywords: 'Sign in, components, MetaLamp, education',
-    description: 'Отель Toxin, подобрать номер',
-  })
-  body.sign-in__body
-    .sign-in__wrapper
-      +header()
-      main.sign-in__background-container
-        .sign-in__card-wrapper
-          +sign-in-card()
-      +footer()
-      +footer-mobile()
+block vars
+  -
+    const className = 'sign-in';
+    const title = 'Sign in';
+    const keywords = 'Sign in, components, MetaLamp, education';
+    const description = 'Отель Toxin, подобрать номер';
+
+block content
+  main.sign-in__background-container
+    .sign-in__card-wrapper
+      +sign-in-card()

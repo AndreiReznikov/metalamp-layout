@@ -1,4 +1,4 @@
-include ~components/header/header
+extends ~pages-base/page-base
 include ~components/filter-date-dropdown/filter-date-dropdown
 include ~components/dropdown/dropdown
 include ~components/range-slider/range-slider
@@ -6,120 +6,115 @@ include ~components/checkbox-button/checkbox-button
 include ~components/checkbox-list/checkbox-list
 include ~components/pagination/pagination
 include ~components/room-card/room-card
-include ~components/footer/footer
-include ~components/footer-mobile/footer-mobile
-include ~templates/vars-and-mixins
 
-doctype html
-html.search-room(lang="en")
-  +pageBase({
-    title: 'Search room',
-    keywords: 'Search room, components, MetaLamp, education',
-    description: 'Отель Toxin, подобрать номер',
-  })
-  body.search-room__body
-    .search-room__wrapper
-      +header()
-      .search-room__filter
-        button.search-room__filter-button.js-search-room__filter-button
-          span.search-room__filter-wrapper
-            span.search-room__filter-icon
-            span.search-room__filter-text Фильтры
-      main.search-room__container
-        .search-room__widgets-container.js-search-room__widgets-container
-          form.search-room__widgets-form
-            section.search-room__widgets-wrapper
-              .search-room__filter-date-dropdown-container
-                .search-room__filter-date-dropdown-wrapper
-                  +filter-date-dropdown({
-                    title: 'Даты пребывания в отеле',
-                    dateFrom: '2023, 8, 19',
-                    dateTo: '2023, 8, 23',
-                  })
-              .search-room__guests-dropdown-container
-                .search-room__guests-dropdown-wrapper
-                  +dropdown({
-                    title: 'Гости',
-                    items: ['Взрослые', 'Дети', 'Младенцы'],
-                    addingButtons: true,
-                    isGuests: true,
-                    buttonsNum: [0, 2],
-                    clicksNum: [3, 1],
-                    size: 'S',
-                  })
-              .search-room__range-slider-container
-                +range-slider({
-                  title: 'Диапазон цены',
-                })
-                p.search-room__slider-sub-text Стоимость за сутки пребывания в номере
-              .search-room__checkbox-buttons-container
-                .search-room__checkbox-buttons-wrapper
-                  -
-                    const { className, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
+block vars
+  -
+    const className = 'search-room';
+    const title = 'Search room';
+    const keywords = 'Search room, components, MetaLamp, education';
+    const description = 'Отель Toxin, подобрать номер';
 
-                  +checkbox-list({
-                    title: 'Правила дома',
-                    checkboxTexts,
-                    checkedItems,
-                    isExpandable,
-                    isOpened,
-                  })
+block content
+  .search-room__filter
+    button.search-room__filter-button.js-search-room__filter-button
+      span.search-room__filter-wrapper
+        span.search-room__filter-icon
+        span.search-room__filter-text Фильтры
+  main.search-room__container
+    .search-room__widgets-container.js-search-room__widgets-container
+      form.search-room__widgets-form
+        section.search-room__widgets-wrapper
+          .search-room__filter-date-dropdown-container
+            .search-room__filter-date-dropdown-wrapper
+              +filter-date-dropdown({
+                title: 'Даты пребывания в отеле',
+                dateFrom: '2023, 8, 19',
+                dateTo: '2023, 8, 23',
+              })
+          .search-room__guests-dropdown-container
+            .search-room__guests-dropdown-wrapper
+              +dropdown({
+                title: 'Гости',
+                items: ['Взрослые', 'Дети', 'Младенцы'],
+                addingButtons: true,
+                isGuests: true,
+                buttonsNum: [0, 2],
+                clicksNum: [3, 1],
+                size: 'S',
+              })
+          .search-room__range-slider-container
+            +range-slider({
+              title: 'Диапазон цены',
+            })
+            p.search-room__slider-sub-text Стоимость за сутки пребывания в номере
+          .search-room__checkbox-buttons-container
+            .search-room__checkbox-buttons-wrapper
+              -
+                const { checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
 
-              .search-room__rich-checkbox-buttons-container
-                .search-room__rich-checkbox-buttons-wrapper
-                  each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
-                    - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
-                    +checkbox-list({
-                      title,
-                      richTitles,
-                      checkboxTexts,
-                      isExpandable,
-                      isRich,
-                    })
+              +checkbox-list({
+                title: 'Правила дома',
+                checkboxTexts,
+                checkedItems,
+                isExpandable,
+                isOpened,
+              })
 
-              .search-room__conveniences-dropdown-container
-                .search-room__conveniences-dropdown-wrapper
-                  +dropdown({
-                    title: 'Удобства номера',
-                    items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                    isConveniences: true,
-                    buttonsNum: [0, 1],
-                    clicksNum: [2, 2],
-                    size: 'S',
-                  })
-              .search-room__checkbox-list-container
+          .search-room__rich-checkbox-buttons-container
+            .search-room__rich-checkbox-buttons-wrapper
+              each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
+                - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
+
                 +checkbox-list({
-                  title: 'Дополнительные удобства',
-                  isExpandable: true,
-                  checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+                  title,
+                  richTitles,
+                  checkboxTexts,
+                  isExpandable,
+                  isRich,
                 })
-        section.search-room__cards-container
-          h1.search-room__title Номера, которые мы для вас подобрали
-          +pagination({
-            numbers: '1 - 12',
-            totalNumber: 'из 100+ вариантов аренды',
-          })
-      +footer()
-      +footer-mobile()
-      .search-room__pagination-container
-        each roomCardProperty in roomsCardsProperties
-          -
-            const [
-              photo,
-              number,
-              price,
-              starsNumber,
-              checkedButton,
-              reviewsNumber,
-              isLux
-            ] = roomCardProperty;
 
-          +room-card({
-            photos: [photo, photo, photo, photo],
-            number,
-            price,
-            starsNumber,
-            checkedButton,
-            reviewsNumber,
-            isLux,
-          })
+          .search-room__conveniences-dropdown-container
+            .search-room__conveniences-dropdown-wrapper
+              +dropdown({
+                title: 'Удобства номера',
+                items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+                isConveniences: true,
+                buttonsNum: [0, 1],
+                clicksNum: [2, 2],
+                size: 'S',
+              })
+          .search-room__checkbox-list-container
+            +checkbox-list({
+              title: 'Дополнительные удобства',
+              isExpandable: true,
+              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+            })
+
+    section.search-room__cards-container
+      h1.search-room__title Номера, которые мы для вас подобрали
+      +pagination({
+        numbers: '1 - 12',
+        totalNumber: 'из 100+ вариантов аренды',
+      })
+
+  .search-room__pagination-container
+    each roomCardProperty in roomsCardsProperties
+      -
+        const [
+          photo,
+          number,
+          price,
+          starsNumber,
+          checkedButton,
+          reviewsNumber,
+          isLux
+        ] = roomCardProperty;
+      +room-card({
+        photos: [photo, photo, photo, photo],
+        number,
+        price,
+        starsNumber,
+        checkedButton,
+        reviewsNumber,
+        isLux,
+      })

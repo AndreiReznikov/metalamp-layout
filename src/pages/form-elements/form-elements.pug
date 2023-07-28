@@ -1,297 +1,290 @@
-include ~/components/logo/logo
-include ~/components/text-field/text-field
-include ~/components/masked-text-field/masked-text-field
-include ~/components/element-description/element-description
-include ~/components/date-dropdown/date-dropdown
-include ~/components/filter-date-dropdown/filter-date-dropdown
-include ~/components/subscription-text-field/subscription-text-field
-include ~/components/dropdown/dropdown
-include ~/components/checkbox-list/checkbox-list
-include ~/components/checkbox-button/checkbox-button
-include ~/components/radio-buttons/radio-buttons
-include ~/components/toggle-button/toggle-button
-include ~/components/like-button/like-button
-include ~/components/rate-button/rate-button
-include ~/components/range-slider/range-slider
-include ~/components/button/button
-include ~/components/pagination/pagination
-include ~/components/bullet-list/bullet-list
-include ~/components/advantage/advantage
-include ~/components/comment/comment
-include ~/templates/vars-and-mixins
+extends ~pages-base/ui-kit-base
+include ~components/text-field/text-field
+include ~components/masked-text-field/masked-text-field
+include ~components/element-description/element-description
+include ~components/date-dropdown/date-dropdown
+include ~components/filter-date-dropdown/filter-date-dropdown
+include ~components/subscription-text-field/subscription-text-field
+include ~components/dropdown/dropdown
+include ~components/checkbox-list/checkbox-list
+include ~components/checkbox-button/checkbox-button
+include ~components/radio-buttons/radio-buttons
+include ~components/toggle-button/toggle-button
+include ~components/like-button/like-button
+include ~components/rate-button/rate-button
+include ~components/range-slider/range-slider
+include ~components/button/button
+include ~components/pagination/pagination
+include ~components/bullet-list/bullet-list
+include ~components/advantage/advantage
+include ~components/comment/comment
 
-doctype html
-html.form-elements(lang="ru")
-  +pageBase({
-    title: 'Form Elements',
-    keywords: 'Form Elements, components, MetaLamp, education',
-    description: 'Компоненты формы для сайта Toxin',
-  })
-  body.form-elements__body
-    .form-elements__container
-      .form-elements__logo-container
-        +logo({
-          href: 'index.html',
+block vars
+  -
+    const className = 'form-elements';
+    const title = 'Form Elements';
+    const keywords = 'Form Elements, components, MetaLamp, education';
+    const description = 'Компоненты формы для сайта Toxin';
+
+block content
+  .form-elements__wrapper
+    .form-elements__left-block
+      each textField in textFields
+        - const { className, title, status, type, placeholder, value, isFocused } = textField;
+        div(class=className)
+          +element-description({
+            title,
+            status,
+          })
+          +text-field({
+            type,
+            placeholder,
+            value,
+            isFocused,
+          })
+
+      .form-elements__dropdown-first-container
+        +dropdown({
+          items: ['Взрослые', 'Дети', 'Младенцы'],
+          addingButtons: true,
+          isGuests: true,
+          title: 'Dropdown',
         })
 
-      .form-elements__wrapper
-        .form-elements__left-block
-          each textField in textFields
-            - const { className, title, status, type, placeholder, value, isFocused } = textField;
-            div(class=className)
-              +element-description({
-                title,
-                status,
-              })
-              +text-field({
-                type,
-                placeholder,
-                value,
-                isFocused,
-              })
+      .form-elements__masked-text-field-container
+        +masked-text-field({
+          type: 'text',
+          placeholder: 'ДД.ММ.ГГГГ',
+          title: 'Masked text field',
+        })
 
-          .form-elements__dropdown-first-container
-            +dropdown({
-              items: ['Взрослые', 'Дети', 'Младенцы'],
-              addingButtons: true,
-              isGuests: true,
-              title: 'Dropdown',
+      .form-elements__date-dropdown-container
+        +date-dropdown({
+          title: ['Date dropdown', 'Date dropdown'],
+          dateFrom: '2023, 8, 15',
+          dateTo: '2023, 8, 19',
+          isFromEmpty: 'true',
+        })
+
+      .form-elements__filter-date-dropdown-container
+        +filter-date-dropdown({
+          title: 'Filter date dropdown',
+          dateFrom: '2023, 8, 19',
+          dateTo: '2023, 8, 23',
+        })
+
+      .form-elements__subscription-text-field-container
+        +subscription-text-field({
+          title: 'Subscription text field',
+        })
+
+      .form-elements__dropdown-second-container
+        +element-description({
+          title: 'Dropdown',
+          status: 'Default',
+        })
+        +dropdown({
+          items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+          isConveniences: true,
+          buttonsNum: [0, 1],
+          clicksNum: [2, 2],
+          size: 'S',
+        })
+
+      .form-elements__dropdown-third-container
+        +element-description({
+          title: 'Dropdown',
+          status: 'Expanded',
+        })
+        +dropdown({
+          items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+          isConveniences: true,
+          isOpened: true,
+          buttonsNum: [0, 1],
+          clicksNum: [2, 2],
+          size: 'S',
+        })
+
+      each checkboxList in checkboxLists
+        - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxList;
+        div(class=className)
+          +checkbox-list({
+            title,
+            checkboxTexts,
+            checkedItems,
+            isExpandable,
+            isOpened,
+          })
+
+    .form-elements__central-block
+      .form-elements__checkbox-buttons-container
+          - const { listTitle, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
+          +checkbox-list({
+            title: listTitle,
+            checkboxTexts,
+            checkedItems,
+            isExpandable,
+            isOpened,
+          })
+
+      .form-elements__radio-buttons-container
+        .form-elements__radio-buttons-description-container
+          +element-description({
+            title: 'Radio buttons',
+          })
+        +radio-buttons({
+          title: 'Radio buttons',
+          radioNames: ['Мужчина', 'Женщина'],
+          checkedNumber: 0,
+        })
+
+      .form-elements__toggle-buttons-container
+        .form-elements__toggle-description-container
+          +element-description({
+            title: 'Toggle',
+          })
+        .form-elements__toggle-buttons-wrapper
+          each toggleButton in toggleButtons
+            - const [ text, checked ] = toggleButton;
+            +toggle-button({
+              text,
+              checked,
             })
 
-          .form-elements__masked-text-field-container
-            +masked-text-field({
-              type: 'text',
-              placeholder: 'ДД.ММ.ГГГГ',
-              title: 'Masked text field',
+      .form-elements__like-button-container
+        +element-description({
+          title: 'Like button',
+        })
+        .form-elements__like-buttons-wrapper
+          each likeButton in likeButtons
+            - const [ count, isLiked ] = likeButton;
+            +like-button({
+              count,
+              isLiked,
             })
 
-          .form-elements__date-dropdown-container
-            +date-dropdown({
-              title: ['Date dropdown', 'Date dropdown'],
-              dateFrom: '2023, 8, 15',
-              dateTo: '2023, 8, 19',
-              isFromEmpty: 'true',
+      .form-elements__rate-buttons-container
+        +element-description({
+          title: 'Rate button',
+        })
+        .form-elements__rate-buttons-wrapper
+          each rateButton in rateButtons
+            - const { starsNumber, checkedButton, name } = rateButton;
+            +rate-button({
+              starsNumber,
+              checkedButton,
+              name,
             })
 
-          .form-elements__filter-date-dropdown-container
-            +filter-date-dropdown({
-              title: 'Filter date dropdown',
-              dateFrom: '2023, 8, 19',
-              dateTo: '2023, 8, 23',
-            })
+      .form-elements__dropdown-fourth-container
+        +dropdown({
+          items: ['Взрослые', 'Дети', 'Младенцы'],
+          isOpened: true,
+          addingButtons: true,
+          isGuests: true,
+          title: 'Dropdown',
+        })
 
-          .form-elements__subscription-text-field-container
-            +subscription-text-field({
-              title: 'Subscription text field',
-            })
+      .form-elements__rich-checkbox-buttons-container
+        each richCheckboxButton in richCheckboxButtons
+          - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
+          +checkbox-list({
+            title,
+            richTitles,
+            checkboxTexts,
+            isExpandable,
+            isRich,
+          })
 
-          .form-elements__dropdown-second-container
-            +element-description({
-              title: 'Dropdown',
-              status: 'Default',
-            })
-            +dropdown({
-              items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-              isConveniences: true,
-              buttonsNum: [0, 1],
-              clicksNum: [2, 2],
-              size: 'S',
-            })
+    .form-elements__right-block
+      .form-elements__range-slider-container
+        +range-slider({
+          title: 'Range slider',
+        })
 
-          .form-elements__dropdown-third-container
-            +element-description({
-              title: 'Dropdown',
-              status: 'Expanded',
-            })
-            +dropdown({
-              items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-              isConveniences: true,
-              isOpened: true,
-              buttonsNum: [0, 1],
-              clicksNum: [2, 2],
-              size: 'S',
-            })
+      .form-elements__buttons-container
+        .form-elements__buttons-description-container
+          +element-description({
+            title: 'Buttons',
+          })
 
-          each checkboxList in checkboxLists
-            - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxList;
-            div(class=className)
-              +checkbox-list({
-                title,
-                checkboxTexts,
-                checkedItems,
-                isExpandable,
-                isOpened,
-              })
-
-
-        .form-elements__central-block
-          .form-elements__checkbox-buttons-container
-              - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
-              +checkbox-list({
-                title,
-                checkboxTexts,
-                checkedItems,
-                isExpandable,
-                isOpened,
-              })
-
-          .form-elements__radio-buttons-container
-            .form-elements__radio-buttons-description-container
-              +element-description({
-                title: 'Radio buttons',
-              })
-            +radio-buttons({
-              title: 'Radio buttons',
-              radioNames: ['Мужчина', 'Женщина'],
-              checkedNumber: 0,
-            })
-
-          .form-elements__toggle-buttons-container
-            .form-elements__toggle-description-container
-              +element-description({
-                title: 'Toggle',
-              })
-            .form-elements__toggle-buttons-wrapper
-              each toggleButton in toggleButtons
-                - const [ text, checked ] = toggleButton;
-                +toggle-button({
+        each formElementsButton in formElementsButtons
+          - const { className, buttons } = formElementsButton;
+          div(class=className)
+            each button in buttons
+              -
+                const {
+                  filledButton,
+                  unfilledButton,
+                  borderlessButton,
+                  longButton,
+                  size,
                   text,
-                  checked,
-                })
+                  isHovered,
+                } = button;
 
-          .form-elements__like-button-container
-            +element-description({
-              title: 'Like button',
-            })
-            .form-elements__like-buttons-wrapper
-              each likeButton in likeButtons
-                - const [ count, isLiked ] = likeButton;
-                +like-button({
-                  count,
-                  isLiked,
-                })
-
-          .form-elements__rate-buttons-container
-            +element-description({
-              title: 'Rate button',
-            })
-            .form-elements__rate-buttons-wrapper
-              each rateButton in rateButtons
-                - const { starsNumber, checkedButton, name } = rateButton;
-                +rate-button({
-                  starsNumber,
-                  checkedButton,
-                  name,
-                })
-
-          .form-elements__dropdown-fourth-container
-            +dropdown({
-              items: ['Взрослые', 'Дети', 'Младенцы'],
-              isOpened: true,
-              addingButtons: true,
-              isGuests: true,
-              title: 'Dropdown',
-            })
-
-          .form-elements__rich-checkbox-buttons-container
-            each richCheckboxButton in richCheckboxButtons
-              - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
-              +checkbox-list({
-                title,
-                richTitles,
-                checkboxTexts,
-                isExpandable,
-                isRich,
+              +button({
+                filledButton,
+                unfilledButton,
+                borderlessButton,
+                longButton,
+                size,
+                text,
+                isHovered,
               })
 
-        .form-elements__right-block
-          .form-elements__range-slider-container
-            +range-slider({
-              title: 'Range slider',
-            })
+      .form-elements__pagination-container
+        .form-elements__pagination-description-container
+          +element-description({
+            title: 'Pagination',
+          })
+        +pagination({
+          numbers: '1 - 12',
+          totalNumber: 'из 100+ вариантов аренды',
+        })
 
-          .form-elements__buttons-container
-            .form-elements__buttons-description-container
-              +element-description({
-                title: 'Buttons',
-              })
+      .form-elements__dropdown-fifth-container
+        +dropdown({
+          title: 'Dropdown',
+          items: ['Взрослые', 'Дети', 'Младенцы'],
+          isOpened: true,
+          addingButtons: true,
+          isGuests: true,
+          buttonsNum: [0, 1],
+          clicksNum: [2, 1],
+        })
 
-            each formElementsButton in formElementsButtons
-              - const { className, buttons } = formElementsButton;
-              div(class=className)
-                each button in buttons
-                  -
-                    const {
-                      filledButton,
-                      unfilledButton,
-                      borderlessButton,
-                      longButton,
-                      size,
-                      text,
-                      isHovered,
-                    } = button;
-                  +button({
-                    filledButton,
-                    unfilledButton,
-                    borderlessButton,
-                    longButton,
-                    size,
-                    text,
-                    isHovered,
-                  })
+      .form-elements__bullet-list-container
+        .form-elements__bullet-list-description-container
+          +element-description({
+            title: 'Bullet list',
+          })
+        +bullet-list({
+          bulletItems: [
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00',
+            ],
+          })
 
-          .form-elements__pagination-container
-            .form-elements__pagination-description-container
-              +element-description({
-                title: 'Pagination',
-              })
-            +pagination({
-              numbers: '1 - 12',
-              totalNumber: 'из 100+ вариантов аренды',
-            })
+    .form-elements__bottom-block
+      .form-elements__advantages-container
+        each advantage in advantages
+          - const { title, description, image, isBorder } = advantage;
+          +advantage({
+            title,
+            description,
+            image,
+            isBorder,
+          })
 
-          .form-elements__dropdown-fifth-container
-            +dropdown({
-              title: 'Dropdown',
-              items: ['Взрослые', 'Дети', 'Младенцы'],
-              isOpened: true,
-              addingButtons: true,
-              isGuests: true,
-              buttonsNum: [0, 1],
-              clicksNum: [2, 1],
-            })
-
-          .form-elements__bullet-list-container
-            .form-elements__bullet-list-description-container
-              +element-description({
-                title: 'Bullet list',
-              })
-            +bullet-list({
-              bulletItems: [
-                'Нельзя с питомцами',
-                'Без вечеринок и мероприятий',
-                'Время прибытия — после 13:00, а выезд до 12:00',
-                ],
-              })
-
-        .form-elements__bottom-block
-          .form-elements__advantages-container
-            each advantage in advantages
-              - const { title, description, image, isBorder } = advantage;
-              +advantage({
-                title,
-                description,
-                image,
-                isBorder,
-              })
-
-          .form-elements__comment-container
-            +comment({
-              image: 'image.jpg',
-              alt: 'user photo',
-              date: '5 дней назад',
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-              username: 'Мурад Сарафанов',
-              likeCount: 12,
-              isLiked: true,
-            })
+      .form-elements__comment-container
+        +comment({
+          image: 'image.jpg',
+          alt: 'user photo',
+          date: '5 дней назад',
+          text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          username: 'Мурад Сарафанов',
+          likeCount: 12,
+          isLiked: true,
+        })

@@ -47,6 +47,7 @@ module.exports = {
       '~img': `${PATHS.src}/img`,
       '~fonts': `${PATHS.src}/fonts`,
       '~templates': `${PATHS.src}/templates`,
+      '~pages-base': `${PATHS.src}/pages-base`,
     },
   },
   module: {

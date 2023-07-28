@@ -1,0 +1,20 @@
+include ~components/logo/logo
+include ~templates/vars-and-mixins
+
+block vars
+
+doctype html
+html(class=className lang="ru")
+  +pageBase({
+    title,
+    keywords,
+    description,
+  })
+  body(class=`${className}__body`)
+    div(class=`${className}__container`)
+      div(class=`${className}__logo-container`)
+        +logo({
+          href: 'index.html',
+        })
+
+      block content

@@ -1,35 +1,28 @@
-include ~components/logo/logo
+extends ~pages-base/ui-kit-base
 include ~components/header/header
 include ~components/footer/footer
 include ~components/footer-mobile/footer-mobile
-include ~templates/vars-and-mixins
 
-doctype html
-html.headers-and-footers(lang="ru")
-  +pageBase({
-    title: 'Headers & Footers',
-    keywords: 'Headers & Footers, components, MetaLamp, education',
-    description: 'Компоненты header и footer для сайта Toxin',
-  })
-  body.headers-and-footers__body
-    .headers-and-footers__container
-      .headers-and-footers__logo-container
-        +logo({
-          href: 'index.html',
-        })
+block vars
+  -
+    const className = 'headers-and-footers';
+    const title = 'Headers & Footers';
+    const keywords = 'Headers & Footers, components, MetaLamp, education';
+    const description = 'Компоненты header и footer для сайта Toxin';
 
-      .headers-and-footers__header-container
-        +header()
+block content
+  .headers-and-footers__header-container
+    +header()
 
-      .headers-and-footers__header-with-logged-in-user-container
-        +header({
-          isLoggedIn: true,
-          username: 'Юлий Цезарь',
-        })
+  .headers-and-footers__header-with-logged-in-user-container
+    +header({
+      isLoggedIn: true,
+      username: 'Юлий Цезарь',
+    })
 
-      .headers-and-footers__footer-container
-        +footer()
-      .headers-and-footers__footer-mobile-container
-        +footer-mobile({
-          isVisible: true,
-        })
+  .headers-and-footers__footer-container
+    +footer()
+  .headers-and-footers__footer-mobile-container
+    +footer-mobile({
+      isVisible: true,
+    })

@@ -1,31 +1,30 @@
-include ~templates/vars-and-mixins
+extends ~pages-base/ui-kit-base
 
-doctype html
-html.index(lang="ru")
-  +pageBase({
-    title: 'MetaLamp layout',
-    keywords: 'MetaLamp layout, components, MetaLamp, education',
-    description: 'Отель Toxin, подобрать номер',
-  })
-  body.index__body
-    .index__container
-      .index__wrapper
-        .index__ui-kit-container
-          h2.index__ui-kit-title UI Kit
-          ul.index__ui-kit-list
-            each page in pages
-              - const [ href, name ] = page;
-              li.index__ui-kit-item
-                a.index__ui-kit-link(
-                  href=href
-                  target="_blank"
-                  rel="noopener noreferrer"
-                )=name
+block vars
+  -
+    const className = 'index';
+    const title = 'MetaLamp layout';
+    const keywords = 'MetaLamp layout, components, MetaLamp, education';
+    const description = 'Отель Toxin, подобрать номер';
 
-        .index__website-pages-container
-          a.index__website-pages-link(
-            href="landing-page.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          )
-            h2.index__website-pages-title Website Pages
+block content
+  .index__wrapper
+    .index__ui-kit-container
+      h2.index__ui-kit-title UI Kit
+      ul.index__ui-kit-list
+        each page in pages
+          - const [ href, name ] = page;
+          li.index__ui-kit-item
+            a.index__ui-kit-link(
+              href=href
+              target="_blank"
+              rel="noopener noreferrer"
+            )=name
+
+    .index__website-pages-container
+      a.index__website-pages-link(
+        href="landing-page.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      )
+        h2.index__website-pages-title Website Pages

@@ -1,23 +1,16 @@
-include ~components/header/header
+extends ~pages-base/page-base
 include ~components/registration-card/registration-card
-include ~components/footer/footer
-include ~components/footer-mobile/footer-mobile
-include ~templates/vars-and-mixins
 
-doctype html
-html.registration(lang="en")
-  +pageBase({
-    title: 'Registration',
-    keywords: 'Registration, components, MetaLamp, education',
-    description: 'Отель Toxin, подобрать номер',
-  })
-  body.registration__body
-    .registration__wrapper
-      +header()
-      main.registration__background-container
-        .registration__card-wrapper
-          +registration-card({
-            buttonText: 'Зарегистрироваться',
-          })
-      +footer()
-      +footer-mobile()
+block vars
+  -
+    const className = 'registration';
+    const title = 'Registration';
+    const keywords = 'Registration, components, MetaLamp, education';
+    const description = 'Отель Toxin, подобрать номер';
+
+block content
+  main.registration__background-container
+    .registration__card-wrapper
+      +registration-card({
+        buttonText: 'Зарегистрироваться',
+      })

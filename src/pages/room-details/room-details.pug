@@ -1,119 +1,111 @@
-include ~components/header/header
+extends ~pages-base/page-base
 include ~components/advantage/advantage
 include ~components/reserve-card/reserve-card
 include ~components/comment/comment
 include ~components/bullet-list/bullet-list
-include ~components/footer/footer
-include ~components/footer-mobile/footer-mobile
-include ~templates/vars-and-mixins
 
-doctype html
-html.room-details(lang="en")
-  +pageBase({
-    title: 'Room details',
-    keywords: 'Room details, components, MetaLamp, education',
-    description: 'Отель Toxin, подобрать номер',
-  })
-  body.room-details__body
-    .room-details__wrapper
-      +header()
-      .room-details__background-container
-        .room-details__background
-          .room-details__large-photo-wrapper
-            img(
-              class="room-details__background-image room-details__background-image_size_l"
-              src=require("~img/room-photo-1.jpg")
-              alt="Room photo"
-            )
+block vars
+  -
+    const className = 'room-details';
+    const title = 'Room details';
+    const keywords = 'Room details, components, MetaLamp, education';
+    const description = 'Отель Toxin, подобрать номер';
 
-          - let i = 1;
-          .room-details__small-photo-wrapper
-            while i < 3
-              img(
-                class="room-details__background-image"
-                src=require(`~img/room-photo-1-${i++}.jpg`)
-                alt="Room photo"
-              )
+block content
+  .room-details__background-container
+    .room-details__background
+      .room-details__large-photo-wrapper
+        img(
+          class="room-details__background-image room-details__background-image_size_l"
+          src=require("~img/room-photo-1.jpg")
+          alt="Room photo"
+        )
 
-      main.room-details__main-container
-        .room-details__main-wrapper
-          .room-details__advantages-container
-            +roomTitle('Сведения о номере')
-            .room-details__advantages-wrapper
+      - let i = 1;
+      .room-details__small-photo-wrapper
+        while i < 3
+          img(
+            class="room-details__background-image"
+            src=require(`~img/room-photo-1-${i++}.jpg`)
+            alt="Room photo"
+          )
 
-              each advantageRoom in advantagesRoom
-                - const [ title, description, image, isBorder ] = advantageRoom;
-                .room-details__advantage-wrapper
-                  +advantage({
-                    title,
-                    description,
-                    image,
-                    isBorder,
-                  })
+  main.room-details__main-container
+    .room-details__main-wrapper
+      .room-details__advantages-container
+        +roomTitle('Сведения о номере')
+        .room-details__advantages-wrapper
 
-          .room-details__doughnut-container
-            .room-details__doughnut-title-container
-              +roomTitle('Впечатления от номера')
-            .room-details__doughnut-wrapper.js-room-details__doughnut-wrapper
-              canvas.room-details__chart.js-room-details__chart(width="342" height="133")
+          each advantageRoom in advantagesRoom
+            - const [ title, description, image, isBorder ] = advantageRoom;
+            .room-details__advantage-wrapper
+              +advantage({
+                title,
+                description,
+                image,
+                isBorder,
+              })
 
-          section.room-details__comments-container
-            .room-details__comments-title-information-wrapper
-              .room-details__comments-title-container
-                +roomTitle('Отзывы посетителей номера')
-              span.room-details__comments-number-text 2 отзыва
+      .room-details__doughnut-container
+        .room-details__doughnut-title-container
+          +roomTitle('Впечатления от номера')
+        .room-details__doughnut-wrapper.js-room-details__doughnut-wrapper
+          canvas.room-details__chart.js-room-details__chart(width="342" height="133")
 
-            each comment in comments
-              -
-                const [
-                  image,
-                  alt,
-                  date,
-                  text,
-                  username,
-                  likeCount,
-                  isLiked,
-                ] = comment;
-              article.room-details__comment-wrapper
-                +comment({
-                  image,
-                  alt,
-                  date,
-                  text,
-                  username,
-                  likeCount,
-                  isLiked,
-                })
+      section.room-details__comments-container
+        .room-details__comments-title-information-wrapper
+          .room-details__comments-title-container
+            +roomTitle('Отзывы посетителей номера')
+          span.room-details__comments-number-text 2 отзыва
 
-          .room-details__rules-and-cancel-wrapper
-            article.room-details__bullet-list-container
-              .room-details__bullet-list-title-container
-                +roomTitle('Правила')
-              .room-details__bullet-list-wrapper
-                +bullet-list({
-                  bulletItems: [
-                    'Нельзя с питомцами',
-                    'Без вечеринок и мероприятий',
-                    'Время прибытия — после 13:00, а выезд до 12:00',
-                    ],
-                 })
-
-            section.room-details__cancel-information-container
-              .room-details__cancel-information-title-container
-                +roomTitle('Отмена')
-              .room-details__cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-
-        section.room-details__card-wrapper
-          .room-details__room-card-wrapper
-            +reserve-card({
-              roomNumber: '888',
-              price: '9 900',
-              totalSum: '38 081',
-              dateFrom: '2023, 8, 19',
-              dateTo: '2023, 8, 23',
-              dropdownButtonsNum: [0, 1],
-              dropdownClicksNum: [2, 1],
+        each comment in comments
+          -
+            const [
+              image,
+              alt,
+              date,
+              text,
+              username,
+              likeCount,
+              isLiked,
+            ] = comment;
+          article.room-details__comment-wrapper
+            +comment({
+              image,
+              alt,
+              date,
+              text,
+              username,
+              likeCount,
+              isLiked,
             })
 
-      +footer()
-      +footer-mobile()
+      .room-details__rules-and-cancel-wrapper
+        article.room-details__bullet-list-container
+          .room-details__bullet-list-title-container
+            +roomTitle('Правила')
+          .room-details__bullet-list-wrapper
+            +bullet-list({
+              bulletItems: [
+                'Нельзя с питомцами',
+                'Без вечеринок и мероприятий',
+                'Время прибытия — после 13:00, а выезд до 12:00',
+                ],
+             })
+
+        section.room-details__cancel-information-container
+          .room-details__cancel-information-title-container
+            +roomTitle('Отмена')
+          .room-details__cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+    section.room-details__card-wrapper
+      .room-details__room-card-wrapper
+        +reserve-card({
+          roomNumber: '888',
+          price: '9 900',
+          totalSum: '38 081',
+          dateFrom: '2023, 8, 19',
+          dateTo: '2023, 8, 23',
+          dropdownButtonsNum: [0, 1],
+          dropdownClicksNum: [2, 1],
+        })

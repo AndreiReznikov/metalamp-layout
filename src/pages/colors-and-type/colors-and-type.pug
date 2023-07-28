@@ -1,39 +1,33 @@
-include ~components/logo/logo
+extends ~pages-base/ui-kit-base
 include ~components/color/color
 include ~components/type/type
-include ~templates/vars-and-mixins
 
-doctype html
-html.colors-and-type(lang="en")
-  +pageBase({
-    title: 'Colors & Type',
-    keywords: 'Colors & Type, components, MetaLamp, education',
-    description: 'Цвета и шрифты, используемые для сайта Toxin',
-  })
-  body.colors-and-type__body
-    .colors-and-type__container
-      .colors-and-type__logo-container
-        +logo({
-          href: 'index.html',
-        })
+block vars
+  -
+    const className = 'colors-and-type';
+    const title = 'Colors & Type';
+    const keywords = 'Colors & Type, components, MetaLamp, education';
+    const description = 'Цвета и шрифты, используемые для сайта Toxin';
 
-      main.colors-and-type__wrapper
-        .colors-and-type__colors-description-list-container
-          ul.colors-and-type__colors-description-list
-            each color in colors
-              - const [ title, hex ] = color;
-              li.colors-and-type__colors-description-list__item
-                +color({
-                  title,
-                  hex,
-                })
+block content
 
-        .colors-and-type__type-description-list-container
-          ul.colors-and-type__type-description-list
-            each typeValues in types
-              - const [ title, description ] = typeValues;
-              li.colors-and-type__type-description-list__item
-                +type({
-                  title,
-                  description,
-                })
+  main.colors-and-type__wrapper
+    .colors-and-type__colors-description-list-container
+      ul.colors-and-type__colors-description-list
+        each color in colors
+          - const [ title, hex ] = color;
+          li.colors-and-type__colors-description-list__item
+            +color({
+              title,
+              hex,
+            })
+
+    .colors-and-type__type-description-list-container
+      ul.colors-and-type__type-description-list
+        each typeValues in types
+          - const [ title, description ] = typeValues;
+          li.colors-and-type__type-description-list__item
+            +type({
+              title,
+              description,
+            })
