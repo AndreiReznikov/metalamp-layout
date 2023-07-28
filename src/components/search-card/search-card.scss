@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .search-card {
   @include width(260px, 380px);

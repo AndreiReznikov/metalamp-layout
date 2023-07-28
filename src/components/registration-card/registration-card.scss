@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .registration-card {
   @include width(250px, 380px);

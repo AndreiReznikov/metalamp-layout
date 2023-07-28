@@ -141,7 +141,7 @@ const prevArrow = '<div class="datepicker--arrow-prev"></div>';
 const nextArrow = '<div class="datepicker--arrow-next"></div>';
 const canvas = '<div class="room-details__chart-text-container"><span class="room-details__chart-text js-room-details__chart-text"><span class="room-details__chart-text-number js-room-details__chart-text-number"></span> голосов</span></div>';
 
-const vars = {
+const consts = {
   setSelectionGuestsText,
   setSelectionConveniencesText,
   prevArrow,
@@ -150,4 +150,4 @@ const vars = {
   canvasOptions,
 };
 
-export default vars;
+export default consts;

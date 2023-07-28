@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .radio-buttons {
   display: flex;

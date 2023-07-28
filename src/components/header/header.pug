@@ -14,7 +14,7 @@ mixin header(options = {})
         .header__right-block-container
           nav.header__nav
             ul.header__menu-list
-              each headerItem in headerItems
+              each headerItem in data.headerItems
                 - const [ title, items, link, fontWeight ] = headerItem;
                 if items.length
                   li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
@@ -42,7 +42,7 @@ mixin header(options = {})
             span.header__user-name=options.username
           else
             .header__buttons-container
-              each button in headerButtons
+              each button in data.headerButtons
                 - const { unfilledButton, filledButton, text, size, href } = button;
                 +button({
                   unfilledButton,
@@ -54,7 +54,7 @@ mixin header(options = {})
 
     .header__mobile-menu.js-header__mobile-menu
       .header__mobile-buttons-container
-        each button in headerButtons
+        each button in data.headerButtons
           -
             let { unfilledButton, filledButton, text, size, href, isMobile } = button;
             if (unfilledButton && !isMobile) isMobile = true;
@@ -70,7 +70,7 @@ mixin header(options = {})
             })
       nav.header__mobile-nav
         ul.header__mobile-list
-          each headerItem in headerItems
+          each headerItem in data.headerItems
             - const [ title, items, link ] = headerItem;
             if items.length
               li.header__mobile-list-item.header__mobile-list-item_expandable.js-header__mobile-list-item.js-header__mobile-list-item_expandable

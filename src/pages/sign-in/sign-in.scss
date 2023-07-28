@@ -6,7 +6,8 @@
 @import '~components/social-icons/social-icons';
 @import '~components/subscription-text-field/subscription-text-field';
 @import '~components/footer/footer';
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .sign-in {
   @include body-font;

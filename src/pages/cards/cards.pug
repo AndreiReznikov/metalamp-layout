@@ -13,6 +13,7 @@ block vars
     const keywords = 'Cards, components, MetaLamp, education';
     const description = 'Компоненты карточек для сайта Toxin';
 
+    let data = require('~mock-data/data.json');
 
 block content
   .cards__wrapper
@@ -48,7 +49,7 @@ block content
         })
 
       .cards__room-cards-container
-        each roomCard in roomCards
+        each roomCard in data.roomCards
           -
             const {
               photos,

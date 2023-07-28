@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .subscription-text-field {
   @include width(250px, 267px);

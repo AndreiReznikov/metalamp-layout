@@ -44,10 +44,12 @@ module.exports = {
       '~': PATHS.src,
       '~components': `${PATHS.src}/components`,
       '~libs': `${PATHS.src}/libs`,
-      '~img': `${PATHS.src}/img`,
+      '~img': `${PATHS.src}/mock-data/img`,
       '~fonts': `${PATHS.src}/fonts`,
       '~templates': `${PATHS.src}/templates`,
+      '~constants': `${PATHS.src}/constants`,
       '~pages-base': `${PATHS.src}/pages-base`,
+      '~mock-data': `${PATHS.src}/mock-data`,
     },
   },
   module: {
@@ -104,7 +106,7 @@ module.exports = {
   },
   plugins: [
     new FaviconsWebpackPlugin({
-      logo: './src/img/logo.png',
+      logo: './src/icons/logo.png',
     }),
     ...PAGES.map((page) => new HTMLWebpackPlugin({
       template: `${PATHS.src}/pages/${page}/${page}.pug`,

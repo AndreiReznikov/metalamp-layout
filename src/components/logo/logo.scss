@@ -1,7 +1,8 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
-$logos: 'colorful-icon' 106px 40px '~img/logo-toxin.svg',
-  'icon' 48px 48px '~img/logo.svg';
+$logos: 'colorful-icon' 106px 40px '~/icons/logo-toxin.svg',
+  'icon' 48px 48px '~/icons/logo.svg';
 
 .logo {
   display: inline-flex;

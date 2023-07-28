@@ -2,7 +2,7 @@ import Inputmask from '~libs/inputmask';
 import IonRangeslider from '~libs/ion-rangeslider';
 import PaginationJS from '~libs/paginationjs';
 import AirDatepicker from '~libs/air-datepicker';
-import vars from '~templates/vars';
+import consts from '~constants/consts';
 import '~components/checkbox-list';
 import '~components/dropdown';
 import '~components/like-button';
@@ -26,8 +26,8 @@ class FormElements {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.dateDropdown.setDatesDefault();
@@ -45,8 +45,8 @@ class FormElements {
       keyboardNav: true,
       dateFormat: 'd M',
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.filterDateDropdown.setDatesDefault();

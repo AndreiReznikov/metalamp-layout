@@ -16,7 +16,8 @@
 @import '~components/subscription-text-field/subscription-text-field';
 @import '~components/social-icons/social-icons';
 @import '~components/footer/footer';
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .search-room {
   @include body-font;
@@ -84,7 +85,7 @@
     width: 15px;
     height: 15px;
     margin: 2px 5px 0 0;
-    background-image: url('~img/filter.svg');
+    background-image: url('~/icons/filter.svg');
   }
 
   &__filter-text {

@@ -15,7 +15,8 @@
 @import '~components/rate-button/rate-button';
 @import '~components/room-card/room-card';
 @import '~components/filter-date-dropdown/filter-date-dropdown';
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 .cards {
   @include body-font;

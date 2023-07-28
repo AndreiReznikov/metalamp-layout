@@ -26,10 +26,12 @@ block vars
     const keywords = 'Form Elements, components, MetaLamp, education';
     const description = 'Компоненты формы для сайта Toxin';
 
+    let data = require('~mock-data/data.json');
+
 block content
   .form-elements__wrapper
     .form-elements__left-block
-      each textField in textFields
+      each textField in data.textFields
         - const { className, title, status, type, placeholder, value, isFocused } = textField;
         div(class=className)
           +element-description({
@@ -105,7 +107,7 @@ block content
           size: 'S',
         })
 
-      each checkboxList in checkboxLists
+      each checkboxList in data.checkboxLists
         - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxList;
         div(class=className)
           +checkbox-list({
@@ -118,7 +120,7 @@ block content
 
     .form-elements__central-block
       .form-elements__checkbox-buttons-container
-          - const { listTitle, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
+          - const { listTitle, checkboxTexts, checkedItems, isExpandable, isOpened } = data.checkboxes;
           +checkbox-list({
             title: listTitle,
             checkboxTexts,
@@ -144,7 +146,7 @@ block content
             title: 'Toggle',
           })
         .form-elements__toggle-buttons-wrapper
-          each toggleButton in toggleButtons
+          each toggleButton in data.toggleButtons
             - const [ text, checked ] = toggleButton;
             +toggle-button({
               text,
@@ -156,7 +158,7 @@ block content
           title: 'Like button',
         })
         .form-elements__like-buttons-wrapper
-          each likeButton in likeButtons
+          each likeButton in data.likeButtons
             - const [ count, isLiked ] = likeButton;
             +like-button({
               count,
@@ -168,7 +170,7 @@ block content
           title: 'Rate button',
         })
         .form-elements__rate-buttons-wrapper
-          each rateButton in rateButtons
+          each rateButton in data.rateButtons
             - const { starsNumber, checkedButton, name } = rateButton;
             +rate-button({
               starsNumber,
@@ -186,7 +188,7 @@ block content
         })
 
       .form-elements__rich-checkbox-buttons-container
-        each richCheckboxButton in richCheckboxButtons
+        each richCheckboxButton in data.richCheckboxButtons
           - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
           +checkbox-list({
             title,
@@ -208,7 +210,7 @@ block content
             title: 'Buttons',
           })
 
-        each formElementsButton in formElementsButtons
+        each formElementsButton in data.formElementsButtons
           - const { className, buttons } = formElementsButton;
           div(class=className)
             each button in buttons
@@ -269,7 +271,7 @@ block content
 
     .form-elements__bottom-block
       .form-elements__advantages-container
-        each advantage in advantages
+        each advantage in data.advantages
           - const { title, description, image, isBorder } = advantage;
           +advantage({
             title,

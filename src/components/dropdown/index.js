@@ -1,11 +1,11 @@
-import vars from '~templates/vars';
+import consts from '~constants/consts';
 
 import Dropdown from './Dropdown';
 
 $(document).ready(() => {
   const dropdownGuests = new Dropdown(
     '.js-dropdown__wrapper_guests',
-    vars.setSelectionGuestsText,
+    consts.setSelectionGuestsText,
     'Сколько гостей',
   );
 
@@ -13,7 +13,7 @@ $(document).ready(() => {
 
   const dropdownConveniences = new Dropdown(
     '.js-dropdown__wrapper_conveniences',
-    vars.setSelectionConveniencesText,
+    consts.setSelectionConveniencesText,
     'Выберите удобства',
   );
 

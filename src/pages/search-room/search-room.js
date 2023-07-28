@@ -2,7 +2,7 @@ import AirDatepicker from '~libs/air-datepicker';
 import IonRangeslider from '~libs/ion-rangeslider';
 import SlickCarousel from '~libs/slick-carousel';
 import PaginationJS from '~libs/paginationjs';
-import vars from '~templates/vars';
+import consts from '~constants/consts';
 import '~components/header';
 import '~components/dropdown';
 import '~components/checkbox-list';
@@ -30,8 +30,8 @@ class SearchRoom {
       keyboardNav: true,
       dateFormat: 'd M',
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.filterDateDropdown.setDatesDefault();
@@ -42,6 +42,7 @@ class SearchRoom {
   _initializeSlickCarousel() {
     this.initializeSlick = () => {
       this.slickCarousel = new SlickCarousel('.js-pagination__data-container .js-room-card__slider');
+
       this.slickCarousel.initializePlugin({
         arrows: true,
         dots: true,
@@ -120,13 +121,16 @@ class SearchRoom {
   }
 
   _preventDefault() {
-    this.$imageContainer.click((event) => event.preventDefault());
+    $(document).ready(() => {
+      this.$imageContainer = $('.room-card__image-container');
+
+      this.$imageContainer.click((event) => event.preventDefault());
+    });
   }
 
   _findElements() {
     this.$filterButton = $('.js-search-room__filter-button');
     this.$filterItems = $('.js-search-room__widgets-container');
-    this.$imageContainer = $('.room-card__image-container');
   }
 }
 

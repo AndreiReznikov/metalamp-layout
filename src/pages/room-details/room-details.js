@@ -1,6 +1,6 @@
 import AirDatepicker from '~libs/air-datepicker';
 import Chart from '~libs/chart';
-import vars from '~templates/vars';
+import consts from '~constants/consts';
 import '~components/header';
 import '~components/dropdown';
 import '~components/like-button';
@@ -23,8 +23,8 @@ class RoomDetails {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.dateDropdown.setDatesDefault();
@@ -39,7 +39,7 @@ class RoomDetails {
 
     this.canvas = document.querySelector('.js-room-details__chart').getContext('2d');
     this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
-    this.$canvasContainer.append(vars.canvas);
+    this.$canvasContainer.append(consts.canvas);
     this.$chart = $('.js-room-details__chart');
     this.$chartRating = this.$canvasContainer.find('.js-room-details__chart-text-number');
     this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text');
@@ -93,7 +93,7 @@ class RoomDetails {
       }],
     };
 
-    this.canvasOptions = vars.canvasOptions;
+    this.canvasOptions = consts.canvasOptions;
     this.canvasOptions.data = this.canvasData;
     this.canvasOptions.options.layout.padding = {
       left: this.windowWidth < 600 ? -65 : -25,

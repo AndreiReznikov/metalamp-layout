@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 $squares: 'one_hundred_percent_dark_shade' $dark-shade-100,
   'seventy_five_percent_dark_shade' $dark-shade-75,

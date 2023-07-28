@@ -11,6 +11,8 @@ block vars
     const keywords = 'Room details, components, MetaLamp, education';
     const description = 'Отель Toxin, подобрать номер';
 
+    let data = require('~mock-data/data.json');
+
 block content
   .room-details__background-container
     .room-details__background
@@ -36,7 +38,7 @@ block content
         +roomTitle('Сведения о номере')
         .room-details__advantages-wrapper
 
-          each advantageRoom in advantagesRoom
+          each advantageRoom in data.advantagesRoom
             - const [ title, description, image, isBorder ] = advantageRoom;
             .room-details__advantage-wrapper
               +advantage({
@@ -58,7 +60,7 @@ block content
             +roomTitle('Отзывы посетителей номера')
           span.room-details__comments-number-text 2 отзыва
 
-        each comment in comments
+        each comment in data.comments
           -
             const [
               image,

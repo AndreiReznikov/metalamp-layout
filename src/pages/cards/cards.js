@@ -1,7 +1,7 @@
 import AirDatepicker from '~libs/air-datepicker';
 import Inputmask from '~libs/inputmask';
 import SlickCarousel from '~libs/slick-carousel';
-import vars from '~templates/vars';
+import consts from '~constants/consts';
 import '~components/dropdown';
 import '~templates/fonts.scss';
 
@@ -22,8 +22,8 @@ class Cards {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.dateDropdown.setDatesDefault();
@@ -40,8 +40,8 @@ class Cards {
       keyboardNav: true,
       range: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: vars.prevArrow,
-      nextHtml: vars.nextArrow,
+      prevHtml: consts.prevArrow,
+      nextHtml: consts.nextArrow,
     });
 
     this.filterDateDropdown.setDatesDefault();
@@ -60,18 +60,14 @@ class Cards {
   }
 
   _initializeSlickCarousel() {
-    const initializeSlick = () => {
-      this.slickCarousel = new SlickCarousel('.js-room-card__slider');
+    this.slickCarousel = new SlickCarousel('.js-room-card__slider');
 
-      this.slickCarousel.initializePlugin({
-        arrows: true,
-        dots: true,
-        prevArrow: '<div class="room-card__arrow-prev"></div>',
-        nextArrow: '<div class="room-card__arrow-next"></div>',
-      });
-    };
-
-    initializeSlick();
+    this.slickCarousel.initializePlugin({
+      arrows: true,
+      dots: true,
+      prevArrow: '<div class="room-card__arrow-prev"></div>',
+      nextArrow: '<div class="room-card__arrow-next"></div>',
+    });
   }
 }
 

@@ -34,7 +34,7 @@ mixin reserve-card(options = {})
             clicksNum: options.dropdownClicksNum,
           })
         .reserve-card__price-block
-          each amountForService in amountsForServices
+          each amountForService in data.amountsForServices
             - const [ service, amount, info ] = amountForService;
             .reserve-card__sum
               .reserve-card__sum-description

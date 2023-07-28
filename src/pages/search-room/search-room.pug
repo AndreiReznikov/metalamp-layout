@@ -14,6 +14,8 @@ block vars
     const keywords = 'Search room, components, MetaLamp, education';
     const description = 'Отель Toxin, подобрать номер';
 
+    let data = require('~mock-data/data.json');
+
 block content
   .search-room__filter
     button.search-room__filter-button.js-search-room__filter-button
@@ -50,7 +52,7 @@ block content
           .search-room__checkbox-buttons-container
             .search-room__checkbox-buttons-wrapper
               -
-                const { checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxes;
+                const { checkboxTexts, checkedItems, isExpandable, isOpened } = data.checkboxes;
 
               +checkbox-list({
                 title: 'Правила дома',
@@ -62,7 +64,7 @@ block content
 
           .search-room__rich-checkbox-buttons-container
             .search-room__rich-checkbox-buttons-wrapper
-              each searchRoomRichCheckboxButton in searchRoomRichCheckboxButtons
+              each searchRoomRichCheckboxButton in data.searchRoomRichCheckboxButtons
                 - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
 
                 +checkbox-list({
@@ -98,7 +100,7 @@ block content
       })
 
   .search-room__pagination-container
-    each roomCardProperty in roomsCardsProperties
+    each roomCardProperty in data.roomsCardsProperties
       -
         const [
           photo,

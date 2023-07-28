@@ -18,7 +18,7 @@ mixin footer(options = {})
             })
             .footer__first-section-text Бронирование номеров в&nbsp;лучшем отеле 2019&nbsp;года по&nbsp;версии ассоциации «Отельные&nbsp;взгляды»
           .footer__items-section
-            each section in footerSections
+            each section in data.footerSections
               - const { className, title, items, link } = section;
               div(class=className)
                 ul.footer__list

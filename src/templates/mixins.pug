@@ -1,0 +1,11 @@
+mixin pageBase(options = {})
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content=options.keywords)
+    meta(name="description" content=options.description)
+    link(rel='mask-icon' href=require(`~/icons/logo.svg`) color='#BC9CFF')
+    title=options.title
+
+mixin roomTitle(text)
+  h2.room-details__title=text

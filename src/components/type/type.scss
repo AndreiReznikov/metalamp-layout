@@ -1,4 +1,5 @@
-@import '~templates/vars-and-mixins';
+@import '~templates/mixins';
+@import '~constants/consts';
 
 $types: 'size_l' 520px 24px none,
   'size_m' 450px 19px none,
