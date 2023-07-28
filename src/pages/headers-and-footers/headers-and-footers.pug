@@ -1,7 +1,6 @@
 extends ~pages-base/ui-kit-base
 include ~components/header/header
 include ~components/footer/footer
-include ~components/footer-mobile/footer-mobile
 
 block vars
   -
@@ -23,6 +22,6 @@ block content
   .headers-and-footers__footer-container
     +footer()
   .headers-and-footers__footer-mobile-container
-    +footer-mobile({
-      isVisible: true,
+    +footer({
+      mobile: true,
     })

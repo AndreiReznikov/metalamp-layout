@@ -2,37 +2,52 @@ include ~components/logo/logo
 include ~components/subscription-text-field/subscription-text-field
 include ~components/social-icons/social-icons
 
-mixin footer()
-  footer.footer
-    .footer__top-section-container
-      .footer__top-section-wrapper
-        .footer__first-section
-          +logo({
-            isColorful: true,
-            href: 'landing-page.html',
-          })
-          .footer__first-section-text Бронирование номеров в&nbsp;лучшем отеле 2019&nbsp;года по&nbsp;версии ассоциации «Отельные&nbsp;взгляды»
-        .footer__items-section
-          each section in footerSections
-            - const { className, title, items, link } = section;
-            div(class=className)
-              ul.footer__list
-                li.footer__list-item
-                  h3.footer__title=title
-                each item in items
-                  li.footer__list-item
-                    a.footer__link(
-                      href=link
-                    )=item
+mixin footer(options = {})
+  -
+    let footerClassName = 'footer';
+    footerClassName += options.mobile ? ' footer_mobile' : '';
 
-        .footer__fifth-section
-          h3.footer__subscription-title Подписка
-          form.footer__subscription-form
-            .footer__subscription-text Получайте специальные предложения и&nbsp;новости сервиса
-            +subscription-text-field()
-    .footer__bottom-section-wrapper
-      .footer__copyright-text Copyright &#169; 2018 Toxin отель. Все права защищены.
-      .footer__social-icons-container
+  footer(class=footerClassName)
+    .footer__desktop-wrapper
+      .footer__top-section-container
+        .footer__top-section-wrapper
+          .footer__first-section
+            +logo({
+              isColorful: true,
+              href: 'landing-page.html',
+            })
+            .footer__first-section-text Бронирование номеров в&nbsp;лучшем отеле 2019&nbsp;года по&nbsp;версии ассоциации «Отельные&nbsp;взгляды»
+          .footer__items-section
+            each section in footerSections
+              - const { className, title, items, link } = section;
+              div(class=className)
+                ul.footer__list
+                  li.footer__list-item
+                    h3.footer__title=title
+                  each item in items
+                    li.footer__list-item
+                      a.footer__link(
+                        href=link
+                      )=item
+
+          .footer__fifth-section
+            h3.footer__subscription-title Подписка
+            form.footer__subscription-form
+              .footer__subscription-text Получайте специальные предложения и&nbsp;новости сервиса
+              +subscription-text-field()
+      .footer__bottom-section-wrapper
+        .footer__copyright-text Copyright &#169; 2018 Toxin отель. Все права защищены.
+        .footer__social-icons-container
+          +social-icons({
+            socials: ['twitter', 'facebook', 'instagram'],
+          })
+    .footer__mobile
+      +logo({
+        isColorful: true,
+        href: 'landing-page.html',
+      })
+      .footer__mobile-text Copyright &#169; 2018 Toxin отель. Все права защищены.
+      .footer__mobile-icons-container
         +social-icons({
           socials: ['twitter', 'facebook', 'instagram'],
         })

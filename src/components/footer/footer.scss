@@ -3,10 +3,21 @@
 .footer {
   flex: 0 0 auto;
   width: 100%;
-  min-height: 443px;
   background-color: #fff;
 
   @include media-max($md) {
+    & > :not(&__mobile) {
+      display: none;
+    }
+
+    min-height: 367px;
+  }
+
+  &_mobile {
+    max-width: 768px;
+  }
+
+  &_mobile > &__desktop-wrapper {
     display: none;
   }
 
@@ -168,5 +179,31 @@
 
   &__social-icons-container {
     padding: 2px 2px 0 0;
+  }
+
+  &__mobile {
+    flex: 0 0 auto;
+    flex-direction: column;
+    display: none;
+    background-color: #fff;
+    min-height: 367px;
+
+    @include width(320px, $md);
+
+    @include media-max($md) {
+      @include flex-center;
+    }
+
+    &-text {
+      @include body-font;
+
+      margin: 23px 0;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+
+  &_mobile > &__mobile {
+    @include flex-center;
   }
 }
