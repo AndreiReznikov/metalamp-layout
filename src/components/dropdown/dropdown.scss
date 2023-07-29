@@ -114,12 +114,19 @@
   }
 
   &__counter {
-    @include h3;
-    @include flex-between-center;
+    @include flex-between-center();
 
-    width: 90px;
+    min-width: 90px;
     height: 30px;
     border: none;
+  }
+
+  &__counter-value {
+    @include h3;
+
+    text-align: center;
+    border: none;
+    outline: none;
   }
 
   &__counter-decrement, &__counter-increment {
@@ -133,6 +140,14 @@
     border-radius: 22px;
     box-sizing: border-box;
     cursor: pointer;
+  }
+
+  &__counter-decrement::after {
+    content: '-';
+  }
+
+  &__counter-increment::after {
+    content: '+';
   }
 
   &__counter-decrement:hover:not(&__counter-decrement_dim),

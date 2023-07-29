@@ -213,18 +213,27 @@
   }
 
   &__chart-text {
+    @include inline-flex-center;
+
+    flex-direction: column;
+  }
+
+  &__chart-text-number, &__chart-text-items {
     @include h3;
 
-    max-width: 65px;
-    line-height: 15px;
     text-align: center;
-    text-transform: uppercase;
     color: #1F2041;
+    border: none;
+    outline: none;
   }
 
   &__chart-text-number {
     font-size: 24px;
-    line-height: 29px;
+  }
+
+  &__chart-text-items {
+    font-size: 12px;
+    text-transform: uppercase;
   }
 
   &__comments-container {

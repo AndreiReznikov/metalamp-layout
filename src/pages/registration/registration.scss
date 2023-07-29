@@ -38,13 +38,17 @@
 
     flex: 1 0 auto;
     width: 100%;
-    height: 684px;
+    min-height: 684px;
     background: url('~img/sign-in-background.jpg');
 
     @include background-position(cover);
 
     @include media-max($sm) {
-      height: 720px;
+      min-height: 720px;
     }
+  }
+
+  &__card-wrapper {
+    margin: 20px 0;
   }
 }

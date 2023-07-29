@@ -13,6 +13,7 @@ class RoomDetails {
     this._initializeDateDropdown();
     this._initializeChart();
     this._addRatingSumToChart();
+    this._changeValueWidth();
     this._expandCanvas();
   }
 
@@ -42,7 +43,7 @@ class RoomDetails {
     this.$canvasContainer.append(consts.canvas);
     this.$chart = $('.js-room-details__chart');
     this.$chartRating = this.$canvasContainer.find('.js-room-details__chart-text-number');
-    this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text');
+    this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text-items');
 
     this.colors = {
       black: ['#909090', '#3D4975'],
@@ -100,9 +101,11 @@ class RoomDetails {
     };
     this.canvasOptions.options.plugins.legend.onHover = (event, legendItem, legend) => {
       this._callLegendCallback(event, legendItem, legend, 'hover');
+      this._changeValueWidth();
     };
     this.canvasOptions.options.plugins.legend.onLeave = (event, legendItem, legend) => {
       this._callLegendCallback(event, legendItem, legend, 'leave');
+      this._changeValueWidth();
     };
 
     const doughnutChart = new Chart(this.canvas, this.canvasOptions);
@@ -120,7 +123,12 @@ class RoomDetails {
   _addRatingSumToChart() {
     const getRatingSum = () => this.userRatings.reduce((a, b) => a + b, 0);
 
-    this.$chartRating.text(`${getRatingSum()}`);
+    this.$chartRating.val(`${getRatingSum()}`);
+  }
+
+  _changeValueWidth() {
+    this.$chartRating.css('width', `${this.$chartRating.val().length * 20}px`);
+    this.$chartText.css('width', `${this.$chartText.val().length * 10}px`);
   }
 
   _changeChartText(index, isOnLeaveEvent) {
@@ -128,7 +136,8 @@ class RoomDetails {
     const colorsProperty = Object.keys(this.colors)[index];
     const currentColor = this.colors[colorsProperty][0];
 
-    this.$chartRating.text(`${currentRating}`);
+    this.$chartRating.val(`${currentRating}`);
+    this.$chartRating.css('color', currentColor);
     this.$chartText.css('color', currentColor);
 
     this.userRatings.forEach((_, i) => {
@@ -140,6 +149,7 @@ class RoomDetails {
 
     if (!isOnLeaveEvent) return;
 
+    this.$chartRating.css('color', this.colors.default);
     this.$chartText.css('color', this.colors.default);
     this._addRatingSumToChart();
   }
