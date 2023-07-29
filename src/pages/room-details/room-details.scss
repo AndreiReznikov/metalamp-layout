@@ -231,6 +231,12 @@
     font-size: 24px;
   }
 
+  &__chart-text-number::-webkit-outer-spin-button,
+  &__chart-text-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   &__chart-text-items {
     font-size: 12px;
     text-transform: uppercase;

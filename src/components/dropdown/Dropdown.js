@@ -21,7 +21,7 @@ class Dropdown {
 
     $counter.append(
       '<span class="dropdown__counter-decrement dropdown__counter-decrement_dim js-dropdown__counter-decrement"></span>',
-      '<input class="dropdown__counter-value js-dropdown__counter-value" value="0" readonly></input>',
+      '<input class="dropdown__counter-value js-dropdown__counter-value" value="0" type="number" readonly></input>',
       '<span class="dropdown__counter-increment js-dropdown__counter-increment"></span>',
     );
   }
@@ -136,7 +136,7 @@ class Dropdown {
         changeValueWidth();
 
         const handleMinusDecrementValue = () => {
-          $value.val(`${getOptionCount() - 1}`);
+          $value.val(getOptionCount() - 1);
           changeValueWidth();
 
           if (getOptionCount() === 0) {
@@ -144,7 +144,7 @@ class Dropdown {
           }
 
           if (getOptionCount() < 0) {
-            $value.val('0');
+            $value.val(0);
             return;
           }
 
@@ -161,7 +161,7 @@ class Dropdown {
         };
 
         const handlePlusIncrementValue = () => {
-          $value.val(`${getOptionCount() + 1}`);
+          $value.val(getOptionCount() + 1);
           changeValueWidth();
 
           itemsCount[index] = getOptionCount();
@@ -179,7 +179,7 @@ class Dropdown {
         const handleClearButtonClearCount = () => {
           itemsCount = [];
           totalSum = 0;
-          $value.val('0');
+          $value.val(0);
           changeValueWidth();
           $minus.addClass('dropdown__counter-decrement_dim');
           $clearButton.fadeOut();

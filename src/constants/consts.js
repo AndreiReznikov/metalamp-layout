@@ -139,7 +139,7 @@ const canvasOptions = {
 
 const prevArrow = '<div class="datepicker--arrow-prev"></div>';
 const nextArrow = '<div class="datepicker--arrow-next"></div>';
-const canvas = '<div class="room-details__chart-text-container"><span class="room-details__chart-text js-room-details__chart-text"><input class="room-details__chart-text-number js-room-details__chart-text-number" value="0" readonly></input><input class="room-details__chart-text-items js-room-details__chart-text-items" value="голосов" readonly></input></span></div>';
+const canvas = '<div class="room-details__chart-text-container"><span class="room-details__chart-text js-room-details__chart-text"><input class="room-details__chart-text-number js-room-details__chart-text-number" value="0" type="number" readonly></input><input class="room-details__chart-text-items js-room-details__chart-text-items" value="голосов" readonly></input></span></div>';
 
 const consts = {
   setSelectionGuestsText,

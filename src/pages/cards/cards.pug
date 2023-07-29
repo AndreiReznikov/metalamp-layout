@@ -26,18 +26,19 @@ block content
         })
 
     .cards__central-block
-      +reserve-card({
-        roomNumber: '888',
-        price: '9 900',
-        totalSum: '38 081',
-        dateFrom: '2023, 8, 15',
-        dateTo: '2023, 8, 19',
-        dropdownButtonsNum: [0, 1],
-        dropdownClicksNum: [2, 1],
-      })
-
-      .cards__sign-in-block-container
-        +sign-in-card()
+      .block
+        +reserve-card({
+          roomNumber: '888',
+          price: '9 900',
+          totalSum: '38 081',
+          dateFrom: '2023, 8, 15',
+          dateTo: '2023, 8, 19',
+          dropdownButtonsNum: [0, 1],
+          dropdownClicksNum: [2, 1],
+        })
+      .block
+        .cards__sign-in-block-container
+          +sign-in-card()
 
     .cards__right-block
       .cards__date-dropdown-container

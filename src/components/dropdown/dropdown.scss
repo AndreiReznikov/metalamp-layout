@@ -114,7 +114,7 @@
   }
 
   &__counter {
-    @include flex-between-center();
+    @include flex-between-center;
 
     min-width: 90px;
     height: 30px;
@@ -127,6 +127,12 @@
     text-align: center;
     border: none;
     outline: none;
+  }
+
+  &__counter-value::-webkit-outer-spin-button,
+  &__counter-value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   &__counter-decrement, &__counter-increment {
