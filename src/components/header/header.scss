@@ -18,20 +18,22 @@
     max-width: $max-width;
     min-height: 70px;
     margin: 0 auto;
-    padding: 0 140px;
+    padding: 10px 140px;
     box-sizing: border-box;
 
     @include media-max($xxl) {
-      padding: 0 35px;
+      padding: 10px 35px;
     }
 
     @include media-max($xl) {
-      padding: 0 15px;
+      padding: 10px 15px;
     }
   }
 
   &__right-block-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 
     @include media-max($xl) {
@@ -47,6 +49,7 @@
     @include body-font;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-right:  18px;
     list-style-type: none;
@@ -81,7 +84,9 @@
     display: none;
     position: absolute;
     top: 40px;
-    width: 220px;
+    min-width: 220px;
+    max-width: 320px;
+    padding: 25px;
     background-color: #fff;
     border-top: 1px solid $dark-shade-5;
     box-shadow: 0 4px 12px 3px $dark-shade-25;
@@ -108,7 +113,7 @@
   }
 
   &__expanded-menu-item {
-    margin: 35px;
+    margin: 35px 0;
     text-align: center;
   }
 

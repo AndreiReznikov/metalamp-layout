@@ -90,8 +90,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 560px;
-    width: 100%;
+    min-width: 560px;
     white-space: nowrap;
 
     @include media-max($xl) {
@@ -136,6 +135,7 @@
   }
 
   &__link {
+    display: inline-block;
     text-decoration: none;
     color: $dark-shade-50;
   }

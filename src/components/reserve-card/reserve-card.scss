@@ -2,8 +2,8 @@
 @import '~constants/consts';
 
 .reserve-card {
-  @include width(250px, 380px);
-
+  min-width: 380px;
+  max-width: 600px;
   background: #fff;
   border: $card-border;
   box-sizing: border-box;
@@ -22,7 +22,7 @@
     }
   }
 
-  &__number-and-price-container    {
+  &__number-and-price-container {
     @include flex-between-center;
   }
 
@@ -33,8 +33,11 @@
     line-height: 17px;
   }
 
-  &__room-number{
+  &__room-number {
     @include h1;
+
+    display: inline-block;
+    margin-left: 5px;
   }
 
   &__lux-mark {
@@ -77,11 +80,12 @@
 
   &__sum {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 13px;
   }
 
-  &__sum-description  {
+  &__sum-description {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -93,10 +97,11 @@
     position: relative;
   }
 
-  &__information-icon {
+  &__information-icon-container::after {
     @include h3;
     @include flex-center;
 
+    content: 'i';
     width: 20px;
     height: 20px;
     border: 1px solid $dark-shade-25;
@@ -139,6 +144,7 @@
     @include h2;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 29px;
     line-height: 23px;

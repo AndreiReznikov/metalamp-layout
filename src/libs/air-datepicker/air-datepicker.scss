@@ -34,6 +34,7 @@
   &--nav-title {
     @include h3;
 
+    flex-wrap: wrap;
     font-size: 19px;
     line-height: 23px;
     text-transform: none;
@@ -113,9 +114,6 @@
   &--cell.-range-from-::after {
     @include one-hundred-width-and-height;
 
-
-
-
     content: '';
     position: absolute;
     border-radius: 22px 0 0 22px;
@@ -168,6 +166,7 @@
   }
 
   &--buttons {
+    flex-wrap: wrap;
     padding: 12px 20px 0;
     border-top: none;
   }
@@ -176,6 +175,7 @@
     @include h3;
 
     flex: none;
+    max-width: 100px;
     margin-left: auto;
     line-height: 15px;
     color: $purple;
