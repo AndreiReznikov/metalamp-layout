@@ -2,6 +2,9 @@ include ~components/button/button
 include ~components/rate-button/rate-button
 
 mixin room-card(options = {})
+  -
+    const price = options.price.toLocaleString();
+
   .room-card.js-room-card
     .room-card__image-container
       .room-card__slider.js-room-card__slider
@@ -18,7 +21,7 @@ mixin room-card(options = {})
               text: 'Люкс',
             })
       .room-card__price-container
-        span.room-card__price=options.price
+        span.room-card__price=price
           span.room-card__currency &#8381;
           span.room-card__time-interval  в сутки
     .room-card__rate

@@ -3,6 +3,7 @@ import IonRangeslider from '~libs/ion-rangeslider';
 import SlickCarousel from '~libs/slick-carousel';
 import PaginationJS from '~libs/paginationjs';
 import consts from '~constants/consts';
+import '~mock-data/data.json';
 import '~components/header';
 import '~components/dropdown';
 import '~components/checkbox-list';
