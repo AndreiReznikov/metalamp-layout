@@ -2,9 +2,8 @@
 @import '~constants/consts';
 
 .room-card {
-  @include width(250px, 270px);
+  @include width(270px, 320px);
 
-  position: relative;
   min-height: 257px;
   background: #fff;
   box-sizing: border-box;

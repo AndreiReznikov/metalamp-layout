@@ -1,6 +1,15 @@
 @import '~templates/mixins';
 @import '~constants/consts';
 
+.slick-list.draggable {
+ position: relative;
+ height: 151px;
+}
+
+.slick-track {
+  position: absolute;
+}
+
 .slick-arrow {
   height: 14px;
 }
