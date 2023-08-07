@@ -17,7 +17,7 @@
   &__title {
     @include h1;
 
-    margin: 39px 29px 0;
+    margin: 42px 29px 0;
 
     @include media-max($sm) {
       text-align: center;

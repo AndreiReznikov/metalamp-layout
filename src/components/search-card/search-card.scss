@@ -18,7 +18,7 @@
   &__title {
     @include h1;
 
-    margin: 39px 29px 0;
+    margin: 36px 25px 0;
 
     @include media-max($sm) {
       margin: 39px 10px 0;
@@ -31,7 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 21px 0 29px;
+    padding: 24px 0;
   }
 
   &__date-dropdown-container,
@@ -43,8 +43,7 @@
   }
 
   &__guests-dropdown-container {
-    margin: 0 10px;
-    margin-top: 20px;
+    margin: 22px 10px 0;
   }
 
   &__long-button-container {

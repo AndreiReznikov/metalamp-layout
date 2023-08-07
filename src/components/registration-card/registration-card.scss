@@ -17,7 +17,7 @@
   &__title {
     @include h1;
 
-    margin: 39px 29px 0;
+    margin: 40px 29px 0;
 
     @include media-max($sm) {
       text-align: center;
@@ -50,7 +50,7 @@
   }
 
   &__date-input-container {
-    margin-top: 24px;
+    margin-top: 26px;
   }
 
   &__entry-data-container {
@@ -76,9 +76,9 @@
   }
 
   &__long-button-container {
-    margin-top: 22px;
     display: flex;
     justify-content: center;
+    margin-top: 24px;
   }
 
   &__login-container {

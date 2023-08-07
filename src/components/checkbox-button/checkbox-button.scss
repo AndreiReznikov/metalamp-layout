@@ -5,7 +5,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   &__title {
@@ -34,7 +34,7 @@
   &__text-title {
     @include h3;
 
-    padding: 0 0 5px 30px;
+    padding: 0 0 6px 30px;
     font-size: 14px;
     text-transform: none;
     color: $dark-shade-75;

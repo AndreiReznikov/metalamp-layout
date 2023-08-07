@@ -157,7 +157,7 @@
   }
 
   &__advantage-wrapper:first-child {
-    margin-top: 24px;
+    margin-top: 28px;
   }
 
   &__doughnut-container {
@@ -244,7 +244,7 @@
   }
 
   &__comments-container {
-    margin-top: 11px;
+    margin-top: 14px;
 
     @include media-max($lg) {
       width: 100%;
