@@ -6,7 +6,6 @@
 
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   z-index: 100;
 
@@ -29,8 +28,8 @@
 
   &__input-wrapper-from,
   &__input-wrapper-to {
-    @include width(125px, 150px);
-    
+    @include width(100px, 150px);
+
     position: relative;
     margin-top: 5px;
     box-sizing: border-box;
@@ -40,9 +39,13 @@
     margin-right: 5px;
   }
 
+  &__input-wrapper-to {
+    margin-left: 5px;
+  }
+
   &__input-from, &__input-to {
     @include body-font;
-    @include width(125px, 150px);
+    @include width(100px, 150px);
 
     min-height: 44px;
     padding: 0 30px 0 15px;

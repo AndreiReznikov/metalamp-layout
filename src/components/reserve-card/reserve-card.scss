@@ -2,8 +2,8 @@
 @import '~constants/consts';
 
 .reserve-card {
-  min-width: 380px;
-  max-width: 600px;
+  @include width(300px, 600px);
+
   background: #fff;
   border: $card-border;
   box-sizing: border-box;
