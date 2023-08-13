@@ -35,7 +35,7 @@ block content
   main.room-details__main-container
     .room-details__main-wrapper
       .room-details__advantages-container
-        +roomTitle('Сведения о номере')
+        h2.room-details__advantages-title Сведения о номере
         .room-details__advantages-wrapper
 
           each advantageRoom in data.advantagesRoom
@@ -50,14 +50,14 @@ block content
 
       .room-details__doughnut-container
         .room-details__doughnut-title-container
-          +roomTitle('Впечатления от номера')
+          h2.room-details__doughnut-title Впечатления от номера
         .room-details__doughnut-wrapper.js-room-details__doughnut-wrapper
           canvas.room-details__chart.js-room-details__chart(width="342" height="133")
 
       section.room-details__comments-container
         .room-details__comments-title-information-wrapper
           .room-details__comments-title-container
-            +roomTitle('Отзывы посетителей номера')
+            h2.room-details__comments-title Отзывы посетителей номера
           span.room-details__comments-number-text 2 отзыва
 
         each comment in data.comments
@@ -85,7 +85,7 @@ block content
       .room-details__rules-and-cancel-wrapper
         article.room-details__bullet-list-container
           .room-details__bullet-list-title-container
-            +roomTitle('Правила')
+            h2.room-details__bullet-list-title Правила
           .room-details__bullet-list-wrapper
             +bullet-list({
               bulletItems: [
@@ -97,7 +97,7 @@ block content
 
         section.room-details__cancel-information-container
           .room-details__cancel-information-title-container
-            +roomTitle('Отмена')
+            h2.room-details__cancel-information-title Отмена
           .room-details__cancel-information-text Бесплатная отмена в течение 48&nbsp;ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
     section.room-details__card-wrapper

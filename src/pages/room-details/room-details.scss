@@ -284,7 +284,11 @@
     }
   }
 
-  &__title {
+  &__advantages-title,
+  &__doughnut-title,
+  &__comments-title,
+  &__bullet-list-title,
+  &__cancel-information-title {
     @include h2;
 
     @include media-max($md) {
