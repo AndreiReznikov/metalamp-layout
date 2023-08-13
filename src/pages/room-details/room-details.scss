@@ -150,14 +150,17 @@
   }
 
   &__advantages-wrapper {
+    @include margin-padding-zero;
+
     max-width: 320px;
   }
 
-  &__advantage-wrapper {
+  &__advantage-item {
     margin-top: 26px;
+    list-style-type: none;
   }
 
-  &__advantage-wrapper:first-child {
+  &__advantage-item:first-child {
     margin-top: 28px;
   }
 
@@ -252,8 +255,13 @@
     }
   }
 
-  &__comment-wrapper {
+  &__comments-list {
+    @include margin-padding-zero;
+  }
+
+  &__comment-item {
     margin-bottom: 23px;
+    list-style-type: none;
   }
 
   &__comments-title-information-wrapper {

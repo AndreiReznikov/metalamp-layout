@@ -36,11 +36,11 @@ block content
     .room-details__main-wrapper
       .room-details__advantages-container
         h2.room-details__advantages-title Сведения о номере
-        .room-details__advantages-wrapper
+        ul.room-details__advantages-wrapper
 
           each advantageRoom in data.advantagesRoom
             - const { title, description, image, isBorder } = advantageRoom;
-            .room-details__advantage-wrapper
+            li.room-details__advantage-item
               +advantage({
                 title,
                 description,
@@ -60,27 +60,28 @@ block content
             h2.room-details__comments-title Отзывы посетителей номера
           span.room-details__comments-number-text 2 отзыва
 
-        each comment in data.comments
-          -
-            const {
-              image,
-              alt,
-              date,
-              text,
-              username,
-              likeCount,
-              isLiked,
-             } = comment;
-          article.room-details__comment-wrapper
-            +comment({
-              image,
-              alt,
-              date,
-              text,
-              username,
-              likeCount,
-              isLiked,
-            })
+        ul.room-details__comments-list
+          each comment in data.comments
+            -
+              const {
+                image,
+                alt,
+                date,
+                text,
+                username,
+                likeCount,
+                isLiked,
+               } = comment;
+            li.room-details__comment-item
+              +comment({
+                image,
+                alt,
+                date,
+                text,
+                username,
+                likeCount,
+                isLiked,
+              })
 
       .room-details__rules-and-cancel-wrapper
         article.room-details__bullet-list-container

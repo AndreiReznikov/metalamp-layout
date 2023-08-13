@@ -10,7 +10,10 @@
     justify-content: space-between;
     margin-bottom: 17px;
     box-sizing: border-box;
-    cursor: pointer;
+
+    &_expandable {
+      cursor: pointer;
+    }
   }
 
   &__arrow {
@@ -26,7 +29,13 @@
   }
 
   &__list {
+    @include margin-padding-zero;
+
     display: none;
+  }
+
+  &__item {
+    list-style-type: none;
   }
 
   &__list_opened {

@@ -270,15 +270,16 @@ block content
           })
 
     .form-elements__bottom-block
-      .form-elements__advantages-container
+      ul.form-elements__advantages-container
         each advantage in data.advantages
           - const { title, description, image, isBorder } = advantage;
-          +advantage({
-            title,
-            description,
-            image,
-            isBorder,
-          })
+          li.form-elements__advantages-item
+            +advantage({
+              title,
+              description,
+              image,
+              isBorder,
+            })
 
       .form-elements__comment-container
         +comment({
