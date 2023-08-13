@@ -11,7 +11,7 @@ mixin date-dropdown(options = {})
       )
 
     each val, index in ['from', 'to']
-      .date-dropdown__wrapper
+      div(class=`date-dropdown__wrapper-${val}`)
         if options.title
           h3.date-dropdown__title=options.title[index]
         div(class=`date-dropdown__input-wrapper-${val}`)

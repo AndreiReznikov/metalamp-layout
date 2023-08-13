@@ -10,28 +10,28 @@
   }
 
   &--flat &-line {
-    margin-top: 13px;
     width: 266px;
     height: 6px;
+    margin-top: 13px;
     background: #fff;
     border: 1px solid $dark-shade-25;
-    box-sizing: border-box;
     border-radius: 3px;
+    box-sizing: border-box;
     cursor: pointer;
   }
 
   &--flat &-bar {
-    margin-top: 13px;
     height: 6px;
+    margin-top: 13px;
     background: $green-blue-gradient;
     border-radius: 3px;
     cursor: pointer;
   }
 
   &--flat &-handle {
-    margin-top: 11px;
     width: 16px;
     height: 16px;
+    margin-top: 11px;
     background: $green-blue-gradient;
     border: 2px solid #fff;
     border-radius: 10px;

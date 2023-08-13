@@ -21,7 +21,8 @@
       }
 
       &.button__base_size_l {
-        width: 196px;
+        @include width(196px, 100%);
+        
         min-height: 34px;
       }
   }
@@ -107,8 +108,8 @@
       justify-content: end;
       background: $gradient;
       text-align: center;
-      box-sizing: border-box;
       color: #fff;
+      box-sizing: border-box;
       cursor: pointer;
 
       &:hover, &.button__base_hovered {
@@ -162,8 +163,8 @@
       padding: 15px;
       background: $gradient;
       text-decoration: none;
-      box-sizing: border-box;
       color: #fff;
+      box-sizing: border-box;
 
       &:hover {
         background: $semitransparent-gradient;

@@ -3,6 +3,8 @@
 
 .checkbox-button {
   &__container {
+    @include width(250px, 320px);
+
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 11px;
@@ -64,8 +66,8 @@
     border-image: $gradient;
     border-image-slice: 1;
     border-width: 0 2px 2px 0;
-    box-sizing: border-box;
     transform: rotate(45deg);
+    box-sizing: border-box;
     z-index: 10;
   }
 

@@ -27,8 +27,8 @@
     display: flex;
     align-items: center;
     padding: 20px 24px 22px;
-    box-sizing: border-box;
     border-bottom: none;
+    box-sizing: border-box;
   }
 
   &--nav-title {
@@ -100,7 +100,6 @@
     text-align: center;
     border-radius: 22px;
     color: $dark-shade-50;
-    box-sizing: border-box;
   }
 
   &--cell.-range-from- {

@@ -1,5 +1,4 @@
 @import 'normalize.css';
-
 @import '~components/logo/logo';
 @import '~components/header/header';
 @import '~components/text-field/text-field';
@@ -36,7 +35,6 @@
     @include flex-center;
 
     flex: 1 0 auto;
-    width: 100%;
     min-height: 702px;
     background: url('~img/sign-in-background.jpg');
 

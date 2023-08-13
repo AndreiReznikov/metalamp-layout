@@ -3,9 +3,7 @@
 
 .comment {
   @include width(280px, 711px);
-
-  box-sizing: border-box;
-
+  
   &__user-wrapper {
     display: flex;
   }

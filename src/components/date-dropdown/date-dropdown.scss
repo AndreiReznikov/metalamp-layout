@@ -18,8 +18,8 @@
     @include zero-width-and-height;
 
     position: absolute;
-    padding: 0;
     top: 58px;
+    padding: 0;
     overflow: hidden;
     visibility: hidden;
     border: 0;
@@ -35,12 +35,9 @@
     box-sizing: border-box;
   }
 
-  &__input-wrapper-from {
+  &__wrapper-from {
     margin-right: 5px;
-  }
-
-  &__input-wrapper-to {
-    margin-left: 5px;
+    box-sizing: border-box
   }
 
   &__input-from, &__input-to {

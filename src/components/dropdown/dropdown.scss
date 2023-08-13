@@ -131,7 +131,7 @@
 
   &__counter-value::-webkit-outer-spin-button,
   &__counter-value::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    appearance: none;
     margin: 0;
   }
 
@@ -179,9 +179,9 @@
     @include h3;
 
     color: $purple;
-    cursor: pointer;
     border: none;
     background: transparent;
+    cursor: pointer;
   }
 
   &__clear-button {

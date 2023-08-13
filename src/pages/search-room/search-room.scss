@@ -1,5 +1,4 @@
 @import 'normalize.css';
-
 @import '~libs/paginationjs/paginationjs';
 @import '~libs/ion-rangeslider/ion-rangeslider';
 @import '~libs/slick-carousel/slick-carousel';
@@ -50,7 +49,7 @@
     margin: 0 auto;
     padding: 0 130px 104px 140px;
     border-bottom: 1px solid $dark-shade-5;
-    box-sizing: border-box;
+
 
     @include media-max($xl) {
       padding: 0 15px 100px;
@@ -60,7 +59,6 @@
   &__filter {
     display: none;
     margin-top: 25px;
-    width: 100%;
 
     @include media-max($xl) {
       display: flex;
@@ -103,7 +101,6 @@
 
     @include media-max($xl) {
       display: none;
-      flex-basis: 100%;
       padding: 20px 10px;
       border: 1px solid $dark-shade-5;
       border-radius: 4px;
