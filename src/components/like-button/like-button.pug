@@ -1,12 +1,12 @@
 mixin like-button(options = {})
   -
     let className = 'like-button__button js-like-button__button';
-    className += options.isLiked ? ' like-button__button_liked' : '';
+    className += options.liked ? ' like-button__button_liked' : '';
 
   .like-button.js-like-button
     button(class=className)
       span.like-button__inner-container
-        if options.isLiked
+        if options.liked
           span.like-button__icon.like-button__icon_liked.js-like-button__icon
         else
           span.like-button__icon.js-like-button__icon

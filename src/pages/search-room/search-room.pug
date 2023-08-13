@@ -102,7 +102,7 @@ block content
   .search-room__pagination-container
     each roomCardProperty in data.roomsCardsProperties
       -
-        const [
+        const {
           photo,
           number,
           price,
@@ -110,7 +110,7 @@ block content
           checkedButton,
           reviewsNumber,
           isLux
-        ] = roomCardProperty;
+         } = roomCardProperty;
       +room-card({
         photos: [photo, photo, photo, photo],
         number,

@@ -15,7 +15,7 @@ block content
       h2.index__ui-kit-title UI Kit
       ul.index__ui-kit-list
         each page in data.pages
-          - const [ href, name ] = page;
+          - const { href, name } = page;
           li.index__ui-kit-item
             a.index__ui-kit-link(
               href=href

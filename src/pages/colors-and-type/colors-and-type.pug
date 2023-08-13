@@ -17,7 +17,7 @@ block content
     .colors-and-type__colors-description-list-container
       ul.colors-and-type__colors-description-list
         each color in data.colors
-          - const [ title, hex ] = color;
+          - const { title, hex } = color;
           li.colors-and-type__colors-description-list__item
             +color({
               title,
@@ -27,7 +27,7 @@ block content
     .colors-and-type__type-description-list-container
       ul.colors-and-type__type-description-list
         each typeValues in data.types
-          - const [ title, description ] = typeValues;
+          - const { title, description } = typeValues;
           li.colors-and-type__type-description-list__item
             +type({
               title,

@@ -44,12 +44,24 @@
     "isExpandable": false
   },
   "toggleButtons": [
-    ["Получать спецпредложения", true],
-    ["Получать спецпредложения", false]
+    {
+      "text": "Получать спецпредложения",
+      "checked": true
+    },
+    {
+      "text": "Получать спецпредложения",
+      "checked": false
+    }
   ],
   "likeButtons": [
-    [2, false],
-    [12, true]
+    {
+      "count": 2,
+      "liked": false
+    },
+    {
+      "count": 12,
+      "liked": true
+    }
   ],
   "rateButtons": [
     {

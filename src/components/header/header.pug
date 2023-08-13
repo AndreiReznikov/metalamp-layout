@@ -18,8 +18,8 @@ mixin header(options = {})
           nav.header__nav
             ul.header__menu-list
               each headerItem in data.headerItems
-                - const [ title, items, link, fontWeight ] = headerItem;
-                if items.length
+                - const { title, subtitles, link } = headerItem;
+                if subtitles.length
                   li.header__list-item.header__list-item_expandable.js-header__list-item_expandable
                     a.header__list-link.js-header__list-link.js-header__list-link_expandable(
                       href=link
@@ -29,11 +29,11 @@ mixin header(options = {})
 
                     .header__expanded-menu.js-header__expanded-menu
                       ul.header__expanded-menu-list
-                        each item in items
+                        each subtitle in subtitles
                           li.header__expanded-menu-item
                             a.header__expanded-menu-link(
                               href=link
-                            )=item
+                            )=subtitle
                 else
                   li.header__list-item
                     a.header__list-link.js-header__list-link(
@@ -74,8 +74,8 @@ mixin header(options = {})
       nav.header__mobile-nav
         ul.header__mobile-list
           each headerItem in data.headerItems
-            - const [ title, items, link ] = headerItem;
-            if items.length
+            - const { title, subtitles, link } = headerItem;
+            if subtitles.length
               li.header__mobile-list-item.header__mobile-list-item_expandable.js-header__mobile-list-item.js-header__mobile-list-item_expandable
                 a.header__mobile-list-link.header__mobile-list-link_expandable.js-header__mobile-list-link_expandable(
                   href=link
@@ -83,11 +83,11 @@ mixin header(options = {})
                   span.header__mobile-list-bold-item=title
                   span.header__mobile-list-arrow.js-header__mobile-list-arrow
                 ul.header__mobile-expanded-list.js-header__mobile-expanded-list
-                  each item in items
+                  each subtitle in subtitles
                     li.header__mobile-expanded-list-item
                       a.header__mobile-expanded-list-link.js-header__mobile-list-link(
                         href=link
-                      )=item
+                      )=subtitle
             else
               li.header__mobile-list-item
                 a.header__mobile-list-link.js-header__mobile-list-link(

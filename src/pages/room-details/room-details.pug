@@ -39,7 +39,7 @@ block content
         .room-details__advantages-wrapper
 
           each advantageRoom in data.advantagesRoom
-            - const [ title, description, image, isBorder ] = advantageRoom;
+            - const { title, description, image, isBorder } = advantageRoom;
             .room-details__advantage-wrapper
               +advantage({
                 title,
@@ -62,7 +62,7 @@ block content
 
         each comment in data.comments
           -
-            const [
+            const {
               image,
               alt,
               date,
@@ -70,7 +70,7 @@ block content
               username,
               likeCount,
               isLiked,
-            ] = comment;
+             } = comment;
           article.room-details__comment-wrapper
             +comment({
               image,

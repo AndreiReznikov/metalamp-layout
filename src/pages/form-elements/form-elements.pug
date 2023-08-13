@@ -147,7 +147,7 @@ block content
           })
         .form-elements__toggle-buttons-wrapper
           each toggleButton in data.toggleButtons
-            - const [ text, checked ] = toggleButton;
+            - const { text, checked } = toggleButton;
             +toggle-button({
               text,
               checked,
@@ -159,10 +159,10 @@ block content
         })
         .form-elements__like-buttons-wrapper
           each likeButton in data.likeButtons
-            - const [ count, isLiked ] = likeButton;
+            - const { count, liked } = likeButton;
             +like-button({
               count,
-              isLiked,
+              liked,
             })
 
       .form-elements__rate-buttons-container

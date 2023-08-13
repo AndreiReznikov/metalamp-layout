@@ -1,10 +1,30 @@
 {
   "headerItems": [
-    ["О нас", [], "/mock-address/change-me", "bold"],
-    ["Услуги", ["Ресторан", "Бассейн", "Транспорт"], "/mock-address/change-me"],
-    ["Вакансии", [], "/mock-address/change-me"],
-    ["Новости", [], "/mock-address/change-me"],
-    ["Соглашения", ["Договор по оказанию услуг", "Договор хранения"], "/mock-address/change-me"]
+    {
+      "title": "О нас",
+      "subtitles": [],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "title": "Услуги",
+      "subtitles": ["Ресторан", "Бассейн", "Транспорт"],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "title": "Вакансии",
+      "subtitles": [],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "title": "Новости",
+      "subtitles": [],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "title": "Соглашения",
+      "subtitles": ["Договор по оказанию услуг", "Договор хранения"],
+      "link": "/mock-address/change-me"
+    }
   ],
   "headerButtons": [
     {

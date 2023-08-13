@@ -1,9 +1,9 @@
 {
-  "amountsForServices": [
-    ["9 990₽ x 4 суток", "39 960"],
-    ["Сбор за услуги: скидка 2 179₽", "0", "info"],
-    ["Сбор за дополнительные услуги", "300", "info"]
-  ],
+  "amountsForServices": {
+    "total": ["9 990₽ x 4 суток", "39 960"],
+    "services": ["Сбор за услуги: скидка 2 179₽", "0", "info"],
+    "additional": ["Сбор за дополнительные услуги", "300", "info"]
+  },
   "roomCards": [
     {
       "photos": ["room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg"],

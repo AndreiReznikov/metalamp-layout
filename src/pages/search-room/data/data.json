@@ -21,186 +21,1560 @@
       "Можно с питомцами",
       "Можно пригласить гостей (до\u00A010\u00A0человек)"
     ],
-    "checkedItems": [1, 2],
+    "checkedItems": [
+      1,
+      2
+    ],
     "isExpandable": false
   },
   "roomsCardsProperties": [
-    ["room-photo-1.jpg",888,9990,5,5,145,true],
-    ["room-photo-2.jpg",840,9990,5,4,65,false],
-    ["room-photo-3.jpg",980,8500,5,3,35,true],
-    ["room-photo-4.jpg",856,7300,5,5,19,false],
-    ["room-photo-5.jpg",740,6000,5,4,44,false],
-    ["room-photo-6.jpg",982,5800,5,3,56,false],
-    ["room-photo-7.jpg",678,5500,5,5,45,false],
-    ["room-photo-8.jpg",450,5300,5,4,39,false],
-    ["room-photo-9.jpg",350,5000,5,3,77,false],
-    ["room-photo-10.jpg",666,5000,5,5,25,false],
-    ["room-photo-11.jpg",444,5000,5,3,15,false],
-    ["room-photo-12.jpg",352,5000,5,3,55,false],
-    ["room-photo-6.jpg",470,2500,5,5,25,false],
-    ["room-photo-12.jpg",926,2900,5,3,68,false],
-    ["room-photo-4.jpg",537, 2800, 5, 4, 107, true],
-    ["room-photo-10.jpg",832, 5400, 5, 2, 37, false],
-    ["room-photo-6.jpg",746, 3800, 5, 1, 63, true],
-    ["room-photo-7.jpg",754, 4000, 5, 3, 107, true],
-    ["room-photo-11.jpg",581,2000,5,4,86,false],
-    ["room-photo-9.jpg",184,3700,5,2,103,true],
-    ["room-photo-1.jpg",703,3400,5,1,36,false],
-    ["room-photo-6.jpg",73,3900,5,4,121,false],
-    ["room-photo-7.jpg",246,5100,5,1,179,false],
-    ["room-photo-9.jpg",122,5600,5,3,92,false],
-    ["room-photo-2.jpg",941,6700,5,2,25,true],
-    ["room-photo-7.jpg",705,6200,5,4,82,false],
-    ["room-photo-3.jpg",267,5200,5,3,95,false],
-    ["room-photo-8.jpg",950,3300,5,1,84,true],
-    ["room-photo-6.jpg",422,2300,5,4,146,true],
-    ["room-photo-7.jpg",385,8200,5,4,93,true],
-    ["room-photo-6.jpg",981,8800,5,3,97,false],
-    ["room-photo-3.jpg",947,4600,5,2,47,true],
-    ["room-photo-10.jpg",233,3300,5,1,118,true],
-    ["room-photo-11.jpg",862,3400,5,4,48,false],
-    ["room-photo-3.jpg",146,4900,5,3,178,false],
-    ["room-photo-6.jpg",696,4300,5,4,15,false],
-    ["room-photo-8.jpg",14,2400,5,1,73,false],
-    ["room-photo-8.jpg",327,5600,5,1,38,true],
-    ["room-photo-8.jpg",299,3800,5,1,136,false],
-    ["room-photo-9.jpg",978,9800,5,3,180,false],
-    ["room-photo-7.jpg",693,3600,5,2,87,true],
-    ["room-photo-3.jpg",495,4500,5,1,65,false],
-    ["room-photo-9.jpg",535,7200,5,2,197,false],
-    ["room-photo-4.jpg",514,8600,5,1,23,false],
-    ["room-photo-12.jpg",710,3000,5,2,123,true],
-    ["room-photo-6.jpg",472,2400,5,4,93,false],
-    ["room-photo-8.jpg",566,6300,5,2,61,false],
-    ["room-photo-9.jpg",551,6200,5,4,103,true],
-    ["room-photo-11.jpg",185,6900,5,1,60,false],
-    ["room-photo-12.jpg",322,4000,5,4,199,true],
-    ["room-photo-8.jpg",311,8600,5,2,68,true],
-    ["room-photo-10.jpg",370,7700,5,3,177,false],
-    ["room-photo-12.jpg",72,3200,5,2,92,false],
-    ["room-photo-4.jpg",343,4700,5,4,38,true],
-    ["room-photo-3.jpg",998,6800,5,3,59,false],
-    ["room-photo-2.jpg",271,2500,5,4,27,false],
-    ["room-photo-11.jpg",56,2300,5,2,25,true],
-    ["room-photo-11.jpg",919,8400,5,2,109,true],
-    ["room-photo-1.jpg",1003,5000,5,2,151,false],
-    ["room-photo-3.jpg",451,7400,5,3,136,false],
-    ["room-photo-6.jpg",105,6800,5,1,77,false],
-    ["room-photo-7.jpg",413,9000,5,3,88,true],
-    ["room-photo-6.jpg",793,5100,5,1,97,true],
-    ["room-photo-1.jpg",316,9600,5,4,99,true],
-    ["room-photo-11.jpg",26,4000,5,2,70,true],
-    ["room-photo-9.jpg",663,5800,5,4,62,true],
-    ["room-photo-4.jpg",202,6300,5,3,61,false],
-    ["room-photo-12.jpg",240,8000,5,3,126,false],
-    ["room-photo-4.jpg",372,3100,5,4,120,false],
-    ["room-photo-10.jpg",140,6000,5,1,198,false],
-    ["room-photo-8.jpg",322,3900,5,2,186,false],
-    ["room-photo-6.jpg",170,5200,5,1,40,true],
-    ["room-photo-11.jpg",946,4200,5,2,77,false],
-    ["room-photo-9.jpg",406,2700,5,3,27,true],
-    ["room-photo-7.jpg",618,2400,5,4,195,false],
-    ["room-photo-12.jpg",392,8000,5,2,120,false],
-    ["room-photo-8.jpg",969,7600,5,4,147,true],
-    ["room-photo-6.jpg",407,8800,5,2,32,true],
-    ["room-photo-1.jpg",235,8300,5,3,60,true],
-    ["room-photo-10.jpg",187,2500,5,3,121,true],
-    ["room-photo-11.jpg",316,2200,5,1,173,true],
-    ["room-photo-6.jpg",503,9200,5,4,161,false],
-    ["room-photo-4.jpg",267,8000,5,1,45,false],
-    ["room-photo-11.jpg",939,2000,5,2,80,true],
-    ["room-photo-12.jpg",252,6200,5,1,13,false],
-    ["room-photo-7.jpg",335,6900,5,4,171,false],
-    ["room-photo-9.jpg",651,5500,5,1,63,true],
-    ["room-photo-8.jpg",875,2100,5,3,167,false],
-    ["room-photo-9.jpg",328,9300,5,4,181,false],
-    ["room-photo-8.jpg",231,2100,5,2,93,false],
-    ["room-photo-3.jpg",126,8200,5,3,176,false],
-    ["room-photo-9.jpg",239,2000,5,3,165,true],
-    ["room-photo-11.jpg",752,3900,5,1,33,false],
-    ["room-photo-6.jpg",563,5000,5,4,88,false],
-    ["room-photo-7.jpg",256,8100,5,1,177,false],
-    ["room-photo-8.jpg",243,9800,5,3,96,true],
-    ["room-photo-2.jpg",655,7000,5,4,147,false],
-    ["room-photo-10.jpg",631,3700,5,2,166,false],
-    ["room-photo-1.jpg",790,4200,5,2,56,true],
-    ["room-photo-12.jpg",654,8200,5,2,197,false],
-    ["room-photo-6.jpg",749,5600,5,1,124,false],
-    ["room-photo-9.jpg",840,9600,5,3,180,false],
-    ["room-photo-8.jpg",227,9400,5,4,141,false],
-    ["room-photo-11.jpg",90,8900,5,2,26,true],
-    ["room-photo-3.jpg",216,9500,5,4,126,true],
-    ["room-photo-7.jpg",324,2000,5,2,99,true],
-    ["room-photo-6.jpg",510,6200,5,3,173,false],
-    ["room-photo-11.jpg",918,6600,5,1,198,true],
-    ["room-photo-1.jpg",431,5400,5,2,173,false],
-    ["room-photo-3.jpg",1019,5500,5,4,186,true],
-    ["room-photo-7.jpg",851,7100,5,3,16,true],
-    ["room-photo-8.jpg",811,8000,5,2,49,true],
-    ["room-photo-1.jpg",899,8000,5,3,79,true],
-    ["room-photo-3.jpg",303,7800,5,4,103,false],
-    ["room-photo-10.jpg",928,8800,5,3,119,true],
-    ["room-photo-11.jpg",245,7000,5,2,98,false],
-    ["room-photo-4.jpg",404,3800,5,4,181,true],
-    ["room-photo-10.jpg",563,8200,5,2,101,false],
-    ["room-photo-4.jpg",160,9800,5,3,70,true],
-    ["room-photo-1.jpg",211,3900,5,2,110,false],
-    ["room-photo-7.jpg",665,5700,5,2,51,false],
-    ["room-photo-3.jpg",46,3100,5,4,166,true],
-    ["room-photo-9.jpg",130,2800,5,3,109,false],
-    ["room-photo-6.jpg",994,3000,5,3,15,true],
-    ["room-photo-12.jpg",215,8800,5,1,31,false],
-    ["room-photo-7.jpg",611,2500,5,4,198,true],
-    ["room-photo-8.jpg",958,5000,5,2,35,false],
-    ["room-photo-11.jpg",822,6200,5,4,40,false],
-    ["room-photo-8.jpg",213,2000,5,4,25,true],
-    ["room-photo-7.jpg",139,2200,5,1,53,false],
-    ["room-photo-6.jpg",841,7700,5,2,102,false],
-    ["room-photo-9.jpg",951,2900,5,4,51,true],
-    ["room-photo-1.jpg",547,7600,5,2,173,false],
-    ["room-photo-6.jpg",739,6000,5,1,123,true],
-    ["room-photo-3.jpg",437,5900,5,3,122,false],
-    ["room-photo-4.jpg",473,2500,5,2,53,false],
-    ["room-photo-9.jpg",987,8000,5,2,129,false],
-    ["room-photo-10.jpg",461,2000,5,3,59,true],
-    ["room-photo-10.jpg",482,8400,5,3,179,false],
-    ["room-photo-7.jpg",327,4200,5,1,136,true],
-    ["room-photo-8.jpg",152,7000,5,4,62,false],
-    ["room-photo-12.jpg",153,8400,5,4,82,true],
-    ["room-photo-6.jpg",1012,4900,5,4,130,true],
-    ["room-photo-3.jpg",32,6300,5,4,147,true],
-    ["room-photo-11.jpg",365,3600,5,4,112,true],
-    ["room-photo-7.jpg",818,2000,5,2,89,false],
-    ["room-photo-6.jpg",747,9500,5,1,135,true],
-    ["room-photo-12.jpg",858,9200,5,2,65,true],
-    ["room-photo-4.jpg",744,2700,5,1,154,false],
-    ["room-photo-9.jpg",43,5400,5,2,34,false],
-    ["room-photo-3.jpg",176,8000,5,1,71,false],
-    ["room-photo-7.jpg",825,2700,5,4,150,true],
-    ["room-photo-10.jpg",557,4300,5,2,52,true],
-    ["room-photo-6.jpg",881,2100,5,3,69,false],
-    ["room-photo-8.jpg",702,4300,5,1,27,false],
-    ["room-photo-11.jpg",348,7400,5,2,102,true],
-    ["room-photo-6.jpg",921,2800,5,2,107,true],
-    ["room-photo-3.jpg",637,2000,5,3,97,true],
-    ["room-photo-9.jpg",800,9300,5,1,157,true],
-    ["room-photo-1.jpg",514,5700,5,3,63,false],
-    ["room-photo-8.jpg",901,9000,5,3,58,false],
-    ["room-photo-11.jpg",18,9600,5,2,199,false],
-    ["room-photo-9.jpg",670,5500,5,2,88,false],
-    ["room-photo-7.jpg",601,8200,5,2,131,false],
-    ["room-photo-12.jpg",142,2600,5,4,96,true],
-    ["room-photo-6.jpg",682,2000,5,4,14,false],
-    ["room-photo-3.jpg",659,3000,5,1,195,false],
-    ["room-photo-4.jpg",95,7000,5,1,86,true],
-    ["room-photo-8.jpg",1019,7600,5,4,48,false],
-    ["room-photo-10.jpg",301,5700,5,1,119,true],
-    ["room-photo-11.jpg",775,7200,5,3,137,false],
-    ["room-photo-7.jpg",180,4200,5,4,68,false],
-    ["room-photo-1.jpg",808,6700,5,3,44,false],
-    ["room-photo-12.jpg",758,7400,5,2,54,false],
-    ["room-photo-6.jpg",180,7500,5,3,55,false],
-    ["room-photo-4.jpg",725,9700,5,1,102,false],
-    ["room-photo-3.jpg",693,9000,5,1,41, true]
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 888,
+      "price": 9990,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 145,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 840,
+      "price": 9990,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 65,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 980,
+      "price": 8500,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 35,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 856,
+      "price": 7300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 19,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 740,
+      "price": 6000,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 44,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 982,
+      "price": 5800,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 56,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 678,
+      "price": 5500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 45,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 450,
+      "price": 5300,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 39,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 350,
+      "price": 5000,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 77,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 666,
+      "price": 5000,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 25,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 444,
+      "price": 5000,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 15,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 352,
+      "price": 5000,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 55,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 773,
+      "price": 4900,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 150,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 967,
+      "price": 9200,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 81,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 62,
+      "price": 2700,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 48,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 427,
+      "price": 6800,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 162,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 248,
+      "price": 4100,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 4,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 23,
+      "price": 8600,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 128,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 129,
+      "price": 3000,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 102,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 612,
+      "price": 7300,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 97,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 426,
+      "price": 4800,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 31,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 556,
+      "price": 5500,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 45,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 17,
+      "price": 10300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 105,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 948,
+      "price": 11100,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 139,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 281,
+      "price": 7100,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 27,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 285,
+      "price": 4800,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 172,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 58,
+      "price": 8100,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 94,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 610,
+      "price": 10000,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 187,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 601,
+      "price": 9100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 107,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 176,
+      "price": 7700,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 185,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 137,
+      "price": 4300,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 27,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 762,
+      "price": 11100,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 61,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 608,
+      "price": 4400,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 14,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 85,
+      "price": 7600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 99,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 922,
+      "price": 6500,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 89,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 908,
+      "price": 9900,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 38,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 874,
+      "price": 4800,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 36,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 749,
+      "price": 5100,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 189,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 341,
+      "price": 4400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 194,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 28,
+      "price": 8800,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 8,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 425,
+      "price": 10400,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 57,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 607,
+      "price": 8800,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 75,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 158,
+      "price": 9200,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 144,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 621,
+      "price": 3100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 176,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 9,
+      "price": 4100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 92,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 885,
+      "price": 9400,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 161,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 302,
+      "price": 5400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 39,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 733,
+      "price": 6600,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 87,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 974,
+      "price": 6100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 90,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 419,
+      "price": 3500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 196,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 724,
+      "price": 5800,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 39,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 921,
+      "price": 7300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 158,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 95,
+      "price": 8200,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 116,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 97,
+      "price": 11600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 3,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 379,
+      "price": 10300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 21,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 639,
+      "price": 9500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 101,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 290,
+      "price": 10300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 5,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 206,
+      "price": 11100,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 165,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 607,
+      "price": 3800,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 11,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 470,
+      "price": 11500,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 56,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 812,
+      "price": 4200,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 18,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 933,
+      "price": 10900,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 101,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 469,
+      "price": 6800,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 189,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 767,
+      "price": 8100,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 121,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 148,
+      "price": 10600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 160,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 320,
+      "price": 10300,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 174,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 880,
+      "price": 10600,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 111,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 483,
+      "price": 9800,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 27,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 394,
+      "price": 9000,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 74,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 297,
+      "price": 11300,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 127,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 592,
+      "price": 9800,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 198,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 223,
+      "price": 8000,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 73,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 891,
+      "price": 6200,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 152,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 454,
+      "price": 2700,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 57,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 343,
+      "price": 5500,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 79,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 797,
+      "price": 2400,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 179,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 86,
+      "price": 6700,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 23,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 309,
+      "price": 6400,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 165,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 117,
+      "price": 8200,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 56,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 838,
+      "price": 4800,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 89,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 550,
+      "price": 8500,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 138,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 937,
+      "price": 7000,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 119,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 614,
+      "price": 7600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 41,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 281,
+      "price": 11300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 61,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 955,
+      "price": 9800,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 28,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 311,
+      "price": 5100,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 165,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 575,
+      "price": 3400,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 158,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 991,
+      "price": 8100,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 166,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 832,
+      "price": 9300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 191,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 31,
+      "price": 7400,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 62,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 815,
+      "price": 3900,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 144,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 134,
+      "price": 6000,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 40,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 500,
+      "price": 10400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 174,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 348,
+      "price": 11500,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 59,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 558,
+      "price": 10800,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 143,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 387,
+      "price": 8200,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 113,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 152,
+      "price": 4400,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 127,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 880,
+      "price": 8200,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 30,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 241,
+      "price": 7700,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 125,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 799,
+      "price": 4100,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 44,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 418,
+      "price": 9400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 174,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 174,
+      "price": 5400,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 136,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 175,
+      "price": 2400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 176,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 478,
+      "price": 6900,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 173,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 682,
+      "price": 9400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 127,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 548,
+      "price": 2000,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 74,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 205,
+      "price": 4600,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 187,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 119,
+      "price": 2700,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 1,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 857,
+      "price": 10100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 54,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 960,
+      "price": 10900,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 181,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 846,
+      "price": 5100,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 24,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 265,
+      "price": 10500,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 71,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 265,
+      "price": 7600,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 11,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 68,
+      "price": 5700,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 99,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 624,
+      "price": 4300,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 59,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 373,
+      "price": 2100,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 134,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 785,
+      "price": 6300,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 34,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 473,
+      "price": 11600,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 80,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 860,
+      "price": 11200,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 52,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 671,
+      "price": 4300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 5,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 353,
+      "price": 3600,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 165,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 515,
+      "price": 6700,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 150,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 300,
+      "price": 6100,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 54,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 996,
+      "price": 10400,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 37,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 876,
+      "price": 8700,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 125,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 989,
+      "price": 9500,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 54,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 803,
+      "price": 11300,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 14,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 827,
+      "price": 7700,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 63,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 583,
+      "price": 2600,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 169,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 948,
+      "price": 8800,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 54,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 217,
+      "price": 2300,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 31,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 277,
+      "price": 10000,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 12,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 132,
+      "price": 9400,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 190,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 937,
+      "price": 3300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 49,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 409,
+      "price": 9600,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 120,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 813,
+      "price": 11000,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 95,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 416,
+      "price": 6700,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 170,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-11.jpg",
+      "number": 745,
+      "price": 2800,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 3,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 935,
+      "price": 7500,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 135,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 440,
+      "price": 11900,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 13,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 221,
+      "price": 11300,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 35,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 967,
+      "price": 11100,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 42,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 72,
+      "price": 9500,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 123,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 61,
+      "price": 6500,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 142,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 192,
+      "price": 2700,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 114,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 929,
+      "price": 3700,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 182,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 393,
+      "price": 9900,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 115,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 465,
+      "price": 8200,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 45,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 753,
+      "price": 11000,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 193,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-4.jpg",
+      "number": 7,
+      "price": 10900,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 18,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 677,
+      "price": 10500,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 177,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 692,
+      "price": 5700,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 169,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 664,
+      "price": 6600,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 130,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 74,
+      "price": 10600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 138,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 948,
+      "price": 8300,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 104,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 741,
+      "price": 8400,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 169,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-10.jpg",
+      "number": 673,
+      "price": 3300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 42,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-1.jpg",
+      "number": 545,
+      "price": 3700,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 7,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 303,
+      "price": 11900,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 53,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-12.jpg",
+      "number": 855,
+      "price": 8100,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 103,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 519,
+      "price": 8000,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 168,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 854,
+      "price": 7200,
+      "starsNumber": 5,
+      "checkedButton": 3,
+      "reviewsNumber": 87,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 244,
+      "price": 8500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 70,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 886,
+      "price": 7300,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 54,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-6.jpg",
+      "number": 694,
+      "price": 4500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 200,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 871,
+      "price": 4500,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 106,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-2.jpg",
+      "number": 948,
+      "price": 5400,
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 102,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-5.jpg",
+      "number": 885,
+      "price": 2700,
+      "starsNumber": 5,
+      "checkedButton": 2,
+      "reviewsNumber": 52,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-8.jpg",
+      "number": 771,
+      "price": 2200,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 43,
+      "isLux": false
+    },
+    {
+      "photo": "room-photo-9.jpg",
+      "number": 790,
+      "price": 8300,
+      "starsNumber": 5,
+      "checkedButton": 1,
+      "reviewsNumber": 98,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-3.jpg",
+      "number": 82,
+      "price": 6600,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 94,
+      "isLux": true
+    },
+    {
+      "photo": "room-photo-7.jpg",
+      "number": 7,
+      "price": 4000,
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 142,
+      "isLux": false
+    }
   ]
 }

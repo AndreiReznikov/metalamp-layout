@@ -1,17 +1,50 @@
 {
   "colors": [
-    ["Dark Shade 100%", "#1F2041"],
-    ["Dark Shade 75%", "#1F2041"],
-    ["Dark Shade 50%", "#1F2041"],
-    ["Dark Shade 25%", "#1F2041"],
-    ["Dark Shade 5%", "#1F2041"],
-    ["Purple", "#BC9CFF"],
-    ["Green", "#6FCF97"]
+    {
+      "title": "Dark Shade 100%",
+      "hex": "#1F2041"
+    },
+    {
+      "title": "Dark Shade 75%",
+      "hex": "#1F2041"
+    },
+    {
+      "title": "Dark Shade 50%",
+      "hex": "#1F2041"
+    },
+    {
+      "title": "Dark Shade 25%",
+      "hex": "#1F2041"
+    },
+    {
+      "title": "Dark Shade 5%",
+      "hex": "#1F2041"
+    },
+    {
+      "title": "Purple",
+      "hex": "#BC9CFF"
+    },
+    {
+      "title": "Green",
+      "hex": "#6FCF97"
+    }
   ],
   "types": [
-    ["H1", "This one is the sub-section or widget title"],
-    ["H2", "Next one is the item title inside widgets"],
-    ["H3", "This is a label or CTA text"],
-    ["Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc."]
+    {
+      "title": "H1",
+      "description": "This one is the sub-section or widget title"
+    },
+    {
+      "title": "H2",
+      "description": "Next one is the item title inside widgets"
+    },
+    {
+      "title": "H3",
+      "description": "This is a label or CTA text"
+    },
+    {
+      "title": "Body",
+      "description": "This is the body text which is used for most of the design, like paragraphs, lists, etc."
+    }
   ]
 }

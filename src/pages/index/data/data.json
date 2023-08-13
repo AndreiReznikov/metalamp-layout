@@ -1,8 +1,20 @@
 {
   "pages": [
-    ["colors-and-type.html", "Colors and Type"],
-    ["form-elements.html", "Form Elements"],
-    ["cards.html", "Cards"],
-    ["headers-and-footers.html", "Headers and Footers"]
+    {
+      "href": "colors-and-type.html",
+      "name": "Colors and Type"
+    },
+    {
+      "href": "form-elements.html",
+      "name": "Form Elements"
+    },
+    {
+      "href": "cards.html",
+      "name": "Cards"
+    },
+    {
+      "href": "headers-and-footers.html",
+      "name": "Headers and Footers"
+    }
   ]
 }
