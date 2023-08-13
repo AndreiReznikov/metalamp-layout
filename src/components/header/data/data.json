@@ -1,0 +1,22 @@
+{
+  "headerItems": [
+    ["О нас", [], "/mock-address/change-me", "bold"],
+    ["Услуги", ["Ресторан", "Бассейн", "Транспорт"], "/mock-address/change-me"],
+    ["Вакансии", [], "/mock-address/change-me"],
+    ["Новости", [], "/mock-address/change-me"],
+    ["Соглашения", ["Договор по оказанию услуг", "Договор хранения"], "/mock-address/change-me"]
+  ],
+  "headerButtons": [
+    {
+      "unfilledButton": true,
+      "text": "Войти",
+      "href": "sign-in.html"
+    },
+    {
+      "filledButton": true,
+      "text": "Зарегистрироваться",
+      "size": "L",
+      "href": "registration.html"
+    }
+  ]
+}

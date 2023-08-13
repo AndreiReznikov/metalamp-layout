@@ -7,6 +7,8 @@ mixin footer(options = {})
     let footerClassName = 'footer';
     footerClassName += options.mobile ? ' footer_mobile' : '';
 
+    const data = require('./data/data.json');
+
   footer(class=footerClassName)
     .footer__desktop-wrapper
       .footer__top-section-container

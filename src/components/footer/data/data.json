@@ -1,0 +1,22 @@
+{
+  "footerSections": [
+    {
+      "className": "footer__second-section",
+      "title": "Навигация",
+      "items": ["О нас", "Новости", "Служба поддержки", "Услуги"],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "className": "footer__third-section",
+      "title": "О нас",
+      "items": ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+      "link": "/mock-address/change-me"
+    },
+    {
+      "className": "footer__fourth-section",
+      "title": "Служба поддержки",
+      "items": ["Соглашения", "Сообщества", "Связь с нами"],
+      "link": "/mock-address/change-me"
+    }
+  ]
+}

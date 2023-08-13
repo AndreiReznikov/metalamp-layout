@@ -1,0 +1,27 @@
+{
+  "amountsForServices": [
+    ["9 990₽ x 4 суток", "39 960"],
+    ["Сбор за услуги: скидка 2 179₽", "0", "info"],
+    ["Сбор за дополнительные услуги", "300", "info"]
+  ],
+  "roomCards": [
+    {
+      "photos": ["room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg"],
+      "number": "888",
+      "price": "9 990",
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "reviewsNumber": 145,
+      "isLux": true
+    },
+    {
+      "photos": ["room-photo-2.jpg", "room-photo-2.jpg", "room-photo-2.jpg", "room-photo-2.jpg"],
+      "number": "840",
+      "price": "9 990",
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "reviewsNumber": 65,
+      "isLux": false
+    }
+  ]
+}

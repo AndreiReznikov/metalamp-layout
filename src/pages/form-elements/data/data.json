@@ -1,0 +1,150 @@
+{
+  "textFields": [
+    {
+      "className": "form-elements__first-text-field",
+      "title": "Text field",
+      "status": "Default",
+      "type": "email",
+      "placeholder": "Email"
+    },
+    {
+      "className": "form-elements__second-text-field",
+      "title": "Text field",
+      "status": "Hover / Focus",
+      "type": "email",
+      "placeholder": "Email",
+      "value": "This is pretty awesome",
+      "isFocused": true
+    }
+  ],
+  "checkboxLists": [
+    {
+      "className": "form-elements__checkbox-list-container",
+      "title": "Expandable checkbox list",
+      "checkboxTexts": ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
+      "isExpandable": true
+    },
+    {
+      "className": "form-elements__opened-checkbox-list-container",
+      "title": "Expandable checkbox list",
+      "checkboxTexts": ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
+      "checkedItems": [1, 2, 3],
+      "isExpandable": true,
+      "isOpened": true
+    }
+  ],
+  "checkboxes": {
+    "listTitle": "Checkbox buttons",
+    "checkboxTexts": [
+      "Можно курить",
+      "Можно с питомцами",
+      "Можно пригласить гостей (до\u00A010\u00A0человек)"
+    ],
+    "checkedItems": [1, 2],
+    "isExpandable": false
+  },
+  "toggleButtons": [
+    ["Получать спецпредложения", true],
+    ["Получать спецпредложения", false]
+  ],
+  "likeButtons": [
+    [2, false],
+    [12, true]
+  ],
+  "rateButtons": [
+    {
+      "starsNumber": 5,
+      "checkedButton": 4,
+      "name": "First rate"
+    },
+    {
+      "starsNumber": 5,
+      "checkedButton": 5,
+      "name": "Second rate"
+    }
+  ],
+  "richCheckboxButtons": [
+    {
+      "title": "Rich checkbox buttons",
+      "checkboxTexts": [
+        "Ширина коридоров в номере не\u00A0менее 91 см.",
+        "На 1 этаже вас встретит специалист и\u00A0проводит до номера."
+      ],
+      "richTitles": [
+        "Широкий коридор",
+        "Помощник для инвалидов"
+      ],
+      "isExpandable": false,
+      "isRich": true
+    }
+  ],
+  "formElementsButtons": [
+    {
+      "className": "form-elements__filled-buttons-container",
+      "buttons": [
+        {
+          "filledButton": true,
+          "text": "Click me"
+        },
+        {
+          "filledButton": true,
+          "text": "Click me",
+          "isHovered": true
+        }
+      ]
+    },
+    {
+      "className": "form-elements__empty-buttons-container",
+      "buttons": [
+        {
+          "unfilledButton": true,
+          "size": "L",
+          "text": "Click me"
+        },
+        {
+          "unfilledButton": true,
+          "size": "L",
+          "text": "Click me",
+          "isHovered": true
+        }
+      ]
+    },
+    {
+      "className": "form-elements__text-buttons-container",
+      "buttons": [
+        {
+          "borderlessButton": true,
+          "text": "Click me"
+        },
+        {
+          "borderlessButton": true,
+          "text": "Click me",
+          "isHovered": true
+        }
+      ]
+    },
+    {
+      "className": "form-elements__long-button-container",
+      "buttons": [
+        {
+          "longButton": true,
+          "text": "Перейти к оплате"
+        }
+      ]
+    }
+  ],
+  "advantages": [
+    {
+      "title": "Комфорт",
+      "description": "Шумопоглощающие стены",
+      "image": "insert-emoticon.svg",
+      "isBorder": true
+    },
+    {
+      "title": "Удобство",
+      "description": "Окно в каждой из спален",
+      "image": "location-city.svg",
+      "isBorder": true
+    }
+  ]
+}

@@ -2,6 +2,9 @@ include ~components/logo/logo
 include ~components/button/button
 
 mixin header(options = {})
+  -
+    const data = require('./data/data.json');
+
   .header.js-header
     header.header__container.js-header__container
       .header__wrapper
