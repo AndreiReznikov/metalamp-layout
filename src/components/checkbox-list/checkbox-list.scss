@@ -1,7 +1,7 @@
 @import '~templates/mixins';
 @import '~constants/consts';
 
-.checkbox-list{
+.checkbox-list {
   &__title {
     @include h3;
     @include width(266px, 100%);
@@ -19,21 +19,21 @@
   &__arrow {
     padding: 2px 18px 0 0;
 
-    &_transformed {
-      transform: rotateX(180deg);
-    }
-
     &::after {
       @include arrow;
     }
   }
 
-  &__list {
-    display: none;
+  &__title_expandable.js-checkbox-list__title_opened > &__arrow {
+    transform: rotateX(180deg);
+  }
 
-    &_opened {
-      display: block;
-    }
+  &__title_expandable + &__list {
+    display: none;
+  }
+
+  &__title_expandable.js-checkbox-list__title_opened + &__list {
+    display: block;
   }
 
   &__item {
