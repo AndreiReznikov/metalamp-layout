@@ -40,8 +40,20 @@
     }
   ],
   "amountsForServices": {
-    "total": ["9 990₽ x 4 суток", "39 960"],
-    "services": ["Сбор за услуги: скидка 2 179₽", "0", "info"],
-    "additional": ["Сбор за дополнительные услуги", "300", "info"]
+    "total": {
+      "description": "9 990₽ x 4 суток",
+      "sum": "39 960",
+      "info": false
+    },
+    "services": {
+      "description": "Сбор за услуги: скидка 2 179₽",
+      "sum": "0",
+      "info": true
+    },
+    "additional": {
+      "description": "Сбор за дополнительные услуги",
+      "sum": "300",
+      "info": true
+    }
   }
 }

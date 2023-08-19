@@ -35,10 +35,10 @@ mixin reserve-card(options = {})
           })
         .reserve-card__price-block
           each amountForService in data.amountsForServices
-            - const [ service, amount, info ] = amountForService;
+            - const { description, sum, info } = amountForService;
             .reserve-card__sum
               .reserve-card__sum-description
-                span.reserve-card__sum-text=service
+                span.reserve-card__sum-text=description
                 if info
                   .reserve-card__information-icon-container
                     .reserve-card__information-tooltip Подробнее в разделе:
@@ -46,7 +46,7 @@ mixin reserve-card(options = {})
                         href='/mock-address/change-me'
                         target='_blank'
                       )  Договор&nbsp;по&nbsp;оказанию&nbsp;услуг
-              span.reserve-card__service-sum=amount
+              span.reserve-card__service-sum=sum
                 span.reserve-card__currency &#8381;
 
         .reserve-card__total-sum-block
