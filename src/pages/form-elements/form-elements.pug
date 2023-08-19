@@ -108,23 +108,21 @@ block content
         })
 
       each checkboxList in data.checkboxLists
-        - const { className, title, checkboxTexts, checkedItems, isExpandable, isOpened } = checkboxList;
+        - const { className, title, checkboxState, isExpandable, isOpened } = checkboxList;
         div(class=className)
           +checkbox-list({
             title,
-            checkboxTexts,
-            checkedItems,
+            checkboxState,
             isExpandable,
             isOpened,
           })
 
     .form-elements__central-block
       .form-elements__checkbox-buttons-container
-          - const { listTitle, checkboxTexts, checkedItems, isExpandable, isOpened } = data.checkboxes;
+          - const { listTitle, checkboxState, isExpandable, isOpened } = data.checkboxes;
           +checkbox-list({
             title: listTitle,
-            checkboxTexts,
-            checkedItems,
+            checkboxState,
             isExpandable,
             isOpened,
           })
@@ -189,11 +187,11 @@ block content
 
       .form-elements__rich-checkbox-buttons-container
         each richCheckboxButton in data.richCheckboxButtons
-          - const { title, richTitles, checkboxTexts, isExpandable, isRich } = richCheckboxButton;
+          - const { title, richTitles, checkboxState, isExpandable, isRich } = richCheckboxButton;
           +checkbox-list({
             title,
             richTitles,
-            checkboxTexts,
+            checkboxState,
             isExpandable,
             isRich,
           })

@@ -51,26 +51,25 @@ block content
             p.search-room__slider-sub-text Стоимость за сутки пребывания в номере
           .search-room__checkbox-buttons-container
             .search-room__checkbox-buttons-wrapper
-              -
-                const { checkboxTexts, checkedItems, isExpandable, isOpened } = data.checkboxes;
+              //- -
+              //-   const { checkboxState, isExpandable, isOpened } = data.checkboxes;
 
-              +checkbox-list({
-                title: 'Правила дома',
-                checkboxTexts,
-                checkedItems,
-                isExpandable,
-                isOpened,
-              })
+              //- +checkbox-list({
+              //-   title: 'Правила дома',
+              //-   checkboxState,
+              //-   isExpandable,
+              //-   isOpened,
+              //- })
 
           .search-room__rich-checkbox-buttons-container
             .search-room__rich-checkbox-buttons-wrapper
               each searchRoomRichCheckboxButton in data.searchRoomRichCheckboxButtons
-                - const { title, richTitles, checkboxTexts, isExpandable, isRich } = searchRoomRichCheckboxButton;
+                - const { title, richTitles, checkboxState, isExpandable, isRich } = searchRoomRichCheckboxButton;
 
                 +checkbox-list({
                   title,
                   richTitles,
-                  checkboxTexts,
+                  checkboxState,
                   isExpandable,
                   isRich,
                 })
@@ -89,7 +88,32 @@ block content
             +checkbox-list({
               title: 'Дополнительные удобства',
               isExpandable: true,
-              checkboxTexts: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'],
+              checkboxState: [
+                {
+                  text: 'Завтрак',
+                  checked: false,
+                },
+                {
+                  text: 'Письменный стол',
+                  checked: false,
+                },
+                {
+                  text: 'Стул для кормления',
+                  checked: false,
+                },
+                {
+                  text: 'Кроватка',
+                  checked: false,
+                },
+                {
+                  text: 'Телевизор',
+                  checked: false,
+                },
+                {
+                  text: 'Шампунь',
+                  checked: false,
+                },
+              ],
             })
 
     section.search-room__cards-container

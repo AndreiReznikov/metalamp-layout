@@ -21,24 +21,82 @@
     {
       "className": "form-elements__checkbox-list-container",
       "title": "Expandable checkbox list",
-      "checkboxTexts": ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
+      "checkboxState": [
+        {
+          "text": "Завтрак",
+          "checked": false
+        },
+        {
+          "text": "Письменный стол",
+          "checked": false
+        },
+        {
+          "text": "Стул для кормления",
+          "checked": false
+        },
+        {
+          "text": "Кроватка",
+          "checked": false
+        },
+        {
+          "text": "Телевизор",
+          "checked": false
+        },
+        {
+          "text": "Шампунь",
+          "checked": false
+        }
+      ],
       "isExpandable": true
     },
     {
       "className": "form-elements__opened-checkbox-list-container",
       "title": "Expandable checkbox list",
-      "checkboxTexts": ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
-      "checkedItems": [1, 2, 3],
+      "checkboxState": [
+        {
+          "text": "Завтрак",
+          "checked": false
+        },
+        {
+          "text": "Письменный стол",
+          "checked": true
+        },
+        {
+          "text": "Стул для кормления",
+          "checked": true
+        },
+        {
+          "text": "Кроватка",
+          "checked": true
+        },
+        {
+          "text": "Телевизор",
+          "checked": false
+        },
+        {
+          "text": "Шампунь",
+          "checked": false
+        }
+      ],
       "isExpandable": true,
       "isOpened": true
     }
   ],
   "checkboxes": {
     "listTitle": "Checkbox buttons",
-    "checkboxTexts": [
-      "Можно курить",
-      "Можно с питомцами",
-      "Можно пригласить гостей (до\u00A010\u00A0человек)"
+    "checkboxState": [
+      {
+        "text": "Можно курить",
+        "checked": false
+      },
+      {
+        "text": "Можно с питомцами",
+        "checked": true
+      },
+      {
+        "text": "Можно пригласить гостей (до\u00A010\u00A0человек)",
+        "checked": true
+      }
     ],
     "checkedItems": [1, 2],
     "isExpandable": false
@@ -78,13 +136,17 @@
   "richCheckboxButtons": [
     {
       "title": "Rich checkbox buttons",
-      "checkboxTexts": [
-        "Ширина коридоров в номере не\u00A0менее 91 см.",
-        "На 1 этаже вас встретит специалист и\u00A0проводит до номера."
-      ],
-      "richTitles": [
-        "Широкий коридор",
-        "Помощник для инвалидов"
+      "checkboxState": [
+        {
+          "richTitle": "Широкий коридор",
+          "text": "Ширина коридоров в номере не\u00A0менее 91 см.",
+          "checked": false
+        },
+        {
+          "richTitle": "Помощник для инвалидов",
+          "text": "На 1 этаже вас встретит специалист и\u00A0проводит до номера.",
+          "checked": false
+        }
       ],
       "isExpandable": false,
       "isRich": true

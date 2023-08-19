@@ -14,20 +14,14 @@ mixin checkbox-list(options = {})
       if options.isExpandable
         span.checkbox-list__arrow.js-checkbox-list__arrow
     ul(class=listClass)
-      each text, index in options.checkboxTexts
+      each state in options.checkboxState
         -
-          const checked = options.checkedItems?.includes(index);
-          let richButtonTitle;
-
-          if (options.richTitles) {
-            richButtonTitle = options.richTitles[index];
-            console.log(richButtonTitle)
-          }
+          const {text, checked, richTitle} = state;
 
         li.checkbox-list__item
           +checkbox-button({
             text,
             checked,
             isRich: options.isRich,
-            richButtonTitle,
+            richButtonTitle: richTitle,
           })
