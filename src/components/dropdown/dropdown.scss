@@ -48,6 +48,7 @@
 
   &__selection {
     @include one-hundred-width-and-height;
+    @include body-font;
 
     display: inline-flex;
     align-items: center;

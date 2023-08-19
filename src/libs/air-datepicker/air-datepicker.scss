@@ -93,6 +93,8 @@
   }
 
   &--cell {
+    @include body-font;
+
     font-size: 12px;
     line-height: 15px;
     text-align: center;
