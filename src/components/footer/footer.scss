@@ -46,6 +46,10 @@
     }
   }
 
+  &__list {
+    @include margin-padding-zero;
+  }
+
   &__list-item  {
     display: block;
     margin-bottom: 20px;

@@ -236,6 +236,8 @@
   }
 
   &__mobile-list {
+    @include margin-padding-zero;
+    
     list-style-type: none;
   }
 

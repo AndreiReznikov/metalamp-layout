@@ -3,6 +3,8 @@
 
 .bullet-list {
   &__list {
+    @include margin-padding-zero;
+    
     list-style-type: none;
   }
 

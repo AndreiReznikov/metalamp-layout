@@ -29,6 +29,8 @@
   }
 
   &__colors-description-list {
+    @include margin-padding-zero;
+
     list-style-type: none;
 
     &__item {
@@ -42,8 +44,9 @@
   }
 
   &__type-description-list {
+    @include margin-padding-zero;
+
     list-style-type: none;
-    padding: 0;
 
     &__item {
       margin-bottom: 51px;

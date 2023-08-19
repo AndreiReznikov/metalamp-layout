@@ -242,6 +242,8 @@
   }
 
   &__advantages-container {
+    @include margin-padding-zero;
+    
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;

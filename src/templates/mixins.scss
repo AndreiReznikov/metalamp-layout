@@ -1,4 +1,6 @@
 @mixin h1() {
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -7,6 +9,8 @@
 }
 
 @mixin h2() {
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -15,6 +19,8 @@
 }
 
 @mixin h3() {
+  @include margin-padding-zero;
+
   font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -29,6 +35,11 @@
   font-weight: normal;
   font-size: 14px;
   color: $dark-shade-75;
+}
+
+@mixin margin-padding-zero() {
+  margin: 0;
+  padding: 0;
 }
 
 @mixin arrow() {
