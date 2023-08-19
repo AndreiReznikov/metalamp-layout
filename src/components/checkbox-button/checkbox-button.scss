@@ -22,16 +22,6 @@
     cursor: pointer;
   }
 
-  &__text_regular {
-    @include width(200px, 240px);
-
-    display: inline-flex;
-    padding-left: 30px;
-    font-size: 12px;
-    line-height: 14px;
-    color: $dark-shade-50;
-  }
-
   &__text-title {
     @include h3;
 
@@ -46,26 +36,21 @@
     padding-left: 30px;
     color: $dark-shade-50;
     line-height: 20px;
+
+    &_regular {
+      @include width(200px, 240px);
+
+      display: inline-flex;
+      padding-left: 30px;
+      font-size: 12px;
+      line-height: 14px;
+      color: $dark-shade-50;
+    }
   }
 
   &__input {
     position: absolute;
     appearance: none;
-  }
-
-  &__input:checked + &__custom-input::after {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 8px;
-    margin: 0 0 2px 1px;
-    border: 1px solid transparent;
-    border-image: $gradient;
-    border-image-slice: 1;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    box-sizing: border-box;
-    z-index: 10;
   }
 
   &__custom-input {
@@ -84,6 +69,21 @@
 
   &__input:not(:checked) ~ &__custom-input {
     border: 1px solid $dark-shade-25;
+  }
+
+  &__input:checked + &__custom-input::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 8px;
+    margin: 0 0 2px 1px;
+    border: 1px solid transparent;
+    border-image: $gradient;
+    border-image-slice: 1;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    z-index: 10;
   }
 
   &__label:hover > &__input:not(:checked) + &__custom-input {

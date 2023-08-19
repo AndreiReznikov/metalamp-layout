@@ -38,10 +38,10 @@
 
   &__username-input-wrapper {
     margin-bottom: 10px;
-  }
 
-  &__username-input-wrapper:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__radio-buttons-container {
@@ -64,10 +64,10 @@
 
   &__entry-data-input-wrapper {
     margin-bottom: 10px;
-  }
 
-  &__entry-data-input-wrapper:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__toggle-button-container {

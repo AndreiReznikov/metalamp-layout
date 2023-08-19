@@ -51,18 +51,17 @@
     outline: none;
     cursor: pointer;
 
-    @include media-max($sm) {
-      padding-left: 10px;
+    &::placeholder {
+      text-transform: uppercase;
     }
-  }
 
-  &__input-from:hover, &__input-to:hover,
-  &__input-from:focus, &__input-to:focus {
+    &:hover, &:focus {
     border: 1px solid $dark-shade-50;
   }
 
-  &__input-from::placeholder, &__input-to::placeholder {
-    text-transform: uppercase;
+    @include media-max($sm) {
+      padding-left: 10px;
+    }
   }
 
   &__arrow {
@@ -73,12 +72,12 @@
     transform: translate(0, -50%);
     pointer-events: none;
 
+    &::after {
+      @include arrow;
+    }
+
     @include media-max($sm) {
       right: 10px;
     }
-  }
-
-  &__arrow::after {
-    @include arrow;
   }
 }

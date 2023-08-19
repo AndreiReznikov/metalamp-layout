@@ -17,12 +17,12 @@
 
     position: relative;
     height: 44px;
-  }
 
-  &__input-container_hidden {
-    @include width(250px, 320px);
+    &_hidden {
+      @include width(250px, 320px);
 
-    opacity: 0;
+      opacity: 0;
+    }
   }
 
   &__input {
@@ -36,16 +36,15 @@
     box-sizing: border-box;
     outline: none;
     cursor: pointer;
-  }
 
-  &__input::placeholder {
-    text-transform: none;
-  }
+    &::placeholder {
+      text-transform: none;
+    }
 
-  &__input:hover,
-  &__input:focus {
-    outline: none;
-    border: 1px solid $dark-shade-50;
+    &:hover, &:focus {
+      outline: none;
+      border: 1px solid $dark-shade-50;
+    }
   }
 
   &__arrow {
@@ -54,9 +53,9 @@
     right: 15px;
     transform: translate(0, -50%);
     pointer-events: none;
-  }
 
-  &__arrow::after {
-    @include arrow;
+    &::after {
+      @include arrow;
+    }
   }
 }

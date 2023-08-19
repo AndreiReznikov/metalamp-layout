@@ -11,16 +11,16 @@
     margin-bottom: 10px;
     padding-left: 20px;
     line-height: 24px;
-  }
 
-  &__item::before {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    margin-top: 8px;
-    left: 0;
-    background: $dark-shade-25;
-    border-radius: 50%;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      left: 0;
+      background: $dark-shade-25;
+      border-radius: 50%;
+    }
   }
 }

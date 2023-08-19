@@ -17,21 +17,21 @@
     background-repeat: no-repeat;
     appearance: none;
     cursor: pointer;
-  }
 
-  &__radio:hover {
-    @include stars-background;
+    &:hover {
+      @include stars-background;
 
-    opacity: 0.5;
-  }
+      opacity: 0.5;
+    }
 
-  &__radio:checked, &__radio:checked ~ &__radio {
-    @include stars-background;
-  }
+    &:checked, &:checked ~ & {
+      @include stars-background;
+    }
 
-  &__radio:hover ~ &__radio {
-    @include stars-background;
+    &:hover ~ & {
+      @include stars-background;
 
-    opacity: 0.5;
+      opacity: 0.5;
+    }
   }
 }

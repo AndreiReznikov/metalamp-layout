@@ -20,6 +20,17 @@
     border-radius: 10px;
     box-sizing: content-box;
     z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin: 0 $circle-margin;
+      background: $dark-shade-25;
+      border-radius: 10px;
+      transition: .4s;
+    }
   }
 
   &__input:checked + &__custom-input {
@@ -38,17 +49,6 @@
   &__input {
     position: absolute;
     appearance: none;
-  }
-
-  &__custom-input::after {
-    position: absolute;
-    content: "";
-    width: 12px;
-    height: 12px;
-    margin: 0 $circle-margin;
-    background: $dark-shade-25;
-    border-radius: 10px;
-    transition: .4s;
   }
 
   &__input:checked + &__custom-input::after {

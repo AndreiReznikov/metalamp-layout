@@ -124,10 +124,10 @@
     display: inline-block;
     text-decoration: none;
     color: $dark-shade-50;
-  }
 
-  &__link:hover {
-    color: $dark-shade-75;
+    &:hover {
+      color: $dark-shade-75;
+    }
   }
 
   &__subscription-title {

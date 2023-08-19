@@ -11,6 +11,15 @@ $types: 'size_l' 520px 24px none,
 
   &__text{
     display: flex;
+
+    @each $name, $width, $font-size, $text-transform, $line-height in $types {
+      &_#{$name} {
+        width: $width;
+        font-size: $font-size;
+        text-transform: $text-transform;
+        line-height: if($line-height, 24px, normal);
+      }
+    }
   }
 
   &__title {
@@ -20,15 +29,5 @@ $types: 'size_l' 520px 24px none,
     color: $dark-shade-25;
     font-weight: normal;
     text-align: right;
-
-  }
-
-  @each $name, $width, $font-size, $text-transform, $line-height in $types {
-    &__text_#{$name} {
-      width: $width;
-      font-size: $font-size;
-      text-transform: $text-transform;
-      line-height: if($line-height, 24px, normal);
-    }
   }
 }

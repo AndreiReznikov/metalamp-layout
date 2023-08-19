@@ -58,18 +58,18 @@
     @include button-arrow;
 
     justify-content: center;
+
+    &::after {
+      @include button-arrow-after(true);
+    }
+
+    &::before {
+      @include button-arrow-before(true);
+    }
   }
 
   &--arrow-prev {
     transform: rotate(180deg);
-  }
-
-  &--arrow-prev::after, &--arrow-next::after {
-    @include button-arrow-after(true);
-  }
-
-  &--arrow-prev::before, &--arrow-next::before {
-    @include button-arrow-before(true);
   }
 
   &--content {
@@ -106,15 +106,15 @@
     border: none;
     background: $gradient;
     border-radius: 22px;
-  }
 
-  &--cell.-range-from-::after {
-    @include one-hundred-width-and-height;
+    &::after {
+      @include one-hundred-width-and-height;
 
-    content: '';
-    position: absolute;
-    border-radius: 22px 0 0 22px;
-    background: $highly-transparent-gradient;
+      content: '';
+      position: absolute;
+      border-radius: 22px 0 0 22px;
+      background: $highly-transparent-gradient;
+    }
   }
 
   &--cell.-range-to- {
@@ -123,15 +123,15 @@
     background: $gradient;
     border: none;
     border-radius: 22px;
-  }
 
-  &--cell.-range-to-::after {
-    @include one-hundred-width-and-height;
+    &::after {
+      @include one-hundred-width-and-height;
 
-    content: '';
-    position: absolute;
-    border-radius: 0 22px 22px 0;
-    background: $highly-transparent-gradient;
+      content: '';
+      position: absolute;
+      border-radius: 0 22px 22px 0;
+      background: $highly-transparent-gradient;
+    }
   }
 
   &--cell.-in-range- {
@@ -143,19 +143,19 @@
     color: #fff;
     font-weight: bold;
     background: $green-blue-gradient;
-  }
 
-  &--cell.-current-.-in-range- {
-    color: #fff;
-    border-radius: 22px;
-  }
+    &.-in-range- {
+      color: #fff;
+      border-radius: 22px;
+    }
 
-  &--cell.-current-.-in-range-::after {
-    @include one-hundred-width-and-height;
+    &.-in-range-::after {
+      @include one-hundred-width-and-height;
 
-    content: '';
-    position: absolute;
-    background: $highly-transparent-gradient;
+      content: '';
+      position: absolute;
+      background: $highly-transparent-gradient;
+    }
   }
 
   &--cell.-disabled- {

@@ -90,20 +90,20 @@
 
   &__information-icon-container {
     position: relative;
-  }
 
-  &__information-icon-container::after {
-    @include h3;
-    @include flex-center;
+    &::after {
+      @include h3;
+      @include flex-center;
 
-    content: 'i';
-    width: 20px;
-    height: 20px;
-    border: 1px solid $dark-shade-25;
-    border-radius: 50%;
-    color: $dark-shade-25;
-    text-transform: none;
-    cursor: pointer;
+      content: 'i';
+      width: 20px;
+      height: 20px;
+      border: 1px solid $dark-shade-25;
+      border-radius: 50%;
+      color: $dark-shade-25;
+      text-transform: none;
+      cursor: pointer;
+    }
   }
 
   &__information-tooltip {
@@ -129,10 +129,10 @@
   &__information-tooltip-link {
     color: $purple;
     text-decoration: none;
-  }
 
-  &__information-tooltip-link:hover {
-    opacity: 0.5;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__total-sum-block {

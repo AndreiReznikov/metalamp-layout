@@ -18,25 +18,25 @@
 
   &__arrow {
     padding: 2px 18px 0 0;
-  }
 
-  &__arrow_transformed {
-    transform: rotateX(180deg);
-  }
+    &_transformed {
+      transform: rotateX(180deg);
+    }
 
-  &__arrow::after {
-    @include arrow;
+    &::after {
+      @include arrow;
+    }
   }
 
   &__list {
     display: none;
+
+    &_opened {
+      display: block;
+    }
   }
 
   &__item {
     list-style-type: none;
-  }
-
-  &__list_opened {
-    display: block;
   }
 }

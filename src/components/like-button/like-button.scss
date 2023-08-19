@@ -22,11 +22,11 @@
     border: 1px solid $dark-shade-25;
     border-radius: 10px;
     cursor: pointer;
-  }
 
-  &__button_liked {
-    border: 1px solid $purple;
-    color: $purple;
+    &_liked {
+      border: 1px solid $purple;
+      color: $purple;
+    }
   }
 
   &__icon {
@@ -36,10 +36,10 @@
     height: 8px;
     margin-right: 2px;
     background-image: url("~/icons/unliked.svg");
-  }
 
-  &__icon_liked {
-    background-image: url("~/icons/liked.svg");
+    &_liked {
+      background-image: url("~/icons/liked.svg");
+    }
   }
 
   &__count {

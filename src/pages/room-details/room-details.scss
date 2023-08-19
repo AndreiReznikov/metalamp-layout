@@ -226,12 +226,12 @@
 
   &__chart-text-number {
     font-size: 24px;
-  }
 
-  &__chart-text-number::-webkit-outer-spin-button,
-  &__chart-text-number::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
   }
 
   &__chart-text-items {

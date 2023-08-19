@@ -47,9 +47,9 @@
   &__data-container {
     display: none;
     width: 100%;
-  }
 
-  &__data-container_visible {
-    display: block;
+    &_visible {
+      display: block;
+    }
   }
 }

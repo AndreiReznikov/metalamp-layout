@@ -19,37 +19,36 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      transform: translateY(-50%);
+      border: 1px solid #fff;
+      border-width: 0 3px 3px 0;
+    }
   }
 
   &__arrow-prev {
     left: 0;
+
+    &::after {
+      left: 18px;
+      transform: rotate(135deg);
+    }
   }
 
   &__arrow-next {
     right: 0;
-  }
 
-  &__arrow-prev::after, &__arrow-next::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    transform: translateY(-50%);
-    border: 1px solid #fff;
-    border-width: 0 3px 3px 0;
-
-  }
-
-  &__arrow-prev::after {
-    left: 18px;
-    transform: rotate(135deg);
-  }
-
-  &__arrow-next::after {
-    right: 18px;
-    transform: rotate(-45deg);
+    &::after {
+      right: 18px;
+      transform: rotate(-45deg);
+    }
   }
 
   &__slider:hover > &__arrow-prev,

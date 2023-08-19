@@ -66,16 +66,14 @@
     @include button-arrow;
 
     justify-content: center;
-  }
 
-  & &-pages li.paginationjs-next a::after,
-  & &-pages li.paginationjs-prev a::after {
-    @include button-arrow-after;
-  }
+    &::after {
+      @include button-arrow-after;
+    }
 
-  & &-pages li.paginationjs-next a::before,
-  & &-pages li.paginationjs-prev a::before {
-    @include button-arrow-before;
+    &::before {
+      @include button-arrow-before;
+    }
   }
 
   & &-pages li.paginationjs-prev a::before {

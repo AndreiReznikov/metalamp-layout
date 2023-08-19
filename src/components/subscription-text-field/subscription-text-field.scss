@@ -25,25 +25,25 @@
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
     box-sizing: border-box;
-  }
 
-  &__input:focus {
-    outline: none;
-  }
+    &::placeholder {
+      color: $dark-shade-25;
+    }
 
-  &__input:disabled {
-    color: $dark-shade-5;
-    border: 1px solid $dark-shade-5;
-    cursor: default;
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      color: $dark-shade-5;
+      border: 1px solid $dark-shade-5;
+      cursor: default;
+    }
   }
 
   &__input:hover, &__input:focus,
   &__button:hover + &__input {
     border: 1px solid $dark-shade-50;
-  }
-
-  &__input::placeholder {
-    color: $dark-shade-25;
   }
 
   &__button {
@@ -60,13 +60,13 @@
     @include button-arrow;
 
     justify-content: center;
-  }
 
-  &__arrow::after {
-    @include button-arrow-after(true);
-  }
+    &::after {
+      @include button-arrow-after(true);
+    }
 
-  &__arrow::before {
-    @include button-arrow-before(true);
+    &::before {
+      @include button-arrow-before(true);
+    }
   }
 }

@@ -56,26 +56,26 @@
   &__list-item {
     position: relative;
     padding-left: 20px;
-  }
 
-  &__list-item:first-child {
-    padding: 0;
+    &:first-child {
+      padding: 0;
+    }
   }
 
   &__list-arrow {
     display: inline-block;
     margin: 0 9px;
     transition: 0.4s;
-  }
 
-  &__list-arrow::after {
-    @include arrow;
+    &::after {
+      @include arrow;
 
-    margin-bottom: 3px;
-  }
+      margin-bottom: 3px;
+    }
 
-  &__list-arrow_transformed {
-    transform: rotate(180deg);
+    &_transformed {
+      transform: rotate(180deg);
+    }
   }
 
   &__expanded-menu {
@@ -90,18 +90,18 @@
     box-shadow: 0 4px 12px 3px $dark-shade-25;
     box-sizing: border-box;
     z-index: 100;
-  }
 
-  &__expanded-menu::after {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 25px;
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
-    transform: rotate(45deg);
-    z-index: 101;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 25px;
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      z-index: 101;
+    }
   }
 
   &__expanded-menu-list {
@@ -116,11 +116,10 @@
   &__expanded-menu-link, &__list-link {
     color: $dark-shade-50;
     text-decoration: none;
-  }
 
-  &__expanded-menu-link:hover,
-  &__list-link:hover {
+    &:hover {
     color: $dark-shade-75;
+  }
   }
 
   &__buttons-container {
@@ -136,10 +135,10 @@
     border-left: 1px solid $dark-shade-10;
     color: $dark-shade-50;
     cursor: pointer;
-  }
 
-  &__user-name:hover {
-    color: $dark-shade-75;
+    &:hover {
+      color: $dark-shade-75;
+    }
   }
 
   &__burger-container {
@@ -159,45 +158,45 @@
     width: 35px;
     height: 2px;
     background-color: $dark-shade-50;
-  }
 
-  &__burger::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    width: 35px;
-    height: 2px;
-    background-color:$dark-shade-50;
-    transition: 0.6s;
-  }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 35px;
+      height: 2px;
+      background-color:$dark-shade-50;
+      transition: 0.6s;
+    }
 
-  &__burger::before {
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    width: 35px;
-    height: 2px;
-    background-color:$dark-shade-50;
-    transition: 0.6s;
-  }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      width: 35px;
+      height: 2px;
+      background-color:$dark-shade-50;
+      transition: 0.6s;
+    }
 
-  &__burger_transformed {
-    height: 0;
-  }
+    &_transformed {
+      height: 0;
+    }
 
-  &__burger_transformed::after, &__burger_transformed::before {
-    transform: rotate(45deg);
-    top: 0;
-    bottom: 0;
-    transition: 0.6s;
-  }
+    &_transformed::after, &_transformed::before {
+      transform: rotate(45deg);
+      top: 0;
+      bottom: 0;
+      transition: 0.6s;
+    }
 
-  &__burger_transformed::after {
-    transform: rotate(45deg);
-  }
+    &_transformed::after {
+      transform: rotate(45deg);
+    }
 
-  &__burger_transformed::before {
-    transform: rotate(-45deg);
+    &_transformed::before {
+      transform: rotate(-45deg);
+    }
   }
 
   &__mobile-menu {
@@ -214,15 +213,15 @@
     box-sizing: border-box;
     z-index: 200;
 
+    &_visible {
+      right: 0;
+      visibility: visible;
+    }
+
     @include media-max($sm) {
       width: 100%;
       right: 100%;
     }
-  }
-
-  &__mobile-menu_visible {
-    right: 0;
-    visibility: visible;
   }
 
   &__mobile-buttons-container {
@@ -260,14 +259,14 @@
     right: 0;
     object-fit: cover;
     transition: 0.4s;
-  }
 
-  &__mobile-list-arrow::after {
-    @include arrow;
-  }
+    &::after {
+      @include arrow;
+    }
 
-  &__mobile-list-arrow_transformed {
-    transform: rotate(180deg);
+    &_transformed {
+      transform: rotate(180deg);
+    }
   }
 
   &__mobile-expanded-list {
@@ -277,10 +276,10 @@
 
   &__mobile-expanded-list-item {
     margin: 20px;
-  }
 
-  &__mobile-expanded-list-item:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__mobile-expanded-list-link {
