@@ -47,7 +47,6 @@
   }
 
   &__selection {
-    @include body-font;
     @include one-hundred-width-and-height;
 
     display: inline-flex;

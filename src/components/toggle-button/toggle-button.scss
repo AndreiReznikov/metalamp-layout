@@ -2,8 +2,6 @@
 @import '~constants/consts';
 
 .toggle-button {
-  @include body-font;
-
   display: flex;
   align-items: center;
   position: relative;

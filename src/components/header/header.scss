@@ -46,8 +46,6 @@
   }
 
   &__menu-list {
-    @include body-font;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -134,8 +132,6 @@
   }
 
   &__user-name {
-    @include body-font;
-
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -256,8 +252,6 @@
   }
 
   &__mobile-list-link {
-    @include body-font;
-
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -296,8 +290,6 @@
   }
 
   &__mobile-expanded-list-link {
-    @include body-font;
-
     font-size: 20px;
     color: $dark-shade-50;
     text-decoration: none;

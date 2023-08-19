@@ -3,7 +3,7 @@
 
 .comment {
   @include width(280px, 711px);
-  
+
   &__user-wrapper {
     display: flex;
   }
@@ -34,8 +34,6 @@
   }
 
   &__date {
-    @include body-font;
-
     line-height: 24px;
   }
 
@@ -49,8 +47,6 @@
   }
 
   &__text {
-    @include body-font;
-
     padding-left: 15px;
     line-height: 24px;
   }

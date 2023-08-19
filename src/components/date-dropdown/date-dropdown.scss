@@ -41,7 +41,6 @@
   }
 
   &__input-from, &__input-to {
-    @include body-font;
     @include width(100px, 150px);
 
     min-height: 44px;
@@ -64,8 +63,6 @@
   }
 
   &__input-from::placeholder, &__input-to::placeholder {
-    @include body-font;
-
     text-transform: uppercase;
   }
 

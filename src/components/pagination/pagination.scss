@@ -38,8 +38,6 @@
   }
 
   &__text {
-    @include body-font;
-
     position: absolute;
     min-width: 200px;
     margin-top: 50px;

@@ -92,8 +92,6 @@
   }
 
   &__login-text {
-    @include body-font;
-
     @include media-max($sm) {
       width: 100%;
       margin-bottom: 20px;

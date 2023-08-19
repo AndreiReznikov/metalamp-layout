@@ -6,8 +6,6 @@
   flex-wrap: wrap;
 
   &__label {
-    @include body-font;
-
     display: flex;
     align-items: center;
     margin-right: 20px;

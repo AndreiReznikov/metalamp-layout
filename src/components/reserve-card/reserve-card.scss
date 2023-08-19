@@ -45,8 +45,6 @@
   }
 
   &__price {
-    @include body-font;
-
     padding-top: 4px;
     font-weight: bold;
     line-height: 18px;
@@ -71,8 +69,6 @@
   }
 
   &__price-block {
-    @include body-font;
-
     margin-top: 20px;
     line-height: 20px;
   }

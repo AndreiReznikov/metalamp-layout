@@ -11,8 +11,6 @@
   }
 
   & &-pages li > a {
-    @include body-font;
-
     display: flex;
     justify-content: center;
     width: 40px;
@@ -99,8 +97,6 @@
   }
 
   & &-nav {
-    @include body-font;
-
     position: absolute;
   }
 }

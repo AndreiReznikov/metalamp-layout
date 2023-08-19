@@ -51,8 +51,6 @@
   }
 
   &__list-item  {
-    @include body-font;
-
     display: block;
     margin-bottom: 20px;
     line-height: 17px;
@@ -79,8 +77,6 @@
   }
 
   &__first-section-text {
-    @include body-font;
-
     margin-top: 13px;
     line-height: 24px;
   }
@@ -147,8 +143,6 @@
   }
 
   &__subscription-text {
-    @include body-font;
-
     margin: 16px 0 22px;
     line-height: 24px;
     cursor: default;
@@ -167,17 +161,13 @@
     }
   }
 
-  &__copyright-text {
-    @include body-font;
-  }
-
   &__social-icons-container {
     padding: 2px 2px 0 0;
   }
 
   &__mobile {
     @include width(320px, $md);
-    
+
     flex: 0 0 auto;
     flex-direction: column;
     display: none;
@@ -189,8 +179,6 @@
     }
 
     &-text {
-      @include body-font;
-
       margin: 23px 0;
       line-height: 17px;
       text-align: center;

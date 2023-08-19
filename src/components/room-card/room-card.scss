@@ -77,8 +77,6 @@
   }
 
   &__number-symbol::after {
-    @include body-font;
-
     content: '№';
     font-weight: bold;
     color: $dark-shade-100;
@@ -94,8 +92,6 @@
   }
 
   &__price {
-    @include body-font;
-
     display: inline-block;
     padding-bottom: 1px;
     font-weight: bold;
@@ -114,8 +110,6 @@
   }
 
   &__reviews-number {
-    @include body-font;
-
     font-weight: bold;
     color: $dark-shade-50;
   }

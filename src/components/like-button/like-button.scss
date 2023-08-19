@@ -44,8 +44,6 @@
   }
 
   &__count {
-    @include body-font;
-
     color: $dark-shade-25;
     font-size: 10px;
   }

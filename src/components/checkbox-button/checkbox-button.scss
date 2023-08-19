@@ -24,7 +24,6 @@
 
   &__text_regular {
     @include width(200px, 240px);
-    @include body-font;
 
     display: inline-flex;
     padding-left: 30px;
@@ -43,8 +42,6 @@
   }
 
   &__text {
-    @include body-font;
-
     max-width: 192px;
     padding-left: 30px;
     color: $dark-shade-50;
