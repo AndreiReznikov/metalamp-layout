@@ -82,7 +82,7 @@ class Dropdown {
       }
     };
 
-    this.$document.click(handleDocumentToggleMenu);
+    this.$document.on('click', handleDocumentToggleMenu);
   }
 
   _openMenuDefault() {
@@ -187,9 +187,9 @@ class Dropdown {
           setSumToData(totalSum);
         };
 
-        $minus.click(handleMinusDecrementValue);
-        $plus.click(handlePlusIncrementValue);
-        $clearButton.click(handleClearButtonClearCount);
+        $minus.on('click', handleMinusDecrementValue);
+        $plus.on('click', handlePlusIncrementValue);
+        $clearButton.on('click', handleClearButtonClearCount);
       });
     });
   }

@@ -121,11 +121,15 @@ class SearchRoom {
   }
 
   _preventDefault() {
-    $(document).ready(() => {
-      this.$imageContainer = $('.room-card__image-container');
+    this.$imageContainer = $('.room-card__image-container');
 
-      this.$imageContainer.click((event) => event.preventDefault());
-    });
+    const bindPreventDefault = () => {
+      const callPreventDefault = (event) => event.preventDefault();
+
+      this.$imageContainer.on('click', callPreventDefault);
+    };
+
+    $(document).on('ready', bindPreventDefault());
   }
 
   _findElements() {

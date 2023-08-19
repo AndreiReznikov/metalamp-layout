@@ -2,7 +2,7 @@ import consts from '~constants/consts';
 
 import Dropdown from './Dropdown';
 
-$(document).ready(() => {
+const initializeDropdowns = () => {
   const dropdownGuests = new Dropdown(
     '.js-dropdown__wrapper_guests',
     consts.setSelectionGuestsText,
@@ -18,4 +18,6 @@ $(document).ready(() => {
   );
 
   dropdownConveniences.init();
-});
+};
+
+$(document).on('ready', initializeDropdowns());

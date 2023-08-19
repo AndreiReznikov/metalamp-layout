@@ -23,7 +23,7 @@ class CheckboxList {
         $arrow.toggleClass('checkbox-list__arrow_transformed');
       };
 
-      $title.click(handleTitleToggleList);
+      $title.on('click', handleTitleToggleList);
     });
   }
 

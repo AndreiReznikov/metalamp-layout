@@ -1,6 +1,8 @@
 import Header from './Header';
 
-$(document).ready(() => {
+const initializeHeader = () => {
   const header = new Header();
   header.init();
-});
+};
+
+$(document).on('ready', initializeHeader());

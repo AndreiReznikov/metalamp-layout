@@ -1,6 +1,8 @@
 import CheckboxList from './CheckboxList';
 
-$(document).ready(() => {
+const initializeCheckboxList = () => {
   const checkboxList = new CheckboxList();
   checkboxList.init();
-});
+};
+
+$(document).on('ready', initializeCheckboxList());

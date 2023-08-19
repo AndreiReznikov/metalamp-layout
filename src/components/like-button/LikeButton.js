@@ -32,7 +32,7 @@ class LikeButton {
         $icon.toggleClass('like-button__icon_liked');
       };
 
-      $button.click(handleButtonToggleLike);
+      $button.on('click', handleButtonToggleLike);
     });
   }
 }

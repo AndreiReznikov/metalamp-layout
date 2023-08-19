@@ -47,7 +47,7 @@ class AirDatepicker {
           $calendar.removeClass('datepicker_size_s');
         }
 
-        $calendar.click(handleCalendarSetCellHeight);
+        $calendar.on('click', handleCalendarSetCellHeight);
 
         handleCalendarCalculateCellHeight();
         handleCalendarSetCellHeight();
@@ -147,8 +147,8 @@ class AirDatepicker {
 
         const handleDateFromOrDateToShowDatepicker = () => datepicker.show();
 
-        $dateFrom.click(handleDateFromOrDateToShowDatepicker);
-        $dateTo.click(handleDateFromOrDateToShowDatepicker);
+        $dateFrom.on('click', handleDateFromOrDateToShowDatepicker);
+        $dateTo.on('click', handleDateFromOrDateToShowDatepicker);
       });
     }
   }
@@ -249,7 +249,7 @@ class AirDatepicker {
         datepicker.hide();
       };
 
-      $applyButton.click(handleApplyButtonHideDatepicker);
+      $applyButton.on('click', handleApplyButtonHideDatepicker);
     });
   }
 

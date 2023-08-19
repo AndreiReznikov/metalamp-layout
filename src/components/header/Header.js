@@ -95,7 +95,7 @@ class Header {
         }
       };
 
-      this.$document.click(handleDocumentToggleMenu);
+      this.$document.on('click', handleDocumentToggleMenu);
     });
   }
 
@@ -116,7 +116,7 @@ class Header {
         $scrim.toggle();
       };
 
-      $burgerContainer.click(handleBurgerContainerToggleMobileMenu);
+      $burgerContainer.on('click', handleBurgerContainerToggleMobileMenu);
     });
   }
 }
