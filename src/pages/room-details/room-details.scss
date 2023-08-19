@@ -21,10 +21,6 @@
 
   background-color: #fff;
 
-  &__body {
-    @include margin-padding-zero;
-  }
-
   &_non-scrollable {
     position: fixed;
     overflow: hidden;
@@ -148,8 +144,6 @@
   }
 
   &__advantages-wrapper {
-    @include margin-padding-zero;
-
     max-width: 320px;
   }
 
@@ -251,10 +245,6 @@
     @include media-max($lg) {
       width: 100%;
     }
-  }
-
-  &__comments-list {
-    @include margin-padding-zero;
   }
 
   &__comment-item {

@@ -9,10 +9,6 @@
   color: $dark-shade-100;
   background-color: #fff;
 
-  &__body {
-    @include margin-padding-zero;
-  }
-
   &__container {
     max-width: $max-width;
     margin: 0 auto;
@@ -33,8 +29,6 @@
   }
 
   &__colors-description-list {
-    @include margin-padding-zero;
-
     list-style-type: none;
 
     &__item {

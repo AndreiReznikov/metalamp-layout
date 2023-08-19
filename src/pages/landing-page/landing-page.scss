@@ -17,10 +17,6 @@
 
   background-color: #fff;
 
-  &__body {
-    @include margin-padding-zero;
-  }
-
   &_non-scrollable {
     position: fixed;
     overflow: hidden;

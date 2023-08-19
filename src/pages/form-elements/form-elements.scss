@@ -29,10 +29,6 @@
   color: $dark-shade-100;
   background-color: #fff;
 
-  &__body {
-    @include margin-padding-zero;
-  }
-
   &__container {
     max-width: $max-width;
     margin: 0 auto;
@@ -246,8 +242,6 @@
   }
 
   &__advantages-container {
-    @include margin-padding-zero;
-
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;

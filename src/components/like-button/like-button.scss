@@ -15,7 +15,6 @@
   }
 
   &__button {
-    @include margin-padding-zero;
     @include width(40px, 100%);
 
     min-height: 20px;

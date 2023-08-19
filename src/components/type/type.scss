@@ -10,10 +10,7 @@ $types: 'size_l' 520px 24px none,
   font-family: Montserrat, Arial, sans-serif;
 
   &__text{
-    @include margin-padding-zero;
-
     display: flex;
-
   }
 
   &__title {

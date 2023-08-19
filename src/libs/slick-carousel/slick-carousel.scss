@@ -38,8 +38,6 @@
 }
 
 .slick-dots li button {
-  @include margin-padding-zero;
-
   width: 8px;
   height: 8px;
   border: 1px solid #fff;
