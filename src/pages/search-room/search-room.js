@@ -117,7 +117,7 @@ class SearchRoom {
 
   _toggleFilterItems() {
     const showFilterItems = () => this.$filterItems.toggle();
-    this.$filterButton.click(showFilterItems);
+    this.$filterButton.on('click', showFilterItems);
   }
 
   _preventDefault() {

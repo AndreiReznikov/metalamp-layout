@@ -92,10 +92,10 @@
     border-top: none;
     border-radius: 0 0 4px 4px;
     box-sizing: border-box;
+  }
 
-    &_visible {
-      display: block;
-    }
+  &__wrapper_opened > &__menu {
+    display: block;
   }
 
   &__selection-container:hover ~ &__menu {

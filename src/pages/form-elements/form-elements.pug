@@ -119,12 +119,11 @@ block content
 
     .form-elements__central-block
       .form-elements__checkbox-buttons-container
-          - const { listTitle, checkboxState, isExpandable, isOpened } = data.checkboxes;
+          - const { listTitle, checkboxState, isExpandable } = data.checkboxes;
           +checkbox-list({
             title: listTitle,
             checkboxState,
             isExpandable,
-            isOpened,
           })
 
       .form-elements__radio-buttons-container

@@ -10,7 +10,7 @@ mixin checkbox-list(options = {})
   .checkbox-list.js-checkbox-list
     h3(class=titleClass)=options.title
       if options.isExpandable
-        span.checkbox-list__arrow.js-checkbox-list__arrow
+        span.checkbox-list__arrow
     ul.checkbox-list__list
       each state in options.checkboxState
         -

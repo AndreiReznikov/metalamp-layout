@@ -51,15 +51,14 @@ block content
             p.search-room__slider-sub-text Стоимость за сутки пребывания в номере
           .search-room__checkbox-buttons-container
             .search-room__checkbox-buttons-wrapper
-              //- -
-              //-   const { checkboxState, isExpandable, isOpened } = data.checkboxes;
+              -
+                const { checkboxState, isExpandable } = data.checkboxes;
 
-              //- +checkbox-list({
-              //-   title: 'Правила дома',
-              //-   checkboxState,
-              //-   isExpandable,
-              //-   isOpened,
-              //- })
+              +checkbox-list({
+                title: 'Правила дома',
+                checkboxState,
+                isExpandable,
+              })
 
           .search-room__rich-checkbox-buttons-container
             .search-room__rich-checkbox-buttons-wrapper
