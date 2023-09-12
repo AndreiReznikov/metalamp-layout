@@ -84,36 +84,7 @@ block content
                 size: 'S',
               })
           .search-room__checkbox-list-container
-            +checkbox-list({
-              title: 'Дополнительные удобства',
-              isExpandable: true,
-              checkboxState: [
-                {
-                  text: 'Завтрак',
-                  checked: false,
-                },
-                {
-                  text: 'Письменный стол',
-                  checked: false,
-                },
-                {
-                  text: 'Стул для кормления',
-                  checked: false,
-                },
-                {
-                  text: 'Кроватка',
-                  checked: false,
-                },
-                {
-                  text: 'Телевизор',
-                  checked: false,
-                },
-                {
-                  text: 'Шампунь',
-                  checked: false,
-                },
-              ],
-            })
+            +checkbox-list(data.expandableCheckbox)
 
     section.search-room__cards-container
       h1.search-room__title Номера, которые мы для вас подобрали

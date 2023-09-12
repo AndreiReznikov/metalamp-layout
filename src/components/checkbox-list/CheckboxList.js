@@ -6,7 +6,7 @@ class CheckboxList {
 
   _findElements() {
     this.$listsCollection = $('.js-checkbox-list');
-    this.$openedListsCollection = $('.js-checkbox-list__title_expandable.js-checkbox-list__title_opened');
+    this.$openedListsCollection = $('.js-checkbox-list__title_expandable.checkbox-list__title_opened');
   }
 
   _toggleLists() {
@@ -15,7 +15,7 @@ class CheckboxList {
 
       const $title = $expandableList.find('.js-checkbox-list__title_expandable');
 
-      const handleTitleToggleList = () => $title.toggleClass('js-checkbox-list__title_opened');
+      const handleTitleToggleList = () => $title.toggleClass('checkbox-list__title_opened');
 
       $title.on('click', handleTitleToggleList);
     });

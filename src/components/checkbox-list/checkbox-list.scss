@@ -24,7 +24,7 @@
     }
   }
 
-  &__title_expandable.js-checkbox-list__title_opened > &__arrow {
+  &__title_expandable.checkbox-list__title_opened > &__arrow {
     transform: rotateX(180deg);
   }
 
@@ -36,7 +36,7 @@
     display: none;
   }
 
-  &__title_expandable.js-checkbox-list__title_opened + &__list {
+  &__title_expandable.checkbox-list__title_opened + &__list {
     display: block;
   }
 

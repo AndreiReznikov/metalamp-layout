@@ -18,6 +18,36 @@
       "isRich": true
     }
   ],
+  "expandableCheckbox": {
+    "title": "Дополнительные удобства",
+    "isExpandable": true,
+    "checkboxState": [
+      {
+        "text": "Завтрак",
+        "checked": false
+      },
+      {
+        "text": "Письменный стол",
+        "checked": false
+      },
+      {
+        "text": "Стул для кормления",
+        "checked": false
+      },
+      {
+        "text": "Кроватка",
+        "checked": false
+      },
+      {
+        "text": "Телевизор",
+        "checked": false
+      },
+      {
+        "text": "Шампунь",
+        "checked": false
+      }
+    ]
+  },
   "checkboxes": {
     "listTitle": "Checkbox buttons",
     "checkboxState": [
