@@ -20,4 +20,4 @@ const initializeDropdowns = () => {
   dropdownConveniences.init();
 };
 
-$(document).on('ready', initializeDropdowns());
+document.addEventListener('DOMContentLoaded', initializeDropdowns());

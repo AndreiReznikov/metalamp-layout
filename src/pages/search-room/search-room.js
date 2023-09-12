@@ -129,7 +129,7 @@ class SearchRoom {
       this.$imageContainer.on('click', callPreventDefault);
     };
 
-    $(document).on('ready', bindPreventDefault());
+    document.addEventListener('DOMContentLoaded', bindPreventDefault());
   }
 
   _findElements() {

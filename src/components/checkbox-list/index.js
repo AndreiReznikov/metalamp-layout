@@ -5,4 +5,4 @@ const initializeCheckboxList = () => {
   checkboxList.init();
 };
 
-$(document).on('ready', initializeCheckboxList());
+document.addEventListener('DOMContentLoaded', initializeCheckboxList());
