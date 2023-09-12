@@ -105,6 +105,8 @@
   }
 
   &__expanded-menu-list {
+    @include margin-padding-zero;
+
     list-style-type: none;
   }
 
@@ -181,21 +183,21 @@
 
     &_transformed {
       height: 0;
-    }
 
-    &_transformed::after, &_transformed::before {
-      transform: rotate(45deg);
-      top: 0;
-      bottom: 0;
-      transition: 0.6s;
-    }
+      &::after, &::before {
+        transform: rotate(45deg);
+        top: 0;
+        bottom: 0;
+        transition: 0.6s;
+      }
 
-    &_transformed::after {
-      transform: rotate(45deg);
-    }
+      &::after {
+        transform: rotate(45deg);
+      }
 
-    &_transformed::before {
-      transform: rotate(-45deg);
+      &::before {
+        transform: rotate(-45deg);
+      }
     }
   }
 
@@ -237,7 +239,7 @@
 
   &__mobile-list {
     @include margin-padding-zero;
-    
+
     list-style-type: none;
   }
 
@@ -272,6 +274,8 @@
   }
 
   &__mobile-expanded-list {
+    @include margin-padding-zero;
+
     display: none;
     list-style-type: none;
   }
