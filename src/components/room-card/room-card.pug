@@ -15,11 +15,7 @@ mixin room-card(options = {})
         span.room-card__number-symbol
         span.room-card__room-number=' ' + options.number
         if options.isLux
-          .room-card__lux-mark
-            +button({
-              borderlessButton: true,
-              text: 'Люкс',
-            })
+          .room-card__lux-mark Люкс
       .room-card__price-container
         span.room-card__price=price
           span.room-card__currency &#8381;

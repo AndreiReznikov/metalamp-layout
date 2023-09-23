@@ -40,8 +40,11 @@
   }
 
   &__lux-mark {
+    @include h3;
+
     display: inline-block;
     margin-left: 6px;
+    color: $purple;
   }
 
   &__price {
@@ -102,7 +105,6 @@
       border-radius: 50%;
       color: $dark-shade-25;
       text-transform: none;
-      cursor: pointer;
     }
   }
 

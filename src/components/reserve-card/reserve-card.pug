@@ -9,11 +9,7 @@ mixin reserve-card(options = {})
         .reserve-card__number-and-price-container
           h1.reserve-card__number-symbol №
             span.reserve-card__room-number=' ' + options.roomNumber
-            span.reserve-card__lux-mark
-              +button({
-                borderlessButton: true,
-                text: 'Люкс',
-              })
+            span.reserve-card__lux-mark Люкс
           span.reserve-card__price=options.price
             span.reserve-card__currency &#8381;
             span.reserve-card__time-interval=' ' + 'в сутки'
