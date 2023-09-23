@@ -9,9 +9,6 @@ class LikeButton {
   }
 
   _toggleButtons() {
-    const unlikeIcon = '~img/unliked.svg';
-    const likeIcon = '~img/liked.svg';
-
     this.$likeButtonsCollection.each(function toggleButtons() {
       const $this = $(this);
       const $button = $this.find('.js-like-button__button');
@@ -23,10 +20,8 @@ class LikeButton {
       const handleButtonToggleLike = () => {
         if ($button.hasClass('like-button__button_liked')) {
           $count.text(countValue -= 1);
-          $icon.css('background-image', unlikeIcon);
         } else {
           $count.text(countValue += 1);
-          $icon.css('background-image', likeIcon);
         }
         $button.toggleClass('like-button__button_liked');
         $icon.toggleClass('like-button__icon_liked');
