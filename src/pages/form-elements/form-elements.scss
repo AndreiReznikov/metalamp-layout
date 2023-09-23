@@ -31,8 +31,10 @@
 
   &__container {
     max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px
   }
 
   &__logo-container {
@@ -153,7 +155,8 @@
     display: flex;
     justify-content: space-between;
     width: 260px;
-    margin: 18px 0 0 2px;
+    margin-top: 18px;
+    margin-left: 2px;
   }
 
   &__dropdown-fourth-container {
@@ -243,7 +246,7 @@
 
   &__advantages-container {
     @include margin-padding-zero;
-    
+
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -256,6 +259,7 @@
   }
 
   &__comment-container {
-    margin: 7px 0 0 166px;
+    margin-top: 7px;
+    margin-left: 166px;
   }
 }

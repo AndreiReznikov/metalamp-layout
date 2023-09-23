@@ -94,9 +94,9 @@
   &__main-container {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 0 auto;
     max-width: $max-width;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     padding: 70px 140px 62px;
     border-bottom: 1px solid $dark-shade-5;
 
@@ -145,7 +145,7 @@
 
   &__advantages-wrapper {
     @include margin-padding-zero;
-    
+
     max-width: 320px;
   }
 
@@ -174,7 +174,8 @@
   }
 
   &__doughnut-title-container {
-    margin: 0 0 16px 22px;
+    margin-bottom: 16px;
+    margin-left: 22px;
 
     @include media-max($xl) {
       margin-left: 0;
@@ -262,7 +263,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0 2px 23px 0;
+    margin-right: 2px;
+    margin-bottom: 23px;
 
     @include media-max($lg) {
       flex-direction: column;
@@ -348,7 +350,8 @@
   }
 
   &__bullet-list-title-container {
-    margin: 0 0 18px 20px;
+    margin-bottom: 18px;
+    margin-left: 20px;
   }
 
   &__bullet-list-wrapper {

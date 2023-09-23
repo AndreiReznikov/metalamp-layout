@@ -18,10 +18,14 @@
   &__title {
     @include h1;
 
-    margin: 36px 25px 0;
+    margin-top: 36px;
+    margin-right: 25px;
+    margin-left: 25px;
 
     @include media-max($sm) {
-      margin: 39px 10px 0;
+      margin-top: 39px;
+      margin-right: 10px;
+      margin-left: 10px;
       font-size: 20px;
       text-align: center;
     }
@@ -31,19 +35,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   &__date-dropdown-container,
   &__guests-dropdown-container {
     @include flex-center;
 
-    margin: 0 15px;
+    margin-right: 15px;
+    margin-left: 15px;
     width: 100%;
   }
 
   &__guests-dropdown-container {
-    margin: 22px 10px 0;
+    margin-top: 22px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   &__long-button-container {

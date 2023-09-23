@@ -32,7 +32,6 @@
   &__background-container {
     @include background-position(cover);
 
-    flex: 1 0 auto;
     position: relative;
     background-image: url('~img/landing-background.jpg');
 
@@ -45,8 +44,10 @@
   &__background-wrapper {
     max-width: $max-width;
     min-height: 830px;
-    padding: 0 140px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 140px;
+    padding-left: 140px;
 
 
     @include media-max($md) {

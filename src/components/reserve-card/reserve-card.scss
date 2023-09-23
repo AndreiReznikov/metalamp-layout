@@ -147,7 +147,8 @@
 
   &__dotted-border {
     flex: 1;
-    margin: 0 5px;
+    margin-right: 5px;
+    margin-left: 5px;
     height: 18px;
     border-bottom: dotted 1px $dark-shade-25;
   }

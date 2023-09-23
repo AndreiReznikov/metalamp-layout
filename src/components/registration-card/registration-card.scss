@@ -16,7 +16,9 @@
   &__title {
     @include h1;
 
-    margin: 40px 29px 0;
+    margin-top: 40px;
+    margin-right: 29px;
+    margin-left: 29px;
 
     @include media-max($sm) {
       text-align: center;
@@ -24,7 +26,9 @@
     }
 
     @include media-max($sm) {
-      margin: 39px 5px 0;
+      margin-top: 39px;
+      margin-right: 5px;
+      margin-left: 5px;
     }
   }
 

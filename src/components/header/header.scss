@@ -17,7 +17,8 @@
 
     max-width: $max-width;
     min-height: 70px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     padding: 10px 140px;
     box-sizing: border-box;
 
@@ -56,15 +57,12 @@
   &__list-item {
     position: relative;
     padding-left: 20px;
-
-    &:first-child {
-      padding: 0;
-    }
   }
 
   &__list-arrow {
     display: inline-block;
-    margin: 0 9px;
+    margin-right: 9px;
+    margin-left: 9px;
     transition: 0.4s;
 
     &::after {
@@ -111,7 +109,8 @@
   }
 
   &__expanded-menu-item {
-    margin: 35px 0;
+    margin-top: 35px;
+    margin-bottom: 35px;
     text-align: center;
   }
 

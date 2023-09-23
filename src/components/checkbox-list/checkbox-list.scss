@@ -17,7 +17,8 @@
   }
 
   &__arrow {
-    padding: 2px 18px 0 0;
+    padding-top: 2px;
+    padding-right: 18px;
     pointer-events: none;
 
     &::after {

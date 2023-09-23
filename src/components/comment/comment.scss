@@ -25,7 +25,7 @@
 
   &__username {
     @include h3;
-    
+
     line-height: 24px;
     font-size: 14px;
     color: $dark-shade-75;
@@ -38,7 +38,8 @@
 
   &__comment-wrapper {
     display: flex;
-    margin: 9px 0 0 4px;
+    margin-top: 9px;
+    margin-left: 4px;
   }
 
   &__like-button-wrapper {

@@ -40,15 +40,19 @@
   &__container  {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 0 auto;
     max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 130px 104px 140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 130px;
+    padding-bottom: 104px;
+    padding-left: 140px;
     border-bottom: 1px solid $dark-shade-5;
 
 
     @include media-max($xl) {
-      padding: 0 15px 100px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 100px;
     }
   }
 
@@ -80,7 +84,8 @@
 
     width: 15px;
     height: 15px;
-    margin: 2px 5px 0 0;
+    margin-top: 2px;
+    margin-right: 5px;
     background-image: url('~/icons/filter.svg');
   }
 
@@ -118,7 +123,6 @@
     width: 266px;
 
     @include media-max($xl) {
-      margin-top: 0;
       order: 0;
     }
 
@@ -241,7 +245,8 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: 32px 0 0 58px;
+    margin-top: 32px;
+    margin-left: 58px;
     flex: 6;
 
     @include media-max($xl) {
@@ -264,16 +269,10 @@
     }
   }
 
-  &.pagination-list {
+  .pagination__list {
+    justify-content: space-evenly;
     margin-bottom: 36px;
-
-    @include media-max($xxl) {
-      justify-content: space-evenly;
-    }
-  }
-
-  &.pagination-container {
-    margin-right: 10px;
+    padding: 0;
   }
 
   &__pagination-container {

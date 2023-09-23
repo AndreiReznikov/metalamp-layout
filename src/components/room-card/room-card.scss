@@ -70,7 +70,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 20px 20px 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
     padding-bottom: 11px;
     border-bottom: 1px solid $dark-shade-10;
   }
@@ -105,7 +107,9 @@
   &__rate {
     @include flex-between-center;
 
-    margin: 10px 21px 0;
+    margin-top: 10px;
+    margin-right: 21px;
+    margin-left: 21px;
   }
 
   &__reviews-number {

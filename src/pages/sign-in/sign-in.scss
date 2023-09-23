@@ -30,7 +30,6 @@
   &__background-container {
     @include flex-center;
 
-    flex: 1 0 auto;
     min-height: 702px;
     background: url('~img/sign-in-background.jpg');
 
@@ -42,6 +41,7 @@
   }
 
   &__card-wrapper {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }

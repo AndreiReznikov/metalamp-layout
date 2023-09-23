@@ -25,7 +25,8 @@
   &__text-title {
     @include h3;
 
-    padding: 0 0 6px 30px;
+    padding-bottom: 6px;
+    padding-left: 30px;
     font-size: 14px;
     text-transform: none;
     color: $dark-shade-75;
@@ -76,7 +77,8 @@
     display: block;
     width: 6px;
     height: 8px;
-    margin: 0 0 2px 1px;
+    margin-bottom: 2px;
+    margin-left: 1px;
     border: 1px solid transparent;
     border-image: $gradient;
     border-image-slice: 1;
