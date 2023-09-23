@@ -13,14 +13,14 @@ mixin button(options = {})
     if options.borderlessButton
       button(
         class=className
-        type='button'
+        type="button"
         )
         span.button__text=options.text
 
     else if options.longButton
       div(class=className)
         button(
-          class='button__item'
+          class="button__item"
           type=options.type
           )
           span.button__text-container
