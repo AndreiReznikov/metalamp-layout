@@ -1,5 +1,5 @@
 include ~components/logo/logo
-include ~components/button/button
+include ~components/button/link
 
 mixin header(options = {})
   -
@@ -47,7 +47,7 @@ mixin header(options = {})
             .header__buttons-container
               each button in data.headerButtons
                 - const { unfilledButton, filledButton, text, size, href } = button;
-                +button({
+                +link({
                   unfilledButton,
                   filledButton,
                   text,
@@ -63,7 +63,7 @@ mixin header(options = {})
             if (unfilledButton && !isMobile) isMobile = true;
 
           .header__mobile-button-container
-            +button({
+            +link({
               unfilledButton,
               filledButton,
               isMobile,

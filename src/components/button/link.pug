@@ -1,0 +1,34 @@
+mixin link(options = {})
+  -
+    let className = 'button__base';
+    className += options.filledButton ? ' button__base_filled' :
+      options.unfilledButton ? ' button__base_unfilled' :
+      options.longLinkButton ? ' button__base_long_link' : '';
+
+    className += options.isMobile ? ' button__base_mobile' : '';
+
+    const largeClassName = options.size === 'L' ? ' button__base_size_l' : '';
+    const hoveredClassName = options.isHovered ? ' button__base_hovered' : '';
+
+    className += largeClassName + hoveredClassName;
+
+  .button
+    if options.filledButton || options.unfilledButton
+      a(
+        class=className,
+        href=options.href
+        )
+        if options.filledButton
+          span.button__text=options.text
+        else
+          span.button__background=options.text
+
+    else if options.longLinkButton
+      div(class=className)
+        a(
+          class='button__link'
+          href=options.href
+          )
+          span.button__text-container
+            span.button__text=options.text
+          span.button__arrow

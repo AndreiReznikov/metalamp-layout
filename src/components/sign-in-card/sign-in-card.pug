@@ -1,5 +1,6 @@
 include ~components/text-field/text-field
 include ~components/button/button
+include ~components/button/link
 
 mixin sign-in-card()
   .sign-in-card
@@ -22,7 +23,7 @@ mixin sign-in-card()
           })
         .sign-in-card__registration-wrapper
           .sign-in-card__registration-text Нет аккаунта на Toxin?
-          +button({
+          +link({
             unfilledButton: true,
             text: 'Создать',
             href: 'registration.html',

@@ -3,6 +3,7 @@ include ~components/radio-buttons/radio-buttons
 include ~components/masked-text-field/masked-text-field
 include ~components/toggle-button/toggle-button
 include ~components/button/button
+include ~components/button/link
 
 mixin registration-card(options = {})
   .registration-card.js-registration-card
@@ -49,7 +50,7 @@ mixin registration-card(options = {})
           })
         .registration-card__login-container
           .registration-card__login-text Уже есть аккаунт на Toxin
-          +button({
+          +link({
             unfilledButton: true,
             text: 'Войти',
             href: 'sign-in.html',

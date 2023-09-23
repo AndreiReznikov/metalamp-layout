@@ -14,6 +14,7 @@ include ~components/like-button/like-button
 include ~components/rate-button/rate-button
 include ~components/range-slider/range-slider
 include ~components/button/button
+include ~components/button/link
 include ~components/pagination/pagination
 include ~components/bullet-list/bullet-list
 include ~components/advantage/advantage
@@ -222,15 +223,23 @@ block content
                   isHovered,
                 } = button;
 
-              +button({
-                filledButton,
-                unfilledButton,
-                borderlessButton,
-                longButton,
-                size,
-                text,
-                isHovered,
-              })
+              if filledButton || unfilledButton
+                +link({
+                  filledButton,
+                  unfilledButton,
+                  size,
+                  text,
+                  isHovered,
+                })
+              else
+                +button({
+                  borderlessButton,
+                  longButton,
+                  size,
+                  text,
+                  isHovered,
+                })
+
 
       .form-elements__pagination-container
         .form-elements__pagination-description-container

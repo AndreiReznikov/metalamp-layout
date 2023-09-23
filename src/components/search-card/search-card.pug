@@ -1,6 +1,6 @@
 include ~components/date-dropdown/date-dropdown
 include ~components/dropdown/dropdown
-include ~components/button/button
+include ~components/button/link
 
 mixin search-card(options = {})
   .search-card
@@ -21,7 +21,7 @@ mixin search-card(options = {})
             title: 'Гости',
           })
         .search-card__long-button-container
-          +button({
+          +link({
             longLinkButton: true,
             text: 'Подобрать номер',
             href: 'search-room.html',
