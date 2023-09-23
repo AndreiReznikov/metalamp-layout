@@ -2,25 +2,25 @@ include ~components/button/button
 
 mixin dropdown(options = {})
   -
-    let className = 'dropdown__wrapper js-dropdown__wrapper';
-    className += options.isOpened ? ' dropdown__wrapper_opened' : '';
-    className += options.isGuests ? ' dropdown__wrapper_guests js-dropdown__wrapper_guests' : '';
-    className += options.isConveniences ? ' dropdown__wrapper_conveniences js-dropdown__wrapper_conveniences' : '';
-    className += options.size === 'S' ? ' dropdown__wrapper_size_s' : '';
+    let dropdownName = 'dropdown js-dropdown';
+    dropdownName += options.isOpened ? ' dropdown_opened' : '';
+    dropdownName += options.isGuests ? ' dropdown_guests js-dropdown_guests' : '';
+    dropdownName += options.isConveniences ? ' dropdown_conveniences js-dropdown_conveniences' : '';
+    dropdownName += options.size === 'S' ? ' dropdown_size_s' : '';
 
     const buttons = [
       ['dropdown__clear-button js-dropdown__clear-button', 'Очистить'],
       ['dropdown__apply-button js-dropdown__apply-button', 'Применить'],
     ];
 
-  .dropdown.js-dropdown
+  div(
+      class=dropdownName
+      data-clicks=options.clicksNum
+      data-buttons=options.buttonsNum
+    )
     if options.title
       h3.dropdown__title=options.title
-    div(
-        class=className
-        data-clicks=options.clicksNum
-        data-buttons=options.buttonsNum
-      )
+    .dropdown__wrapper
       .dropdown__selection-container.js-dropdown__selection-container
         input.dropdown__selection.js-dropdown__selection(readonly)
         .dropdown__arrow-container

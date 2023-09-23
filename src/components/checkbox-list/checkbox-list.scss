@@ -10,21 +10,22 @@
     justify-content: space-between;
     margin-bottom: 17px;
     box-sizing: border-box;
+  }
 
-    &_expandable {
-      cursor: pointer;
-    }
+  &_expandable > &__title {
+    cursor: pointer;
   }
 
   &__arrow {
     padding: 2px 18px 0 0;
+    pointer-events: none;
 
     &::after {
       @include arrow;
     }
   }
 
-  &__title_expandable.checkbox-list__title_opened > &__arrow {
+  &_expandable.checkbox-list_opened > &__title > &__arrow {
     transform: rotateX(180deg);
   }
 
@@ -32,11 +33,11 @@
     @include margin-padding-zero;
   }
 
-  &__title_expandable + &__list {
+  &_expandable > &__list {
     display: none;
   }
 
-  &__title_expandable.checkbox-list__title_opened + &__list {
+  &_expandable.checkbox-list_opened > &__list {
     display: block;
   }
 

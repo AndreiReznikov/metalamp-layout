@@ -35,13 +35,13 @@ class Dropdown {
       const $target = $(event.target);
       const isClickOnMenuOrApplyButton = $target.closest('.js-dropdown__menu').length
         && !$target.closest('.js-dropdown__apply-button').length;
-      const isClickOnDropdown = $target.closest('.js-dropdown__wrapper').length;
+      const isClickOnDropdown = $target.closest('.js-dropdown').length;
 
       if (isClickOnMenuOrApplyButton) return;
 
-      const toggleDropdownMenu = ($dropdown) => $dropdown.toggleClass('dropdown__wrapper_opened');
+      const toggleDropdownMenu = ($dropdown) => $dropdown.toggleClass('dropdown_opened');
 
-      const removeDropdownMenu = ($dropdown) => $dropdown.removeClass('dropdown__wrapper_opened');
+      const removeDropdownMenu = ($dropdown) => $dropdown.removeClass('dropdown___opened');
 
       let $dropdown = $(this);
       let $menu = $dropdown.find('.js-dropdown__menu');
@@ -82,10 +82,10 @@ class Dropdown {
   _openMenuDefault() {
     this.$dropdownsCollection.each(function openMenuDefault() {
       const $dropdown = $(this);
-      const isDropdownOpened = $dropdown.hasClass('dropdown__wrapper_opened');
+      const isDropdownOpened = $dropdown.hasClass('dropdown_opened');
 
       if (isDropdownOpened) {
-        $dropdown.addClass('dropdown__wrapper_opened');
+        $dropdown.addClass('dropdown_opened');
       }
     });
   }

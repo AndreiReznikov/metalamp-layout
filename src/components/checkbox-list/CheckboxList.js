@@ -5,19 +5,22 @@ class CheckboxList {
   }
 
   _findElements() {
-    this.$listsCollection = $('.js-checkbox-list');
-    this.$openedListsCollection = $('.js-checkbox-list__title_expandable.checkbox-list__title_opened');
+    this.$listsCollection = $('.js-checkbox-list_expandable');
   }
 
   _toggleLists() {
     this.$listsCollection.each(function toggleLists() {
       const $expandableList = $(this);
 
-      const $title = $expandableList.find('.js-checkbox-list__title_expandable');
+      const handleTitleToggleList = (event) => {
+        const $target = $(event.target);
 
-      const handleTitleToggleList = () => $title.toggleClass('checkbox-list__title_opened');
+        if (!$target.hasClass('checkbox-list__title')) return;
 
-      $title.on('click', handleTitleToggleList);
+        $expandableList.toggleClass('checkbox-list_opened');
+      };
+
+      $expandableList.on('click', handleTitleToggleList);
     });
   }
 }

@@ -4,7 +4,7 @@ import Dropdown from './Dropdown';
 
 const initializeDropdowns = () => {
   const dropdownGuests = new Dropdown(
-    '.js-dropdown__wrapper_guests',
+    '.js-dropdown_guests',
     consts.setSelectionGuestsText,
     'Сколько гостей',
   );
@@ -12,7 +12,7 @@ const initializeDropdowns = () => {
   dropdownGuests.init();
 
   const dropdownConveniences = new Dropdown(
-    '.js-dropdown__wrapper_conveniences',
+    '.js-dropdown_conveniences',
     consts.setSelectionConveniencesText,
     'Выберите удобства',
   );

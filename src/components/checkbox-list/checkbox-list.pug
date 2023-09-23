@@ -2,13 +2,13 @@ include ~components/checkbox-button/checkbox-button
 
 mixin checkbox-list(options = {})
   -
-    let titleClass = 'checkbox-list__title js-checkbox-list__title';
-      titleClass += options.isExpandable ?
-        ' checkbox-list__title_expandable js-checkbox-list__title_expandable' : '';
-      titleClass += options.isOpened ? ' checkbox-list__title_opened' : '';
+    let listClass = 'checkbox-list js-checkbox-list';
+      listClass += options.isExpandable ?
+        ' checkbox-list_expandable js-checkbox-list_expandable' : '';
+      listClass += options.isOpened ? ' checkbox-list_opened' : '';
 
-  .checkbox-list.js-checkbox-list
-    h3(class=titleClass)=options.title
+  div(class=listClass)
+    h3.checkbox-list__title=options.title
       if options.isExpandable
         span.checkbox-list__arrow
     ul.checkbox-list__list

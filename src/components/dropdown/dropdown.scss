@@ -18,23 +18,23 @@
     position: relative;
     border-color: $dark-shade-25;
     box-sizing: border-box;
+  }
 
-    &_guests {
-      border-radius: 4px;
-    }
+  &_guests > &__wrapper {
+    border-radius: 4px;
+  }
 
-    &_conveniences {
-      border-radius: 4px 4px 0 0;
-    }
+  &_conveniences > &__wrapper {
+    border-radius: 4px 4px 0 0;
+  }
 
-    &_size_s {
-      @include width(266px, 100%);
-    }
+  &_size_s > &__wrapper {
+    @include width(266px, 100%);
+  }
 
-    &_opened {
-      border-radius: 4px 4px 0 0;
-      border-color: $dark-shade-50;
-    }
+  &_opened > &__wrapper {
+    border-radius: 4px 4px 0 0;
+    border-color: $dark-shade-50;
   }
 
   &__selection-container {
@@ -94,7 +94,7 @@
     box-sizing: border-box;
   }
 
-  &__wrapper_opened > &__menu {
+  &_opened > &__wrapper > &__menu {
     display: block;
   }
 
