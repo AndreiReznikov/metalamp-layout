@@ -53,6 +53,10 @@ block content
           h2.room-details__doughnut-title Впечатления от номера
         .room-details__doughnut-wrapper.js-room-details__doughnut-wrapper
           canvas.room-details__chart.js-room-details__chart(width="342" height="133")
+          .room-details__chart-text-container
+            span.room-details__chart-text.js-room-details__chart-text
+              input.room-details__chart-text-number.js-room-details__chart-text-number(value="0" type="number" readonly)
+              input.room-details__chart-text-items.js-room-details__chart-text-items(value="голосов" readonly)
 
       section.room-details__comments-container
         .room-details__comments-title-information-wrapper

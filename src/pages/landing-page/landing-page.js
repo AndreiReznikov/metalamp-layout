@@ -1,5 +1,4 @@
 import AirDatepicker from '~libs/air-datepicker';
-import consts from '~constants/consts';
 import '~components/header';
 import '~components/dropdown';
 import '~templates/fonts.scss';
@@ -18,8 +17,8 @@ class LandingPage {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: consts.prevArrow,
-      nextHtml: consts.nextArrow,
+      prevHtml: '<div class="datepicker--arrow-prev"></div>',
+      nextHtml: '<div class="datepicker--arrow-next"></div>',
     });
 
     this.dateDropdown.setDatesDefault();

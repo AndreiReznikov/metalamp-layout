@@ -2,7 +2,6 @@ import AirDatepicker from '~libs/air-datepicker';
 import IonRangeslider from '~libs/ion-rangeslider';
 import SlickCarousel from '~libs/slick-carousel';
 import PaginationJS from '~libs/paginationjs';
-import consts from '~constants/consts';
 import '~components/header';
 import '~components/dropdown';
 import '~components/checkbox-list';
@@ -30,8 +29,8 @@ class SearchRoom {
       keyboardNav: true,
       dateFormat: 'd M',
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: consts.prevArrow,
-      nextHtml: consts.nextArrow,
+      prevHtml: '<div class="datepicker--arrow-prev"></div>',
+      nextHtml: '<div class="datepicker--arrow-next"></div>',
     });
 
     this.filterDateDropdown.setDatesDefault();

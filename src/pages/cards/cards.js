@@ -1,7 +1,6 @@
 import AirDatepicker from '~libs/air-datepicker';
 import Inputmask from '~libs/inputmask';
 import SlickCarousel from '~libs/slick-carousel';
-import consts from '~constants/consts';
 import '~components/dropdown';
 import '~templates/fonts.scss';
 
@@ -22,8 +21,8 @@ class Cards {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: consts.prevArrow,
-      nextHtml: consts.nextArrow,
+      prevHtml: '<div class="datepicker--arrow-prev"></div>',
+      nextHtml: '<div class="datepicker--arrow-next"></div>',
     });
 
     this.dateDropdown.setDatesDefault();
@@ -40,8 +39,8 @@ class Cards {
       keyboardNav: true,
       range: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: consts.prevArrow,
-      nextHtml: consts.nextArrow,
+      prevHtml: '<div class="datepicker--arrow-prev"></div>',
+      nextHtml: '<div class="datepicker--arrow-next"></div>',
     });
 
     this.filterDateDropdown.setDatesDefault();

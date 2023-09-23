@@ -24,8 +24,8 @@ class RoomDetails {
       clearButton: true,
       keyboardNav: true,
       navTitles: { days: 'MM <i>yyyy</i>' },
-      prevHtml: consts.prevArrow,
-      nextHtml: consts.nextArrow,
+      prevHtml: '<div class="datepicker--arrow-prev"></div>',
+      nextHtml: '<div class="datepicker--arrow-next"></div>',
     });
 
     this.dateDropdown.setDatesDefault();
@@ -40,7 +40,6 @@ class RoomDetails {
 
     this.canvas = document.querySelector('.js-room-details__chart').getContext('2d');
     this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
-    this.$canvasContainer.append(consts.canvas);
     this.$chart = $('.js-room-details__chart');
     this.$chartRating = this.$canvasContainer.find('.js-room-details__chart-text-number');
     this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text-items');
