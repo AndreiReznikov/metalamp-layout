@@ -5,4 +5,4 @@ const initializeHeader = () => {
   header.init();
 };
 
-document.addEventListener('DOMContentLoaded', initializeHeader());
+document.addEventListener('DOMContentLoaded', initializeHeader);

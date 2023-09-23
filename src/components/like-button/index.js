@@ -6,4 +6,4 @@ const initializeLikeButton = () => {
   likeButton.init();
 };
 
-document.addEventListener('DOMContentLoaded', initializeLikeButton());
+document.addEventListener('DOMContentLoaded', initializeLikeButton);
