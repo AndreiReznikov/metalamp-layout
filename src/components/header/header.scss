@@ -218,11 +218,6 @@
       right: 0;
       visibility: visible;
     }
-
-    @include media-max($sm) {
-      width: 100%;
-      right: 100%;
-    }
   }
 
   &__mobile-buttons-container {
