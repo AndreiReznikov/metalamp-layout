@@ -55,16 +55,15 @@ class PaginationJS {
     this.pageSize = pageSize;
     this.paginationItemsNumber = $('.js-pagination__list-item').length;
     this.paginationSubText = this.$pagination.find('.js-pagination__numbers');
-    this.pageNumber =
-      this.$paginationContainer.pagination('getSelectedPageNum');
+    this.pageNumber = this.$paginationContainer.pagination('getSelectedPageNum');
 
     const paginationText = `${
       this.pageSize * this.pageNumber - this.pageSize + 1
     } -
           ${
-            this.pageSize * this.pageNumber -
-            (this.pageSize - this.paginationItemsNumber)
-          } `;
+  this.pageSize * this.pageNumber
+            - (this.pageSize - this.paginationItemsNumber)
+} `;
 
     this.paginationSubText.text(paginationText);
   }

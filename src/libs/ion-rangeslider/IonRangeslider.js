@@ -7,7 +7,9 @@ class IonRangeslider {
   }
 
   initializePlugin(options) {
-    const { skin, min, max, from, to, type } = options;
+    const {
+      skin, min, max, from, to, type,
+    } = options;
 
     this.$rangeSliderInput.ionRangeSlider({
       skin,

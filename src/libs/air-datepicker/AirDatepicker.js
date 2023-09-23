@@ -67,10 +67,8 @@ class AirDatepicker {
           $dateFrom.off(unbindEventType);
           $dateTo.off(unbindEventType);
 
-          const bindEventType =
-            eventType === 'show' ? 'click.hide' : 'click.show';
-          const datepickerMethod =
-            eventType === 'show' ? hideDatepicker : showDatepicker;
+          const bindEventType = eventType === 'show' ? 'click.hide' : 'click.show';
+          const datepickerMethod = eventType === 'show' ? hideDatepicker : showDatepicker;
 
           $datepickerInput.on(bindEventType, datepickerMethod);
           $dateFrom.on(bindEventType, datepickerMethod);
@@ -216,19 +214,17 @@ class AirDatepicker {
       const $clearButton = datepickerElements.find('[data-action="clear"]');
 
       if (datepicker.selectedDates.length < 1) {
-        const hideButton =
-          animationType === 'fade'
-            ? $clearButton.fadeOut.bind($clearButton)
-            : $clearButton.hide.bind($clearButton);
+        const hideButton = animationType === 'fade'
+          ? $clearButton.fadeOut.bind($clearButton)
+          : $clearButton.hide.bind($clearButton);
         hideButton();
 
         return;
       }
 
-      const showButton =
-        animationType === 'fade'
-          ? $clearButton.fadeIn.bind($clearButton)
-          : $clearButton.show.bind($clearButton);
+      const showButton = animationType === 'fade'
+        ? $clearButton.fadeIn.bind($clearButton)
+        : $clearButton.show.bind($clearButton);
       showButton();
     });
   }

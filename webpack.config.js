@@ -110,12 +110,11 @@ module.exports = {
       logo: './src/icons/logo.png',
     }),
     ...PAGES.map(
-      (page) =>
-        new HTMLWebpackPlugin({
-          template: `${PATHS.src}/pages/${page}/${page}.pug`,
-          filename: `${page}.html`,
-          chunks: [`${page}`],
-        }),
+      (page) => new HTMLWebpackPlugin({
+        template: `${PATHS.src}/pages/${page}/${page}.pug`,
+        filename: `${page}.html`,
+        chunks: [`${page}`],
+      }),
     ),
     new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({

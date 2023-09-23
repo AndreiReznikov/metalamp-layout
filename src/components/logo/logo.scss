@@ -1,8 +1,7 @@
 @import '~templates/mixins';
 @import '~constants/consts';
 
-$logos:
-  'colorful-icon' 106px 40px '~/icons/logo-toxin.svg',
+$logos: 'colorful-icon' 106px 40px '~/icons/logo-toxin.svg',
   'icon' 48px 48px '~/icons/logo.svg';
 
 .logo {

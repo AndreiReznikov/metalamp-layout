@@ -33,18 +33,15 @@ class Dropdown {
   _toggleMenu() {
     const handleDocumentToggleMenu = (event) => {
       const $target = $(event.target);
-      const isClickOnMenuOrApplyButton =
-        $target.closest('.js-dropdown__menu').length &&
-        !$target.closest('.js-dropdown__apply-button').length;
+      const isClickOnMenuOrApplyButton = $target.closest('.js-dropdown__menu').length
+        && !$target.closest('.js-dropdown__apply-button').length;
       const isClickOnDropdown = $target.closest('.js-dropdown').length;
 
       if (isClickOnMenuOrApplyButton) return;
 
-      const toggleDropdownMenu = ($dropdown) =>
-        $dropdown.toggleClass('dropdown_opened');
+      const toggleDropdownMenu = ($dropdown) => $dropdown.toggleClass('dropdown_opened');
 
-      const removeDropdownMenu = ($dropdown) =>
-        $dropdown.removeClass('dropdown___opened');
+      const removeDropdownMenu = ($dropdown) => $dropdown.removeClass('dropdown___opened');
 
       let $dropdown = $(this);
       let $menu = $dropdown.find('.js-dropdown__menu');
@@ -60,11 +57,10 @@ class Dropdown {
             '.js-dropdown__apply-button .button__text',
           );
 
-          const isClickOnDropdownOrApplyButton =
-            $target
-              .closest('.js-dropdown')
-              .is($dropdown.closest('.js-dropdown')) ||
-            $target.is($applyButton);
+          const isClickOnDropdownOrApplyButton = $target
+            .closest('.js-dropdown')
+            .is($dropdown.closest('.js-dropdown'))
+            || $target.is($applyButton);
 
           const totalSum = $dropdown.data('total-sum');
 
@@ -101,8 +97,7 @@ class Dropdown {
   }
 
   _changeCounterValue() {
-    const setSelectionText =
-      this.setSelectionText || ((itemsCount, totalSum) => `${totalSum} items`);
+    const setSelectionText = this.setSelectionText || ((itemsCount, totalSum) => `${totalSum} items`);
     const changeSelectionText = (element, callback) => element.val(callback);
 
     this.$dropdownsCollection.each(function changeCounterValue() {
