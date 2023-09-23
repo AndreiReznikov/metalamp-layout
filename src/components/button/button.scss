@@ -16,15 +16,16 @@
     box-sizing: border-box;
     cursor: pointer;
 
-      &:hover, &.button__base_hovered {
-        background: $semitransparent-gradient;
-      }
+    &:hover,
+    &.button__base_hovered {
+      background: $semitransparent-gradient;
+    }
 
-      &.button__base_size_l {
-        @include width(196px, 100%);
-        
-        min-height: 34px;
-      }
+    &.button__base_size_l {
+      @include width(196px, 100%);
+
+      min-height: 34px;
+    }
   }
 
   &__base_unfilled {
@@ -50,7 +51,8 @@
       @include width(196px, 100%);
     }
 
-    &:hover, &.button__base_hovered {
+    &:hover,
+    &.button__base_hovered {
       background: $semitransparent-gradient;
     }
 
@@ -80,7 +82,8 @@
     box-sizing: border-box;
     cursor: pointer;
 
-    &:hover, &.button__base_hovered {
+    &:hover,
+    &.button__base_hovered {
       color: $dark-shade-50;
     }
   }
@@ -112,7 +115,8 @@
       box-sizing: border-box;
       cursor: pointer;
 
-      &:hover, &.button__base_hovered {
+      &:hover,
+      &.button__base_hovered {
         background: $semitransparent-gradient;
       }
 

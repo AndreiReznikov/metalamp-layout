@@ -37,7 +37,7 @@
     min-height: 100%;
   }
 
-  &__container  {
+  &__container {
     display: flex;
     flex-wrap: wrap;
     max-width: $max-width;
@@ -47,7 +47,6 @@
     padding-bottom: 104px;
     padding-left: 140px;
     border-bottom: 1px solid $dark-shade-5;
-
 
     @include media-max($xl) {
       padding-right: 15px;

@@ -44,7 +44,8 @@
       text-transform: none;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       outline: none;
       border: 1px solid $dark-shade-50;
     }

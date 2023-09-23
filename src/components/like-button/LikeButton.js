@@ -19,9 +19,9 @@ class LikeButton {
 
       const handleButtonToggleLike = () => {
         if ($button.hasClass('like-button__button_liked')) {
-          $count.text(countValue -= 1);
+          $count.text((countValue -= 1));
         } else {
-          $count.text(countValue += 1);
+          $count.text((countValue += 1));
         }
         $button.toggleClass('like-button__button_liked');
         $icon.toggleClass('like-button__icon_liked');

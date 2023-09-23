@@ -66,23 +66,24 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', {
-          loader: 'postcss-loader',
-          options: {
-            postcssOptions: {
-              plugins: [
-                [
-                  'postcss-preset-env',
-                ],
-              ],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['postcss-preset-env']],
+              },
             },
           },
-        }, {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.pug$/,
@@ -108,11 +109,14 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/icons/logo.png',
     }),
-    ...PAGES.map((page) => new HTMLWebpackPlugin({
-      template: `${PATHS.src}/pages/${page}/${page}.pug`,
-      filename: `${page}.html`,
-      chunks: [`${page}`],
-    })),
+    ...PAGES.map(
+      (page) =>
+        new HTMLWebpackPlugin({
+          template: `${PATHS.src}/pages/${page}/${page}.pug`,
+          filename: `${page}.html`,
+          chunks: [`${page}`],
+        }),
+    ),
     new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',

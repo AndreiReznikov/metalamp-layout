@@ -13,7 +13,7 @@
     @include h3;
   }
 
-  &__input  {
+  &__input {
     @include zero-width-and-height;
 
     position: absolute;
@@ -33,10 +33,11 @@
 
   &__wrapper-from {
     margin-right: 5px;
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
-  &__input-from, &__input-to {
+  &__input-from,
+  &__input-to {
     @include width(100px, 150px);
     @include body-font;
 
@@ -54,9 +55,10 @@
       text-transform: uppercase;
     }
 
-    &:hover, &:focus {
-    border: 1px solid $dark-shade-50;
-  }
+    &:hover,
+    &:focus {
+      border: 1px solid $dark-shade-50;
+    }
 
     @include media-max($sm) {
       padding-left: 10px;

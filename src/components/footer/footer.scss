@@ -50,7 +50,7 @@
     @include margin-padding-zero;
   }
 
-  &__list-item  {
+  &__list-item {
     display: block;
     margin-bottom: 20px;
     line-height: 17px;
@@ -66,7 +66,7 @@
     cursor: default;
   }
 
-  &__first-section  {
+  &__first-section {
     flex-basis: 260px;
 
     @include media-max($xl) {
@@ -97,7 +97,7 @@
     }
   }
 
-  &__second-section  {
+  &__second-section {
     @include media-max($xl) {
       margin-right: 60px;
     }
@@ -174,7 +174,6 @@
 
   &__mobile {
     @include width(320px, $md);
-
 
     flex-direction: column;
     display: none;

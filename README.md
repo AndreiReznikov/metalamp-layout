@@ -6,18 +6,18 @@ This is a training project to find hotel rooms, to which I have devoted quite a 
 
 # Plugins:
 
- - air-datepicker: ^2.2.3,
- - chart.js: ^3.4.1,
- - inputmask: ^5.0.6,
- - ion-rangeslider: ^2.3.1,
- - jquery: ^3.6.0,
- - paginationjs": ^2.1.5,
- - slick-carousel": ^1.8.1
+- air-datepicker: ^2.2.3,
+- chart.js: ^3.4.1,
+- inputmask: ^5.0.6,
+- ion-rangeslider: ^2.3.1,
+- jquery: ^3.6.0,
+- paginationjs": ^2.1.5,
+- slick-carousel": ^1.8.1
 
 # Technologies:
 
- - npm: 9.5.1
- - Node.js 18.16.1
+- npm: 9.5.1
+- Node.js 18.16.1
 
 # Important
 
@@ -38,6 +38,7 @@ Then you have to install all the necessary packages to work with the project. Us
 ```
 npm install
 ```
+
 To start the project, use the command:
 
 ```
@@ -47,30 +48,43 @@ npm run server
 # Npm commands
 
 - "prod": build a production bundle,
+
 ```
 npm run prod
 ```
+
 - "dev": build a development bundle,
+
 ```
 npm run dev
 ```
+
 - "server": start the local server,
+
 ```
 npm run server
 ```
+
 - "lint": check the project for eslint errors,
+
 ```
 npm run lint
 ```
+
 - "fix": fix eslint errors
+
 ```
 npm run fix
 ```
+
 - "stylelint": check the project for stylelint errors,
+
 ```
 npm run stylelint
 ```
+
 - "fix:stylelint": fix stylelint errors
+
 ```
 npm run fix:stylelint
 ```

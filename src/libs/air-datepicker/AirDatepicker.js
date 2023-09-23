@@ -67,8 +67,10 @@ class AirDatepicker {
           $dateFrom.off(unbindEventType);
           $dateTo.off(unbindEventType);
 
-          const bindEventType = eventType === 'show' ? 'click.hide' : 'click.show';
-          const datepickerMethod = eventType === 'show' ? hideDatepicker : showDatepicker;
+          const bindEventType =
+            eventType === 'show' ? 'click.hide' : 'click.show';
+          const datepickerMethod =
+            eventType === 'show' ? hideDatepicker : showDatepicker;
 
           $datepickerInput.on(bindEventType, datepickerMethod);
           $dateFrom.on(bindEventType, datepickerMethod);
@@ -214,15 +216,19 @@ class AirDatepicker {
       const $clearButton = datepickerElements.find('[data-action="clear"]');
 
       if (datepicker.selectedDates.length < 1) {
-        const hideButton = animationType === 'fade' ? $clearButton.fadeOut.bind($clearButton)
-          : $clearButton.hide.bind($clearButton);
+        const hideButton =
+          animationType === 'fade'
+            ? $clearButton.fadeOut.bind($clearButton)
+            : $clearButton.hide.bind($clearButton);
         hideButton();
 
         return;
       }
 
-      const showButton = animationType === 'fade' ? $clearButton.fadeIn.bind($clearButton)
-        : $clearButton.show.bind($clearButton);
+      const showButton =
+        animationType === 'fade'
+          ? $clearButton.fadeIn.bind($clearButton)
+          : $clearButton.show.bind($clearButton);
       showButton();
     });
   }
@@ -240,7 +246,9 @@ class AirDatepicker {
 
       const datepicker = $datepickerInput.data('datepicker');
       const datepickerElements = datepicker.$datepicker;
-      const $applyButton = $('<span data-action="selectDate" class=\'datepicker--button\'>Применить</span>');
+      const $applyButton = $(
+        '<span data-action="selectDate" class=\'datepicker--button\'>Применить</span>',
+      );
 
       datepickerElements.find('.datepicker--buttons').append($applyButton);
 
@@ -257,7 +265,9 @@ class AirDatepicker {
     this.$datepickerCollection = $(element);
 
     if (element === '.js-filter-date-dropdown') {
-      this.$datepickerOpened = this.$datepickerCollection.find('.js-filter-date-dropdown__input_opened');
+      this.$datepickerOpened = this.$datepickerCollection.find(
+        '.js-filter-date-dropdown__input_opened',
+      );
     }
   }
 }

@@ -36,7 +36,10 @@ class FormElements {
   }
 
   _initializeFilterDateDropdown() {
-    this.filterDateDropdown = new AirDatepicker('.js-filter-date-dropdown', 'S');
+    this.filterDateDropdown = new AirDatepicker(
+      '.js-filter-date-dropdown',
+      'S',
+    );
 
     this.filterDateDropdown.initializePlugin({
       range: true,

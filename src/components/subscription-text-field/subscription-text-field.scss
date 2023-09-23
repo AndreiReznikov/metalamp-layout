@@ -42,7 +42,8 @@
     }
   }
 
-  &__input:hover, &__input:focus,
+  &__input:hover,
+  &__input:focus,
   &__button:hover + &__input {
     border: 1px solid $dark-shade-50;
   }

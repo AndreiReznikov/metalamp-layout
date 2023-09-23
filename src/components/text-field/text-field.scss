@@ -18,22 +18,23 @@
     box-sizing: border-box;
     border-radius: 4px;
 
-      &:hover, &:focus {
-        border: 1px solid $dark-shade-50;
-      }
+    &:hover,
+    &:focus {
+      border: 1px solid $dark-shade-50;
+    }
 
-      &:focus {
-        outline: none;
-      }
+    &:focus {
+      outline: none;
+    }
 
-      &::placeholder {
-        color: $dark-shade-25;
-      }
+    &::placeholder {
+      color: $dark-shade-25;
+    }
 
-      &:disabled {
-        color: $dark-shade-5;
-        border: 1px solid $dark-shade-5;
-        cursor: default;
-      }
+    &:disabled {
+      color: $dark-shade-5;
+      border: 1px solid $dark-shade-5;
+      cursor: default;
+    }
   }
 }

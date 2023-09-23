@@ -1,7 +1,8 @@
 @import '~templates/mixins';
 @import '~constants/consts';
 
-$squares: 'one_hundred_percent_dark_shade' $dark-shade-100,
+$squares:
+  'one_hundred_percent_dark_shade' $dark-shade-100,
   'seventy_five_percent_dark_shade' $dark-shade-75,
   'fifty_percent_dark_shade' $dark-shade-50,
   'twenty_five_percent_dark_shade' $dark-shade-25,
@@ -10,34 +11,34 @@ $squares: 'one_hundred_percent_dark_shade' $dark-shade-100,
   'green' $green;
 
 .color {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &__square {
-      min-width: 70px;
-      min-height: 70px;
-      border-radius: 6px;
-    }
+  &__square {
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 6px;
+  }
 
-    @each $modifier, $color in $squares {
-      &__square_#{$modifier} {
-        background-color: $color;
-      }
-    }
-
-    &__text {
-      margin-left: 40px;
-    }
-
-    &__title {
-      @include h2;
-
-      line-height: 28px;
-    }
-
-    &__hex {
-      @include h2;
-
-      font-weight: normal;
+  @each $modifier, $color in $squares {
+    &__square_#{$modifier} {
+      background-color: $color;
     }
   }
+
+  &__text {
+    margin-left: 40px;
+  }
+
+  &__title {
+    @include h2;
+
+    line-height: 28px;
+  }
+
+  &__hex {
+    @include h2;
+
+    font-weight: normal;
+  }
+}

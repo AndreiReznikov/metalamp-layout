@@ -6,7 +6,7 @@
     opacity: 0.5;
   }
 
-  &__inner-container{
+  &__inner-container {
     @include flex-between-center;
 
     width: 100%;
@@ -37,10 +37,10 @@
     width: 8px;
     height: 8px;
     margin-right: 2px;
-    background-image: url("~/icons/unliked.svg");
+    background-image: url('~/icons/unliked.svg');
 
     &_liked {
-      background-image: url("~/icons/liked.svg");
+      background-image: url('~/icons/liked.svg');
     }
   }
 

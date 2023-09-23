@@ -24,7 +24,8 @@
       opacity: 0.5;
     }
 
-    &:checked, &:checked ~ & {
+    &:checked,
+    &:checked ~ & {
       @include stars-background;
     }
 

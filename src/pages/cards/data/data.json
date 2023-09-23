@@ -18,7 +18,12 @@
   },
   "roomCards": [
     {
-      "photos": ["room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg", "room-photo-1.jpg"],
+      "photos": [
+        "room-photo-1.jpg",
+        "room-photo-1.jpg",
+        "room-photo-1.jpg",
+        "room-photo-1.jpg"
+      ],
       "number": "888",
       "price": "9 990",
       "starsNumber": 5,
@@ -27,7 +32,12 @@
       "isLux": true
     },
     {
-      "photos": ["room-photo-2.jpg", "room-photo-2.jpg", "room-photo-2.jpg", "room-photo-2.jpg"],
+      "photos": [
+        "room-photo-2.jpg",
+        "room-photo-2.jpg",
+        "room-photo-2.jpg",
+        "room-photo-2.jpg"
+      ],
       "number": "840",
       "price": "9 990",
       "starsNumber": 5,

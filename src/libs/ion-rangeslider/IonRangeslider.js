@@ -7,14 +7,7 @@ class IonRangeslider {
   }
 
   initializePlugin(options) {
-    const {
-      skin,
-      min,
-      max,
-      from,
-      to,
-      type,
-    } = options;
+    const { skin, min, max, from, to, type } = options;
 
     this.$rangeSliderInput.ionRangeSlider({
       skin,
@@ -28,8 +21,12 @@ class IonRangeslider {
 
   addTooltips() {
     this.$ionRangeSlider = this.$rangeSlider.find('.irs.irs--flat');
-    this.$ionRangeSlider.append('<div class="range-slider__values js-range-slider__values"></div>');
-    this.$rangeSliderValues = $(this.$ionRangeSlider.find('.js-range-slider__values'));
+    this.$ionRangeSlider.append(
+      '<div class="range-slider__values js-range-slider__values"></div>',
+    );
+    this.$rangeSliderValues = $(
+      this.$ionRangeSlider.find('.js-range-slider__values'),
+    );
     this.$rangeSliderValues.append(
       '<span class="range-slider__from js-range-slider__from"></span>',
       '<span class=range-slider__value-separator> - </span>',
@@ -41,8 +38,12 @@ class IonRangeslider {
     const $valueFrom = this.$ionRangeSlider.find('.js-range-slider__from');
     const $valueTo = this.$ionRangeSlider.find('.js-range-slider__to');
 
-    $valueFrom.html(`${this.$rangeSliderInput.data('from').toLocaleString()}&#8381`);
-    $valueTo.html(`${this.$rangeSliderInput.data('to').toLocaleString()}&#8381`);
+    $valueFrom.html(
+      `${this.$rangeSliderInput.data('from').toLocaleString()}&#8381`,
+    );
+    $valueTo.html(
+      `${this.$rangeSliderInput.data('to').toLocaleString()}&#8381`,
+    );
 
     const handleRangeSliderInputTransformInputsView = (event) => {
       const $input = $(event.currentTarget);
@@ -52,7 +53,10 @@ class IonRangeslider {
       $valueTo.html(`${to.toLocaleString()}&#8381;`);
     };
 
-    this.$rangeSliderInput.on('change', handleRangeSliderInputTransformInputsView);
+    this.$rangeSliderInput.on(
+      'change',
+      handleRangeSliderInputTransformInputsView,
+    );
   }
 
   _findElements(slider) {

@@ -54,7 +54,8 @@
     height: 16px;
   }
 
-  &--arrow-prev, &--arrow-next {
+  &--arrow-prev,
+  &--arrow-next {
     @include button-arrow;
 
     justify-content: center;
@@ -183,7 +184,7 @@
     color: $purple;
   }
 
-  &--button[data-action="clear"] {
+  &--button[data-action='clear'] {
     margin-left: 0;
   }
 

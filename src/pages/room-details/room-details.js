@@ -38,11 +38,17 @@ class RoomDetails {
     const $window = $(window);
     this.windowWidth = $window.width();
 
-    this.canvas = document.querySelector('.js-room-details__chart').getContext('2d');
+    this.canvas = document
+      .querySelector('.js-room-details__chart')
+      .getContext('2d');
     this.$canvasContainer = $('.js-room-details__doughnut-wrapper');
     this.$chart = $('.js-room-details__chart');
-    this.$chartRating = this.$canvasContainer.find('.js-room-details__chart-text-number');
-    this.$chartText = this.$canvasContainer.find('.js-room-details__chart-text-items');
+    this.$chartRating = this.$canvasContainer.find(
+      '.js-room-details__chart-text-number',
+    );
+    this.$chartText = this.$canvasContainer.find(
+      '.js-room-details__chart-text-items',
+    );
 
     this.colors = {
       black: ['#909090', '#3D4975'],
@@ -70,27 +76,24 @@ class RoomDetails {
     setCanvasColor([canvasBlack, ...this.colors.black]);
 
     this.userRatings = [0, 260, 260, 520];
-    this.labels = [
-      'Разочарован',
-      'Удовлетворительно',
-      'Хорошо',
-      'Великолепно',
-    ];
+    this.labels = ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'];
 
     this.canvasData = {
       labels: this.labels,
-      datasets: [{
-        label: 'Ratings',
-        data: this.userRatings,
-        backgroundColor: [
-          canvasBlack,
-          canvasPurple,
-          canvasGreen,
-          canvasOrange,
-        ],
-        hoverOffset: 4,
-        borderWidth: 1,
-      }],
+      datasets: [
+        {
+          label: 'Ratings',
+          data: this.userRatings,
+          backgroundColor: [
+            canvasBlack,
+            canvasPurple,
+            canvasGreen,
+            canvasOrange,
+          ],
+          hoverOffset: 4,
+          borderWidth: 1,
+        },
+      ],
     };
 
     this.canvasOptions = consts.canvasOptions;
@@ -98,11 +101,19 @@ class RoomDetails {
     this.canvasOptions.options.layout.padding = {
       left: this.windowWidth < 600 ? -65 : -25,
     };
-    this.canvasOptions.options.plugins.legend.onHover = (event, legendItem, legend) => {
+    this.canvasOptions.options.plugins.legend.onHover = (
+      event,
+      legendItem,
+      legend,
+    ) => {
       this._callLegendCallback(event, legendItem, legend, 'hover');
       this._changeValueWidth();
     };
-    this.canvasOptions.options.plugins.legend.onLeave = (event, legendItem, legend) => {
+    this.canvasOptions.options.plugins.legend.onLeave = (
+      event,
+      legendItem,
+      legend,
+    ) => {
       this._callLegendCallback(event, legendItem, legend, 'leave');
       this._changeValueWidth();
     };

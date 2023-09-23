@@ -46,17 +46,25 @@ class PaginationJS {
   }
 
   showDataContainer() {
-    this.$paginationDataContainer.addClass('pagination__data-container_visible');
+    this.$paginationDataContainer.addClass(
+      'pagination__data-container_visible',
+    );
   }
 
   showItemsNumber(pageSize) {
     this.pageSize = pageSize;
     this.paginationItemsNumber = $('.js-pagination__list-item').length;
     this.paginationSubText = this.$pagination.find('.js-pagination__numbers');
-    this.pageNumber = this.$paginationContainer.pagination('getSelectedPageNum');
+    this.pageNumber =
+      this.$paginationContainer.pagination('getSelectedPageNum');
 
-    const paginationText = `${(this.pageSize * this.pageNumber - this.pageSize + 1)} -
-          ${this.pageSize * this.pageNumber - (this.pageSize - this.paginationItemsNumber)} `;
+    const paginationText = `${
+      this.pageSize * this.pageNumber - this.pageSize + 1
+    } -
+          ${
+            this.pageSize * this.pageNumber -
+            (this.pageSize - this.paginationItemsNumber)
+          } `;
 
     this.paginationSubText.text(paginationText);
   }
@@ -72,8 +80,12 @@ class PaginationJS {
 
   _findElement(pagination) {
     this.$pagination = $(pagination);
-    this.$paginationContainer = this.$pagination.find('.js-pagination__container');
-    this.$paginationDataContainer = this.$pagination.find('.js-pagination__data-container');
+    this.$paginationContainer = this.$pagination.find(
+      '.js-pagination__container',
+    );
+    this.$paginationDataContainer = this.$pagination.find(
+      '.js-pagination__data-container',
+    );
   }
 }
 

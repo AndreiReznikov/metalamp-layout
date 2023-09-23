@@ -5,7 +5,10 @@
   position: absolute;
   width: 266px;
 
-  &-min, &-max, &-from, &-to {
+  &-min,
+  &-max,
+  &-from,
+  &-to {
     display: none;
   }
 
@@ -42,7 +45,9 @@
     display: none;
   }
 
-  &--flat &-from, &--flat &-to, &--flat &-single {
+  &--flat &-from,
+  &--flat &-to,
+  &--flat &-single {
     display: none;
   }
 }

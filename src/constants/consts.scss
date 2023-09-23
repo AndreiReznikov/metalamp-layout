@@ -1,15 +1,23 @@
-$dark-shade-100: #1F2041;
+$dark-shade-100: #1f2041;
 $dark-shade-75: rgb(31 32 65 / 75%);
 $dark-shade-50: rgb(31 32 65 / 50%);
 $dark-shade-25: rgb(31 32 65 / 25%);
 $dark-shade-10: rgb(31 32 65 / 10%);
 $dark-shade-5: rgb(31 32 65 / 5%);
-$purple: #BC9CFF;
-$green: #6FCF97;
-$gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$green-blue-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-$semitransparent-gradient: linear-gradient(180deg, rgb(188 156 255 / 50%) 0%, rgb(139 164 249 / 50%) 100%);
-$highly-transparent-gradient: linear-gradient(180deg, rgb(188 156 255 / 25%), rgb(139 164 249 / 25%));
+$purple: #bc9cff;
+$green: #6fcf97;
+$gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$green-blue-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$semitransparent-gradient: linear-gradient(
+  180deg,
+  rgb(188 156 255 / 50%) 0%,
+  rgb(139 164 249 / 50%) 100%
+);
+$highly-transparent-gradient: linear-gradient(
+  180deg,
+  rgb(188 156 255 / 25%),
+  rgb(139 164 249 / 25%)
+);
 $card-border: 1px solid rgb(0 0 0 / 12%);
 $card-shadow-large: 0 0 25px rgb(0 0 0 / 20%);
 $card-shadow-small: 0 0 5px rgb(0 0 0 / 20%);

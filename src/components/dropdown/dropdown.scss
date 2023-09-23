@@ -137,7 +137,8 @@
     }
   }
 
-  &__counter-decrement, &__counter-increment {
+  &__counter-decrement,
+  &__counter-increment {
     @include inline-flex-center;
 
     width: 30px;
@@ -178,7 +179,8 @@
     padding-left: 14px;
   }
 
-  &__clear-button, &__apply-button {
+  &__clear-button,
+  &__apply-button {
     @include h3;
 
     color: $purple;

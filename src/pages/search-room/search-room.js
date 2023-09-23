@@ -21,7 +21,10 @@ class SearchRoom {
   }
 
   _initializeFilterDateDropdown() {
-    this.filterDateDropdown = new AirDatepicker('.js-filter-date-dropdown', 'S');
+    this.filterDateDropdown = new AirDatepicker(
+      '.js-filter-date-dropdown',
+      'S',
+    );
 
     this.filterDateDropdown.initializePlugin({
       range: true,
@@ -40,7 +43,9 @@ class SearchRoom {
 
   _initializeSlickCarousel() {
     this.initializeSlick = () => {
-      this.slickCarousel = new SlickCarousel('.js-pagination__data-container .js-room-card__slider');
+      this.slickCarousel = new SlickCarousel(
+        '.js-pagination__data-container .js-room-card__slider',
+      );
 
       this.slickCarousel.initializePlugin({
         arrows: true,
@@ -55,9 +60,10 @@ class SearchRoom {
 
   _initializePaginationJS() {
     const addPaginationItem = (item) => {
-      const paginationItem = '<li class="pagination__list-item js-pagination__list-item">'
-        + `<a class="pagination__list-link" href="room-details.html">${item}</a>`
-        + '</li>';
+      const paginationItem =
+        '<li class="pagination__list-item js-pagination__list-item">' +
+        `<a class="pagination__list-link" href="room-details.html">${item}</a>` +
+        '</li>';
 
       return paginationItem;
     };

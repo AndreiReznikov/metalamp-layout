@@ -50,7 +50,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right:  18px;
+    margin-right: 18px;
     list-style-type: none;
   }
 
@@ -114,13 +114,14 @@
     text-align: center;
   }
 
-  &__expanded-menu-link, &__list-link {
+  &__expanded-menu-link,
+  &__list-link {
     color: $dark-shade-50;
     text-decoration: none;
 
     &:hover {
-    color: $dark-shade-75;
-  }
+      color: $dark-shade-75;
+    }
   }
 
   &__buttons-container {
@@ -166,7 +167,7 @@
       top: 10px;
       width: 35px;
       height: 2px;
-      background-color:$dark-shade-50;
+      background-color: $dark-shade-50;
       transition: 0.6s;
     }
 
@@ -176,14 +177,15 @@
       bottom: 10px;
       width: 35px;
       height: 2px;
-      background-color:$dark-shade-50;
+      background-color: $dark-shade-50;
       transition: 0.6s;
     }
 
     &_transformed {
       height: 0;
 
-      &::after, &::before {
+      &::after,
+      &::before {
         transform: rotate(45deg);
         top: 0;
         bottom: 0;
